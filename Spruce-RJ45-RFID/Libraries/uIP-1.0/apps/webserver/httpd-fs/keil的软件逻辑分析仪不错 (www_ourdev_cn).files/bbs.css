@@ -1,0 +1,159 @@
+TABLE {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 1px
+}
+TD {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 1px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+.tt1 {
+	FONT-SIZE: 9pt; COLOR: #333333; TEXT-DECORATION: none
+}
+A.tt1:hover {
+	COLOR: maroon; TEXT-DECORATION: underline
+}
+.tt2 {
+	FONT-SIZE: 9pt; COLOR: orange; TEXT-DECORATION: underline
+}
+A.tt2:hover {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.tt3 {
+	FONT-SIZE: 9pt; COLOR: #5d7790; TEXT-DECORATION: underline
+}
+A.tt3:hover {
+	COLOR: #d1d9e2; TEXT-DECORATION: none
+}
+.tt4 {
+	FONT-SIZE: 9pt; COLOR: blue; TEXT-DECORATION: none
+}
+A.tt4:hover {
+	COLOR: maroon; TEXT-DECORATION: underline
+}
+.tt5 {
+	FONT-SIZE: 9pt; COLOR: #444444; TEXT-DECORATION: underline
+}
+A.tt5:hover {
+	COLOR: maroon; TEXT-DECORATION: none
+}
+.tt6 {
+	FONT-SIZE: 9pt; COLOR: navy; TEXT-DECORATION: underline; none: 
+}
+A.tt6:hover {
+	COLOR: maroon; TEXT-DECORATION: none
+}
+.tt7 {
+	FONT-SIZE: 9pt; COLOR: orange; TEXT-DECORATION: underline
+}
+A.tt7:hover {
+	COLOR: silver; TEXT-DECORATION: none
+}
+.tt8 {
+	FONT-SIZE: 9pt; COLOR: maroon; TEXT-DECORATION: none
+}
+A.tt8:hover {
+	COLOR: #0000a0; TEXT-DECORATION: underline
+}
+.tt9 {
+	FONT-SIZE: 9pt; COLOR: blue; TEXT-DECORATION: underline
+}
+A.tt9:hover {
+	COLOR: red; TEXT-DECORATION: none
+}
+.tt10 {
+	FONT-SIZE: 9pt; COLOR: #000000; TEXT-DECORATION: none
+}
+A.tt10:hover {
+	COLOR: aqua; TEXT-DECORATION: none
+}
+.tt11 {
+	FONT-SIZE: 9pt; COLOR: maroon; TEXT-DECORATION: none
+}
+A.tt11:hover {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+.tt12 {
+	FONT-SIZE: 9pt; COLOR: white; TEXT-DECORATION: none
+}
+A.tt12:hover {
+	COLOR: maroon; TEXT-DECORATION: underline
+}
+.tt13 {
+	FONT-SIZE: 12pt; COLOR: #333333; TEXT-DECORATION: none
+}
+A.tt13:hover {
+	COLOR: maroon; TEXT-DECORATION: underline
+}
+.tt15 {
+	FONT-SIZE: 9pt; COLOR: #eeeeee; TEXT-DECORATION: none
+}
+A.tt15:hover {
+	COLOR: maroon; TEXT-DECORATION: underline
+}
+.tt16 {
+	FONT-SIZE: 9pt; COLOR: blue; TEXT-DECORATION: none
+}
+A.tt16:hover {
+	COLOR: blue; TEXT-DECORATION: underline
+}
+.f01 {
+	FONT-SIZE: 9pt; COLOR: #000000; LINE-HEIGHT: 14pt
+}
+.f02 {
+	FONT-SIZE: 9pt; COLOR: #333333; LINE-HEIGHT: 12pt
+}
+.f03 {
+	FONT-SIZE: 9pt; COLOR: #5d7790; LINE-HEIGHT: 16pt
+}
+.f04 {
+	FONT-SIZE: 9pt; COLOR: #5d7790; LINE-HEIGHT: 9pt
+}
+.f05 {
+	FONT-SIZE: 9pt; COLOR: red
+}
+.f06 {
+	FONT-SIZE: 9pt; COLOR: #ffffff; LINE-HEIGHT: 16pt
+}
+.f07 {
+	FONT-SIZE: 10pt; COLOR: #333333; LINE-HEIGHT: 16pt
+}
+.f08 {
+	FONT-SIZE: 24pt; COLOR: #bbbbbb; LINE-HEIGHT: 26pt
+}
+.f08a {
+	FONT-SIZE: 9pt; COLOR: #bbbbbb; LINE-HEIGHT: 9pt
+}
+.f09 {
+	FONT-SIZE: 20pt; COLOR: #ffffff; LINE-HEIGHT: 22pt
+}
+.f10 {
+	FONT-SIZE: 9pt; COLOR: #555555
+}
+.f11 {
+	FONT-SIZE: 9pt; COLOR: #ffffff; LINE-HEIGHT: 9pt
+}
+.f12 {
+	FONT-SIZE: 9pt; COLOR: #666666; LINE-HEIGHT: 9pt
+}
+.f13 {
+	FONT-SIZE: 9pt; COLOR: #ffffff; LINE-HEIGHT: 16pt
+}
+.f14 {
+	FONT-SIZE: 9pt; COLOR: #000000; LINE-HEIGHT: 16pt
+}
+.f15 {
+	FONT-SIZE: 8pt; COLOR: #000000; LINE-HEIGHT: 14pt
+}
+.f15 {
+	FONT-SIZE: 9pt; COLOR: maroon; LINE-HEIGHT: 12pt
+}
+.f16 {
+	FONT-SIZE: 18pt; COLOR: #000000; LINE-HEIGHT: 26pt
+}
+.f17 {
+	FONT-SIZE: 24pt; COLOR: #666666; LINE-HEIGHT: 26pt
+}
+1jimg {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: 0px; ; WIDTH: expression(this.width>"760x":this.width); PADDING-TOP: 0px; BORDER-BOTTOM: 0px; ; HEIGHT: expression(this.height>760?"760px":this.height); max-width: 760px; max-height: 760px
+}
+A idsmg {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: 0px; ; WIDTH: expression(this.width>"760x":this.width); PADDING-TOP: 0px; BORDER-BOTTOM: 0px; ; HEIGHT: expression(this.height>760?"760px":this.height); max-width: 760px; max-height: 760px
+}

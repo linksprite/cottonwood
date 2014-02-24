@@ -1,0 +1,4 @@
+--device DARMSTM ".\obj\main.o" ".\obj\stm32f10x_it.o" ".\obj\usart_printf.o" ".\obj\systick.o" ".\obj\spi.o" ".\obj\web_server.o" ".\obj\rfid_cmd.o" ".\obj\startup_stm32f10x_hd.o" ".\obj\stm32f10x_rcc.o" ".\obj\misc.o" ".\obj\stm32f10x_usart.o" ".\obj\stm32f10x_gpio.o" ".\obj\stm32f10x_fsmc.o" ".\obj\stm32f10x_spi.o" ".\obj\core_cm3.o" ".\obj\system_stm32f10x.o" ".\obj\psock.o" ".\obj\timer.o" ".\obj\uip.o" ".\obj\uip_arp.o" ".\obj\uip-fw.o" ".\obj\uiplib.o" ".\obj\uip-neighbor.o" ".\obj\uip-split.o" ".\obj\httpd.o" ".\obj\httpd-cgi.o" ".\obj\httpd-fs.o" ".\obj\http-strings.o" ".\obj\enc28j60.o" ".\obj\ip_arp_udp_tcp.o" ".\obj\tcp_demo.o" ".\obj\emc28j60_uip.o" ".\obj\tapdev.o" ".\obj\clock-arch.o" --library_type=microlib --strict --scatter ".\Obj\STM32-FD-uIP.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\List\STM32-FD-uIP.map" -o ".\Obj\STM32-FD-uIP.axf"

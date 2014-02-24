@@ -1,0 +1,52 @@
+*** Creating Trace Output File '.\Obj\STM32-FD-uIP.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\obj\main.o"'
+### List of Objects: adding '".\obj\stm32f10x_it.o"'
+### List of Objects: adding '".\obj\usart_printf.o"'
+### List of Objects: adding '".\obj\systick.o"'
+### List of Objects: adding '".\obj\spi.o"'
+### List of Objects: adding '".\obj\web_server.o"'
+### List of Objects: adding '".\obj\rfid_cmd.o"'
+### List of Objects: adding '".\obj\startup_stm32f10x_hd.o"'
+### List of Objects: adding '".\obj\stm32f10x_rcc.o"'
+### List of Objects: adding '".\obj\misc.o"'
+### List of Objects: adding '".\obj\stm32f10x_usart.o"'
+### List of Objects: adding '".\obj\stm32f10x_gpio.o"'
+### List of Objects: adding '".\obj\stm32f10x_fsmc.o"'
+### List of Objects: adding '".\obj\stm32f10x_spi.o"'
+### List of Objects: adding '".\obj\core_cm3.o"'
+### List of Objects: adding '".\obj\system_stm32f10x.o"'
+### List of Objects: adding '".\obj\psock.o"'
+### List of Objects: adding '".\obj\timer.o"'
+### List of Objects: adding '".\obj\uip.o"'
+### List of Objects: adding '".\obj\uip_arp.o"'
+### List of Objects: adding '".\obj\uip-fw.o"'
+### List of Objects: adding '".\obj\uiplib.o"'
+### List of Objects: adding '".\obj\uip-neighbor.o"'
+### List of Objects: adding '".\obj\uip-split.o"'
+### List of Objects: adding '".\obj\httpd.o"'
+### List of Objects: adding '".\obj\httpd-cgi.o"'
+### List of Objects: adding '".\obj\httpd-fs.o"'
+### List of Objects: adding '".\obj\http-strings.o"'
+### List of Objects: adding '".\obj\enc28j60.o"'
+### List of Objects: adding '".\obj\ip_arp_udp_tcp.o"'
+### List of Objects: adding '".\obj\tcp_demo.o"'
+### List of Objects: adding '".\obj\emc28j60_uip.o"'
+### List of Objects: adding '".\obj\tapdev.o"'
+### List of Objects: adding '".\obj\clock-arch.o"'
+### ADS-LD Command completed:
+--device DARMSTM ".\obj\main.o" ".\obj\stm32f10x_it.o" ".\obj\usart_printf.o" ".\obj\systick.o" ".\obj\spi.o" ".\obj\web_server.o" ".\obj\rfid_cmd.o" ".\obj\startup_stm32f10x_hd.o" ".\obj\stm32f10x_rcc.o" ".\obj\misc.o" ".\obj\stm32f10x_usart.o" ".\obj\stm32f10x_gpio.o" ".\obj\stm32f10x_fsmc.o" ".\obj\stm32f10x_spi.o" ".\obj\core_cm3.o" ".\obj\system_stm32f10x.o" ".\obj\psock.o" ".\obj\timer.o" ".\obj\uip.o" ".\obj\uip_arp.o" ".\obj\uip-fw.o" ".\obj\uiplib.o" ".\obj\uip-neighbor.o" ".\obj\uip-split.o" ".\obj\httpd.o" ".\obj\httpd-cgi.o" ".\obj\httpd-fs.o" ".\obj\http-strings.o" ".\obj\enc28j60.o" ".\obj\ip_arp_udp_tcp.o" ".\obj\tcp_demo.o" ".\obj\emc28j60_uip.o" ".\obj\tapdev.o" ".\obj\clock-arch.o" --library_type=microlib --strict --scatter ".\Obj\STM32-FD-uIP.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\List\STM32-FD-uIP.map" -o ".\Obj\STM32-FD-uIP.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\Obj\STM32-FD-uIP.axf'
+### ADS-LD Command File: '.\Obj\STM32-FD-uIP.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\Obj\STM32-FD-uIP.lnp', Handle=0x000002DC
+### Writing '.lnp' file
+### ADS-LD Command file '.\Obj\STM32-FD-uIP.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

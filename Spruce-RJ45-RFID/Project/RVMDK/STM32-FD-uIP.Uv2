@@ -1,0 +1,138 @@
+### uVision2 Project, (C) Keil Software
+### Do not modify !
+
+Target (STM32-FD-uIP), 0x0004 // Tools: 'ARM-ADS'
+
+Group (User)
+Group (RVMDK)
+Group (StdPeriph_Driver)
+Group (CMSIS)
+Group (uIP-1.0)
+Group (uIP_APP)
+
+File 1,1,<..\..\Source\src\main.c><main.c>
+File 1,1,<..\..\Source\src\stm32f10x_it.c><stm32f10x_it.c>
+File 1,1,<..\..\Source\src\usart_printf.c><usart_printf.c>
+File 1,1,<..\..\Source\src\systick.c><systick.c>
+File 1,1,<..\..\Source\src\uIP_enc28j60\SPI.C><SPI.C>
+File 1,1,<..\..\Source\src\web_server.c><web_server.c>
+File 1,1,<..\..\Source\src\RFID_Cmd.c><RFID_Cmd.c>
+File 2,2,<..\..\Libraries\CMSIS\Core\CM3\startup\arm\startup_stm32f10x_hd.s><startup_stm32f10x_hd.s>
+File 3,1,<..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c><stm32f10x_rcc.c>
+File 3,1,<..\..\Libraries\STM32F10x_StdPeriph_Driver\src\misc.c><misc.c>
+File 3,1,<..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c><stm32f10x_usart.c>
+File 3,1,<..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c><stm32f10x_gpio.c>
+File 3,1,<..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.c><stm32f10x_fsmc.c>
+File 3,1,<..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.c><stm32f10x_spi.c>
+File 4,1,<..\..\Libraries\CMSIS\Core\CM3\core_cm3.c><core_cm3.c>
+File 4,1,<..\..\Libraries\CMSIS\Core\CM3\system_stm32f10x.c><system_stm32f10x.c>
+File 5,1,<..\..\Libraries\uIP-1.0\uip\psock.c><psock.c>
+File 5,1,<..\..\Libraries\uIP-1.0\uip\timer.c><timer.c>
+File 5,1,<..\..\Libraries\uIP-1.0\uip\uip.c><uip.c>
+File 5,1,<..\..\Libraries\uIP-1.0\uip\uip_arp.c><uip_arp.c>
+File 5,1,<..\..\Libraries\uIP-1.0\uip\uip-fw.c><uip-fw.c>
+File 5,1,<..\..\Libraries\uIP-1.0\uip\uiplib.c><uiplib.c>
+File 5,1,<..\..\Libraries\uIP-1.0\uip\uip-neighbor.c><uip-neighbor.c>
+File 5,1,<..\..\Libraries\uIP-1.0\uip\uip-split.c><uip-split.c>
+File 5,1,<..\..\Libraries\uIP-1.0\apps\webserver\httpd.c><httpd.c>
+File 5,1,<..\..\Libraries\uIP-1.0\apps\webserver\httpd-cgi.c><httpd-cgi.c>
+File 5,1,<..\..\Libraries\uIP-1.0\apps\webserver\httpd-fs.c><httpd-fs.c>
+File 5,1,<..\..\Libraries\uIP-1.0\apps\webserver\http-strings.c><http-strings.c>
+File 6,1,<..\..\Source\src\uIP_enc28j60\ENC28J60.C><ENC28J60.C>
+File 6,1,<..\..\Source\src\uIP_enc28j60\ip_arp_udp_tcp.c><ip_arp_udp_tcp.c>
+File 6,1,<..\..\Source\src\tcp_demo.c><tcp_demo.c>
+File 6,1,<..\..\Source\src\uIP_enc28j60\emc28j60_uip.c><emc28j60_uip.c>
+File 6,1,<..\..\Source\src\uIP_enc28j60\tapdev.c><tapdev.c>
+File 6,1,<..\..\Source\src\uIP_enc28j60\clock-arch.c><clock-arch.c>
+
+
+Options 1,0,0  // Target 'STM32-FD-uIP'
+ Device (STM32F103VE)
+ Vendor (STMicroelectronics)
+ Cpu (IRAM(0x20000000-0x2000FFFF) IROM(0x8000000-0x807FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3"))
+ FlashUt ()
+ StupF ("STARTUP\ST\STM32F10x.s" ("STM32 Startup Code"))
+ FlashDR (UL2CM3(-O14 -S0 -C0 -N00("ARM Cortex-M3") -D00(1BA00477) -L00(4) -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F10x_512 -FS08000000 -FL080000))
+ DevID (4225)
+ Rgf (stm32f10x_lib.h)
+ Mem ()
+ C ()
+ A ()
+ RL ()
+ OH ()
+ DBC_IFX ()
+ DBC_CMS ()
+ DBC_AMS ()
+ DBC_LMS ()
+ UseEnv=0
+ EnvBin ()
+ EnvInc ()
+ EnvLib ()
+ EnvReg (ÿST\STM32F10x\)
+ OrgReg (ÿST\STM32F10x\)
+ TgStat=16
+ OutDir (.\Obj\)
+ OutName (STM32-FD-uIP)
+ GenApp=1
+ GenLib=0
+ GenHex=1
+ Debug=1
+ Browse=1
+ LstDir (.\List\)
+ HexSel=1
+ MG32K=0
+ TGMORE=0
+ RunUsr 0 0 <>
+ RunUsr 1 0 <>
+ BrunUsr 0 0 <>
+ BrunUsr 1 0 <>
+ CrunUsr 0 0 <>
+ CrunUsr 1 0 <>
+ SVCSID <>
+ GLFLAGS=1790
+ ADSFLGA { 243,63,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ACPUTYP ("Cortex-M3")
+ RVDEV ()
+ ADSTFLGA { 0,12,0,18,163,0,0,66,0,0,0,0,0,0,0,0,0,0,0,0 }
+ OCMADSOCM { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ OCMADSIRAM { 0,0,0,0,32,0,0,1,0 }
+ OCMADSIROM { 1,0,0,0,8,0,0,8,0 }
+ OCMADSXRAM { 0,0,0,0,0,0,0,0,0 }
+ OCR_RVCT { 1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,8,0,0,8,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,1,0,0,0,0,0,0,0,0,0,0 }
+ RV_STAVEC ()
+ ADSCCFLG { 4,32,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSCMISC ()
+ ADSCDEFN (STM32F10X_HD, USE_STDPERIPH_DRIVER)
+ ADSCUDEF ()
+ ADSCINCD (..\..\Libraries\CMSIS\Core\CM3;..\..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\..\Source\inc;..\..\Libraries\uIP-1.0\apps\webserver;..\..\Libraries\uIP-1.0\uip;..\..\Source\src\uIP_enc28j60)
+ ADSASFLG { 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSAMISC ()
+ ADSADEFN ()
+ ADSAUDEF ()
+ ADSAINCD ()
+ PropFld { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ IncBld=1
+ AlwaysBuild=0
+ GenAsm=0
+ AsmAsm=0
+ PublicsOnly=0
+ StopCode=3
+ CustArgs ()
+ LibMods ()
+ ADSLDFG { 17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSLDTA (0x8000000)
+ ADSLDDA (0x20000000)
+ ADSLDSC ()
+ ADSLDIB ()
+ ADSLDIC ()
+ ADSLDMC ()
+ ADSLDIF ()
+ ADSLDDW ()
+  OPTDL (SARMCM3.DLL)()(DARMSTM.DLL)(-pSTM32F103VE)(SARMCM3.DLL)()(TARMSTM.DLL)(-pSTM32F103VE)
+  OPTDBG 49146,7,()()()()()()()()()() (Segger\JL2CM3.dll)()()()
+ FLASH1 { 9,0,0,0,1,0,0,0,6,16,0,0,0,0,0,0,0,0,0,0 }
+ FLASH2 (Segger\JL2CM3.dll)
+ FLASH3 ("" ())
+ FLASH4 ()
+EndOpt
+

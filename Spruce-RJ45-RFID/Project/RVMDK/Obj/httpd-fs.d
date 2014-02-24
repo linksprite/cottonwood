@@ -1,0 +1,17 @@
+.\Obj\httpd-fs.o: ..\..\Libraries\uIP-1.0\apps\webserver\httpd-fs.c
+.\Obj\httpd-fs.o: ..\..\Libraries\uIP-1.0\apps\webserver\httpd.h
+.\Obj\httpd-fs.o: ..\..\Libraries\uIP-1.0\uip\psock.h
+.\Obj\httpd-fs.o: ..\..\Libraries\uIP-1.0\uip\uipopt.h
+.\Obj\httpd-fs.o: ..\..\Source\src\uIP_enc28j60\uip-conf.h
+.\Obj\httpd-fs.o: C:\Keil\ARM\RV31\INC\inttypes.h
+.\Obj\httpd-fs.o: C:\Keil\ARM\RV31\INC\stdint.h
+.\Obj\httpd-fs.o: ..\..\Source\inc\tcp_demo.h
+.\Obj\httpd-fs.o: ..\..\Libraries\uIP-1.0\uip\uipopt.h
+.\Obj\httpd-fs.o: ..\..\Libraries\uIP-1.0\uip\psock.h
+.\Obj\httpd-fs.o: ..\..\Libraries\uIP-1.0\uip\pt.h
+.\Obj\httpd-fs.o: ..\..\Libraries\uIP-1.0\uip\lc.h
+.\Obj\httpd-fs.o: ..\..\Libraries\uIP-1.0\uip\lc-switch.h
+.\Obj\httpd-fs.o: ..\..\Libraries\uIP-1.0\apps\webserver\httpd-fs.h
+.\Obj\httpd-fs.o: ..\..\Libraries\uIP-1.0\apps\webserver\httpd-fsdata.h
+.\Obj\httpd-fs.o: ..\..\Libraries\uIP-1.0\uip\uip.h
+.\Obj\httpd-fs.o: ..\..\Libraries\uIP-1.0\apps\webserver\httpd-fsdata.c

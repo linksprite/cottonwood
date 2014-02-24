@@ -1,0 +1,1437 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [.\Obj\STM32-FD-uIP.axf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image .\Obj\STM32-FD-uIP.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, RVCT4.0 [Build 524]: Last Updated: Mon Sep 05 10:44:33 2011
+<BR><P>
+<H3>Maximum Stack Usage =        160 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+main &rArr; UipPro &rArr; uip_process &rArr; tcp_server_appcall &rArr; httpd_appcall &rArr; handle_connection &rArr; handle_output &rArr; handle_script &rArr; send_part_of_file &rArr; psock_send &rArr; send_data &rArr; uip_send
+<P>
+<H3>
+Mutually Recursive functions
+</H3> <LI><a href="#[275d238]">ADC1_2_IRQHandler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[275d238]">ADC1_2_IRQHandler</a><BR>
+</UL>
+<P>
+<H3>
+Function Pointers
+</H3><UL>
+ <LI><a href="#[275d490]">Reset_Handler</a>
+ <LI><a href="#[2761798]">NMI_Handler</a>
+ <LI><a href="#[2761810]">HardFault_Handler</a>
+ <LI><a href="#[27617d4]">MemManage_Handler</a>
+ <LI><a href="#[2761888]">BusFault_Handler</a>
+ <LI><a href="#[276166c]">UsageFault_Handler</a>
+ <LI><a href="#[2761720]">SVC_Handler</a>
+ <LI><a href="#[276184c]">DebugMon_Handler</a>
+ <LI><a href="#[276175c]">PendSV_Handler</a>
+ <LI><a href="#[27616e4]">SysTick_Handler</a>
+ <LI><a href="#[275c464]">WWDG_IRQHandler</a>
+ <LI><a href="#[275cba8]">PVD_IRQHandler</a>
+ <LI><a href="#[275c9c8]">TAMPER_IRQHandler</a>
+ <LI><a href="#[275caf4]">RTC_IRQHandler</a>
+ <LI><a href="#[275cd10]">FLASH_IRQHandler</a>
+ <LI><a href="#[275cb6c]">RCC_IRQHandler</a>
+ <LI><a href="#[275ceb4]">EXTI0_IRQHandler</a>
+ <LI><a href="#[275ce3c]">EXTI1_IRQHandler</a>
+ <LI><a href="#[275ce00]">EXTI2_IRQHandler</a>
+ <LI><a href="#[275cdc4]">EXTI3_IRQHandler</a>
+ <LI><a href="#[275cd88]">EXTI4_IRQHandler</a>
+ <LI><a href="#[275d148]">DMA1_Channel1_IRQHandler</a>
+ <LI><a href="#[275d10c]">DMA1_Channel2_IRQHandler</a>
+ <LI><a href="#[275d0d0]">DMA1_Channel3_IRQHandler</a>
+ <LI><a href="#[275d094]">DMA1_Channel4_IRQHandler</a>
+ <LI><a href="#[275d058]">DMA1_Channel5_IRQHandler</a>
+ <LI><a href="#[275d01c]">DMA1_Channel6_IRQHandler</a>
+ <LI><a href="#[275cfe0]">DMA1_Channel7_IRQHandler</a>
+ <LI><a href="#[275d238]">ADC1_2_IRQHandler</a>
+ <LI><a href="#[275c4dc]">USB_HP_CAN1_TX_IRQHandler</a>
+ <LI><a href="#[275c4a0]">USB_LP_CAN1_RX0_IRQHandler</a>
+ <LI><a href="#[275d1c0]">CAN1_RX1_IRQHandler</a>
+ <LI><a href="#[275d184]">CAN1_SCE_IRQHandler</a>
+ <LI><a href="#[275cd4c]">EXTI9_5_IRQHandler</a>
+ <LI><a href="#[275c98c]">TIM1_BRK_IRQHandler</a>
+ <LI><a href="#[275c8d8]">TIM1_UP_IRQHandler</a>
+ <LI><a href="#[275c914]">TIM1_TRG_COM_IRQHandler</a>
+ <LI><a href="#[275c950]">TIM1_CC_IRQHandler</a>
+ <LI><a href="#[275c89c]">TIM2_IRQHandler</a>
+ <LI><a href="#[275c860]">TIM3_IRQHandler</a>
+ <LI><a href="#[275c824]">TIM4_IRQHandler</a>
+ <LI><a href="#[275cc5c]">I2C1_EV_IRQHandler</a>
+ <LI><a href="#[275cc98]">I2C1_ER_IRQHandler</a>
+ <LI><a href="#[275cbe4]">I2C2_EV_IRQHandler</a>
+ <LI><a href="#[275cc20]">I2C2_ER_IRQHandler</a>
+ <LI><a href="#[275ca7c]">SPI1_IRQHandler</a>
+ <LI><a href="#[275ca40]">SPI2_IRQHandler</a>
+ <LI><a href="#[275c5cc]">USART1_IRQHandler</a>
+ <LI><a href="#[27616a8]">USART2_IRQHandler</a>
+ <LI><a href="#[275c554]">USART3_IRQHandler</a>
+ <LI><a href="#[275ce78]">EXTI15_10_IRQHandler</a>
+ <LI><a href="#[275cb30]">RTCAlarm_IRQHandler</a>
+ <LI><a href="#[275c518]">USBWakeUp_IRQHandler</a>
+ <LI><a href="#[275c734]">TIM8_BRK_IRQHandler</a>
+ <LI><a href="#[275c680]">TIM8_UP_IRQHandler</a>
+ <LI><a href="#[275c6bc]">TIM8_TRG_COM_IRQHandler</a>
+ <LI><a href="#[275c6f8]">TIM8_CC_IRQHandler</a>
+ <LI><a href="#[275d1fc]">ADC3_IRQHandler</a>
+ <LI><a href="#[275ccd4]">FSMC_IRQHandler</a>
+ <LI><a href="#[275cab8]">SDIO_IRQHandler</a>
+ <LI><a href="#[275c7e8]">TIM5_IRQHandler</a>
+ <LI><a href="#[275ca04]">SPI3_IRQHandler</a>
+ <LI><a href="#[275c644]">UART4_IRQHandler</a>
+ <LI><a href="#[275c608]">UART5_IRQHandler</a>
+ <LI><a href="#[275c7ac]">TIM6_IRQHandler</a>
+ <LI><a href="#[275c770]">TIM7_IRQHandler</a>
+ <LI><a href="#[275cfa4]">DMA2_Channel1_IRQHandler</a>
+ <LI><a href="#[275cf68]">DMA2_Channel2_IRQHandler</a>
+ <LI><a href="#[275cf2c]">DMA2_Channel3_IRQHandler</a>
+ <LI><a href="#[275cef0]">DMA2_Channel4_5_IRQHandler</a>
+ <LI><a href="#[27632c8]">main</a>
+ <LI><a href="#[275d4cc]">SystemInit_ExtMemCtl</a>
+ <LI><a href="#[3566458]">__main</a>
+ <LI><a href="#[2760d48]">fputc</a>
+ <LI><a href="#[3665ca4]">_snputc</a>
+ <LI><a href="#[356e3d8]">generate_file_stats</a>
+ <LI><a href="#[356e2e8]">nullfunction</a>
+ <LI><a href="#[356e39c]">generate_net_stats</a>
+ <LI><a href="#[3570124]">generate_part_of_file</a>
+ <LI><a href="#[356e360]">generate_tcp_stats</a>
+ <LI><a href="#[356e414]">file_stats</a>
+ <LI><a href="#[356e2ac]">tcp_stats</a>
+ <LI><a href="#[356e324]">net_stats</a>
+</UL>
+<P>
+<H3>
+Global Symbols
+</H3>
+<P><STRONG><a name="[3566458]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(.text)
+</UL>
+<P><STRONG><a name="[3663850]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+
+<P><STRONG><a name="[3663724]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Calls]<UL><LI><a href="#[3662c5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+</UL>
+
+<P><STRONG><a name="[36636e8]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Called By]<UL><LI><a href="#[3662c5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+</UL>
+
+<P><STRONG><a name="[36635f8]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7.o(.ARM.Collect$$$$00000007))
+
+<P><STRONG><a name="[275d4cc]"></a>SystemInit_ExtMemCtl</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(.text)
+</UL>
+<P><STRONG><a name="[275d490]"></a>Reset_Handler</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275d238]"></a>ADC1_2_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[275d238]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC1_2_IRQHandler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[275d238]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC1_2_IRQHandler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275d1fc]"></a>ADC3_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275d1c0]"></a>CAN1_RX1_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275d184]"></a>CAN1_SCE_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275d148]"></a>DMA1_Channel1_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275d10c]"></a>DMA1_Channel2_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275d0d0]"></a>DMA1_Channel3_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275d094]"></a>DMA1_Channel4_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275d058]"></a>DMA1_Channel5_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275d01c]"></a>DMA1_Channel6_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275cfe0]"></a>DMA1_Channel7_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275cfa4]"></a>DMA2_Channel1_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275cf68]"></a>DMA2_Channel2_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275cf2c]"></a>DMA2_Channel3_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275cef0]"></a>DMA2_Channel4_5_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275ceb4]"></a>EXTI0_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275ce78]"></a>EXTI15_10_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275ce3c]"></a>EXTI1_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275ce00]"></a>EXTI2_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275cdc4]"></a>EXTI3_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275cd88]"></a>EXTI4_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275cd4c]"></a>EXTI9_5_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275cd10]"></a>FLASH_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275ccd4]"></a>FSMC_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275cc98]"></a>I2C1_ER_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275cc5c]"></a>I2C1_EV_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275cc20]"></a>I2C2_ER_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275cbe4]"></a>I2C2_EV_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275cba8]"></a>PVD_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275cb6c]"></a>RCC_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275cb30]"></a>RTCAlarm_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275caf4]"></a>RTC_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275cab8]"></a>SDIO_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275ca7c]"></a>SPI1_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275ca40]"></a>SPI2_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275ca04]"></a>SPI3_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275c9c8]"></a>TAMPER_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275c98c]"></a>TIM1_BRK_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275c950]"></a>TIM1_CC_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275c914]"></a>TIM1_TRG_COM_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275c8d8]"></a>TIM1_UP_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275c89c]"></a>TIM2_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275c860]"></a>TIM3_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275c824]"></a>TIM4_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275c7e8]"></a>TIM5_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275c7ac]"></a>TIM6_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275c770]"></a>TIM7_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275c734]"></a>TIM8_BRK_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275c6f8]"></a>TIM8_CC_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275c6bc]"></a>TIM8_TRG_COM_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275c680]"></a>TIM8_UP_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275c644]"></a>UART4_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275c608]"></a>UART5_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275c5cc]"></a>USART1_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275c554]"></a>USART3_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275c518]"></a>USBWakeUp_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275c4dc]"></a>USB_HP_CAN1_TX_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275c4a0]"></a>USB_LP_CAN1_RX0_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[275c464]"></a>WWDG_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[3566188]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[2762ecc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_arp_out
+<LI><a href="#[2762f08]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_arp_arpin
+<LI><a href="#[351b2c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_arp_update
+<LI><a href="#[351e8ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_send
+<LI><a href="#[3567bc8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TCP_Cmd
+<LI><a href="#[3570124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;generate_part_of_file
+</UL>
+
+<P><STRONG><a name="[356614c]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+
+<P><STRONG><a name="[3566110]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+
+<P><STRONG><a name="[3566020]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[2762ecc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_arp_out
+<LI><a href="#[3565eb8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
+<LI><a href="#[3565f6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
+</UL>
+
+<P><STRONG><a name="[3565fe4]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+
+<P><STRONG><a name="[3565fa8]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+
+<P><STRONG><a name="[3565f6c]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[3566020]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2762ecc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_arp_out
+</UL>
+
+<P><STRONG><a name="[3565f30]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+
+<P><STRONG><a name="[3565ef4]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+
+<P><STRONG><a name="[3565eb8]"></a>_memset$wrapper</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[3566020]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
+</UL>
+
+<P><STRONG><a name="[3565dc8]"></a>strncpy</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, strncpy.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = strncpy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[35700ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_input
+</UL>
+
+<P><STRONG><a name="[3565cd8]"></a>strchr</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, strchr.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[356e414]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;file_stats
+<LI><a href="#[356fff8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;next_scriptstate
+<LI><a href="#[3570034]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_script
+<LI><a href="#[3570070]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_output
+</UL>
+
+<P><STRONG><a name="[3565be8]"></a>strlen</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, strlen.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[3567ed4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;connected
+<LI><a href="#[356f4b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;httpd_cgi
+<LI><a href="#[356ff80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_headers
+</UL>
+
+<P><STRONG><a name="[3565af8]"></a>memcmp</STRONG> (Thumb, 26 bytes, Stack size 12 bytes, memcmp.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = memcmp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3567e98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;newdata
+</UL>
+
+<P><STRONG><a name="[3565a08]"></a>strcpy</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, strcpy.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[3570070]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_output
+</UL>
+
+<P><STRONG><a name="[3565918]"></a>strncmp</STRONG> (Thumb, 30 bytes, Stack size 12 bytes, strncmp.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = strncmp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[356f4b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;httpd_cgi
+<LI><a href="#[356ff80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_headers
+<LI><a href="#[3570070]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_output
+<LI><a href="#[35700ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_input
+</UL>
+
+<P><STRONG><a name="[3565828]"></a>strrchr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, strrchr.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[356ff80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_headers
+</UL>
+
+<P><STRONG><a name="[36632ec]"></a>__aeabi_uldivmod</STRONG> (Thumb, 90 bytes, Stack size 32 bytes, uldiv.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[3662914]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
+<LI><a href="#[3662a40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3665d58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+</UL>
+
+<P><STRONG><a name="[3662c5c]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[36636e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3663724]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
+</UL>
+
+<P><STRONG><a name="[3662c20]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+
+<P><STRONG><a name="[3662a40]"></a>__aeabi_llsl</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[36632ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
+</UL>
+
+<P><STRONG><a name="[3662a04]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
+
+<P><STRONG><a name="[3662914]"></a>__aeabi_llsr</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[36632ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
+</UL>
+
+<P><STRONG><a name="[36628d8]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
+
+<P><STRONG><a name="[2761888]"></a>BusFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_it.o(i.BusFault_Handler))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[276184c]"></a>DebugMon_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f10x_it.o(i.DebugMon_Handler))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[27633b8]"></a>Delay</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, main.o(i.Delay))
+<BR><BR>[Called By]<UL><LI><a href="#[276337c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Configuration
+</UL>
+
+<P><STRONG><a name="[276337c]"></a>GPIO_Configuration</STRONG> (Thumb, 142 bytes, Stack size 8 bytes, main.o(i.GPIO_Configuration))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = GPIO_Configuration &rArr; GPIO_Init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[27631d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
+<LI><a href="#[2763214]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<LI><a href="#[2763250]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
+<LI><a href="#[276328c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
+<LI><a href="#[27633b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2766040]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_fd
+</UL>
+
+<P><STRONG><a name="[276328c]"></a>GPIO_Init</STRONG> (Thumb, 268 bytes, Stack size 20 bytes, stm32f10x_gpio.o(i.GPIO_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = GPIO_Init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[27630e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Configuration
+<LI><a href="#[276319c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_Init
+<LI><a href="#[276337c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Configuration
+</UL>
+
+<P><STRONG><a name="[2763250]"></a>GPIO_ResetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_gpio.o(i.GPIO_ResetBits))
+<BR><BR>[Called By]<UL><LI><a href="#[276337c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Configuration
+<LI><a href="#[35700ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_input
+</UL>
+
+<P><STRONG><a name="[2763214]"></a>GPIO_SetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_gpio.o(i.GPIO_SetBits))
+<BR><BR>[Called By]<UL><LI><a href="#[276319c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_Init
+<LI><a href="#[276337c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Configuration
+<LI><a href="#[35700ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_input
+</UL>
+
+<P><STRONG><a name="[275fd94]"></a>GetRunTime</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, systick.o(i.GetRunTime))
+<BR><BR>[Called By]<UL><LI><a href="#[351e0b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clock_time
+</UL>
+
+<P><STRONG><a name="[2761810]"></a>HardFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_it.o(i.HardFault_Handler))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[2763340]"></a>InitNet</STRONG> (Thumb, 124 bytes, Stack size 8 bytes, main.o(i.InitNet))
+<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = InitNet &rArr; tapdev_init &rArr; etherdev_init &rArr; enc28j60Init &rArr; enc28j60PhyWrite &rArr; enc28j60Write &rArr; enc28j60SetBank &rArr; enc28j60WriteOp &rArr; SPI1_ReadWrite
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2762d28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_init
+<LI><a href="#[2763070]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tapdev_init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[27632c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[27617d4]"></a>MemManage_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_it.o(i.MemManage_Handler))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[2761798]"></a>NMI_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f10x_it.o(i.NMI_Handler))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[2760d0c]"></a>NVIC_Init</STRONG> (Thumb, 102 bytes, Stack size 16 bytes, misc.o(i.NVIC_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = NVIC_Init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[27630e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Configuration
+</UL>
+
+<P><STRONG><a name="[2760cd0]"></a>NVIC_PriorityGroupConfig</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, misc.o(i.NVIC_PriorityGroupConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[27630e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Configuration
+</UL>
+
+<P><STRONG><a name="[276175c]"></a>PendSV_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f10x_it.o(i.PendSV_Handler))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[2760c94]"></a>RCC_APB1PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd))
+<BR><BR>[Called By]<UL><LI><a href="#[27630e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Configuration
+</UL>
+
+<P><STRONG><a name="[27631d8]"></a>RCC_APB2PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd))
+<BR><BR>[Called By]<UL><LI><a href="#[27630e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Configuration
+<LI><a href="#[276319c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_Init
+<LI><a href="#[276337c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Configuration
+</UL>
+
+<P><STRONG><a name="[2759200]"></a>RCC_GetClocksFreq</STRONG> (Thumb, 194 bytes, Stack size 12 bytes, stm32f10x_rcc.o(i.RCC_GetClocksFreq))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = RCC_GetClocksFreq
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2760b68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
+</UL>
+
+<P><STRONG><a name="[276319c]"></a>SPI1_Init</STRONG> (Thumb, 146 bytes, Stack size 32 bytes, spi.o(i.SPI1_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = SPI1_Init &rArr; GPIO_Init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[275f650]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Init
+<LI><a href="#[275f740]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Cmd
+<LI><a href="#[27631d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
+<LI><a href="#[2763214]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<LI><a href="#[276328c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[27632c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[275f77c]"></a>SPI1_ReadWrite</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, spi.o(i.SPI1_ReadWrite))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SPI1_ReadWrite
+</UL>
+<BR>[Calls]<UL><LI><a href="#[275f68c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_SendData
+<LI><a href="#[275f6c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_ReceiveData
+<LI><a href="#[275f704]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_GetFlagStatus
+</UL>
+<BR>[Called By]<UL><LI><a href="#[356b1ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60WriteOp
+<LI><a href="#[356b228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60WriteBuffer
+<LI><a href="#[356b2dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60ReadOp
+<LI><a href="#[356b318]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60ReadBuffer
+</UL>
+
+<P><STRONG><a name="[275f740]"></a>SPI_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_spi.o(i.SPI_Cmd))
+<BR><BR>[Called By]<UL><LI><a href="#[276319c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_Init
+</UL>
+
+<P><STRONG><a name="[275f704]"></a>SPI_I2S_GetFlagStatus</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_spi.o(i.SPI_I2S_GetFlagStatus))
+<BR><BR>[Called By]<UL><LI><a href="#[275f77c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_ReadWrite
+</UL>
+
+<P><STRONG><a name="[275f6c8]"></a>SPI_I2S_ReceiveData</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_spi.o(i.SPI_I2S_ReceiveData))
+<BR><BR>[Called By]<UL><LI><a href="#[275f77c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_ReadWrite
+</UL>
+
+<P><STRONG><a name="[275f68c]"></a>SPI_I2S_SendData</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_spi.o(i.SPI_I2S_SendData))
+<BR><BR>[Called By]<UL><LI><a href="#[275f77c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_ReadWrite
+</UL>
+
+<P><STRONG><a name="[275f650]"></a>SPI_Init</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, stm32f10x_spi.o(i.SPI_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SPI_Init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[276319c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_Init
+</UL>
+
+<P><STRONG><a name="[2761720]"></a>SVC_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f10x_it.o(i.SVC_Handler))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[27616e4]"></a>SysTick_Handler</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, stm32f10x_it.o(i.SysTick_Handler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = SysTick_Handler &rArr; SysTick_ISR
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2761630]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_ISR
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[2761630]"></a>SysTick_ISR</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, systick.o(i.SysTick_ISR))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SysTick_ISR
+</UL>
+<BR>[Calls]<UL><LI><a href="#[27600a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SoftTimerDec
+</UL>
+<BR>[Called By]<UL><LI><a href="#[27616e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
+</UL>
+
+<P><STRONG><a name="[2763124]"></a>SystemInit</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, system_stm32f10x.o(i.SystemInit))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = SystemInit &rArr; SetSysClock
+</UL>
+<BR>[Calls]<UL><LI><a href="#[35201fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2766040]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_fd
+</UL>
+
+<P><STRONG><a name="[3567bc8]"></a>TCP_Cmd</STRONG> (Thumb, 88 bytes, Stack size 64 bytes, tcp_demo.o(i.TCP_Cmd))
+<BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = TCP_Cmd &rArr; cmd_delay
+</UL>
+<BR>[Calls]<UL><LI><a href="#[275d940]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_delay
+<LI><a href="#[2760b2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_SendData
+<LI><a href="#[2760be0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetFlagStatus
+<LI><a href="#[3566188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3567e98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;newdata
+</UL>
+
+<P><STRONG><a name="[27616a8]"></a>USART2_IRQHandler</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, stm32f10x_it.o(i.USART2_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = USART2_IRQHandler &rArr; USART_GetITStatus
+</UL>
+<BR>[Calls]<UL><LI><a href="#[276157c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ReceiveData
+<LI><a href="#[27615b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetITStatus
+<LI><a href="#[27615f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ClearITPendingBit
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[2760c58]"></a>USART_ClearFlag</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_usart.o(i.USART_ClearFlag))
+<BR><BR>[Called By]<UL><LI><a href="#[27630e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Configuration
+</UL>
+
+<P><STRONG><a name="[27615f4]"></a>USART_ClearITPendingBit</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, stm32f10x_usart.o(i.USART_ClearITPendingBit))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = USART_ClearITPendingBit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[27616a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART2_IRQHandler
+</UL>
+
+<P><STRONG><a name="[2760c1c]"></a>USART_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_usart.o(i.USART_Cmd))
+<BR><BR>[Called By]<UL><LI><a href="#[27630e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Configuration
+</UL>
+
+<P><STRONG><a name="[27630e8]"></a>USART_Configuration</STRONG> (Thumb, 256 bytes, Stack size 32 bytes, usart_printf.o(i.USART_Configuration))
+<BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = USART_Configuration &rArr; USART_Init &rArr; RCC_GetClocksFreq
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2760b68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
+<LI><a href="#[2760ba4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ITConfig
+<LI><a href="#[2760c1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Cmd
+<LI><a href="#[2760c58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ClearFlag
+<LI><a href="#[2760c94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1PeriphClockCmd
+<LI><a href="#[2760cd0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
+<LI><a href="#[2760d0c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
+<LI><a href="#[27631d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
+<LI><a href="#[276328c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2766040]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_fd
+</UL>
+
+<P><STRONG><a name="[2760be0]"></a>USART_GetFlagStatus</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_usart.o(i.USART_GetFlagStatus))
+<BR><BR>[Called By]<UL><LI><a href="#[2760d48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
+<LI><a href="#[3567bc8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TCP_Cmd
+</UL>
+
+<P><STRONG><a name="[27615b8]"></a>USART_GetITStatus</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, stm32f10x_usart.o(i.USART_GetITStatus))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = USART_GetITStatus
+</UL>
+<BR>[Called By]<UL><LI><a href="#[27616a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART2_IRQHandler
+</UL>
+
+<P><STRONG><a name="[2760ba4]"></a>USART_ITConfig</STRONG> (Thumb, 72 bytes, Stack size 20 bytes, stm32f10x_usart.o(i.USART_ITConfig))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = USART_ITConfig
+</UL>
+<BR>[Called By]<UL><LI><a href="#[27630e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Configuration
+</UL>
+
+<P><STRONG><a name="[2760b68]"></a>USART_Init</STRONG> (Thumb, 156 bytes, Stack size 56 bytes, stm32f10x_usart.o(i.USART_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = USART_Init &rArr; RCC_GetClocksFreq
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2759200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetClocksFreq
+</UL>
+<BR>[Called By]<UL><LI><a href="#[27630e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Configuration
+</UL>
+
+<P><STRONG><a name="[276157c]"></a>USART_ReceiveData</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f10x_usart.o(i.USART_ReceiveData))
+<BR><BR>[Called By]<UL><LI><a href="#[27616a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART2_IRQHandler
+</UL>
+
+<P><STRONG><a name="[2760b2c]"></a>USART_SendData</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_usart.o(i.USART_SendData))
+<BR><BR>[Called By]<UL><LI><a href="#[2760d48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
+<LI><a href="#[3567bc8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TCP_Cmd
+</UL>
+
+<P><STRONG><a name="[2763304]"></a>UipPro</STRONG> (Thumb, 220 bytes, Stack size 8 bytes, main.o(i.UipPro))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = UipPro &rArr; uip_process &rArr; tcp_server_appcall &rArr; httpd_appcall &rArr; handle_connection &rArr; handle_output &rArr; handle_script &rArr; send_part_of_file &rArr; psock_send &rArr; send_data &rArr; uip_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2762c38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_process
+<LI><a href="#[2762e90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_arp_timer
+<LI><a href="#[2762ecc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_arp_out
+<LI><a href="#[2762f08]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_arp_arpin
+<LI><a href="#[2762f44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_set
+<LI><a href="#[2762f80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_reset
+<LI><a href="#[2762fbc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_expired
+<LI><a href="#[2762ff8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tapdev_send
+<LI><a href="#[2763034]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tapdev_read
+<LI><a href="#[27630ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;htons
+</UL>
+<BR>[Called By]<UL><LI><a href="#[27632c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[276166c]"></a>UsageFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_it.o(i.UsageFault_Handler))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
+<P><STRONG><a name="[3665b78]"></a>__0printf$8</STRONG> (Thumb, 22 bytes, Stack size 24 bytes, printf8.o(i.__0printf$8), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[3665d58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+</UL>
+
+<P><STRONG><a name="[3665b3c]"></a>__1printf$8</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf8.o(i.__0printf$8), UNUSED)
+
+<P><STRONG><a name="[3665b00]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf8.o(i.__0printf$8))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[351bd8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_log
+</UL>
+
+<P><STRONG><a name="[3665ac4]"></a>__0snprintf$8</STRONG> (Thumb, 36 bytes, Stack size 32 bytes, printf8.o(i.__0snprintf$8), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[3665d58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+</UL>
+
+<P><STRONG><a name="[3665a88]"></a>__1snprintf$8</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, printf8.o(i.__0snprintf$8), UNUSED)
+
+<P><STRONG><a name="[3665a4c]"></a>__2snprintf</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, printf8.o(i.__0snprintf$8))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __2snprintf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[356e360]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;generate_tcp_stats
+<LI><a href="#[356e39c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;generate_net_stats
+<LI><a href="#[356e3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;generate_file_stats
+</UL>
+
+<P><STRONG><a name="[3662554]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+
+<P><STRONG><a name="[3662518]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+
+<P><STRONG><a name="[36624dc]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+
+<P><STRONG><a name="[351e0b4]"></a>clock_time</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, clock-arch.o(i.clock_time))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = clock_time
+</UL>
+<BR>[Calls]<UL><LI><a href="#[275fd94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetRunTime
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2762f44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_set
+<LI><a href="#[2762fbc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_expired
+</UL>
+
+<P><STRONG><a name="[275d940]"></a>cmd_delay</STRONG> (Thumb, 18 bytes, Stack size 4 bytes, rfid_cmd.o(i.cmd_delay))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = cmd_delay
+</UL>
+<BR>[Calls]<UL><LI><a href="#[275d904]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3567bc8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TCP_Cmd
+</UL>
+
+<P><STRONG><a name="[275d904]"></a>delay_</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, rfid_cmd.o(i.delay_))
+<BR><BR>[Called By]<UL><LI><a href="#[275d940]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_delay
+</UL>
+
+<P><STRONG><a name="[356b444]"></a>enc28j60Init</STRONG> (Thumb, 316 bytes, Stack size 16 bytes, enc28j60.o(i.enc28j60Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = enc28j60Init &rArr; enc28j60PhyWrite &rArr; enc28j60Write &rArr; enc28j60SetBank &rArr; enc28j60WriteOp &rArr; SPI1_ReadWrite
+</UL>
+<BR>[Calls]<UL><LI><a href="#[356b1ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60WriteOp
+<LI><a href="#[356b264]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60Write
+<LI><a href="#[356b2a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60SetBank
+<LI><a href="#[356b354]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60Read
+<LI><a href="#[356b390]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60PhyWrite
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3567088]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;etherdev_init
+</UL>
+
+<P><STRONG><a name="[356b408]"></a>enc28j60PacketReceive</STRONG> (Thumb, 192 bytes, Stack size 24 bytes, enc28j60.o(i.enc28j60PacketReceive))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = enc28j60PacketReceive &rArr; enc28j60Write &rArr; enc28j60SetBank &rArr; enc28j60WriteOp &rArr; SPI1_ReadWrite
+</UL>
+<BR>[Calls]<UL><LI><a href="#[356b1ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60WriteOp
+<LI><a href="#[356b264]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60Write
+<LI><a href="#[356b2dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60ReadOp
+<LI><a href="#[356b318]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60ReadBuffer
+<LI><a href="#[356b354]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60Read
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2763034]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tapdev_read
+</UL>
+
+<P><STRONG><a name="[356b3cc]"></a>enc28j60PacketSend</STRONG> (Thumb, 102 bytes, Stack size 16 bytes, enc28j60.o(i.enc28j60PacketSend))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = enc28j60PacketSend &rArr; enc28j60Write &rArr; enc28j60SetBank &rArr; enc28j60WriteOp &rArr; SPI1_ReadWrite
+</UL>
+<BR>[Calls]<UL><LI><a href="#[356b1ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60WriteOp
+<LI><a href="#[356b228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60WriteBuffer
+<LI><a href="#[356b264]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60Write
+<LI><a href="#[356b354]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60Read
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2762ff8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tapdev_send
+</UL>
+
+<P><STRONG><a name="[356b390]"></a>enc28j60PhyWrite</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, enc28j60.o(i.enc28j60PhyWrite))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = enc28j60PhyWrite &rArr; enc28j60Write &rArr; enc28j60SetBank &rArr; enc28j60WriteOp &rArr; SPI1_ReadWrite
+</UL>
+<BR>[Calls]<UL><LI><a href="#[356b264]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60Write
+<LI><a href="#[356b354]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60Read
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3567088]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;etherdev_init
+<LI><a href="#[356b444]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60Init
+</UL>
+
+<P><STRONG><a name="[356b354]"></a>enc28j60Read</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, enc28j60.o(i.enc28j60Read))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = enc28j60Read &rArr; enc28j60SetBank &rArr; enc28j60WriteOp &rArr; SPI1_ReadWrite
+</UL>
+<BR>[Calls]<UL><LI><a href="#[356b2a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60SetBank
+<LI><a href="#[356b2dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60ReadOp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[356b390]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60PhyWrite
+<LI><a href="#[356b3cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60PacketSend
+<LI><a href="#[356b408]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60PacketReceive
+<LI><a href="#[356b444]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60Init
+</UL>
+
+<P><STRONG><a name="[356b318]"></a>enc28j60ReadBuffer</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, enc28j60.o(i.enc28j60ReadBuffer))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = enc28j60ReadBuffer &rArr; SPI1_ReadWrite
+</UL>
+<BR>[Calls]<UL><LI><a href="#[275f77c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_ReadWrite
+</UL>
+<BR>[Called By]<UL><LI><a href="#[356b408]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60PacketReceive
+</UL>
+
+<P><STRONG><a name="[356b2dc]"></a>enc28j60ReadOp</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, enc28j60.o(i.enc28j60ReadOp))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = enc28j60ReadOp &rArr; SPI1_ReadWrite
+</UL>
+<BR>[Calls]<UL><LI><a href="#[275f77c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_ReadWrite
+</UL>
+<BR>[Called By]<UL><LI><a href="#[356b354]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60Read
+<LI><a href="#[356b408]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60PacketReceive
+</UL>
+
+<P><STRONG><a name="[356b2a0]"></a>enc28j60SetBank</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, enc28j60.o(i.enc28j60SetBank))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = enc28j60SetBank &rArr; enc28j60WriteOp &rArr; SPI1_ReadWrite
+</UL>
+<BR>[Calls]<UL><LI><a href="#[356b1ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60WriteOp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[356b264]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60Write
+<LI><a href="#[356b354]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60Read
+<LI><a href="#[356b444]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60Init
+</UL>
+
+<P><STRONG><a name="[356b264]"></a>enc28j60Write</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, enc28j60.o(i.enc28j60Write))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = enc28j60Write &rArr; enc28j60SetBank &rArr; enc28j60WriteOp &rArr; SPI1_ReadWrite
+</UL>
+<BR>[Calls]<UL><LI><a href="#[356b1ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60WriteOp
+<LI><a href="#[356b2a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60SetBank
+</UL>
+<BR>[Called By]<UL><LI><a href="#[356b1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60clkout
+<LI><a href="#[356b390]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60PhyWrite
+<LI><a href="#[356b3cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60PacketSend
+<LI><a href="#[356b408]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60PacketReceive
+<LI><a href="#[356b444]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60Init
+</UL>
+
+<P><STRONG><a name="[356b228]"></a>enc28j60WriteBuffer</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, enc28j60.o(i.enc28j60WriteBuffer))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = enc28j60WriteBuffer &rArr; SPI1_ReadWrite
+</UL>
+<BR>[Calls]<UL><LI><a href="#[275f77c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_ReadWrite
+</UL>
+<BR>[Called By]<UL><LI><a href="#[356b3cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60PacketSend
+</UL>
+
+<P><STRONG><a name="[356b1ec]"></a>enc28j60WriteOp</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, enc28j60.o(i.enc28j60WriteOp))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = enc28j60WriteOp &rArr; SPI1_ReadWrite
+</UL>
+<BR>[Calls]<UL><LI><a href="#[275f77c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_ReadWrite
+</UL>
+<BR>[Called By]<UL><LI><a href="#[356b264]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60Write
+<LI><a href="#[356b2a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60SetBank
+<LI><a href="#[356b3cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60PacketSend
+<LI><a href="#[356b408]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60PacketReceive
+<LI><a href="#[356b444]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60Init
+</UL>
+
+<P><STRONG><a name="[356b1b0]"></a>enc28j60clkout</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, enc28j60.o(i.enc28j60clkout))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = enc28j60clkout &rArr; enc28j60Write &rArr; enc28j60SetBank &rArr; enc28j60WriteOp &rArr; SPI1_ReadWrite
+</UL>
+<BR>[Calls]<UL><LI><a href="#[356b264]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60Write
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3567088]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;etherdev_init
+</UL>
+
+<P><STRONG><a name="[3567088]"></a>etherdev_init</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, emc28j60_uip.o(i.etherdev_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = etherdev_init &rArr; enc28j60Init &rArr; enc28j60PhyWrite &rArr; enc28j60Write &rArr; enc28j60SetBank &rArr; enc28j60WriteOp &rArr; SPI1_ReadWrite
+</UL>
+<BR>[Calls]<UL><LI><a href="#[35690a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_ip_arp_udp_tcp
+<LI><a href="#[356b1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60clkout
+<LI><a href="#[356b390]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60PhyWrite
+<LI><a href="#[356b444]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60Init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2763070]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tapdev_init
+</UL>
+
+<P><STRONG><a name="[2760d48]"></a>fputc</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, usart_printf.o(i.fputc))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = fputc
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2760b2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_SendData
+<LI><a href="#[2760be0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetFlagStatus
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> printf8.o(i.__0printf$8)
+</UL>
+<P><STRONG><a name="[27630ac]"></a>htons</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, uip.o(i.htons))
+<BR><BR>[Called By]<UL><LI><a href="#[2763304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UipPro
+<LI><a href="#[351bef4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_ipchksum
+<LI><a href="#[351c638]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;upper_layer_chksum
+<LI><a href="#[356e360]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;generate_tcp_stats
+</UL>
+
+<P><STRONG><a name="[356f968]"></a>httpd_appcall</STRONG> (Thumb, 148 bytes, Stack size 8 bytes, httpd.o(i.httpd_appcall))
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = httpd_appcall &rArr; handle_connection &rArr; handle_output &rArr; handle_script &rArr; send_part_of_file &rArr; psock_send &rArr; send_data &rArr; uip_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[351ea8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;psock_init
+<LI><a href="#[35700e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_connection
+</UL>
+<BR>[Called By]<UL><LI><a href="#[351bdc8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tcp_server_appcall
+</UL>
+
+<P><STRONG><a name="[356f4b8]"></a>httpd_cgi</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, httpd-cgi.o(i.httpd_cgi))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = httpd_cgi &rArr; strncmp
+</UL>
+<BR>[Calls]<UL><LI><a href="#[3565918]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
+<LI><a href="#[3565be8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3570034]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_script
+</UL>
+
+<P><STRONG><a name="[356e090]"></a>httpd_fs_count</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, httpd-fs.o(i.httpd_fs_count))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = httpd_fs_count &rArr; httpd_fs_strcmp
+</UL>
+<BR>[Calls]<UL><LI><a href="#[356d67c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;httpd_fs_strcmp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[356e3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;generate_file_stats
+</UL>
+
+<P><STRONG><a name="[356f47c]"></a>httpd_fs_open</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, httpd-fs.o(i.httpd_fs_open))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = httpd_fs_open &rArr; httpd_fs_strcmp
+</UL>
+<BR>[Calls]<UL><LI><a href="#[356d67c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;httpd_fs_strcmp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3570034]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_script
+<LI><a href="#[3570070]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_output
+</UL>
+
+<P><STRONG><a name="[35690a4]"></a>init_ip_arp_udp_tcp</STRONG> (Thumb, 48 bytes, Stack size 12 bytes, ip_arp_udp_tcp.o(i.init_ip_arp_udp_tcp))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = init_ip_arp_udp_tcp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3567088]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;etherdev_init
+</UL>
+
+<P><STRONG><a name="[27632c8]"></a>main</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, main.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = main &rArr; UipPro &rArr; uip_process &rArr; tcp_server_appcall &rArr; httpd_appcall &rArr; handle_connection &rArr; handle_output &rArr; handle_script &rArr; send_part_of_file &rArr; psock_send &rArr; send_data &rArr; uip_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2762cb0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_listen
+<LI><a href="#[276319c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_Init
+<LI><a href="#[2763304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UipPro
+<LI><a href="#[2763340]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitNet
+<LI><a href="#[2766040]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_fd
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> entry7.o(.ARM.Collect$$$$00000007)
+</UL>
+<P><STRONG><a name="[351eb04]"></a>psock_datalen</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, psock.o(i.psock_datalen))
+<BR><BR>[Called By]<UL><LI><a href="#[351e9d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;psock_readto
+<LI><a href="#[35700ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_input
+</UL>
+
+<P><STRONG><a name="[351eac8]"></a>psock_generator_send</STRONG> (Thumb, 130 bytes, Stack size 24 bytes, psock.o(i.psock_generator_send))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = psock_generator_send &rArr; send_data &rArr; uip_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[351ed20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_data
+<LI><a href="#[351ed5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;data_acked
+</UL>
+<BR>[Called By]<UL><LI><a href="#[356e2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tcp_stats
+<LI><a href="#[356e324]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;net_stats
+<LI><a href="#[356e414]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;file_stats
+<LI><a href="#[356ffbc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_file
+</UL>
+
+<P><STRONG><a name="[351ea8c]"></a>psock_init</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, psock.o(i.psock_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = psock_init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[351ed98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buf_setup
+</UL>
+<BR>[Called By]<UL><LI><a href="#[356f968]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;httpd_appcall
+</UL>
+
+<P><STRONG><a name="[351ea50]"></a>psock_newdata</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, psock.o(i.psock_newdata))
+<BR><BR>[Called By]<UL><LI><a href="#[351e9d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;psock_readto
+</UL>
+
+<P><STRONG><a name="[351e9d8]"></a>psock_readto</STRONG> (Thumb, 140 bytes, Stack size 16 bytes, psock.o(i.psock_readto))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = psock_readto &rArr; buf_bufto
+</UL>
+<BR>[Calls]<UL><LI><a href="#[351ea50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;psock_newdata
+<LI><a href="#[351eb04]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;psock_datalen
+<LI><a href="#[351ed98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buf_setup
+<LI><a href="#[351edd4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buf_bufto
+</UL>
+<BR>[Called By]<UL><LI><a href="#[35700ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_input
+</UL>
+
+<P><STRONG><a name="[351e99c]"></a>psock_send</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, psock.o(i.psock_send))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = psock_send &rArr; send_data &rArr; uip_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[351ed20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_data
+<LI><a href="#[351ed5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;data_acked
+</UL>
+<BR>[Called By]<UL><LI><a href="#[356ff44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_part_of_file
+<LI><a href="#[356ff80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_headers
+</UL>
+
+<P><STRONG><a name="[2763070]"></a>tapdev_init</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, tapdev.o(i.tapdev_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = tapdev_init &rArr; etherdev_init &rArr; enc28j60Init &rArr; enc28j60PhyWrite &rArr; enc28j60Write &rArr; enc28j60SetBank &rArr; enc28j60WriteOp &rArr; SPI1_ReadWrite
+</UL>
+<BR>[Calls]<UL><LI><a href="#[3567088]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;etherdev_init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2763340]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitNet
+</UL>
+
+<P><STRONG><a name="[2763034]"></a>tapdev_read</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, tapdev.o(i.tapdev_read))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = tapdev_read &rArr; enc28j60PacketReceive &rArr; enc28j60Write &rArr; enc28j60SetBank &rArr; enc28j60WriteOp &rArr; SPI1_ReadWrite
+</UL>
+<BR>[Calls]<UL><LI><a href="#[356b408]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60PacketReceive
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2763304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UipPro
+</UL>
+
+<P><STRONG><a name="[2762ff8]"></a>tapdev_send</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, tapdev.o(i.tapdev_send))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = tapdev_send &rArr; enc28j60PacketSend &rArr; enc28j60Write &rArr; enc28j60SetBank &rArr; enc28j60WriteOp &rArr; SPI1_ReadWrite
+</UL>
+<BR>[Calls]<UL><LI><a href="#[356b3cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enc28j60PacketSend
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2763304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UipPro
+</UL>
+
+<P><STRONG><a name="[3567b8c]"></a>tcp_demo_appcall</STRONG> (Thumb, 142 bytes, Stack size 8 bytes, tcp_demo.o(i.tcp_demo_appcall))
+<BR><BR>[Stack]<UL><LI>Max Depth = 84<LI>Call Chain = tcp_demo_appcall &rArr; newdata &rArr; TCP_Cmd &rArr; cmd_delay
+</UL>
+<BR>[Calls]<UL><LI><a href="#[3567e20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timedout
+<LI><a href="#[3567e5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;senddata
+<LI><a href="#[3567e98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;newdata
+<LI><a href="#[3567ed4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;connected
+<LI><a href="#[3567f10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;closed
+<LI><a href="#[3567f4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;acked
+<LI><a href="#[3567f88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aborted
+</UL>
+<BR>[Called By]<UL><LI><a href="#[351bdc8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tcp_server_appcall
+</UL>
+
+<P><STRONG><a name="[351bdc8]"></a>tcp_server_appcall</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, emc28j60_uip.o(i.tcp_server_appcall))
+<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = tcp_server_appcall &rArr; httpd_appcall &rArr; handle_connection &rArr; handle_output &rArr; handle_script &rArr; send_part_of_file &rArr; psock_send &rArr; send_data &rArr; uip_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[3567b8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tcp_demo_appcall
+<LI><a href="#[356f968]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;httpd_appcall
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2762c38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_process
+</UL>
+
+<P><STRONG><a name="[2762fbc]"></a>timer_expired</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, timer.o(i.timer_expired))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = timer_expired &rArr; clock_time
+</UL>
+<BR>[Calls]<UL><LI><a href="#[351e0b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clock_time
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2763304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UipPro
+</UL>
+
+<P><STRONG><a name="[2762f80]"></a>timer_reset</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, timer.o(i.timer_reset))
+<BR><BR>[Called By]<UL><LI><a href="#[2763304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UipPro
+</UL>
+
+<P><STRONG><a name="[2762f44]"></a>timer_set</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, timer.o(i.timer_set))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = timer_set &rArr; clock_time
+</UL>
+<BR>[Calls]<UL><LI><a href="#[351e0b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clock_time
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2763304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UipPro
+</UL>
+
+<P><STRONG><a name="[351bfa8]"></a>uip_add32</STRONG> (Thumb, 106 bytes, Stack size 0 bytes, uip.o(i.uip_add32))
+<BR><BR>[Called By]<UL><LI><a href="#[2762c38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_process
+<LI><a href="#[351c674]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_add_rcv_nxt
+</UL>
+
+<P><STRONG><a name="[2762f08]"></a>uip_arp_arpin</STRONG> (Thumb, 218 bytes, Stack size 8 bytes, uip_arp.o(i.uip_arp_arpin))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = uip_arp_arpin &rArr; uip_arp_update
+</UL>
+<BR>[Calls]<UL><LI><a href="#[351b2c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_arp_update
+<LI><a href="#[3566188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2763304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UipPro
+</UL>
+
+<P><STRONG><a name="[2762ecc]"></a>uip_arp_out</STRONG> (Thumb, 376 bytes, Stack size 8 bytes, uip_arp.o(i.uip_arp_out))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = uip_arp_out
+</UL>
+<BR>[Calls]<UL><LI><a href="#[3565f6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
+<LI><a href="#[3566020]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
+<LI><a href="#[3566188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2763304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UipPro
+</UL>
+
+<P><STRONG><a name="[2762e90]"></a>uip_arp_timer</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, uip_arp.o(i.uip_arp_timer))
+<BR><BR>[Called By]<UL><LI><a href="#[2763304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UipPro
+</UL>
+
+<P><STRONG><a name="[2762d28]"></a>uip_init</STRONG> (Thumb, 94 bytes, Stack size 0 bytes, uip.o(i.uip_init))
+<BR><BR>[Called By]<UL><LI><a href="#[2763340]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitNet
+</UL>
+
+<P><STRONG><a name="[351bef4]"></a>uip_ipchksum</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, uip.o(i.uip_ipchksum))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = uip_ipchksum &rArr; chksum
+</UL>
+<BR>[Calls]<UL><LI><a href="#[27630ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;htons
+<LI><a href="#[351c6b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chksum
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2762c38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_process
+</UL>
+
+<P><STRONG><a name="[2762cb0]"></a>uip_listen</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, uip.o(i.uip_listen))
+<BR><BR>[Called By]<UL><LI><a href="#[27632c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[351bd8c]"></a>uip_log</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, tcp_demo.o(i.uip_log))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = uip_log &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[3665b00]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2762c38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_process
+</UL>
+
+<P><STRONG><a name="[2762c38]"></a>uip_process</STRONG> (Thumb, 4022 bytes, Stack size 16 bytes, uip.o(i.uip_process))
+<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = uip_process &rArr; tcp_server_appcall &rArr; httpd_appcall &rArr; handle_connection &rArr; handle_output &rArr; handle_script &rArr; send_part_of_file &rArr; psock_send &rArr; send_data &rArr; uip_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[351bd8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_log
+<LI><a href="#[351bdc8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tcp_server_appcall
+<LI><a href="#[351be7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_tcpchksum
+<LI><a href="#[351bef4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_ipchksum
+<LI><a href="#[351bfa8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_add32
+<LI><a href="#[351c674]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_add_rcv_nxt
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2763304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UipPro
+</UL>
+
+<P><STRONG><a name="[351e8ac]"></a>uip_send</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, uip.o(i.uip_send))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = uip_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[3566188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[351ed20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_data
+<LI><a href="#[3567e5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;senddata
+</UL>
+
+<P><STRONG><a name="[351be7c]"></a>uip_tcpchksum</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, uip.o(i.uip_tcpchksum))
+<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = uip_tcpchksum &rArr; upper_layer_chksum &rArr; chksum
+</UL>
+<BR>[Calls]<UL><LI><a href="#[351c638]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;upper_layer_chksum
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2762c38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_process
+</UL>
+<P>
+<H3>
+Local Symbols
+</H3>
+<P><STRONG><a name="[2766040]"></a>Init_fd</STRONG> (Thumb, 94 bytes, Stack size 8 bytes, main.o(i.Init_fd))
+<BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = Init_fd &rArr; USART_Configuration &rArr; USART_Init &rArr; RCC_GetClocksFreq
+</UL>
+<BR>[Calls]<UL><LI><a href="#[27630e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Configuration
+<LI><a href="#[2763124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
+<LI><a href="#[276337c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Configuration
+</UL>
+<BR>[Called By]<UL><LI><a href="#[27632c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[27600a0]"></a>SoftTimerDec</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, systick.o(i.SoftTimerDec))
+<BR><BR>[Called By]<UL><LI><a href="#[2761630]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_ISR
+</UL>
+
+<P><STRONG><a name="[35201fc]"></a>SetSysClock</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, system_stm32f10x.o(i.SetSysClock))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SetSysClock
+</UL>
+<BR>[Calls]<UL><LI><a href="#[35201c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClockTo72
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2763124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
+</UL>
+
+<P><STRONG><a name="[35201c0]"></a>SetSysClockTo72</STRONG> (Thumb, 198 bytes, Stack size 0 bytes, system_stm32f10x.o(i.SetSysClockTo72))
+<BR><BR>[Called By]<UL><LI><a href="#[35201fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+</UL>
+
+<P><STRONG><a name="[351edd4]"></a>buf_bufto</STRONG> (Thumb, 102 bytes, Stack size 12 bytes, psock.o(i.buf_bufto))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = buf_bufto
+</UL>
+<BR>[Called By]<UL><LI><a href="#[351e9d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;psock_readto
+</UL>
+
+<P><STRONG><a name="[351ed98]"></a>buf_setup</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, psock.o(i.buf_setup))
+<BR><BR>[Called By]<UL><LI><a href="#[351e9d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;psock_readto
+<LI><a href="#[351ea8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;psock_init
+</UL>
+
+<P><STRONG><a name="[351ed5c]"></a>data_acked</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, psock.o(i.data_acked))
+<BR><BR>[Called By]<UL><LI><a href="#[351e99c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;psock_send
+<LI><a href="#[351eac8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;psock_generator_send
+</UL>
+
+<P><STRONG><a name="[351ed20]"></a>send_data</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, psock.o(i.send_data))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = send_data &rArr; uip_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[351e8ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_send
+</UL>
+<BR>[Called By]<UL><LI><a href="#[351e99c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;psock_send
+<LI><a href="#[351eac8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;psock_generator_send
+</UL>
+
+<P><STRONG><a name="[351c6b0]"></a>chksum</STRONG> (Thumb, 66 bytes, Stack size 20 bytes, uip.o(i.chksum))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = chksum
+</UL>
+<BR>[Called By]<UL><LI><a href="#[351bef4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_ipchksum
+<LI><a href="#[351c638]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;upper_layer_chksum
+</UL>
+
+<P><STRONG><a name="[351c674]"></a>uip_add_rcv_nxt</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, uip.o(i.uip_add_rcv_nxt))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = uip_add_rcv_nxt
+</UL>
+<BR>[Calls]<UL><LI><a href="#[351bfa8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_add32
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2762c38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_process
+</UL>
+
+<P><STRONG><a name="[351c638]"></a>upper_layer_chksum</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, uip.o(i.upper_layer_chksum))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = upper_layer_chksum &rArr; chksum
+</UL>
+<BR>[Calls]<UL><LI><a href="#[27630ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;htons
+<LI><a href="#[351c6b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chksum
+</UL>
+<BR>[Called By]<UL><LI><a href="#[351be7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_tcpchksum
+</UL>
+
+<P><STRONG><a name="[351b2c4]"></a>uip_arp_update</STRONG> (Thumb, 296 bytes, Stack size 16 bytes, uip_arp.o(i.uip_arp_update))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = uip_arp_update
+</UL>
+<BR>[Calls]<UL><LI><a href="#[3566188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2762f08]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_arp_arpin
+</UL>
+
+<P><STRONG><a name="[3570124]"></a>generate_part_of_file</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, httpd.o(i.generate_part_of_file))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = generate_part_of_file
+</UL>
+<BR>[Calls]<UL><LI><a href="#[3566188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> httpd.o(i.send_file)
+</UL>
+<P><STRONG><a name="[35700e8]"></a>handle_connection</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, httpd.o(i.handle_connection))
+<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = handle_connection &rArr; handle_output &rArr; handle_script &rArr; send_part_of_file &rArr; psock_send &rArr; send_data &rArr; uip_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[3570070]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_output
+<LI><a href="#[35700ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_input
+</UL>
+<BR>[Called By]<UL><LI><a href="#[356f968]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;httpd_appcall
+</UL>
+
+<P><STRONG><a name="[35700ac]"></a>handle_input</STRONG> (Thumb, 394 bytes, Stack size 16 bytes, httpd.o(i.handle_input))
+<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = handle_input &rArr; psock_readto &rArr; buf_bufto
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2763214]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<LI><a href="#[2763250]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
+<LI><a href="#[351e9d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;psock_readto
+<LI><a href="#[351eb04]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;psock_datalen
+<LI><a href="#[3565918]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
+<LI><a href="#[3565dc8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[35700e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_connection
+</UL>
+
+<P><STRONG><a name="[3570070]"></a>handle_output</STRONG> (Thumb, 250 bytes, Stack size 16 bytes, httpd.o(i.handle_output))
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = handle_output &rArr; handle_script &rArr; send_part_of_file &rArr; psock_send &rArr; send_data &rArr; uip_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[3565918]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
+<LI><a href="#[3565a08]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
+<LI><a href="#[3565cd8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strchr
+<LI><a href="#[356f47c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;httpd_fs_open
+<LI><a href="#[356ff80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_headers
+<LI><a href="#[356ffbc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_file
+<LI><a href="#[3570034]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_script
+</UL>
+<BR>[Called By]<UL><LI><a href="#[35700e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_connection
+</UL>
+
+<P><STRONG><a name="[3570034]"></a>handle_script</STRONG> (Thumb, 380 bytes, Stack size 24 bytes, httpd.o(i.handle_script))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = handle_script &rArr; send_part_of_file &rArr; psock_send &rArr; send_data &rArr; uip_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[3565cd8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strchr
+<LI><a href="#[356f47c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;httpd_fs_open
+<LI><a href="#[356f4b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;httpd_cgi
+<LI><a href="#[356ff44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_part_of_file
+<LI><a href="#[356ffbc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_file
+<LI><a href="#[356fff8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;next_scriptstate
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3570070]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_output
+</UL>
+
+<P><STRONG><a name="[356fff8]"></a>next_scriptstate</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, httpd.o(i.next_scriptstate))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = next_scriptstate
+</UL>
+<BR>[Calls]<UL><LI><a href="#[3565cd8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strchr
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3570034]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_script
+</UL>
+
+<P><STRONG><a name="[356ffbc]"></a>send_file</STRONG> (Thumb, 94 bytes, Stack size 16 bytes, httpd.o(i.send_file))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = send_file &rArr; psock_generator_send &rArr; send_data &rArr; uip_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[351eac8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;psock_generator_send
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3570034]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_script
+<LI><a href="#[3570070]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_output
+</UL>
+
+<P><STRONG><a name="[356ff80]"></a>send_headers</STRONG> (Thumb, 456 bytes, Stack size 24 bytes, httpd.o(i.send_headers))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = send_headers &rArr; psock_send &rArr; send_data &rArr; uip_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[351e99c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;psock_send
+<LI><a href="#[3565828]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strrchr
+<LI><a href="#[3565918]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
+<LI><a href="#[3565be8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3570070]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_output
+</UL>
+
+<P><STRONG><a name="[356ff44]"></a>send_part_of_file</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, httpd.o(i.send_part_of_file))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = send_part_of_file &rArr; psock_send &rArr; send_data &rArr; uip_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[351e99c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;psock_send
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3570034]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_script
+</UL>
+
+<P><STRONG><a name="[356e414]"></a>file_stats</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, httpd-cgi.o(i.file_stats))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = file_stats &rArr; psock_generator_send &rArr; send_data &rArr; uip_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[351eac8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;psock_generator_send
+<LI><a href="#[3565cd8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strchr
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> httpd-cgi.o(.constdata)
+</UL>
+<P><STRONG><a name="[356e3d8]"></a>generate_file_stats</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, httpd-cgi.o(i.generate_file_stats))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = generate_file_stats &rArr; __2snprintf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[356e090]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;httpd_fs_count
+<LI><a href="#[3665a4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2snprintf
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> httpd-cgi.o(i.file_stats)
+</UL>
+<P><STRONG><a name="[356e39c]"></a>generate_net_stats</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, httpd-cgi.o(i.generate_net_stats))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = generate_net_stats &rArr; __2snprintf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[3665a4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2snprintf
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> httpd-cgi.o(i.net_stats)
+</UL>
+<P><STRONG><a name="[356e360]"></a>generate_tcp_stats</STRONG> (Thumb, 166 bytes, Stack size 80 bytes, httpd-cgi.o(i.generate_tcp_stats))
+<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = generate_tcp_stats &rArr; __2snprintf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[27630ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;htons
+<LI><a href="#[3665a4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2snprintf
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> httpd-cgi.o(i.tcp_stats)
+</UL>
+<P><STRONG><a name="[356e324]"></a>net_stats</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, httpd-cgi.o(i.net_stats))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = net_stats &rArr; psock_generator_send &rArr; send_data &rArr; uip_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[351eac8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;psock_generator_send
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> httpd-cgi.o(.constdata)
+</UL>
+<P><STRONG><a name="[356e2e8]"></a>nullfunction</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, httpd-cgi.o(i.nullfunction))
+<BR>[Address Reference Count : 1]<UL><LI> httpd-cgi.o(i.httpd_cgi)
+</UL>
+<P><STRONG><a name="[356e2ac]"></a>tcp_stats</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, httpd-cgi.o(i.tcp_stats))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = tcp_stats &rArr; psock_generator_send &rArr; send_data &rArr; uip_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[351eac8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;psock_generator_send
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> httpd-cgi.o(.constdata)
+</UL>
+<P><STRONG><a name="[356d67c]"></a>httpd_fs_strcmp</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, httpd-fs.o(i.httpd_fs_strcmp))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = httpd_fs_strcmp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[356e090]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;httpd_fs_count
+<LI><a href="#[356f47c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;httpd_fs_open
+</UL>
+
+<P><STRONG><a name="[3567f88]"></a>aborted</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, tcp_demo.o(i.aborted))
+<BR><BR>[Called By]<UL><LI><a href="#[3567b8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tcp_demo_appcall
+</UL>
+
+<P><STRONG><a name="[3567f4c]"></a>acked</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, tcp_demo.o(i.acked))
+<BR><BR>[Called By]<UL><LI><a href="#[3567b8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tcp_demo_appcall
+</UL>
+
+<P><STRONG><a name="[3567f10]"></a>closed</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, tcp_demo.o(i.closed))
+<BR><BR>[Called By]<UL><LI><a href="#[3567b8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tcp_demo_appcall
+</UL>
+
+<P><STRONG><a name="[3567ed4]"></a>connected</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, tcp_demo.o(i.connected))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = connected
+</UL>
+<BR>[Calls]<UL><LI><a href="#[3565be8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3567b8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tcp_demo_appcall
+</UL>
+
+<P><STRONG><a name="[3567e98]"></a>newdata</STRONG> (Thumb, 108 bytes, Stack size 8 bytes, tcp_demo.o(i.newdata))
+<BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = newdata &rArr; TCP_Cmd &rArr; cmd_delay
+</UL>
+<BR>[Calls]<UL><LI><a href="#[3565af8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memcmp
+<LI><a href="#[3567bc8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TCP_Cmd
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3567b8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tcp_demo_appcall
+</UL>
+
+<P><STRONG><a name="[3567e5c]"></a>senddata</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, tcp_demo.o(i.senddata))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = senddata &rArr; uip_send
+</UL>
+<BR>[Calls]<UL><LI><a href="#[351e8ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uip_send
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3567b8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tcp_demo_appcall
+</UL>
+
+<P><STRONG><a name="[3567e20]"></a>timedout</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, tcp_demo.o(i.timedout))
+<BR><BR>[Called By]<UL><LI><a href="#[3567b8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tcp_demo_appcall
+</UL>
+
+<P><STRONG><a name="[3665d58]"></a>_printf_core</STRONG> (Thumb, 1102 bytes, Stack size 128 bytes, printf8.o(i._printf_core), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[36632ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
+<LI><a href="#[3665ce0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
+<LI><a href="#[3665d1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3665ac4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0snprintf$8
+<LI><a href="#[3665b78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0printf$8
+</UL>
+
+<P><STRONG><a name="[3665d1c]"></a>_printf_post_padding</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, printf8.o(i._printf_post_padding), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[3665d58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+</UL>
+
+<P><STRONG><a name="[3665ce0]"></a>_printf_pre_padding</STRONG> (Thumb, 44 bytes, Stack size 24 bytes, printf8.o(i._printf_pre_padding), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[3665d58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+</UL>
+
+<P><STRONG><a name="[3665ca4]"></a>_snputc</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, printf8.o(i._snputc))
+<BR>[Address Reference Count : 1]<UL><LI> printf8.o(i.__0snprintf$8)
+</UL><P>
+<H3>
+Undefined Global Symbols
+</H3><HR></body></html>
