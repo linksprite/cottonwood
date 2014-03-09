@@ -1,0 +1,109 @@
+\section{serialinterface.\-c File Reference}
+\label{serialinterface_8c}\index{serialinterface.\-c@{serialinterface.\-c}}
+{\ttfamily \#include \char`\"{}c8051\-F340.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}as399x\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}platform.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}global.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}uart.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}timer.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}as399x\-\_\-com.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf init\-Interface} (void)
+\item 
+void {\bf write\-Read\-A\-S399x} (const {\bf u8} $\ast$wbuf, {\bf u8} wlen, {\bf u8} $\ast$rbuf, {\bf u8} rlen, {\bf u8} stop\-Mode, {\bf u8} do\-Start)
+\item 
+void {\bf write\-Read\-A\-S399x\-Isr} (const {\bf u8} wbuf, {\bf u8} $\ast$rbuf)
+\item 
+void {\bf set\-Port\-Direct} ()
+\item 
+void {\bf set\-Port\-Normal} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of serial interface communication with A\-S399x. The file provides functions to initialize the u\-Controller and the board for S\-P\-I communication with A\-S399x. The function \doxyref{write\-Read\-A\-S399x()}{p.}{as399x__com_8h_a66eee56b32bf33a739f1b0c3e7a57262} provides communication functionality. The function \doxyref{write\-Read\-A\-S399x\-Isr()}{p.}{as399x__com_8h_a35abe30a55f52f77670b663d2aef3d61} does the same, but is only called from the I\-S\-R. On the Si\-Labs u\-Controller a dedicated function for the I\-S\-R improves runtime performance (no reentrant function necessary). \par
+For porting to another u\-Controller/board the functions in this file have to be adapted. \par
+\par
+For serial communication on L\-E\-O boards a patch is required. The patch does the following\-: 
+\begin{DoxyItemize}
+\item P0\-\_\-0(\-S\-P\-I S\-C\-K) -\/ P2\-\_\-0 -\/ \doxyref{C\-L\-K(\-A\-S399\-X)}{p.}{global_8h_a4b355291fe6b8ba8e167ab0faa862e45} 
+\item P0\-\_\-1(\-S\-P\-I M\-I\-S\-O) -\/ P1\-\_\-6 -\/ I\-O6(\-A\-S399\-X) 
+\item P0\-\_\-2(\-S\-P\-I M\-O\-S\-I) -\/ P1\-\_\-7 -\/ I\-O7(\-A\-S399\-X) 
+\end{DoxyItemize}Therefore P1\-\_\-6, P1\-\_\-7, P2\-\_\-0, P0\-\_\-1 need to be configured input (open drain). And P0\-\_\-0 and P0\-\_\-2 need to be configured output (push pull).
+
+\begin{DoxyAuthor}{Author}
+Ulrich Herrmann 
+
+Bernhard Breinbauer 
+\end{DoxyAuthor}
+
+
+Definition in file {\bf serialinterface.\-c}.
+
+
+
+\subsection{Function Documentation}
+\index{serialinterface.\-c@{serialinterface.\-c}!init\-Interface@{init\-Interface}}
+\index{init\-Interface@{init\-Interface}!serialinterface.c@{serialinterface.\-c}}
+\subsubsection[{init\-Interface}]{\setlength{\rightskip}{0pt plus 5cm}void init\-Interface (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{serialinterface_8c_a6305d3b6e2bbab54bca14afc97db3c5c}
+This function initializes the in/out ports of the controller for communication with A\-S399x via S\-P\-I. \par
+This function has to be adapted for new boards/controllers/... 
+
+Definition at line 75 of file serialinterface.\-c.
+
+\index{serialinterface.\-c@{serialinterface.\-c}!set\-Port\-Direct@{set\-Port\-Direct}}
+\index{set\-Port\-Direct@{set\-Port\-Direct}!serialinterface.c@{serialinterface.\-c}}
+\subsubsection[{set\-Port\-Direct}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Port\-Direct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{serialinterface_8c_aeeadd66a92ac517951a886b62eb1fb75}
+This function sets the interface to the A\-S399\-X for accessing it via direct mode. \doxyref{I\-O3()}{p.}{platform_8h_adc9689bf9fd884c1d840a3aa947a0a39} macro needs to be used to generate T\-X signals 
+
+Definition at line 199 of file serialinterface.\-c.
+
+\index{serialinterface.\-c@{serialinterface.\-c}!set\-Port\-Normal@{set\-Port\-Normal}}
+\index{set\-Port\-Normal@{set\-Port\-Normal}!serialinterface.c@{serialinterface.\-c}}
+\subsubsection[{set\-Port\-Normal}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Port\-Normal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{serialinterface_8c_a48f08cfa3d7253dcd2520cad24e18e41}
+This function sets the interface to the A\-S399\-X for accessing it via normal (parallel) mode using \doxyref{write\-Read\-A\-S399x()}{p.}{as399x__com_8h_a66eee56b32bf33a739f1b0c3e7a57262} 
+
+Definition at line 204 of file serialinterface.\-c.
+
+\index{serialinterface.\-c@{serialinterface.\-c}!write\-Read\-A\-S399x@{write\-Read\-A\-S399x}}
+\index{write\-Read\-A\-S399x@{write\-Read\-A\-S399x}!serialinterface.c@{serialinterface.\-c}}
+\subsubsection[{write\-Read\-A\-S399x}]{\setlength{\rightskip}{0pt plus 5cm}void write\-Read\-A\-S399x (
+\begin{DoxyParamCaption}
+\item[{const {\bf u8} $\ast$}]{wbuf, }
+\item[{{\bf u8}}]{wlen, }
+\item[{{\bf u8} $\ast$}]{rbuf, }
+\item[{{\bf u8}}]{rlen, }
+\item[{{\bf u8}}]{stop\-Mode, }
+\item[{{\bf u8}}]{do\-Start}
+\end{DoxyParamCaption}
+)}\label{serialinterface_8c_a66eee56b32bf33a739f1b0c3e7a57262}
+This function talks with the A\-S399x chip. 
+
+Definition at line 153 of file serialinterface.\-c.
+
+\index{serialinterface.\-c@{serialinterface.\-c}!write\-Read\-A\-S399x\-Isr@{write\-Read\-A\-S399x\-Isr}}
+\index{write\-Read\-A\-S399x\-Isr@{write\-Read\-A\-S399x\-Isr}!serialinterface.c@{serialinterface.\-c}}
+\subsubsection[{write\-Read\-A\-S399x\-Isr}]{\setlength{\rightskip}{0pt plus 5cm}void write\-Read\-A\-S399x\-Isr (
+\begin{DoxyParamCaption}
+\item[{const {\bf u8}}]{wbuf, }
+\item[{{\bf u8} $\ast$}]{rbuf}
+\end{DoxyParamCaption}
+)}\label{serialinterface_8c_a35abe30a55f52f77670b663d2aef3d61}
+This function talks with the A\-S399x chip from I\-S\-R. 
+
+Definition at line 180 of file serialinterface.\-c.
+

@@ -1,0 +1,649 @@
+\section{usb\-\_\-commands\-\_\-table.\-c File Reference}
+\label{usb__commands__table_8c}\index{usb\-\_\-commands\-\_\-table.\-c@{usb\-\_\-commands\-\_\-table.\-c}}
+{\ttfamily \#include \char`\"{}as399x\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}as399x.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}global.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf call\-Send\-Firmware\-Hardware\-I\-D} (void)
+\item 
+void {\bf call\-Antenna\-Power} (void)
+\item 
+void {\bf call\-Read\-Register} (void)
+\item 
+void {\bf call\-Read\-Registers} (void)
+\item 
+void {\bf call\-Antenna\-Tune} (void)
+\item 
+void {\bf call\-Inventory6\-B} (void)
+\item 
+void {\bf call\-Inventory} (void)
+\item 
+void {\bf call\-Select\-Tag} (void)
+\item 
+void {\bf call\-Write\-To\-Tag} (void)
+\item 
+void {\bf call\-Change\-Freq} (void)
+\item 
+void {\bf call\-Read\-From\-Tag} (void)
+\item 
+void {\bf call\-Lock\-Unlock} (void)
+\item 
+void {\bf call\-Kill\-Tag} (void)
+\item 
+void {\bf call\-N\-X\-P\-Commands} (void)
+\item 
+void {\bf call\-Enable\-Bootloader} (void)
+\item 
+void {\bf call\-Start\-Stop} (void)
+\item 
+void {\bf call\-Update\-Antenna\-Power} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bf C\-O\-D\-E} void($\ast$const {\bf call\-\_\-fkt\-\_\-} [256])(void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Table to branch into the functions associated with a specific command. This file provides a table (\doxyref{call\-\_\-fkt\-\_\-()}{p.}{usb__commands_8h_ac1b48982fbf29b719d1134a3804a19b0}) which allows to branch into functions depending on which command has been received. Each command has an 8bit identifier. This identifier is also used as offset in the table, to branch into the corresponding function.
+
+\begin{DoxyAuthor}{Author}
+Ulrich Herrmann 
+
+Bernhard Breinbauer 
+
+Wolfgang Reichart 
+\end{DoxyAuthor}
+
+
+Definition in file {\bf usb\-\_\-commands\-\_\-table.\-c}.
+
+
+
+\subsection{Function Documentation}
+\index{usb\-\_\-commands\-\_\-table.\-c@{usb\-\_\-commands\-\_\-table.\-c}!call\-Antenna\-Power@{call\-Antenna\-Power}}
+\index{call\-Antenna\-Power@{call\-Antenna\-Power}!usb_commands_table.c@{usb\-\_\-commands\-\_\-table.\-c}}
+\subsubsection[{call\-Antenna\-Power}]{\setlength{\rightskip}{0pt plus 5cm}void call\-Antenna\-Power (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__commands__table_8c_aa0c3c7d6c275324c7abb8d2915ce1f1d}
+This function enables/disables the R\-F field. The format of the report from the host is as follows\-: \begin{TabularC}{15}
+\hline
+\rowcolor{lightgray}{\bf Byte }&{\bf 0 }&{\bf 1 }&{\bf 2 }&{\bf 3 }&{\bf 4 }&{\bf 5 }&{\bf 6 }&{\bf 7 }&{\bf 8 }&{\bf 9 }&{\bf 10 }&{\bf 11 }&{\bf 12 }&{\bf 13  }\\\cline{1-15}
+\rowcolor{lightgray}{\bf Content }&0x18(I\-D) &13(length) &set\-\_\-power &0x00\-: power off\newline
+0x\-F\-F\-: power on &eval\-\_\-mode &set\-\_\-sensitivity &sensitivity &set\-\_\-port &port id &set\-\_\-level &Transmit Power Level L\-S\-B &Transmit Power Level M\-S\-B &set\-\_\-post\-\_\-pa\-\_\-switch &post\-\_\-pa\-\_\-switch  \\\cline{1-15}
+\end{TabularC}
+The parameters are only being set if the proper set\-\_\- value is set to 1.\par
+If eval\-\_\-mode is set the automatic power regulation will be disabled. eval\-\_\-mode will be only set if set\-\_\-power\-\_\-enable is set to 1.\par
+The bytes 6 to 12 are only available on R\-O\-L\-A\-N\-D and A\-R\-N\-I\-E boards.\par
+ The device sends back\-: \begin{TabularC}{15}
+\hline
+\rowcolor{lightgray}{\bf Byte }&{\bf 0 }&{\bf 1 }&{\bf 2 }&{\bf 3 }&{\bf 4 }&{\bf 5 }&{\bf 6 }&{\bf 7 }&{\bf 8 }&{\bf 9 }&{\bf 10 }&{\bf 11 }&{\bf 12 }&{\bf 13  }\\\cline{1-15}
+\rowcolor{lightgray}{\bf Content }&0x19(I\-D) &13(length) &reserved(0) &0 on success &reserved(0) &reserved(0) &sensitivity &reserved (0) &antenna id &reserved (0) &desired Transmit Power L\-S\-B &desired Transmit Power M\-S\-B &current Transmit Power L\-S\-B &current Transmit Power M\-S\-B  \\\cline{1-15}
+\end{TabularC}
+
+
+Also in the reply of the device the bytes 4 to 12 are only available on R\-O\-L\-A\-N\-D and A\-R\-N\-I\-E boards.\par
+ Values for the different parameters are\-: \begin{TabularC}{2}
+\hline
+\rowcolor{lightgray}{\bf Name}&{\bf values }\\\cline{1-2}
+sensitivity&-\/128 .. 127 (d\-Bm)  \\\cline{1-2}
+antenna id&1\-: Antenna port 1\newline
+ 2\-: Antenna port 2  \\\cline{1-2}
+Transmit Power&The desired transmit power which should be set.  \\\cline{1-2}
+post\-\_\-pa\-\_\-switch&Switch just after P\-A, switches between normal operation and power detector.  \\\cline{1-2}
+\end{TabularC}
+
+
+Definition at line 537 of file usb\-\_\-commands.\-c.
+
+\index{usb\-\_\-commands\-\_\-table.\-c@{usb\-\_\-commands\-\_\-table.\-c}!call\-Antenna\-Tune@{call\-Antenna\-Tune}}
+\index{call\-Antenna\-Tune@{call\-Antenna\-Tune}!usb_commands_table.c@{usb\-\_\-commands\-\_\-table.\-c}}
+\subsubsection[{call\-Antenna\-Tune}]{\setlength{\rightskip}{0pt plus 5cm}void call\-Antenna\-Tune (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__commands__table_8c_a2c83f096f7991bfe2e940326ec280427}
+This function sets and reads antenna tuner network related values. The network looks like this\-:
+
+
+\begin{DoxyCode}
+                       .--- L ---.
+                       |        |
+in ----.----.----- L --.--C\_len--.--.-----.-----.----- out
+       |    |                      |     |     |
+      C\_in  L                     C\_out   L     R
+       |    |                      |     |     |
+      \_\_\_  \_\_\_                    \_\_\_   \_\_\_   \_\_\_
+       -    -                      -     -     -
+       \textcolor{stringliteral}{'    '}                      \textcolor{stringliteral}{'     '}     \textcolor{stringliteral}{'}
+\end{DoxyCode}
+ where 
+\begin{DoxyItemize}
+\item C\-\_\-$\ast$ = 32 steps from 1.\-3p\-F to 5.\-5p\-F, step size 0.\-131p\-F, +-\/10\%  
+\end{DoxyItemize}The format of the report from the host is one of the following\-: 
+\begin{DoxyItemize}
+\item Get/\-Set current tuner parameters\-: \begin{TabularC}{11}
+\hline
+\rowcolor{lightgray}{\bf Byte }&{\bf 0 }&{\bf 1 }&{\bf 2 }&{\bf 3 }&{\bf 4 }&{\bf 5 }&{\bf 6 }&{\bf 7 }&{\bf 8 }&{\bf 9  }\\\cline{1-11}
+\rowcolor{lightgray}{\bf Content }&0x5b(I\-D) &length &1 &set\-\_\-cin &cin &set\-\_\-clen &clen &set\-\_\-cout &cout &auto\-\_\-tune  \\\cline{1-11}
+\end{TabularC}
+The values are only being set if the proper set\-\_\- value is set to 1. The device sends back\-: \begin{TabularC}{10}
+\hline
+\rowcolor{lightgray}{\bf Byte }&{\bf 0 }&{\bf 1 }&{\bf 2 }&{\bf 3 }&{\bf 4 }&{\bf 5 }&{\bf 6 }&{\bf 7 }&{\bf 8  }\\\cline{1-10}
+\rowcolor{lightgray}{\bf Content }&0x5c(I\-D) &0x40(length) &1 &status &cin &reserved(0) &clen &reserved(0) &cout  \\\cline{1-10}
+\end{TabularC}
+Values for c$\ast$ paramaters range from 0 to 31, c=1.\-3p\-F + val$\ast$0.131p\-F.\par
+  
+\item Delete current tuning table\-: \begin{TabularC}{4}
+\hline
+\rowcolor{lightgray}{\bf Byte }&{\bf 0 }&{\bf 1 }&{\bf 2  }\\\cline{1-4}
+\rowcolor{lightgray}{\bf Content }&0x5b(I\-D) &length &2  \\\cline{1-4}
+\end{TabularC}
+The device sends back\-: \begin{TabularC}{6}
+\hline
+\rowcolor{lightgray}{\bf Byte }&{\bf 0 }&{\bf 1 }&{\bf 2 }&{\bf 3 }&{\bf 4  }\\\cline{1-6}
+\rowcolor{lightgray}{\bf Content }&0x5c(I\-D) &0x40(length) &2 &0x\-F\-F on success &maximum tuning table size this device supports  \\\cline{1-6}
+\end{TabularC}
+
+\item Add new entry in tuning table\-: \begin{TabularC}{15}
+\hline
+\rowcolor{lightgray}{\bf Byte }&{\bf 0 }&{\bf 1 }&{\bf 2 }&{\bf 3..5 }&{\bf 6 }&{\bf 7 }&{\bf 8 }&{\bf 9 }&{\bf 10..11 }&{\bf 12 }&{\bf 13 }&{\bf 14 }&{\bf 15 }&{\bf 16..17  }\\\cline{1-15}
+\rowcolor{lightgray}{\bf Content }&0x5b(I\-D) &length &3 &frequency &Ant1\-: tune enable &Ant1\-: cin &Ant1\-: clen &Ant1\-: cout &Ant1\-: I+\-Q &Ant2\-: tune enable &Ant2\-: cin &Ant2\-: clen &Ant2\-: cout &Ant2\-: I+\-Q  \\\cline{1-15}
+\end{TabularC}
+Adds the data to the internal tuning table. The first set of data is for antenna 1 the second set for antenna 2. \par
+The device responds\-: \begin{TabularC}{5}
+\hline
+\rowcolor{lightgray}{\bf Byte }&{\bf 0 }&{\bf 1 }&{\bf 2 }&{\bf 3  }\\\cline{1-5}
+\rowcolor{lightgray}{\bf Content }&0x5c(I\-D) &0x40(length) &3 &0x\-F\-F on success  \\\cline{1-5}
+\end{TabularC}
+
+\item If the device does not support antenna tuning, the device always sends back\-: \begin{TabularC}{4}
+\hline
+\rowcolor{lightgray}{\bf Byte }&{\bf 0 }&{\bf 1 }&{\bf 2  }\\\cline{1-4}
+\rowcolor{lightgray}{\bf Content }&0x5c(I\-D) &0x40(length) &0  \\\cline{1-4}
+\end{TabularC}
+
+\end{DoxyItemize}
+
+Definition at line 1115 of file usb\-\_\-commands.\-c.
+
+\index{usb\-\_\-commands\-\_\-table.\-c@{usb\-\_\-commands\-\_\-table.\-c}!call\-Change\-Freq@{call\-Change\-Freq}}
+\index{call\-Change\-Freq@{call\-Change\-Freq}!usb_commands_table.c@{usb\-\_\-commands\-\_\-table.\-c}}
+\subsubsection[{call\-Change\-Freq}]{\setlength{\rightskip}{0pt plus 5cm}void call\-Change\-Freq (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__commands__table_8c_aedfb9442ef8ad6a06ce1113820bd41e6}
+This sets/adds/measures frequency related stuff\-: The format of the report from the host is one of the following 
+\begin{DoxyItemize}
+\item Get R\-S\-S\-I level \begin{TabularC}{5}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3 .. 5 }\\\cline{1-5}
+\rowcolor{lightgray}{\bf Content}&0x41(I\-D)&length&1&freq  \\\cline{1-5}
+\end{TabularC}
+to which the reader replies with this\-: \begin{TabularC}{6}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3}&{\bf 4 }\\\cline{1-6}
+\rowcolor{lightgray}{\bf Content}&0x42(I\-D)&64(length)&I-\/channel&Q-\/channel&d\-Bm \\\cline{1-6}
+\end{TabularC}
+
+\item Get Reflected Power level \begin{TabularC}{6}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3 .. 5}&{\bf 6 }\\\cline{1-6}
+\rowcolor{lightgray}{\bf Content}&0x41(I\-D)&length&2&freq &set\-\_\-tune \\\cline{1-6}
+\end{TabularC}
+If set\-\_\-tune is set the corresponding tuning table value for this frequency will be set before measuring the reflected power.\par
+The reader replies with this\-: \begin{TabularC}{6}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3}&{\bf 4 }\\\cline{1-6}
+\rowcolor{lightgray}{\bf Content}&0x42(I\-D)&64(length)&I-\/channel&Q-\/channel&d\-Bm \\\cline{1-6}
+\end{TabularC}
+
+\item Add frequency to frequency list used for hopping \begin{TabularC}{16}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3 .. 5}&{\bf 6}&{\bf 7 }&{\bf 8 }&{\bf 9 }&{\bf 10 }&{\bf 11 }&{\bf 12 }&{\bf 13 }&{\bf 14 }&{\bf 15 }&{\bf 16  }\\\cline{1-16}
+\rowcolor{lightgray}{\bf Content}&0x41(I\-D)&length&4&freq &rssi\-\_\-threshhold(d\-Bm)&profile\-\_\-id&set\-Tune&tune\-Enable1&Cin1&Clen1&Cout1&tune\-Enable2&Cin2&Clen2&Cout2 \\\cline{1-16}
+\end{TabularC}
+which adds the freq to list used for frequency hopping. If set\-Tune is not 0 the tuning parameters for antenna 1 and 2 will be set. tune\-Enable\-X enables the tune parameters for antenna X. Cin\-X, Clen\-X and Cout\-X are the tuning parameters of antenna X. The reader replies with this\-: \begin{TabularC}{5}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2 }&{\bf 3 }\\\cline{1-5}
+\rowcolor{lightgray}{\bf Content}&0x42(I\-D)&64(length)&0xfc on success&0xff on success \\\cline{1-5}
+\end{TabularC}
+
+\item Clear frequency list used for hopping and add the first frequency as described in the report above. \begin{TabularC}{16}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3 .. 5}&{\bf 6}&{\bf 7 }&{\bf 8 }&{\bf 9 }&{\bf 10 }&{\bf 11 }&{\bf 12 }&{\bf 13 }&{\bf 14 }&{\bf 15 }&{\bf 16  }\\\cline{1-16}
+\rowcolor{lightgray}{\bf Content}&0x41(I\-D)&length&4&freq &rssi\-\_\-threshhold(d\-Bm)&profile\-\_\-id&set\-Tune&tune\-Enable1&Cin1&Clen1&Cout1&tune\-Enable2&Cin2&Clen2&Cout2 \\\cline{1-16}
+\end{TabularC}
+The reader replies with this\-: \begin{TabularC}{5}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2 }&{\bf 3 }\\\cline{1-5}
+\rowcolor{lightgray}{\bf Content}&0x42(I\-D)&64(length)&0xfe on success&0xff on success \\\cline{1-5}
+\end{TabularC}
+
+\item Set frequency hopping related parameters \begin{TabularC}{7}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3 .. 4 }&{\bf 5 .. 6 }&{\bf 7 .. 8  }\\\cline{1-7}
+\rowcolor{lightgray}{\bf Content}&0x41(I\-D)&length&16&listening\-Time&max\-Sending\-Time&idle\-Time \\\cline{1-7}
+\end{TabularC}
+The reader replies with this\-: \begin{TabularC}{5}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2 }&{\bf 3 }\\\cline{1-5}
+\rowcolor{lightgray}{\bf Content}&0x42(I\-D)&64(length)&0xfe on success&0xff on success \\\cline{1-5}
+\end{TabularC}
+
+\item Get frequency hopping related parameters \begin{TabularC}{4}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2 }\\\cline{1-4}
+\rowcolor{lightgray}{\bf Content}&0x41(I\-D)&length&17 \\\cline{1-4}
+\end{TabularC}
+The reader replies with this\-: \begin{TabularC}{14}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3}&{\bf 4 }&{\bf 5 .. 6 }&{\bf 7 .. 8 }&{\bf 9 .. 10 }&{\bf 11 .. 13 }&{\bf 14 .. 16 }&{\bf 17 }&{\bf 18}&{\bf 19 }\\\cline{1-14}
+\rowcolor{lightgray}{\bf Content}&0x42(I\-D)&64(length)&0xfe&0xff&profile\-\_\-id&listening\-\_\-time&max\-\_\-sending\-\_\-time&idle\-\_\-time&gui\-\_\-min\-\_\-freq&gui\-\_\-max\-\_\-freq&gui\-\_\-num\-\_\-freqs&rssi\-\_\-threshold&act\-\_\-num\-\_\-freqs \\\cline{1-14}
+\end{TabularC}
+
+\item Continuous modulation test \begin{TabularC}{6}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3 .. 5}&{\bf 6 .. 7 }\\\cline{1-6}
+\rowcolor{lightgray}{\bf Content}&0x41(I\-D)&length&32&don't care&duration in ms \\\cline{1-6}
+\end{TabularC}
+causes continuous modulation of the R\-F field for given duration. If duration is 0 it runs until next command received from G\-U\-I. The reader replies with this\-: \begin{TabularC}{5}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3 }\\\cline{1-5}
+\rowcolor{lightgray}{\bf Content}&0x42(I\-D)&64(length)&0xfe&0xff \\\cline{1-5}
+\end{TabularC}
+
+\end{DoxyItemize}
+
+Definition at line 2007 of file usb\-\_\-commands.\-c.
+
+\index{usb\-\_\-commands\-\_\-table.\-c@{usb\-\_\-commands\-\_\-table.\-c}!call\-Enable\-Bootloader@{call\-Enable\-Bootloader}}
+\index{call\-Enable\-Bootloader@{call\-Enable\-Bootloader}!usb_commands_table.c@{usb\-\_\-commands\-\_\-table.\-c}}
+\subsubsection[{call\-Enable\-Bootloader}]{\setlength{\rightskip}{0pt plus 5cm}void call\-Enable\-Bootloader (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__commands__table_8c_a0bf612f7a9aff82086a51aab0863a649}
+This function disables current application and enables bootloader. Device needs to be reprogrammed afterwards. The format of the report from the host is as follows\-: \begin{TabularC}{5}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2 }&{\bf 3  }\\\cline{1-5}
+\rowcolor{lightgray}{\bf Content}&0x55(I\-D)&4(length)&dont\-\_\-care&dont\-\_\-care \\\cline{1-5}
+\end{TabularC}
+The device sends back\-: \begin{TabularC}{4}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2 }\\\cline{1-4}
+\rowcolor{lightgray}{\bf Content}&0x56(I\-D)&3(length)&1 on success \\\cline{1-4}
+\end{TabularC}
+
+
+Definition at line 2570 of file usb\-\_\-commands.\-c.
+
+\index{usb\-\_\-commands\-\_\-table.\-c@{usb\-\_\-commands\-\_\-table.\-c}!call\-Inventory@{call\-Inventory}}
+\index{call\-Inventory@{call\-Inventory}!usb_commands_table.c@{usb\-\_\-commands\-\_\-table.\-c}}
+\subsubsection[{call\-Inventory}]{\setlength{\rightskip}{0pt plus 5cm}void call\-Inventory (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__commands__table_8c_adfa43c7d6ee4232592efb290888fb847}
+This function performs a gen2 protocol inventory round according to parameters given by \doxyref{config\-Gen2()}{p.}{usb__commands_8c_a4bb268c52ce1fb531876c6d8408e4afa}. The format of the report from the host is as follows\-: \begin{TabularC}{4}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2  }\\\cline{1-4}
+\rowcolor{lightgray}{\bf Content}&0x31(I\-D)&3(length)&start \\\cline{1-4}
+\end{TabularC}
+where 
+\begin{DoxyItemize}
+\item start\-: 1 -\/$>$ start a new round, 2 -\/$>$ deliver next tag  
+\end{DoxyItemize}The device sends back in a burst mode all the tags using the following report\-: \begin{TabularC}{8}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3}&{\bf 4 }&{\bf 5 }&{\bf 6 .. 6 + epclen }\\\cline{1-8}
+\rowcolor{lightgray}{\bf Content}&0x32(I\-D)&length&tags\-\_\-left&epclen+pclen&pc[0]&pc[1]&epc \\\cline{1-8}
+\end{TabularC}
+
+
+Definition at line 1544 of file usb\-\_\-commands.\-c.
+
+\index{usb\-\_\-commands\-\_\-table.\-c@{usb\-\_\-commands\-\_\-table.\-c}!call\-Inventory6\-B@{call\-Inventory6\-B}}
+\index{call\-Inventory6\-B@{call\-Inventory6\-B}!usb_commands_table.c@{usb\-\_\-commands\-\_\-table.\-c}}
+\subsubsection[{call\-Inventory6\-B}]{\setlength{\rightskip}{0pt plus 5cm}void call\-Inventory6\-B (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__commands__table_8c_aa0084a821c065f158145ea30fbfb1c7a}
+This function performs one inventory round using I\-S\-O18000-\/6b protocol. The format of the report from the host is as follows\-: \begin{TabularC}{7}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3}&{\bf 4 .. 11 }&{\bf 12 }\\\cline{1-7}
+\rowcolor{lightgray}{\bf Content}&0x3f(I\-D)&12(length)&start&mask&word\-\_\-data &start\-\_\-address \\\cline{1-7}
+\end{TabularC}
+where 
+\begin{DoxyItemize}
+\item start\-: 1 -\/$>$ start a new round, 2 -\/$>$ deliver next tag  
+\item mask\-: the mask value for G\-R\-O\-U\-P\-\_\-\-S\-E\-L\-E\-C\-T\-\_\-\-E\-Q command, 0 will select all tags 
+\item start\-\_\-address\-: address where data will be compared 
+\item word\-\_\-data\-: data which will be compared 
+\end{DoxyItemize}The device sends back\-: \begin{TabularC}{8}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3}&{\bf 4}&{\bf 5 .. 12}&{\bf 13 .. 15  }\\\cline{1-8}
+\rowcolor{lightgray}{\bf Content}&0x40(I\-D)&13(length)&tags\-\_\-left&rssi(planned)&8(epclen)&uid&used freq \\\cline{1-8}
+\end{TabularC}
+
+
+Definition at line 1363 of file usb\-\_\-commands.\-c.
+
+\index{usb\-\_\-commands\-\_\-table.\-c@{usb\-\_\-commands\-\_\-table.\-c}!call\-Kill\-Tag@{call\-Kill\-Tag}}
+\index{call\-Kill\-Tag@{call\-Kill\-Tag}!usb_commands_table.c@{usb\-\_\-commands\-\_\-table.\-c}}
+\subsubsection[{call\-Kill\-Tag}]{\setlength{\rightskip}{0pt plus 5cm}void call\-Kill\-Tag (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__commands__table_8c_a6d55f0bf20c6e53f25602cf3f15ee3a8}
+This function kills a gen2 tag. The format of the report from the host is as follows\-: \begin{TabularC}{5}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2 .. 5 }&{\bf 6  }\\\cline{1-5}
+\rowcolor{lightgray}{\bf Content}&0x3d(I\-D)&7(length)&kill password&recom \\\cline{1-5}
+\end{TabularC}
+where\-: 
+\begin{DoxyItemize}
+\item recom\-: see G\-E\-N2 standard\-: table on \char`\"{}\-X\-P\-C\-\_\-\-W1 L\-S\-Bs and a Tag's recomissioned status\char`\"{}  
+\end{DoxyItemize}The device sends back the following report\-: \begin{TabularC}{4}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2 }\\\cline{1-4}
+\rowcolor{lightgray}{\bf Content}&0x3e(I\-D)&3(length)&status \\\cline{1-4}
+\end{TabularC}
+
+
+Definition at line 2423 of file usb\-\_\-commands.\-c.
+
+\index{usb\-\_\-commands\-\_\-table.\-c@{usb\-\_\-commands\-\_\-table.\-c}!call\-Lock\-Unlock@{call\-Lock\-Unlock}}
+\index{call\-Lock\-Unlock@{call\-Lock\-Unlock}!usb_commands_table.c@{usb\-\_\-commands\-\_\-table.\-c}}
+\subsubsection[{call\-Lock\-Unlock}]{\setlength{\rightskip}{0pt plus 5cm}void call\-Lock\-Unlock (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__commands__table_8c_abc34cc08db5c6dc3443c48ce4625e916}
+This function locks a gen2 tag. The format of the report from the host is as follows\-: \begin{TabularC}{6}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2 }&{\bf 3 }&{\bf 4 .. 7 }\\\cline{1-6}
+\rowcolor{lightgray}{\bf Content}&0x3b(I\-D)&8(length)&lock\-\_\-unlock&memory\-\_\-space&access password \\\cline{1-6}
+\end{TabularC}
+where\-: 
+\begin{DoxyItemize}
+\item lock\-\_\-unlock\-: \begin{TabularC}{2}
+\hline
+0&Unlock \\\cline{1-2}
+1&Lock \\\cline{1-2}
+2&Permalock \\\cline{1-2}
+3&Lock \& Permalock \\\cline{1-2}
+\end{TabularC}
+
+\item memory\-\_\-space\-: \begin{TabularC}{2}
+\hline
+0&Kill password \\\cline{1-2}
+1&Access password \\\cline{1-2}
+2&E\-P\-C \\\cline{1-2}
+3&T\-I\-D \\\cline{1-2}
+\end{TabularC}
+
+\end{DoxyItemize}The device sends back the following report\-: \begin{TabularC}{4}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2 }\\\cline{1-4}
+\rowcolor{lightgray}{\bf Content}&0x3c(I\-D)&3(length)&status \\\cline{1-4}
+\end{TabularC}
+
+
+Definition at line 2325 of file usb\-\_\-commands.\-c.
+
+\index{usb\-\_\-commands\-\_\-table.\-c@{usb\-\_\-commands\-\_\-table.\-c}!call\-N\-X\-P\-Commands@{call\-N\-X\-P\-Commands}}
+\index{call\-N\-X\-P\-Commands@{call\-N\-X\-P\-Commands}!usb_commands_table.c@{usb\-\_\-commands\-\_\-table.\-c}}
+\subsubsection[{call\-N\-X\-P\-Commands}]{\setlength{\rightskip}{0pt plus 5cm}void call\-N\-X\-P\-Commands (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__commands__table_8c_a9d980864087ec271634f7d835433ccd4}
+This function sends special N\-X\-P command to N\-X\-P gen2 tags. The format of the report from the host is one of the following 
+\begin{DoxyItemize}
+\item E\-A\-S command \begin{TabularC}{6}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3 }&{\bf 4 .. 7 }\\\cline{1-6}
+\rowcolor{lightgray}{\bf Content}&0x45(I\-D)&10(length)&1&eas\-\_\-on&access pw \\\cline{1-6}
+\end{TabularC}
+
+\item Set/\-Reset protect \begin{TabularC}{6}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3 }&{\bf 4 .. 7 }\\\cline{1-6}
+\rowcolor{lightgray}{\bf Content}&0x45(I\-D)&10(length)&2&set\-\_\-protect&access pw \\\cline{1-6}
+\end{TabularC}
+
+\item Calibrate \begin{TabularC}{6}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3 }&{\bf 4 .. 7 }\\\cline{1-6}
+\rowcolor{lightgray}{\bf Content}&0x45(I\-D)&10(length)&8&not\-\_\-used&access pw \\\cline{1-6}
+\end{TabularC}
+
+\item Change Config \begin{TabularC}{7}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3 }&{\bf 4 .. 7 }&{\bf 8..9  }\\\cline{1-7}
+\rowcolor{lightgray}{\bf Content}&0x45(I\-D)&10(length)&9&not\-\_\-used&access pw&config \\\cline{1-7}
+\end{TabularC}
+where config is a mask of bit which should be flipped inside config word (X\-O\-Red).  
+\end{DoxyItemize}To all the reader replies with this\-: \begin{TabularC}{5}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3 .. 4 }\\\cline{1-5}
+\rowcolor{lightgray}{\bf Content}&0x46(I\-D)&5(length)&status&config word (only change config) \\\cline{1-5}
+\end{TabularC}
+
+
+Definition at line 2488 of file usb\-\_\-commands.\-c.
+
+\index{usb\-\_\-commands\-\_\-table.\-c@{usb\-\_\-commands\-\_\-table.\-c}!call\-Read\-From\-Tag@{call\-Read\-From\-Tag}}
+\index{call\-Read\-From\-Tag@{call\-Read\-From\-Tag}!usb_commands_table.c@{usb\-\_\-commands\-\_\-table.\-c}}
+\subsubsection[{call\-Read\-From\-Tag}]{\setlength{\rightskip}{0pt plus 5cm}void call\-Read\-From\-Tag (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__commands__table_8c_a1e8235cc0b2cb1df5b04a0847f0a0765}
+This function reads from a previously selected gen2 tag. The format of the report from the host is as follows\-: \begin{TabularC}{6}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3}&{\bf 4 }\\\cline{1-6}
+\rowcolor{lightgray}{\bf Content}&0x37(I\-D)&length&mem\-\_\-type&address&data\-\_\-len \\\cline{1-6}
+\end{TabularC}
+where 
+\begin{DoxyItemize}
+\item mem\-\_\-type\-:
+\begin{DoxyItemize}
+\item 0\-:reserved membank
+\item 1\-:E\-P\-C membank
+\item 2\-:T\-I\-D membank
+\item 3\-:U\-S\-E\-R membank
+\end{DoxyItemize}
+\item data\-\_\-len\-: data length to read in 16-\/bit words 
+\end{DoxyItemize}The device sends back the following report\-: \begin{TabularC}{5}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3 }\\\cline{1-5}
+\rowcolor{lightgray}{\bf Content}&0x38(I\-D)&length&status&num\-\_\-words\-\_\-read \\\cline{1-5}
+\end{TabularC}
+
+
+Definition at line 2244 of file usb\-\_\-commands.\-c.
+
+\index{usb\-\_\-commands\-\_\-table.\-c@{usb\-\_\-commands\-\_\-table.\-c}!call\-Read\-Register@{call\-Read\-Register}}
+\index{call\-Read\-Register@{call\-Read\-Register}!usb_commands_table.c@{usb\-\_\-commands\-\_\-table.\-c}}
+\subsubsection[{call\-Read\-Register}]{\setlength{\rightskip}{0pt plus 5cm}void call\-Read\-Register (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__commands__table_8c_a210112a5bcbefccae266f10a543f5b0b}
+This function reads one register from the A\-S399x. The format of the report from the host is as follows\-: \begin{TabularC}{4}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2 }\\\cline{1-4}
+\rowcolor{lightgray}{\bf Content}&0x1c(I\-D)&2(length)&reg\-\_\-number \\\cline{1-4}
+\end{TabularC}
+The device sends back\-: \begin{TabularC}{7}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3}&{\bf 4}&{\bf 5 }\\\cline{1-7}
+\rowcolor{lightgray}{\bf Content}&0x1d(I\-D)&6(length)&0 on success&val0&val1&val2 \\\cline{1-7}
+\end{TabularC}
+val1 and val2 only contain values if reg\-\_\-number is a deep register (0x12,0x14 .. 0x17). 
+
+Definition at line 685 of file usb\-\_\-commands.\-c.
+
+\index{usb\-\_\-commands\-\_\-table.\-c@{usb\-\_\-commands\-\_\-table.\-c}!call\-Read\-Registers@{call\-Read\-Registers}}
+\index{call\-Read\-Registers@{call\-Read\-Registers}!usb_commands_table.c@{usb\-\_\-commands\-\_\-table.\-c}}
+\subsubsection[{call\-Read\-Registers}]{\setlength{\rightskip}{0pt plus 5cm}void call\-Read\-Registers (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__commands__table_8c_a8f9f23c6aa727b21a4a93c9db9e886d2}
+This function reads all register in one bulk from A\-S399x. The format of the report from the host is as follows\-: \begin{TabularC}{3}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0 }&{\bf 1  }\\\cline{1-3}
+Content&0x57(I\-D)&1(length) \\\cline{1-3}
+\end{TabularC}
+\begin{TabularC}{25}
+\hline
+\rowcolor{lightgray}{\bf Byte }&{\bf 0 }&{\bf 1 }&{\bf 2 }&{\bf .. }&{\bf 19 }&{\bf 20 }&{\bf 21 }&{\bf 22 }&{\bf 23 }&{\bf 24 }&{\bf 25 }&{\bf 26 }&{\bf 27 }&{\bf 28 }&{\bf 29 }&{\bf 30 }&{\bf 31 }&{\bf 32 }&{\bf 33 }&{\bf 34 }&{\bf 35 }&{\bf 36 }&{\bf .. }&{\bf 44  }\\\cline{1-25}
+\rowcolor{lightgray}{\bf Content }&0x57(I\-D) &45(length) &reg 0x00 &.. &reg 0x11 &reg 0x12-\/1 &reg 0x12-\/2 &reg 0x12-\/3 &reg 0x13 &reg 0x14-\/1 &reg 0x14-\/2 &reg 0x14-\/3 &reg 0x15-\/1 &reg 0x15-\/2 &reg 0x15-\/3 &reg 0x16-\/1 &reg 0x16-\/2 &reg 0x16-\/3 &reg 0x17-\/1 &reg 0x17-\/2 &reg 0x17-\/3 &reg 0x18 &.. &reg 0x1f  \\\cline{1-25}
+\end{TabularC}
+
+
+Definition at line 1290 of file usb\-\_\-commands.\-c.
+
+\index{usb\-\_\-commands\-\_\-table.\-c@{usb\-\_\-commands\-\_\-table.\-c}!call\-Select\-Tag@{call\-Select\-Tag}}
+\index{call\-Select\-Tag@{call\-Select\-Tag}!usb_commands_table.c@{usb\-\_\-commands\-\_\-table.\-c}}
+\subsubsection[{call\-Select\-Tag}]{\setlength{\rightskip}{0pt plus 5cm}void call\-Select\-Tag (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__commands__table_8c_a34b95e06e77ecac99ce20894c4767f99}
+This function singulates a gen2 tag using the given mask for subsequent operations like read/write The format of the report from the host is as follows\-: \begin{TabularC}{5}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2 }&{\bf 3 .. 3 + mask\-\_\-length }\\\cline{1-5}
+\rowcolor{lightgray}{\bf Content}&0x33(I\-D)&length&mask\-\_\-length&mask \\\cline{1-5}
+\end{TabularC}
+The device sends back the following report\-: \begin{TabularC}{4}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2 }\\\cline{1-4}
+\rowcolor{lightgray}{\bf Content}&0x34(I\-D)&3(length)&status \\\cline{1-4}
+\end{TabularC}
+
+
+Definition at line 1707 of file usb\-\_\-commands.\-c.
+
+\index{usb\-\_\-commands\-\_\-table.\-c@{usb\-\_\-commands\-\_\-table.\-c}!call\-Send\-Firmware\-Hardware\-I\-D@{call\-Send\-Firmware\-Hardware\-I\-D}}
+\index{call\-Send\-Firmware\-Hardware\-I\-D@{call\-Send\-Firmware\-Hardware\-I\-D}!usb_commands_table.c@{usb\-\_\-commands\-\_\-table.\-c}}
+\subsubsection[{call\-Send\-Firmware\-Hardware\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}void call\-Send\-Firmware\-Hardware\-I\-D (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__commands__table_8c_ad6a025a7f083c3f69b3c8cefad179f9e}
+This function sends the firmware/hardware I\-D to the host. The format of the report from the host is as follows\-: \begin{TabularC}{4}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2 }\\\cline{1-4}
+\rowcolor{lightgray}{\bf Content}&0x10(I\-D)&3(length)&0 for firmware\newline
+1 for hardware \\\cline{1-4}
+\end{TabularC}
+The device sends back\-: \begin{TabularC}{4}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2 .. 47 }\\\cline{1-4}
+\rowcolor{lightgray}{\bf Content}&0x11(I\-D)&length&Zero terminated string \\\cline{1-4}
+\end{TabularC}
+
+
+Definition at line 256 of file usb\-\_\-commands.\-c.
+
+\index{usb\-\_\-commands\-\_\-table.\-c@{usb\-\_\-commands\-\_\-table.\-c}!call\-Start\-Stop@{call\-Start\-Stop}}
+\index{call\-Start\-Stop@{call\-Start\-Stop}!usb_commands_table.c@{usb\-\_\-commands\-\_\-table.\-c}}
+\subsubsection[{call\-Start\-Stop}]{\setlength{\rightskip}{0pt plus 5cm}void call\-Start\-Stop (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__commands__table_8c_a6958165c8330ea8d526edf669d0cb5e3}
+This function starts/stops the automatic scanning procedure. The format of the report from the host is as follows\-: \begin{TabularC}{5}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3 }\\\cline{1-5}
+\rowcolor{lightgray}{\bf Content}&0x5d(I\-D)&4(length)&update&start \\\cline{1-5}
+\end{TabularC}
+To start inventory rounds update has to be set to 1 and start has to be set to 1. To stop inventory rounds update has to be set to 1 and start has to be set to 0. If update is set to 0 no change of the current settings will be done. The device sends back\-: \begin{TabularC}{4}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2 }\\\cline{1-4}
+\rowcolor{lightgray}{\bf Content}&0x5e(I\-D)&3(length)&current start value
+
+Subsequently \doxyref{call\-Inventory\-R\-S\-S\-I\-Internal()}{p.}{usb__commands_8c_aafc4e4a9a043305cdd5d3d547112fae7} result packages are returned in a dense continuous loop. See there for description. \\\cline{1-4}
+\end{TabularC}
+
+
+Definition at line 2611 of file usb\-\_\-commands.\-c.
+
+\index{usb\-\_\-commands\-\_\-table.\-c@{usb\-\_\-commands\-\_\-table.\-c}!call\-Update\-Antenna\-Power@{call\-Update\-Antenna\-Power}}
+\index{call\-Update\-Antenna\-Power@{call\-Update\-Antenna\-Power}!usb_commands_table.c@{usb\-\_\-commands\-\_\-table.\-c}}
+\subsubsection[{call\-Update\-Antenna\-Power}]{\setlength{\rightskip}{0pt plus 5cm}void call\-Update\-Antenna\-Power (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__commands__table_8c_a2ce0eb2bd02ab534a95f522442fda919}
+This function updates the antenna output power table (d\-Bm2\-Setting). The format of the report from the host is as follows\-: \begin{TabularC}{9}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3}&{\bf 4 }&{\bf 5 }&{\bf 6 }&{\bf 7  }\\\cline{1-9}
+\rowcolor{lightgray}{\bf Content}&0x14(I\-D)&number of bytes in report&x d\-Bm&Reg15 &m\-V L\-S\-B &m\-V M\-S\-B &x d\-Bm&{\bf ...  }\\\cline{1-9}
+\end{TabularC}
+One power table entry consists of 4 Bytes\-:\par
+x d\-Bm\-: applying the following values will set this output power level.\par
+Reg15\-: value for the T\-X output level bits (4\-:0) in register 0x15 to get the x d\-Bm output level.\par
+m\-V\-: 16bit value which defines the voltage the D\-A\-C should be regulated to, to get the x d\-Bm output level.\par
+For updating the whole antenna output power table (31 table entries) 3 reports have to be sent. Each report contains the entry of the table which should be modified (x d\-Bm) and the new values (Reg15, m\-V).\par
+The device sends back\-: \begin{TabularC}{4}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2 }\\\cline{1-4}
+\rowcolor{lightgray}{\bf Content}&0x15(I\-D)&3(length)&0 on success \\\cline{1-4}
+\end{TabularC}
+
+
+Definition at line 402 of file usb\-\_\-commands.\-c.
+
+\index{usb\-\_\-commands\-\_\-table.\-c@{usb\-\_\-commands\-\_\-table.\-c}!call\-Write\-To\-Tag@{call\-Write\-To\-Tag}}
+\index{call\-Write\-To\-Tag@{call\-Write\-To\-Tag}!usb_commands_table.c@{usb\-\_\-commands\-\_\-table.\-c}}
+\subsubsection[{call\-Write\-To\-Tag}]{\setlength{\rightskip}{0pt plus 5cm}void call\-Write\-To\-Tag (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__commands__table_8c_a6b5124948787e4620bba229d08ea33ff}
+This function writes to a previously selected gen2 tag. The format of the report from the host is as follows\-: \begin{TabularC}{8}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3}&{\bf 4 .. 7}&{\bf 8}&{\bf 9 .. 9 + 2 $\ast$ data\-\_\-len }\\\cline{1-8}
+\rowcolor{lightgray}{\bf Content}&0x35(I\-D)&length&mem\-\_\-type&address&acces\-\_\-pw&data\-\_\-len&data  \\\cline{1-8}
+\end{TabularC}
+where 
+\begin{DoxyItemize}
+\item access\-\_\-pw\-: if access password is nonzero the tag will be accessed first 
+\item mem\-\_\-type\-:
+\begin{DoxyItemize}
+\item 0\-:reserved membank
+\item 1\-:E\-P\-C membank
+\item 2\-:T\-I\-D membank
+\item 3\-:U\-S\-E\-R membank
+\end{DoxyItemize}
+\item data\-\_\-len\-: data length in 16-\/bit words 
+\end{DoxyItemize}The device sends back the following report\-: \begin{TabularC}{5}
+\hline
+\rowcolor{lightgray}{\bf Byte}&{\bf 0}&{\bf 1}&{\bf 2}&{\bf 3 }\\\cline{1-5}
+\rowcolor{lightgray}{\bf Content}&0x36(I\-D)&3(length)&status&num\-\_\-words\-\_\-written \\\cline{1-5}
+\end{TabularC}
+
+
+Definition at line 1777 of file usb\-\_\-commands.\-c.
+
+
+
+\subsection{Variable Documentation}
+\index{usb\-\_\-commands\-\_\-table.\-c@{usb\-\_\-commands\-\_\-table.\-c}!call\-\_\-fkt\-\_\-@{call\-\_\-fkt\-\_\-}}
+\index{call\-\_\-fkt\-\_\-@{call\-\_\-fkt\-\_\-}!usb_commands_table.c@{usb\-\_\-commands\-\_\-table.\-c}}
+\subsubsection[{call\-\_\-fkt\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-O\-D\-E} void($\ast$const call\-\_\-fkt\-\_\-[256])(void)}\label{usb__commands__table_8c_a6034909af7b99d8ccc33e3a87c396f55}
+Table of function pointers. The offset in the table matches the command identifier. When a command is received the corresponding function will be called via this table. 
+
+Definition at line 71 of file usb\-\_\-commands\-\_\-table.\-c.
+

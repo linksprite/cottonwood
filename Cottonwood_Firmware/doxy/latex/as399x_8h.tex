@@ -1,0 +1,1014 @@
+\section{as399x.\-h File Reference}
+\label{as399x_8h}\index{as399x.\-h@{as399x.\-h}}
+{\ttfamily \#include \char`\"{}global.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-S\-E\-N\-D\-E\-R}()~do\{{\bf I\-O2}({\bf L\-O\-W});{\bf I\-O3}({\bf H\-I\-G\-H});\}while(0)
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-R\-E\-C\-E\-I\-V\-E\-R}()~do\{{\bf I\-O2}({\bf H\-I\-G\-H});{\bf I\-O3}({\bf H\-I\-G\-H});\}while(0)
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-I\-D\-L\-E}~0x80
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-S\-O\-F\-T\-I\-N\-I\-T}~0x83
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-H\-O\-P\-M\-A\-I\-N\-F\-R\-E\-Q}~0x84
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-H\-O\-P\-A\-U\-X\-F\-R\-E\-Q}~0x85
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-I\-G\-G\-E\-R\-A\-D\-C\-C\-O\-N}~0x87
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-I\-G\-G\-E\-R\-\_\-\-C\-A\-L\-I\-B\-R\-A\-T\-I\-O\-N}~0x88
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-R\-E\-S\-E\-T\-F\-I\-F\-O}~0x8\-F
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-C\-R\-C}~0x90
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-C\-R\-C\-E\-H\-E\-A\-D}~0x91
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M}~0x92
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-D\-E\-L\-A\-Y\-E\-D\-T\-R\-A\-N\-S\-M}~0x93
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-D\-E\-L\-A\-Y\-E\-D\-T\-R\-A\-N\-S\-M\-C\-R\-C}~0x94
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-B\-L\-O\-C\-K\-R\-X}~0x96
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-E\-N\-A\-B\-L\-E\-R\-X}~0x97
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y}~0x98
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-R\-E\-P}~0x99
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T\-U\-P}~0x9\-A
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T\-N\-I\-C}~0x9\-B
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T\-D\-O\-W\-N}~0x9\-C
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-A\-C\-K\-N}~0x9\-D
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-N\-A\-K}~0x9\-E
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-R\-E\-Q\-R\-N}~0x9\-F
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-S\-T\-A\-T\-U\-S\-C\-T\-R\-L}~0x00
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-C\-T\-R\-L}~0x01
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-O\-P\-T\-G\-E\-N2}~0x02
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-O\-P\-T\-G\-E\-N2}~0x03
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-R\-C\-A\-L\-R\-E\-G\-G\-E\-N2}~0x04
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-R\-C\-A\-L\-G\-E\-N2\-M\-I\-S\-C}~0x05
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-R\-E\-P\-L\-Y\-D\-E\-L\-A\-Y}~0x06
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-N\-O\-R\-E\-S\-P\-W\-A\-I\-T}~0x07
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-W\-A\-I\-T\-T\-I\-M\-E}~0x08
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-S\-P\-E\-C\-I\-A\-L}~0x09
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-S\-P\-E\-C\-I\-A\-L2}~0x0\-A
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-I\-O\-C\-O\-N\-T\-R\-O\-L}~0x0\-B
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-E\-S\-T\-S\-E\-T\-T\-I\-N\-G}~0x12
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-C\-L\-S\-Y\-S\-A\-O\-C\-P\-C\-T\-R\-L}~0x14
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-M\-O\-D\-U\-L\-A\-T\-O\-R\-C\-T\-R\-L}~0x15
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-P\-L\-L\-M\-A\-I\-N}~0x16
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-P\-L\-L\-A\-U\-X}~0x17
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-D\-A\-C}~0x18
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-A\-D\-C}~0x19
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-I\-R\-Q\-S\-T\-A\-T\-U\-S}~0x0\-C
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-I\-R\-Q\-M\-A\-S\-K\-R\-E\-G}~0x0\-D
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-A\-G\-C\-I\-N\-T\-E\-R\-N\-A\-L\-S\-T\-A\-T\-U\-S}~0x0\-E
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-S\-S\-I\-L\-E\-V\-E\-L\-S}~0x0\-F
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-A\-G\-L\-S\-T\-A\-T\-U\-S}~0x10
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-M\-E\-A\-S\-U\-R\-E\-\_\-\-S\-E\-L\-E\-C\-T\-O\-R}~0x11
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-L\-E\-N\-G\-T\-H\-U\-P}~0x1\-A
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-L\-E\-N\-G\-T\-H\-L\-O\-W}~0x1\-B
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-U\-S}~0x1\-C
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-L\-E\-N\-G\-T\-H\-U\-P}~0x1\-D
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-L\-E\-N\-G\-T\-H\-L\-O\-W}~0x1\-E
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-F\-I\-F\-O}~0x1\-F
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-N\-O\-R\-E\-S\-P}~0x01
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-P\-R\-E\-A\-M\-B\-L\-E}~0x02
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-R\-X\-C\-O\-U\-N\-T}~0x04
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-H\-E\-A\-D\-E\-R}~0x08
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-C\-R\-C\-E\-R\-R\-O\-R}~0x10
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-F\-I\-F\-O}~0x20
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-R\-X}~0x40
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-T\-X}~0x80
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-\_\-\-H\-I\-G\-H\-L\-E\-V\-E\-L}~0x80
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-\_\-\-L\-O\-W\-L\-E\-V\-E\-L}~0x40
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W}~0x20
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-F\-I\-F\-O\-\_\-\-D\-E\-P\-T\-H}~24
+\item 
+\#define {\bf R\-E\-S\-P\-\_\-\-T\-X\-I\-R\-Q}~{\bf A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-T\-X}
+\item 
+\#define {\bf R\-E\-S\-P\-\_\-\-R\-X\-I\-R\-Q}~{\bf A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-R\-X}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf as399x\-Single\-Command} ({\bf u8} command)
+\item 
+void {\bf as399x\-Continuous\-Command} ({\bf u8} $\ast$commands, s8 len)
+\item 
+void {\bf as399x\-Continuous\-Read} ({\bf u8} address, s8 len, {\bf u8} $\ast$readbuf)
+\item 
+void {\bf as399x\-Fifo\-Read} (s8 len, {\bf u8} $\ast$readbuf)
+\item 
+{\bf u8} {\bf as399x\-Single\-Read} ({\bf u8} address)
+\item 
+{\bf u8} {\bf as399x\-Single\-Read\-Irq} ({\bf u8} address)
+\item 
+void {\bf as399x\-Write\-Predistortion} (const {\bf u8} $\ast$buf)
+\item 
+void {\bf as399x\-Continuous\-Write} ({\bf u8} address, {\bf u8} $\ast$buf, s8 len)
+\item 
+void {\bf as399x\-Single\-Write} ({\bf u8} address, {\bf u8} value)
+\item 
+void {\bf as399x\-Command\-Continuous\-Address} ({\bf u8} $\ast$command, {\bf u8} com\-\_\-len, {\bf u8} address, {\bf u8} $\ast$buf, {\bf u8} buf\-\_\-len)
+\item 
+void {\bf as399x\-Wait\-For\-Response} (u16 wait\-Mask)
+\item 
+void {\bf as399x\-Wait\-For\-Response\-Timed} (u16 wait\-Mask, u16 ms)
+\item 
+void {\bf as399x\-Enter\-Direct\-Mode} ()
+\item 
+void {\bf as399x\-Exit\-Direct\-Mode} ()
+\item 
+void {\bf as399x\-Enter\-Standby\-Mode} ()\label{as399x_8h_aac42375eaacd77993195163b093aef41}
+
+\item 
+void {\bf as399x\-Exit\-Standby\-Mode} ()
+\item 
+void {\bf as399x\-Enter\-Power\-Down\-Mode} ()\label{as399x_8h_abbd6a2c62c8a946f628b2ad83d231975}
+
+\item 
+void {\bf as399x\-Exit\-Power\-Down\-Mode} ()\label{as399x_8h_a126728cbeb591b0aa075ba1317780acd}
+
+\item 
+void {\bf as399x\-Write\-D\-A\-C} ({\bf u8} nat\-Val)
+\item 
+{\bf u8} {\bf as399x\-Read\-D\-A\-C} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile u16 data {\bf as399x\-Response}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Declaration of low level functions provided by the A\-S399x series chips. \begin{DoxyAuthor}{Author}
+U.\-Herrmann ( based on work by E.\-Grubmueller 
+
+T. Luecker (Substitute)
+\end{DoxyAuthor}
+Declares low level functions provided by the A\-S399x series chips. All higher level functions are provided by \doxyref{as399x\-\_\-public.\-h}{p.}{as399x__public_8h} and protocol work is contained in \doxyref{gen2.\-h}{p.}{gen2_8h} and \doxyref{iso6b.\-h}{p.}{iso6b_8h} 
+
+Definition in file {\bf as399x.\-h}.
+
+
+
+\subsection{Macro Definition Documentation}
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-A\-C\-K\-N@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-A\-C\-K\-N}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-A\-C\-K\-N@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-A\-C\-K\-N}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-A\-C\-K\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-A\-C\-K\-N~0x9\-D}\label{as399x_8h_a74a864d2f714bbfca11dc00bd12bd98c}
+A\-S3990 direct command\-: sending acknowledge command to tag 
+
+Definition at line 91 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-B\-L\-O\-C\-K\-R\-X@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-B\-L\-O\-C\-K\-R\-X}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-B\-L\-O\-C\-K\-R\-X@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-B\-L\-O\-C\-K\-R\-X}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-B\-L\-O\-C\-K\-R\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-B\-L\-O\-C\-K\-R\-X~0x96}\label{as399x_8h_adbac39e677f259f6f1e17a3383aed3a6}
+A\-S3990 direct command\-: block receive operation 
+
+Definition at line 77 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-D\-E\-L\-A\-Y\-E\-D\-T\-R\-A\-N\-S\-M@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-D\-E\-L\-A\-Y\-E\-D\-T\-R\-A\-N\-S\-M}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-D\-E\-L\-A\-Y\-E\-D\-T\-R\-A\-N\-S\-M@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-D\-E\-L\-A\-Y\-E\-D\-T\-R\-A\-N\-S\-M}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-D\-E\-L\-A\-Y\-E\-D\-T\-R\-A\-N\-S\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-D\-E\-L\-A\-Y\-E\-D\-T\-R\-A\-N\-S\-M~0x93}\label{as399x_8h_af34bc781c93c69305afda5ac6d56fa41}
+A\-S3990 direct command\-: delayed transmition without C\-R\-C 
+
+Definition at line 73 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-D\-E\-L\-A\-Y\-E\-D\-T\-R\-A\-N\-S\-M\-C\-R\-C@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-D\-E\-L\-A\-Y\-E\-D\-T\-R\-A\-N\-S\-M\-C\-R\-C}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-D\-E\-L\-A\-Y\-E\-D\-T\-R\-A\-N\-S\-M\-C\-R\-C@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-D\-E\-L\-A\-Y\-E\-D\-T\-R\-A\-N\-S\-M\-C\-R\-C}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-D\-E\-L\-A\-Y\-E\-D\-T\-R\-A\-N\-S\-M\-C\-R\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-D\-E\-L\-A\-Y\-E\-D\-T\-R\-A\-N\-S\-M\-C\-R\-C~0x94}\label{as399x_8h_afa1f1a990938e8e85ca8fe67a49b109d}
+A\-S3990 direct command\-: delayed transmition with C\-R\-C 
+
+Definition at line 75 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-E\-N\-A\-B\-L\-E\-R\-X@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-E\-N\-A\-B\-L\-E\-R\-X}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-E\-N\-A\-B\-L\-E\-R\-X@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-E\-N\-A\-B\-L\-E\-R\-X}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-E\-N\-A\-B\-L\-E\-R\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-E\-N\-A\-B\-L\-E\-R\-X~0x97}\label{as399x_8h_a1ed79b527193d832985f8e9414b2b2cc}
+A\-S3990 direct command\-: enable receive operation 
+
+Definition at line 79 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-H\-O\-P\-A\-U\-X\-F\-R\-E\-Q@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-H\-O\-P\-A\-U\-X\-F\-R\-E\-Q}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-H\-O\-P\-A\-U\-X\-F\-R\-E\-Q@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-H\-O\-P\-A\-U\-X\-F\-R\-E\-Q}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-H\-O\-P\-A\-U\-X\-F\-R\-E\-Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-H\-O\-P\-A\-U\-X\-F\-R\-E\-Q~0x85}\label{as399x_8h_af0822d3ba83d003dea1203d899b051f4}
+A\-S3990 direct command\-: hop to aux frequency 
+
+Definition at line 57 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-H\-O\-P\-M\-A\-I\-N\-F\-R\-E\-Q@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-H\-O\-P\-M\-A\-I\-N\-F\-R\-E\-Q}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-H\-O\-P\-M\-A\-I\-N\-F\-R\-E\-Q@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-H\-O\-P\-M\-A\-I\-N\-F\-R\-E\-Q}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-H\-O\-P\-M\-A\-I\-N\-F\-R\-E\-Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-H\-O\-P\-M\-A\-I\-N\-F\-R\-E\-Q~0x84}\label{as399x_8h_a5f1c915e8f3a01a4bc5ad268b9f2eff7}
+A\-S3990 direct command\-: hop to main frequency 
+
+Definition at line 55 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-I\-D\-L\-E@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-I\-D\-L\-E}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-I\-D\-L\-E@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-I\-D\-L\-E}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-I\-D\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-I\-D\-L\-E~0x80}\label{as399x_8h_af6a432af5783798a1b732d2e5ac8af5f}
+A\-S3990 direct command\-: idle 
+
+Definition at line 51 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-N\-A\-K@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-N\-A\-K}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-N\-A\-K@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-N\-A\-K}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-N\-A\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-N\-A\-K~0x9\-E}\label{as399x_8h_a54bd5b84d28a9cc91936ea5723701670}
+A\-S3990 direct command\-: sending not acknowledge command to tag 
+
+Definition at line 93 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y~0x98}\label{as399x_8h_a924381a00c27514883e413e5d0308a4e}
+A\-S3990 direct command\-: sending query command to tag 
+
+Definition at line 81 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T\-D\-O\-W\-N@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T\-D\-O\-W\-N}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T\-D\-O\-W\-N@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T\-D\-O\-W\-N}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T\-D\-O\-W\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T\-D\-O\-W\-N~0x9\-C}\label{as399x_8h_a6f8255cb807db095a05b73144729f6b9}
+A\-S3990 direct command\-: sending query adjust down command to tag 
+
+Definition at line 89 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T\-N\-I\-C@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T\-N\-I\-C}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T\-N\-I\-C@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T\-N\-I\-C}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T\-N\-I\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T\-N\-I\-C~0x9\-B}\label{as399x_8h_a34311dd0331c9c627a5564e94736637d}
+A\-S3990 direct command\-: sending query adjust nic command to tag 
+
+Definition at line 87 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T\-U\-P@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T\-U\-P}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T\-U\-P@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T\-U\-P}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T\-U\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T\-U\-P~0x9\-A}\label{as399x_8h_a9c13a494ec3f8ba2aeeef5043a51cd56}
+A\-S3990 direct command\-: sending query adjust up command to tag 
+
+Definition at line 85 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-R\-E\-P@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-R\-E\-P}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-R\-E\-P@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-R\-E\-P}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-R\-E\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-Q\-U\-E\-R\-Y\-R\-E\-P~0x99}\label{as399x_8h_ac1963ef0dd40385da81a3c58a89450ae}
+A\-S3990 direct command\-: sending queryrep command to tag 
+
+Definition at line 83 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-R\-E\-Q\-R\-N@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-R\-E\-Q\-R\-N}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-R\-E\-Q\-R\-N@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-R\-E\-Q\-R\-N}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-R\-E\-Q\-R\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-R\-E\-Q\-R\-N~0x9\-F}\label{as399x_8h_a21785fb0b3e9db93da519d950f5f2f0b}
+A\-S3990 direct command\-: sending request new R\-N16 or Handle command to tag 
+
+Definition at line 95 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-R\-E\-S\-E\-T\-F\-I\-F\-O@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-R\-E\-S\-E\-T\-F\-I\-F\-O}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-R\-E\-S\-E\-T\-F\-I\-F\-O@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-R\-E\-S\-E\-T\-F\-I\-F\-O}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-R\-E\-S\-E\-T\-F\-I\-F\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-R\-E\-S\-E\-T\-F\-I\-F\-O~0x8\-F}\label{as399x_8h_a170a9d4694d3c5e3bc5513857730b897}
+A\-S3990 direct command\-: reset A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-F\-I\-F\-O 
+
+Definition at line 65 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-S\-O\-F\-T\-I\-N\-I\-T@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-S\-O\-F\-T\-I\-N\-I\-T}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-S\-O\-F\-T\-I\-N\-I\-T@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-S\-O\-F\-T\-I\-N\-I\-T}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-S\-O\-F\-T\-I\-N\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-S\-O\-F\-T\-I\-N\-I\-T~0x83}\label{as399x_8h_acb2df44e3fc17cdad221499eeac79cf2}
+A\-S3990 direct command\-: soft init 
+
+Definition at line 53 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M~0x92}\label{as399x_8h_abe51cf94ff7bcb9a298ae96e38da39a3}
+A\-S3990 direct command\-: transmition to tag without C\-R\-C 
+
+Definition at line 71 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-C\-R\-C@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-C\-R\-C}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-C\-R\-C@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-C\-R\-C}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-C\-R\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-C\-R\-C~0x90}\label{as399x_8h_a6496119777511f4480df2ee179d74939}
+A\-S3990 direct command\-: transmition to tag with C\-R\-C 
+
+Definition at line 67 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-C\-R\-C\-E\-H\-E\-A\-D@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-C\-R\-C\-E\-H\-E\-A\-D}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-C\-R\-C\-E\-H\-E\-A\-D@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-C\-R\-C\-E\-H\-E\-A\-D}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-C\-R\-C\-E\-H\-E\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-C\-R\-C\-E\-H\-E\-A\-D~0x91}\label{as399x_8h_a1f96f4a5e7a5dac94167ede279f4f345}
+A\-S3990 direct command\-: transmition to tag with C\-R\-C expecting headerbit 
+
+Definition at line 69 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-I\-G\-G\-E\-R\-\_\-\-C\-A\-L\-I\-B\-R\-A\-T\-I\-O\-N@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-I\-G\-G\-E\-R\-\_\-\-C\-A\-L\-I\-B\-R\-A\-T\-I\-O\-N}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-I\-G\-G\-E\-R\-\_\-\-C\-A\-L\-I\-B\-R\-A\-T\-I\-O\-N@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-I\-G\-G\-E\-R\-\_\-\-C\-A\-L\-I\-B\-R\-A\-T\-I\-O\-N}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-I\-G\-G\-E\-R\-\_\-\-C\-A\-L\-I\-B\-R\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-I\-G\-G\-E\-R\-\_\-\-C\-A\-L\-I\-B\-R\-A\-T\-I\-O\-N~0x88}\label{as399x_8h_a589f7e08ae82a9d66f9d9b963cbc1ecb}
+A\-S3992 direct command\-: trigger rx filter calibration 
+
+Definition at line 62 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-I\-G\-G\-E\-R\-A\-D\-C\-C\-O\-N@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-I\-G\-G\-E\-R\-A\-D\-C\-C\-O\-N}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-I\-G\-G\-E\-R\-A\-D\-C\-C\-O\-N@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-I\-G\-G\-E\-R\-A\-D\-C\-C\-O\-N}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-I\-G\-G\-E\-R\-A\-D\-C\-C\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-I\-G\-G\-E\-R\-A\-D\-C\-C\-O\-N~0x87}\label{as399x_8h_ae070a6479b8139125c9acb211c4e977c}
+A\-S3990 direct command\-: trigger A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-A\-D\-C conversion 
+
+Definition at line 59 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-R\-E\-C\-E\-I\-V\-E\-R@{A\-S399\-X\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-R\-E\-C\-E\-I\-V\-E\-R}}
+\index{A\-S399\-X\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-R\-E\-C\-E\-I\-V\-E\-R@{A\-S399\-X\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-R\-E\-C\-E\-I\-V\-E\-R}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-R\-E\-C\-E\-I\-V\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-R\-E\-C\-E\-I\-V\-E\-R(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~do\{{\bf I\-O2}({\bf H\-I\-G\-H});{\bf I\-O3}({\bf H\-I\-G\-H});\}while(0)}\label{as399x_8h_a687345d483cbfb7b658fc340534f8ce3}
+macro for setting the input ports used for direct mode 
+
+Definition at line 47 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-S\-E\-N\-D\-E\-R@{A\-S399\-X\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-S\-E\-N\-D\-E\-R}}
+\index{A\-S399\-X\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-S\-E\-N\-D\-E\-R@{A\-S399\-X\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-S\-E\-N\-D\-E\-R}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-S\-E\-N\-D\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-S\-E\-N\-D\-E\-R(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~do\{{\bf I\-O2}({\bf L\-O\-W});{\bf I\-O3}({\bf H\-I\-G\-H});\}while(0)}\label{as399x_8h_a6539d1d6bfa4beb87a6af0aeb4e0a193}
+macro for setting the output ports used for direct mode 
+
+Definition at line 42 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-F\-I\-F\-O\-\_\-\-D\-E\-P\-T\-H@{A\-S399\-X\-\_\-\-F\-I\-F\-O\-\_\-\-D\-E\-P\-T\-H}}
+\index{A\-S399\-X\-\_\-\-F\-I\-F\-O\-\_\-\-D\-E\-P\-T\-H@{A\-S399\-X\-\_\-\-F\-I\-F\-O\-\_\-\-D\-E\-P\-T\-H}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-F\-I\-F\-O\-\_\-\-D\-E\-P\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-F\-I\-F\-O\-\_\-\-D\-E\-P\-T\-H~24}\label{as399x_8h_a0bae089f421257cf9875cfb3e6882c34}
+A\-S399x F\-I\-F\-O D\-E\-P\-T\-H is 24 bytes 
+
+Definition at line 205 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-\_\-\-H\-I\-G\-H\-L\-E\-V\-E\-L@{A\-S399\-X\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-\_\-\-H\-I\-G\-H\-L\-E\-V\-E\-L}}
+\index{A\-S399\-X\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-\_\-\-H\-I\-G\-H\-L\-E\-V\-E\-L@{A\-S399\-X\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-\_\-\-H\-I\-G\-H\-L\-E\-V\-E\-L}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-\_\-\-H\-I\-G\-H\-L\-E\-V\-E\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-\_\-\-H\-I\-G\-H\-L\-E\-V\-E\-L~0x80}\label{as399x_8h_a57921714d6daf0d9941d91a40fd7f4c1}
+A\-S3990 A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-F\-I\-F\-O status register\-: F\-I\-F\-O 2/3 full 
+
+Definition at line 197 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-\_\-\-L\-O\-W\-L\-E\-V\-E\-L@{A\-S399\-X\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-\_\-\-L\-O\-W\-L\-E\-V\-E\-L}}
+\index{A\-S399\-X\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-\_\-\-L\-O\-W\-L\-E\-V\-E\-L@{A\-S399\-X\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-\_\-\-L\-O\-W\-L\-E\-V\-E\-L}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-\_\-\-L\-O\-W\-L\-E\-V\-E\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-\_\-\-L\-O\-W\-L\-E\-V\-E\-L~0x40}\label{as399x_8h_a6efb0fa1c80edce4f430f2a1f600b8d3}
+A\-S3990 A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-F\-I\-F\-O status register\-: F\-I\-F\-O 1/3 full 
+
+Definition at line 199 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W@{A\-S399\-X\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W}}
+\index{A\-S399\-X\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W@{A\-S399\-X\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W~0x20}\label{as399x_8h_a7419c2f628ba499e63788e129619e857}
+A\-S3990 A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-F\-I\-F\-O status register\-: F\-I\-F\-O overflow 
+
+Definition at line 201 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-C\-R\-C\-E\-R\-R\-O\-R@{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-C\-R\-C\-E\-R\-R\-O\-R}}
+\index{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-C\-R\-C\-E\-R\-R\-O\-R@{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-C\-R\-C\-E\-R\-R\-O\-R}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-C\-R\-C\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-C\-R\-C\-E\-R\-R\-O\-R~0x10}\label{as399x_8h_a82618eb7d3180b4797b69b22c73f0ec3}
+A\-S3990 interrupt\-: error1 bit 
+
+Definition at line 183 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-F\-I\-F\-O@{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-F\-I\-F\-O}}
+\index{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-F\-I\-F\-O@{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-F\-I\-F\-O}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-F\-I\-F\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-F\-I\-F\-O~0x20}\label{as399x_8h_ad95b1a741825ec3184cca22f12af0e91}
+A\-S3990 interrupt\-: fifo bit 
+
+Definition at line 185 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-H\-E\-A\-D\-E\-R@{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-H\-E\-A\-D\-E\-R}}
+\index{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-H\-E\-A\-D\-E\-R@{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-H\-E\-A\-D\-E\-R}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-H\-E\-A\-D\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-H\-E\-A\-D\-E\-R~0x08}\label{as399x_8h_acfa60851e420d58f3090b870b25db8a8}
+A\-S3990 interrupt\-: header bit 
+
+Definition at line 181 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-N\-O\-R\-E\-S\-P@{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-N\-O\-R\-E\-S\-P}}
+\index{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-N\-O\-R\-E\-S\-P@{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-N\-O\-R\-E\-S\-P}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-N\-O\-R\-E\-S\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-N\-O\-R\-E\-S\-P~0x01}\label{as399x_8h_a1bb571cbf1e80d99468b24373ae1fe17}
+A\-S3990 interrupt\-: no response bit 
+
+Definition at line 175 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-P\-R\-E\-A\-M\-B\-L\-E@{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-P\-R\-E\-A\-M\-B\-L\-E}}
+\index{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-P\-R\-E\-A\-M\-B\-L\-E@{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-P\-R\-E\-A\-M\-B\-L\-E}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-P\-R\-E\-A\-M\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-P\-R\-E\-A\-M\-B\-L\-E~0x02}\label{as399x_8h_a49130c5987780218d9a58604c6c59d19}
+A\-S3990 interrupt\-: error 3 bit 
+
+Definition at line 177 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-R\-X@{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-R\-X}}
+\index{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-R\-X@{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-R\-X}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-R\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-R\-X~0x40}\label{as399x_8h_a918e4143ae60f62719e7528b4093ba3f}
+A\-S3990 I\-R\-Q status register\-: receive complete 
+
+Definition at line 187 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-R\-X\-C\-O\-U\-N\-T@{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-R\-X\-C\-O\-U\-N\-T}}
+\index{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-R\-X\-C\-O\-U\-N\-T@{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-R\-X\-C\-O\-U\-N\-T}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-R\-X\-C\-O\-U\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-R\-X\-C\-O\-U\-N\-T~0x04}\label{as399x_8h_a5de34527c974375e87e5e9da6318ef9e}
+A\-S3990 interrupt\-: error 2 bit 
+
+Definition at line 179 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-T\-X@{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-T\-X}}
+\index{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-T\-X@{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-T\-X}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-T\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-T\-X~0x80}\label{as399x_8h_ad3128d5c7233f0d80afba042324f1725}
+A\-S3990 I\-R\-Q status register\-: transmit complete 
+
+Definition at line 189 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-A\-D\-C@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-A\-D\-C}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-A\-D\-C@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-A\-D\-C}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-A\-D\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-A\-D\-C~0x19}\label{as399x_8h_a3ed2faac4f45c3b93ddaef85d0682fe5}
+A\-S3990 register\-: A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-A\-D\-C control 
+
+Definition at line 140 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-A\-G\-C\-I\-N\-T\-E\-R\-N\-A\-L\-S\-T\-A\-T\-U\-S@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-A\-G\-C\-I\-N\-T\-E\-R\-N\-A\-L\-S\-T\-A\-T\-U\-S}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-A\-G\-C\-I\-N\-T\-E\-R\-N\-A\-L\-S\-T\-A\-T\-U\-S@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-A\-G\-C\-I\-N\-T\-E\-R\-N\-A\-L\-S\-T\-A\-T\-U\-S}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-A\-G\-C\-I\-N\-T\-E\-R\-N\-A\-L\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-A\-G\-C\-I\-N\-T\-E\-R\-N\-A\-L\-S\-T\-A\-T\-U\-S~0x0\-E}\label{as399x_8h_acb0075943ca56bc1b764bea8321603df}
+A\-S3990 register\-: A\-G\-C and Internal status 
+
+Definition at line 148 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-A\-G\-L\-S\-T\-A\-T\-U\-S@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-A\-G\-L\-S\-T\-A\-T\-U\-S}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-A\-G\-L\-S\-T\-A\-T\-U\-S@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-A\-G\-L\-S\-T\-A\-T\-U\-S}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-A\-G\-L\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-A\-G\-L\-S\-T\-A\-T\-U\-S~0x10}\label{as399x_8h_af95f9d2733a62f1f91bf3c6ccee684c3}
+A\-S3990 register\-: A\-G\-L status 
+
+Definition at line 152 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-C\-L\-S\-Y\-S\-A\-O\-C\-P\-C\-T\-R\-L@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-C\-L\-S\-Y\-S\-A\-O\-C\-P\-C\-T\-R\-L}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-C\-L\-S\-Y\-S\-A\-O\-C\-P\-C\-T\-R\-L@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-C\-L\-S\-Y\-S\-A\-O\-C\-P\-C\-T\-R\-L}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-C\-L\-S\-Y\-S\-A\-O\-C\-P\-C\-T\-R\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-C\-L\-S\-Y\-S\-A\-O\-C\-P\-C\-T\-R\-L~0x14}\label{as399x_8h_a734fc12a96ee017d4c97c1c3b273d542}
+A\-S3990 register\-: C\-L\-\_\-sys,analouge out and C\-P control 
+
+Definition at line 130 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-D\-A\-C@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-D\-A\-C}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-D\-A\-C@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-D\-A\-C}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-D\-A\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-D\-A\-C~0x18}\label{as399x_8h_aae3cf469d9868eac8910027538c56327}
+A\-S3990 register\-: A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-D\-A\-C control 
+
+Definition at line 138 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-F\-I\-F\-O@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-F\-I\-F\-O}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-F\-I\-F\-O@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-F\-I\-F\-O}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-F\-I\-F\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-F\-I\-F\-O~0x1\-F}\label{as399x_8h_ae4ec3106b0edd5dc948d7771af6a8e0a}
+A\-S3990 register\-: data A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-F\-I\-F\-O 
+
+Definition at line 171 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-U\-S@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-U\-S}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-U\-S@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-U\-S}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-F\-I\-F\-O\-S\-T\-A\-T\-U\-S~0x1\-C}\label{as399x_8h_ae6dfb6896b9497ede5d266fce86d9a4b}
+A\-S3990 register\-: A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-F\-I\-F\-O status 
+
+Definition at line 165 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-I\-O\-C\-O\-N\-T\-R\-O\-L@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-I\-O\-C\-O\-N\-T\-R\-O\-L}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-I\-O\-C\-O\-N\-T\-R\-O\-L@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-I\-O\-C\-O\-N\-T\-R\-O\-L}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-I\-O\-C\-O\-N\-T\-R\-O\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-I\-O\-C\-O\-N\-T\-R\-O\-L~0x0\-B}\label{as399x_8h_ac92878f5561e20ffc6d7e32ad025e388}
+A\-S3990 register\-: regulator and I\-O control 
+
+Definition at line 124 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-I\-R\-Q\-M\-A\-S\-K\-R\-E\-G@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-I\-R\-Q\-M\-A\-S\-K\-R\-E\-G}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-I\-R\-Q\-M\-A\-S\-K\-R\-E\-G@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-I\-R\-Q\-M\-A\-S\-K\-R\-E\-G}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-I\-R\-Q\-M\-A\-S\-K\-R\-E\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-I\-R\-Q\-M\-A\-S\-K\-R\-E\-G~0x0\-D}\label{as399x_8h_a35e15597d2bdb091f7df9061394646c9}
+A\-S3990 register\-: I\-R\-Q mask 
+
+Definition at line 146 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-I\-R\-Q\-S\-T\-A\-T\-U\-S@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-I\-R\-Q\-S\-T\-A\-T\-U\-S}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-I\-R\-Q\-S\-T\-A\-T\-U\-S@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-I\-R\-Q\-S\-T\-A\-T\-U\-S}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-I\-R\-Q\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-I\-R\-Q\-S\-T\-A\-T\-U\-S~0x0\-C}\label{as399x_8h_a588a82f30a83c26fd2e85d16cb00d9d4}
+A\-S3990 register\-: I\-R\-Q status 
+
+Definition at line 144 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-M\-E\-A\-S\-U\-R\-E\-\_\-\-S\-E\-L\-E\-C\-T\-O\-R@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-M\-E\-A\-S\-U\-R\-E\-\_\-\-S\-E\-L\-E\-C\-T\-O\-R}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-M\-E\-A\-S\-U\-R\-E\-\_\-\-S\-E\-L\-E\-C\-T\-O\-R@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-M\-E\-A\-S\-U\-R\-E\-\_\-\-S\-E\-L\-E\-C\-T\-O\-R}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-M\-E\-A\-S\-U\-R\-E\-\_\-\-S\-E\-L\-E\-C\-T\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-M\-E\-A\-S\-U\-R\-E\-\_\-\-S\-E\-L\-E\-C\-T\-O\-R~0x11}\label{as399x_8h_a8116d2f3bb196e1243b48bbb12644c88}
+A\-S3990 register\-: Test setting 1 and measurement selection 
+
+Definition at line 156 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-M\-O\-D\-U\-L\-A\-T\-O\-R\-C\-T\-R\-L@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-M\-O\-D\-U\-L\-A\-T\-O\-R\-C\-T\-R\-L}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-M\-O\-D\-U\-L\-A\-T\-O\-R\-C\-T\-R\-L@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-M\-O\-D\-U\-L\-A\-T\-O\-R\-C\-T\-R\-L}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-M\-O\-D\-U\-L\-A\-T\-O\-R\-C\-T\-R\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-M\-O\-D\-U\-L\-A\-T\-O\-R\-C\-T\-R\-L~0x15}\label{as399x_8h_aeaf7f1f6428c7b0344b8836876292a34}
+A\-S3990 register\-: modulator control 
+
+Definition at line 132 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-P\-L\-L\-A\-U\-X@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-P\-L\-L\-A\-U\-X}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-P\-L\-L\-A\-U\-X@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-P\-L\-L\-A\-U\-X}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-P\-L\-L\-A\-U\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-P\-L\-L\-A\-U\-X~0x17}\label{as399x_8h_ae2bff940cf8e09d85bf10864f69ba49c}
+A\-S3990 register\-: P\-L\-L A/\-B divider auxiliary register (three bytes deep) 
+
+Definition at line 136 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-P\-L\-L\-M\-A\-I\-N@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-P\-L\-L\-M\-A\-I\-N}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-P\-L\-L\-M\-A\-I\-N@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-P\-L\-L\-M\-A\-I\-N}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-P\-L\-L\-M\-A\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-P\-L\-L\-M\-A\-I\-N~0x16}\label{as399x_8h_ab3c0f0630267d64bf6e2b938e5da70ce}
+A\-S3990 register\-: P\-L\-L R, A/\-B divider main register (three bytes deep) 
+
+Definition at line 134 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-C\-T\-R\-L@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-C\-T\-R\-L}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-C\-T\-R\-L@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-C\-T\-R\-L}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-C\-T\-R\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-C\-T\-R\-L~0x01}\label{as399x_8h_a64cdec5c5ccf2894c32126907a746c70}
+A\-S3990 register\-: protocol control 
+
+Definition at line 102 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-S\-S\-I\-L\-E\-V\-E\-L\-S@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-S\-S\-I\-L\-E\-V\-E\-L\-S}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-S\-S\-I\-L\-E\-V\-E\-L\-S@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-S\-S\-I\-L\-E\-V\-E\-L\-S}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-S\-S\-I\-L\-E\-V\-E\-L\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-S\-S\-I\-L\-E\-V\-E\-L\-S~0x0\-F}\label{as399x_8h_aa628071ea13a50b860a2815c721cd927}
+A\-S3990 register\-: R\-S\-S\-I levels 
+
+Definition at line 150 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-L\-E\-N\-G\-T\-H\-L\-O\-W@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-L\-E\-N\-G\-T\-H\-L\-O\-W}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-L\-E\-N\-G\-T\-H\-L\-O\-W@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-L\-E\-N\-G\-T\-H\-L\-O\-W}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-L\-E\-N\-G\-T\-H\-L\-O\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-L\-E\-N\-G\-T\-H\-L\-O\-W~0x1\-B}\label{as399x_8h_a60913e58a5f4ed8ca6269435bcf831e4}
+A\-S3990 register\-: number of bytes to receive (lower byte) 
+
+Definition at line 163 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-L\-E\-N\-G\-T\-H\-U\-P@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-L\-E\-N\-G\-T\-H\-U\-P}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-L\-E\-N\-G\-T\-H\-U\-P@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-L\-E\-N\-G\-T\-H\-U\-P}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-L\-E\-N\-G\-T\-H\-U\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-L\-E\-N\-G\-T\-H\-U\-P~0x1\-A}\label{as399x_8h_ad4fda1d3ac15be67c672b23e6a6cd24a}
+A\-S3990 register\-: Test setting 2 A\-S3990 register\-: number of bytes to receive (upper byte) 
+
+Definition at line 161 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-N\-O\-R\-E\-S\-P\-W\-A\-I\-T@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-N\-O\-R\-E\-S\-P\-W\-A\-I\-T}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-N\-O\-R\-E\-S\-P\-W\-A\-I\-T@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-N\-O\-R\-E\-S\-P\-W\-A\-I\-T}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-N\-O\-R\-E\-S\-P\-W\-A\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-N\-O\-R\-E\-S\-P\-W\-A\-I\-T~0x07}\label{as399x_8h_a7a60ad07a49d5de2094b0444e15ebca0}
+A\-S3990 register\-: wait time until no response interrupt is generated 
+
+Definition at line 116 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-O\-P\-T\-G\-E\-N2@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-O\-P\-T\-G\-E\-N2}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-O\-P\-T\-G\-E\-N2@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-O\-P\-T\-G\-E\-N2}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-O\-P\-T\-G\-E\-N2}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-O\-P\-T\-G\-E\-N2~0x03}\label{as399x_8h_a35d0cbe5a55c0c3334b095b33d3e430b}
+A\-S3990 register\-: receive options G\-E\-N2 
+
+Definition at line 108 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-S\-P\-E\-C\-I\-A\-L@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-S\-P\-E\-C\-I\-A\-L}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-S\-P\-E\-C\-I\-A\-L@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-S\-P\-E\-C\-I\-A\-L}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-S\-P\-E\-C\-I\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-S\-P\-E\-C\-I\-A\-L~0x09}\label{as399x_8h_aab57e0f2292674387a30b431a1473bd4}
+A\-S3990 register\-: receive special settings 
+
+Definition at line 120 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-S\-P\-E\-C\-I\-A\-L2@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-S\-P\-E\-C\-I\-A\-L2}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-S\-P\-E\-C\-I\-A\-L2@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-S\-P\-E\-C\-I\-A\-L2}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-S\-P\-E\-C\-I\-A\-L2}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-S\-P\-E\-C\-I\-A\-L2~0x0\-A}\label{as399x_8h_a931dc19dcde1c4a5d901c9405318f0db}
+A\-S3990 register\-: receive special settings 2 
+
+Definition at line 122 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-W\-A\-I\-T\-T\-I\-M\-E@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-W\-A\-I\-T\-T\-I\-M\-E}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-W\-A\-I\-T\-T\-I\-M\-E@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-W\-A\-I\-T\-T\-I\-M\-E}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-W\-A\-I\-T\-T\-I\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-R\-X\-W\-A\-I\-T\-T\-I\-M\-E~0x08}\label{as399x_8h_a7cd37ae735133677e616268916d29dcf}
+A\-S3990 register\-: wait time after transmition until the receiver is enabled 
+
+Definition at line 118 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-S\-T\-A\-T\-U\-S\-C\-T\-R\-L@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-S\-T\-A\-T\-U\-S\-C\-T\-R\-L}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-S\-T\-A\-T\-U\-S\-C\-T\-R\-L@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-S\-T\-A\-T\-U\-S\-C\-T\-R\-L}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-S\-T\-A\-T\-U\-S\-C\-T\-R\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-S\-T\-A\-T\-U\-S\-C\-T\-R\-L~0x00}\label{as399x_8h_a8f5be9c6af1f96177c12eec37a0c6287}
+A\-S3990 register\-: status control 
+
+Definition at line 100 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-E\-S\-T\-S\-E\-T\-T\-I\-N\-G@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-E\-S\-T\-S\-E\-T\-T\-I\-N\-G}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-E\-S\-T\-S\-E\-T\-T\-I\-N\-G@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-E\-S\-T\-S\-E\-T\-T\-I\-N\-G}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-E\-S\-T\-S\-E\-T\-T\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-E\-S\-T\-S\-E\-T\-T\-I\-N\-G~0x12}\label{as399x_8h_a003b5f9144a47fb13474bc4e4ca1873e}
+A\-S3990 register\-: chip version 
+
+Definition at line 126 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-R\-C\-A\-L\-G\-E\-N2\-M\-I\-S\-C@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-R\-C\-A\-L\-G\-E\-N2\-M\-I\-S\-C}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-R\-C\-A\-L\-G\-E\-N2\-M\-I\-S\-C@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-R\-C\-A\-L\-G\-E\-N2\-M\-I\-S\-C}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-R\-C\-A\-L\-G\-E\-N2\-M\-I\-S\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-R\-C\-A\-L\-G\-E\-N2\-M\-I\-S\-C~0x05}\label{as399x_8h_a2a55770dc93dc20d809fbe45c228589f}
+A\-S3990 register\-: T\-Rcal and misc 
+
+Definition at line 112 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-R\-C\-A\-L\-R\-E\-G\-G\-E\-N2@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-R\-C\-A\-L\-R\-E\-G\-G\-E\-N2}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-R\-C\-A\-L\-R\-E\-G\-G\-E\-N2@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-R\-C\-A\-L\-R\-E\-G\-G\-E\-N2}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-R\-C\-A\-L\-R\-E\-G\-G\-E\-N2}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-R\-C\-A\-L\-R\-E\-G\-G\-E\-N2~0x04}\label{as399x_8h_a9e28414fda5b60cdcf628e572591faf2}
+A\-S3990 register\-: T\-Rcal low 
+
+Definition at line 110 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-L\-E\-N\-G\-T\-H\-L\-O\-W@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-L\-E\-N\-G\-T\-H\-L\-O\-W}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-L\-E\-N\-G\-T\-H\-L\-O\-W@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-L\-E\-N\-G\-T\-H\-L\-O\-W}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-L\-E\-N\-G\-T\-H\-L\-O\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-L\-E\-N\-G\-T\-H\-L\-O\-W~0x1\-E}\label{as399x_8h_a5c265605260b9cfe7b0ad8593536d470}
+A\-S3990 register\-: number of bytes to transmit (lower byte) 
+
+Definition at line 169 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-L\-E\-N\-G\-T\-H\-U\-P@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-L\-E\-N\-G\-T\-H\-U\-P}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-L\-E\-N\-G\-T\-H\-U\-P@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-L\-E\-N\-G\-T\-H\-U\-P}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-L\-E\-N\-G\-T\-H\-U\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-L\-E\-N\-G\-T\-H\-U\-P~0x1\-D}\label{as399x_8h_ad57549f79eaec4300c9a07edd75b1207}
+A\-S3990 register\-: number of bytes to transmit (upper byte) 
+
+Definition at line 167 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-O\-P\-T\-G\-E\-N2@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-O\-P\-T\-G\-E\-N2}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-O\-P\-T\-G\-E\-N2@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-O\-P\-T\-G\-E\-N2}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-O\-P\-T\-G\-E\-N2}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-O\-P\-T\-G\-E\-N2~0x02}\label{as399x_8h_a97859f498dcc038a7c64d1ee583f3dc1}
+A\-S3990 register\-: transmit options G\-E\-N2 
+
+Definition at line 106 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-R\-E\-P\-L\-Y\-D\-E\-L\-A\-Y@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-R\-E\-P\-L\-Y\-D\-E\-L\-A\-Y}}
+\index{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-R\-E\-P\-L\-Y\-D\-E\-L\-A\-Y@{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-R\-E\-P\-L\-Y\-D\-E\-L\-A\-Y}!as399x.h@{as399x.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-R\-E\-P\-L\-Y\-D\-E\-L\-A\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-T\-X\-R\-E\-P\-L\-Y\-D\-E\-L\-A\-Y~0x06}\label{as399x_8h_a501303da857ff4f58c8763ad33b91309}
+A\-S3990 register\-: delayed reply transmission wait time 
+
+Definition at line 114 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!R\-E\-S\-P\-\_\-\-R\-X\-I\-R\-Q@{R\-E\-S\-P\-\_\-\-R\-X\-I\-R\-Q}}
+\index{R\-E\-S\-P\-\_\-\-R\-X\-I\-R\-Q@{R\-E\-S\-P\-\_\-\-R\-X\-I\-R\-Q}!as399x.h@{as399x.\-h}}
+\subsubsection[{R\-E\-S\-P\-\_\-\-R\-X\-I\-R\-Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-S\-P\-\_\-\-R\-X\-I\-R\-Q~{\bf A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-R\-X}}\label{as399x_8h_af33971b8a77f75d2f58c3031daeaa813}
+Indication that rx is done, corresponds to A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-R\-X falling edge 
+
+Definition at line 212 of file as399x.\-h.
+
+\index{as399x.\-h@{as399x.\-h}!R\-E\-S\-P\-\_\-\-T\-X\-I\-R\-Q@{R\-E\-S\-P\-\_\-\-T\-X\-I\-R\-Q}}
+\index{R\-E\-S\-P\-\_\-\-T\-X\-I\-R\-Q@{R\-E\-S\-P\-\_\-\-T\-X\-I\-R\-Q}!as399x.h@{as399x.\-h}}
+\subsubsection[{R\-E\-S\-P\-\_\-\-T\-X\-I\-R\-Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-S\-P\-\_\-\-T\-X\-I\-R\-Q~{\bf A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-T\-X}}\label{as399x_8h_a3e77e698c9431fced87946e8c1234d09}
+Indication that tx is done, corresponds to A\-S399\-X\-\_\-\-I\-R\-Q\-\_\-\-T\-X falling edge 
+
+Definition at line 210 of file as399x.\-h.
+
+
+
+\subsection{Function Documentation}
+\index{as399x.\-h@{as399x.\-h}!as399x\-Command\-Continuous\-Address@{as399x\-Command\-Continuous\-Address}}
+\index{as399x\-Command\-Continuous\-Address@{as399x\-Command\-Continuous\-Address}!as399x.h@{as399x.\-h}}
+\subsubsection[{as399x\-Command\-Continuous\-Address}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Command\-Continuous\-Address (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{command, }
+\item[{{\bf u8}}]{com\-\_\-len, }
+\item[{{\bf u8}}]{address, }
+\item[{{\bf u8} $\ast$}]{buf, }
+\item[{{\bf u8}}]{buf\-\_\-len}
+\end{DoxyParamCaption}
+)}\label{as399x_8h_ad0383b7cd9a62f20da6bdad240dd4b03}
+Sends first some commands to the A\-S3990. The number of commands is specified with the parameter com\-\_\-len. Then it sets the address where the first byte has to be written and after that every byte from the buffer is written to the A\-S3990. \par
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$command} & Pointer to the first byte of the command buffer \\
+\hline
+{\em com\-\_\-len} & Length of the command buffer. \\
+\hline
+{\em address} & addressbyte \\
+\hline
+{\em $\ast$buf} & Pointer to the first byte of the data array. \\
+\hline
+{\em buf\-\_\-len} & Length of the buffer. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 740 of file as399x.\-c.
+
+\index{as399x.\-h@{as399x.\-h}!as399x\-Continuous\-Command@{as399x\-Continuous\-Command}}
+\index{as399x\-Continuous\-Command@{as399x\-Continuous\-Command}!as399x.h@{as399x.\-h}}
+\subsubsection[{as399x\-Continuous\-Command}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Continuous\-Command (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{commands, }
+\item[{s8}]{len}
+\end{DoxyParamCaption}
+)}\label{as399x_8h_af9fa5e31e45c056e01898dfcf7ecae1b}
+Sends a number of commands to the A\-S399x 
+\begin{DoxyParams}{Parameters}
+{\em commands} & commands which should be sent to A\-S399x \\
+\hline
+{\em len} & number of commands to send \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 639 of file as399x.\-c.
+
+\index{as399x.\-h@{as399x.\-h}!as399x\-Continuous\-Read@{as399x\-Continuous\-Read}}
+\index{as399x\-Continuous\-Read@{as399x\-Continuous\-Read}!as399x.h@{as399x.\-h}}
+\subsubsection[{as399x\-Continuous\-Read}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Continuous\-Read (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{address, }
+\item[{s8}]{len, }
+\item[{{\bf u8} $\ast$}]{readbuf}
+\end{DoxyParamCaption}
+)}\label{as399x_8h_a6736a398e8775e09e94c3fcb2beeac22}
+Reads data from a address and some following addresses from the A\-S3990. The len parameter defines the number of address read. \par
+
+\begin{DoxyParams}{Parameters}
+{\em address} & addressbyte \\
+\hline
+{\em len} & Length of the buffer. \\
+\hline
+{\em $\ast$readbuf} & Pointer to the first byte of the array where the data has to be stored in. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 657 of file as399x.\-c.
+
+\index{as399x.\-h@{as399x.\-h}!as399x\-Continuous\-Write@{as399x\-Continuous\-Write}}
+\index{as399x\-Continuous\-Write@{as399x\-Continuous\-Write}!as399x.h@{as399x.\-h}}
+\subsubsection[{as399x\-Continuous\-Write}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Continuous\-Write (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{address, }
+\item[{{\bf u8} $\ast$}]{buf, }
+\item[{s8}]{len}
+\end{DoxyParamCaption}
+)}\label{as399x_8h_a0de508f07f799ee9dc2aa1efe8553122}
+Continuous Write -\/$>$ writes several bytes to subsequent addresses of the A\-S399\-X. \par
+
+\begin{DoxyParams}{Parameters}
+{\em address} & addressbyte \\
+\hline
+{\em $\ast$buf} & Pointer to the first byte of the array. \\
+\hline
+{\em len} & Length of the buffer. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 720 of file as399x.\-c.
+
+\index{as399x.\-h@{as399x.\-h}!as399x\-Enter\-Direct\-Mode@{as399x\-Enter\-Direct\-Mode}}
+\index{as399x\-Enter\-Direct\-Mode@{as399x\-Enter\-Direct\-Mode}!as399x.h@{as399x.\-h}}
+\subsubsection[{as399x\-Enter\-Direct\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Enter\-Direct\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{as399x_8h_aaa6098dbbd9b8c053ce9155e56475bf7}
+
+
+Enter the direct mode. 
+
+The direct mode is needed since the A\-S3991 doesn't support I\-S\-O18000-\/6\-B directly. Direct mode means that the M\-C\-U directly issues the commands. The A\-S3991 modulates the serial stream from the M\-C\-U and sends it out. 
+
+Definition at line 799 of file as399x.\-c.
+
+\index{as399x.\-h@{as399x.\-h}!as399x\-Exit\-Direct\-Mode@{as399x\-Exit\-Direct\-Mode}}
+\index{as399x\-Exit\-Direct\-Mode@{as399x\-Exit\-Direct\-Mode}!as399x.h@{as399x.\-h}}
+\subsubsection[{as399x\-Exit\-Direct\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Exit\-Direct\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{as399x_8h_a6377e4bc9d2e2f3bde7fddebbf9ce017}
+
+
+Leave the direct mode. 
+
+After calling this function the A\-S3991 is in normal mode again. 
+
+Definition at line 833 of file as399x.\-c.
+
+\index{as399x.\-h@{as399x.\-h}!as399x\-Exit\-Standby\-Mode@{as399x\-Exit\-Standby\-Mode}}
+\index{as399x\-Exit\-Standby\-Mode@{as399x\-Exit\-Standby\-Mode}!as399x.h@{as399x.\-h}}
+\subsubsection[{as399x\-Exit\-Standby\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Exit\-Standby\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{as399x_8h_ab611b632781bfee9856510dacdf8f9cf}
+
+
+Leave the standby mode. 
+
+After calling this function the A\-S3991 is in normal mode again. 
+
+Definition at line 1778 of file as399x.\-c.
+
+\index{as399x.\-h@{as399x.\-h}!as399x\-Fifo\-Read@{as399x\-Fifo\-Read}}
+\index{as399x\-Fifo\-Read@{as399x\-Fifo\-Read}!as399x.h@{as399x.\-h}}
+\subsubsection[{as399x\-Fifo\-Read}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Fifo\-Read (
+\begin{DoxyParamCaption}
+\item[{s8}]{len, }
+\item[{{\bf u8} $\ast$}]{readbuf}
+\end{DoxyParamCaption}
+)}\label{as399x_8h_abb94e0a64d518dceef67d292a8fdc391}
+Reads data from the fifo and some following addresses from the A\-S3990. The len parameter defines the number of address read. Does this in a secure way so that it works also on A\-S3991 devices in serial mode 
+\begin{DoxyParams}{Parameters}
+{\em len} & Length of the buffer. \\
+\hline
+{\em $\ast$readbuf} & Pointer to the first byte of the array where the data has to be stored in. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 666 of file as399x.\-c.
+
+\index{as399x.\-h@{as399x.\-h}!as399x\-Read\-D\-A\-C@{as399x\-Read\-D\-A\-C}}
+\index{as399x\-Read\-D\-A\-C@{as399x\-Read\-D\-A\-C}!as399x.h@{as399x.\-h}}
+\subsubsection[{as399x\-Read\-D\-A\-C}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} as399x\-Read\-D\-A\-C (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{as399x_8h_af9e3466abca7914ac141f6205d34b631}
+Reads D\-A\-C value and returns it in natural representation. See \doxyref{as399x\-Write\-D\-A\-C()}{p.}{as399x_8c_ab4f8d2cc9b2b39192e74b0d6669e622d} for details. 
+
+Definition at line 1419 of file as399x.\-c.
+
+\index{as399x.\-h@{as399x.\-h}!as399x\-Single\-Command@{as399x\-Single\-Command}}
+\index{as399x\-Single\-Command@{as399x\-Single\-Command}!as399x.h@{as399x.\-h}}
+\subsubsection[{as399x\-Single\-Command}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Single\-Command (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{command}
+\end{DoxyParamCaption}
+)}\label{as399x_8h_a929d232d3e465ec925841966be951f2b}
+Sends only one command to the A\-S399x. \par
+
+\begin{DoxyParams}{Parameters}
+{\em command} & The command which is send to the A\-S399x. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 630 of file as399x.\-c.
+
+\index{as399x.\-h@{as399x.\-h}!as399x\-Single\-Read@{as399x\-Single\-Read}}
+\index{as399x\-Single\-Read@{as399x\-Single\-Read}!as399x.h@{as399x.\-h}}
+\subsubsection[{as399x\-Single\-Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} as399x\-Single\-Read (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{address}
+\end{DoxyParamCaption}
+)}\label{as399x_8h_a091ee0b3c153f82bdaccea3867168cfa}
+Single Read -\/$>$ reads one byte from one address of the A\-S3990. \par
+This function is only called from application level (not interrupt level). From interrupt level (\doxyref{ext\-Int()}{p.}{as399x_8c_ae5247c559d73460f77a87c52901ea90e}) as399x\-Single\-Read\-Irq is used. 
+\begin{DoxyParams}{Parameters}
+{\em address} & The addressbyte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The databyte read from the A\-S399x 
+\end{DoxyReturn}
+
+
+Definition at line 681 of file as399x.\-c.
+
+\index{as399x.\-h@{as399x.\-h}!as399x\-Single\-Read\-Irq@{as399x\-Single\-Read\-Irq}}
+\index{as399x\-Single\-Read\-Irq@{as399x\-Single\-Read\-Irq}!as399x.h@{as399x.\-h}}
+\subsubsection[{as399x\-Single\-Read\-Irq}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} as399x\-Single\-Read\-Irq (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{address}
+\end{DoxyParamCaption}
+)}\label{as399x_8h_a8045806e4161d7d083dcbdf4d4b87174}
+This function is called only from A\-S399x I\-S\-R (ext\-Int). From application level as399x\-Single\-Read is used.\par
+The separation of application level and interrupt level removes the requirement of as399x\-Single\-Read being reentrant. This is necessary because the reentrant function definition introduces quite some runtime overhead. Especially on the interrupt level this runtime overhead is a problem because we have to meet the T2 timing constrain, defined by the Gen2 protocol when sending back A\-C\-K or Reg\-R\-N commands. 
+\begin{DoxyParams}{Parameters}
+{\em address} & address to read from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+register value read from address. 
+\end{DoxyReturn}
+
+
+Definition at line 694 of file as399x.\-c.
+
+\index{as399x.\-h@{as399x.\-h}!as399x\-Single\-Write@{as399x\-Single\-Write}}
+\index{as399x\-Single\-Write@{as399x\-Single\-Write}!as399x.h@{as399x.\-h}}
+\subsubsection[{as399x\-Single\-Write}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Single\-Write (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{address, }
+\item[{{\bf u8}}]{value}
+\end{DoxyParamCaption}
+)}\label{as399x_8h_aba8ac4c5bb81836447071f99ffa486dc}
+Single Write -\/$>$ writes one byte to one address of the A\-S3990. \par
+
+\begin{DoxyParams}{Parameters}
+{\em address} & The addressbyte \\
+\hline
+{\em value} & The databyte \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 729 of file as399x.\-c.
+
+\index{as399x.\-h@{as399x.\-h}!as399x\-Wait\-For\-Response@{as399x\-Wait\-For\-Response}}
+\index{as399x\-Wait\-For\-Response@{as399x\-Wait\-For\-Response}!as399x.h@{as399x.\-h}}
+\subsubsection[{as399x\-Wait\-For\-Response}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Wait\-For\-Response (
+\begin{DoxyParamCaption}
+\item[{u16}]{wait\-Mask}
+\end{DoxyParamCaption}
+)}\label{as399x_8h_ac015696aef5df90d8e1d76385a8525c1}
+This function waits for the specified response(\-I\-R\-Q). 
+
+Definition at line 778 of file as399x.\-c.
+
+\index{as399x.\-h@{as399x.\-h}!as399x\-Wait\-For\-Response\-Timed@{as399x\-Wait\-For\-Response\-Timed}}
+\index{as399x\-Wait\-For\-Response\-Timed@{as399x\-Wait\-For\-Response\-Timed}!as399x.h@{as399x.\-h}}
+\subsubsection[{as399x\-Wait\-For\-Response\-Timed}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Wait\-For\-Response\-Timed (
+\begin{DoxyParamCaption}
+\item[{u16}]{wait\-Mask, }
+\item[{u16}]{ms}
+\end{DoxyParamCaption}
+)}\label{as399x_8h_ae9e59be23bcad9316747aec29255f613}
+This function waits for the specified response(\-I\-R\-Q). 
+
+Definition at line 757 of file as399x.\-c.
+
+\index{as399x.\-h@{as399x.\-h}!as399x\-Write\-D\-A\-C@{as399x\-Write\-D\-A\-C}}
+\index{as399x\-Write\-D\-A\-C@{as399x\-Write\-D\-A\-C}!as399x.h@{as399x.\-h}}
+\subsubsection[{as399x\-Write\-D\-A\-C}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Write\-D\-A\-C (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{nat\-Val}
+\end{DoxyParamCaption}
+)}\label{as399x_8h_ab4f8d2cc9b2b39192e74b0d6669e622d}
+Sets D\-A\-C output voltage according to parameter nat\-Val. The D\-A\-C values of A\-S399x are in magnitude representation. The F\-W uses D\-A\-C values in natural representation internally, as it makes computation easier. The F\-W handles the D\-A\-C values in the code as it is a 8 bit D\-A\-C from 0\-V to 3.\-2\-V, L\-S\-B = 12.\-5m\-V. \par
+The conversion from natural to magnitude representation is handled by \doxyref{as399x\-Write\-D\-A\-C()}{p.}{as399x_8c_ab4f8d2cc9b2b39192e74b0d6669e622d} and \doxyref{as399x\-Read\-D\-A\-C()}{p.}{as399x_8c_af9e3466abca7914ac141f6205d34b631}. 
+\begin{DoxyParams}{Parameters}
+{\em nat\-Val} & Sets the D\-A\-C output voltage according to the value. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1414 of file as399x.\-c.
+
+\index{as399x.\-h@{as399x.\-h}!as399x\-Write\-Predistortion@{as399x\-Write\-Predistortion}}
+\index{as399x\-Write\-Predistortion@{as399x\-Write\-Predistortion}!as399x.h@{as399x.\-h}}
+\subsubsection[{as399x\-Write\-Predistortion}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Write\-Predistortion (
+\begin{DoxyParamCaption}
+\item[{const {\bf u8} $\ast$}]{buf}
+\end{DoxyParamCaption}
+)}\label{as399x_8h_aeda4c80914c98a52caa8d9fc58c6db85}
+Write 252 byte predistortion data, preserving version register 
+\begin{DoxyParams}{Parameters}
+{\em $\ast$buf} & Pointer to the first byte of the array. \\
+\hline
+{\em buf} & pointer to the buffer. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\index{as399x.\-h@{as399x.\-h}!as399x\-Response@{as399x\-Response}}
+\index{as399x\-Response@{as399x\-Response}!as399x.h@{as399x.\-h}}
+\subsubsection[{as399x\-Response}]{\setlength{\rightskip}{0pt plus 5cm}volatile u16 data as399x\-Response}\label{as399x_8h_aa600edfe1204caf057dbffd9e00cccdd}
+This variable is used as flag to signal an data reception. It is a bit mask of the R\-E\-S\-P\-\_\-\-T\-X\-I\-R\-Q, R\-E\-S\-P\-\_\-\-R\-X\-I\-R\-Q, R\-E\-S\-P\-\_\-$\ast$ values 
+
+Definition at line 80 of file as399x.\-c.
+

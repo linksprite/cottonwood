@@ -1,0 +1,225 @@
+\section{as399x\-\_\-config.\-h File Reference}
+\label{as399x__config_8h}\index{as399x\-\_\-config.\-h@{as399x\-\_\-config.\-h}}
+{\ttfamily \#include $<$intrins.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf X\-D\-A\-T\-A}~xdata
+\item 
+\#define {\bf I\-D\-A\-T\-A}~idata
+\item 
+\#define {\bf C\-O\-D\-E}~code
+\item 
+\#define {\bf D\-A\-T\-A}~data
+\item 
+\#define {\bf L\-E\-O}~1
+\item 
+\#define {\bf P\-I\-C\-O}~0
+\item 
+\#define {\bf R\-O\-G\-E\-R}~0
+\item 
+\#define {\bf R\-O\-L\-A\-N\-D}~0
+\item 
+\#define {\bf M\-I\-C\-R\-O\-R\-E\-A\-D\-E\-R}~0
+\item 
+\#define {\bf A\-R\-N\-I\-E}~0
+\item 
+\#define {\bf C\-R\-C16\-\_\-\-E\-N\-A\-B\-L\-E}~1
+\item 
+\#define {\bf R\-U\-N\-\_\-\-O\-N\-\_\-\-A\-S3992}~1
+\item 
+\#define {\bf U\-A\-R\-T\-S\-U\-P\-P\-O\-R\-T}~0
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-D\-O\-\_\-\-S\-E\-L\-F\-T\-E\-S\-T}~1
+\item 
+\#define {\bf C\-O\-M\-M\-U\-N\-I\-C\-A\-T\-I\-O\-N\-\_\-\-S\-E\-R\-I\-A\-L}~0
+\item 
+\#define {\bf I\-S\-O6\-B}~1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char {\bf u8}
+\item 
+typedef unsigned char {\bf umword}
+\item 
+typedef signed char {\bf smword}
+\item 
+typedef {\bf umword} {\bf bool}
+\item 
+typedef unsigned int {\bf uint}
+\item 
+typedef signed int {\bf sint}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Configuration file for all A\-S99x firmware. \begin{DoxyAuthor}{Author}
+U.\-Herrmann ( based on work by E.\-Grubmueller 
+
+T. Luecker (Substitute)
+\end{DoxyAuthor}
+Do configuration of the driver in here. 
+
+Definition in file {\bf as399x\-\_\-config.\-h}.
+
+
+
+\subsection{Macro Definition Documentation}
+\index{as399x\-\_\-config.\-h@{as399x\-\_\-config.\-h}!A\-R\-N\-I\-E@{A\-R\-N\-I\-E}}
+\index{A\-R\-N\-I\-E@{A\-R\-N\-I\-E}!as399x_config.h@{as399x\-\_\-config.\-h}}
+\subsubsection[{A\-R\-N\-I\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-R\-N\-I\-E~0}\label{as399x__config_8h_a3ac6d6cd74f9d0c77c6a778fb53a6d43}
+Define this to 1 if you have a Arnie board 
+
+Definition at line 56 of file as399x\-\_\-config.\-h.
+
+\index{as399x\-\_\-config.\-h@{as399x\-\_\-config.\-h}!A\-S399\-X\-\_\-\-D\-O\-\_\-\-S\-E\-L\-F\-T\-E\-S\-T@{A\-S399\-X\-\_\-\-D\-O\-\_\-\-S\-E\-L\-F\-T\-E\-S\-T}}
+\index{A\-S399\-X\-\_\-\-D\-O\-\_\-\-S\-E\-L\-F\-T\-E\-S\-T@{A\-S399\-X\-\_\-\-D\-O\-\_\-\-S\-E\-L\-F\-T\-E\-S\-T}!as399x_config.h@{as399x\-\_\-config.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-D\-O\-\_\-\-S\-E\-L\-F\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-D\-O\-\_\-\-S\-E\-L\-F\-T\-E\-S\-T~1}\label{as399x__config_8h_af7931a411d7b7cf1290515f61871aeea}
+Define this to 1 if \doxyref{as399x\-Initialize()}{p.}{as399x_8c_a3bfe6fab3c61cffe7329b050c4523fc5} should perform a proper selftest, testing connection A\-S399x, crystal, pll, antenna 
+
+Definition at line 69 of file as399x\-\_\-config.\-h.
+
+\index{as399x\-\_\-config.\-h@{as399x\-\_\-config.\-h}!C\-O\-D\-E@{C\-O\-D\-E}}
+\index{C\-O\-D\-E@{C\-O\-D\-E}!as399x_config.h@{as399x\-\_\-config.\-h}}
+\subsubsection[{C\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-O\-D\-E~code}\label{as399x__config_8h_ae6527c8381eb3f23b7fd6d6efec6ffc7}
+code is not available on all platforms, thus have a define for it 
+
+Definition at line 42 of file as399x\-\_\-config.\-h.
+
+\index{as399x\-\_\-config.\-h@{as399x\-\_\-config.\-h}!C\-O\-M\-M\-U\-N\-I\-C\-A\-T\-I\-O\-N\-\_\-\-S\-E\-R\-I\-A\-L@{C\-O\-M\-M\-U\-N\-I\-C\-A\-T\-I\-O\-N\-\_\-\-S\-E\-R\-I\-A\-L}}
+\index{C\-O\-M\-M\-U\-N\-I\-C\-A\-T\-I\-O\-N\-\_\-\-S\-E\-R\-I\-A\-L@{C\-O\-M\-M\-U\-N\-I\-C\-A\-T\-I\-O\-N\-\_\-\-S\-E\-R\-I\-A\-L}!as399x_config.h@{as399x\-\_\-config.\-h}}
+\subsubsection[{C\-O\-M\-M\-U\-N\-I\-C\-A\-T\-I\-O\-N\-\_\-\-S\-E\-R\-I\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-O\-M\-M\-U\-N\-I\-C\-A\-T\-I\-O\-N\-\_\-\-S\-E\-R\-I\-A\-L~0}\label{as399x__config_8h_a572a82232a74341a8c88929f69f53e06}
+Serial (S\-P\-I) communication with A\-S399x (if set to 0 parallel interface is used) 
+
+Definition at line 74 of file as399x\-\_\-config.\-h.
+
+\index{as399x\-\_\-config.\-h@{as399x\-\_\-config.\-h}!C\-R\-C16\-\_\-\-E\-N\-A\-B\-L\-E@{C\-R\-C16\-\_\-\-E\-N\-A\-B\-L\-E}}
+\index{C\-R\-C16\-\_\-\-E\-N\-A\-B\-L\-E@{C\-R\-C16\-\_\-\-E\-N\-A\-B\-L\-E}!as399x_config.h@{as399x\-\_\-config.\-h}}
+\subsubsection[{C\-R\-C16\-\_\-\-E\-N\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-R\-C16\-\_\-\-E\-N\-A\-B\-L\-E~1}\label{as399x__config_8h_a562d64f2059ab9751ea9e709f2a1a96f}
+Define to 1 if C\-R\-C16 should be used for iso6b 
+
+Definition at line 59 of file as399x\-\_\-config.\-h.
+
+\index{as399x\-\_\-config.\-h@{as399x\-\_\-config.\-h}!D\-A\-T\-A@{D\-A\-T\-A}}
+\index{D\-A\-T\-A@{D\-A\-T\-A}!as399x_config.h@{as399x\-\_\-config.\-h}}
+\subsubsection[{D\-A\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-A\-T\-A~data}\label{as399x__config_8h_aad9ae913bdfab20dd94ad04ee2d5b045}
+data is not available on all platforms, thus have a define for it 
+
+Definition at line 43 of file as399x\-\_\-config.\-h.
+
+\index{as399x\-\_\-config.\-h@{as399x\-\_\-config.\-h}!I\-D\-A\-T\-A@{I\-D\-A\-T\-A}}
+\index{I\-D\-A\-T\-A@{I\-D\-A\-T\-A}!as399x_config.h@{as399x\-\_\-config.\-h}}
+\subsubsection[{I\-D\-A\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-D\-A\-T\-A~idata}\label{as399x__config_8h_a4393da9f5dc297f483e969152b3fdc84}
+idata is not available on all platforms, thus have a define for it 
+
+Definition at line 41 of file as399x\-\_\-config.\-h.
+
+\index{as399x\-\_\-config.\-h@{as399x\-\_\-config.\-h}!I\-S\-O6\-B@{I\-S\-O6\-B}}
+\index{I\-S\-O6\-B@{I\-S\-O6\-B}!as399x_config.h@{as399x\-\_\-config.\-h}}
+\subsubsection[{I\-S\-O6\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-S\-O6\-B~1}\label{as399x__config_8h_a36e31f56ec1904cdf24818c81011407e}
+Set this to 1 to enable iso6b support 
+
+Definition at line 77 of file as399x\-\_\-config.\-h.
+
+\index{as399x\-\_\-config.\-h@{as399x\-\_\-config.\-h}!L\-E\-O@{L\-E\-O}}
+\index{L\-E\-O@{L\-E\-O}!as399x_config.h@{as399x\-\_\-config.\-h}}
+\subsubsection[{L\-E\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-E\-O~1}\label{as399x__config_8h_a55057554c701c46b1f3b61b54e809566}
+Define this to 1 if you have a L\-E\-O board 
+
+Definition at line 46 of file as399x\-\_\-config.\-h.
+
+\index{as399x\-\_\-config.\-h@{as399x\-\_\-config.\-h}!M\-I\-C\-R\-O\-R\-E\-A\-D\-E\-R@{M\-I\-C\-R\-O\-R\-E\-A\-D\-E\-R}}
+\index{M\-I\-C\-R\-O\-R\-E\-A\-D\-E\-R@{M\-I\-C\-R\-O\-R\-E\-A\-D\-E\-R}!as399x_config.h@{as399x\-\_\-config.\-h}}
+\subsubsection[{M\-I\-C\-R\-O\-R\-E\-A\-D\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-I\-C\-R\-O\-R\-E\-A\-D\-E\-R~0}\label{as399x__config_8h_a0a5b0a1c2e1723b3bb075ef244692cc9}
+Define this to 1 if you have a \char`\"{}\-Micro Reader/ U\-H\-F R\-F\-I\-D Controller\char`\"{} board 
+
+Definition at line 54 of file as399x\-\_\-config.\-h.
+
+\index{as399x\-\_\-config.\-h@{as399x\-\_\-config.\-h}!P\-I\-C\-O@{P\-I\-C\-O}}
+\index{P\-I\-C\-O@{P\-I\-C\-O}!as399x_config.h@{as399x\-\_\-config.\-h}}
+\subsubsection[{P\-I\-C\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-C\-O~0}\label{as399x__config_8h_ac4b29b23bcaf0f50c51b4bddce05a6c0}
+Define this to 1 if you have a P\-I\-C\-O board 
+
+Definition at line 48 of file as399x\-\_\-config.\-h.
+
+\index{as399x\-\_\-config.\-h@{as399x\-\_\-config.\-h}!R\-O\-G\-E\-R@{R\-O\-G\-E\-R}}
+\index{R\-O\-G\-E\-R@{R\-O\-G\-E\-R}!as399x_config.h@{as399x\-\_\-config.\-h}}
+\subsubsection[{R\-O\-G\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-O\-G\-E\-R~0}\label{as399x__config_8h_a4df96a95a12a04b27cea6b33c6d173bb}
+Define this to 1 if you have a R\-O\-G\-E\-R board 
+
+Definition at line 50 of file as399x\-\_\-config.\-h.
+
+\index{as399x\-\_\-config.\-h@{as399x\-\_\-config.\-h}!R\-O\-L\-A\-N\-D@{R\-O\-L\-A\-N\-D}}
+\index{R\-O\-L\-A\-N\-D@{R\-O\-L\-A\-N\-D}!as399x_config.h@{as399x\-\_\-config.\-h}}
+\subsubsection[{R\-O\-L\-A\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-O\-L\-A\-N\-D~0}\label{as399x__config_8h_a9689950cbd995eccc9679eddbd2cfbd8}
+Define this to 1 if you have a R\-O\-L\-A\-N\-D board 
+
+Definition at line 52 of file as399x\-\_\-config.\-h.
+
+\index{as399x\-\_\-config.\-h@{as399x\-\_\-config.\-h}!R\-U\-N\-\_\-\-O\-N\-\_\-\-A\-S3992@{R\-U\-N\-\_\-\-O\-N\-\_\-\-A\-S3992}}
+\index{R\-U\-N\-\_\-\-O\-N\-\_\-\-A\-S3992@{R\-U\-N\-\_\-\-O\-N\-\_\-\-A\-S3992}!as399x_config.h@{as399x\-\_\-config.\-h}}
+\subsubsection[{R\-U\-N\-\_\-\-O\-N\-\_\-\-A\-S3992}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-U\-N\-\_\-\-O\-N\-\_\-\-A\-S3992~1}\label{as399x__config_8h_a074c4457b2e11c1e2ce476536f404597}
+Define this to 1 if A\-S3992 should be supported, software will cease to run on A\-S3990/1 
+
+Definition at line 62 of file as399x\-\_\-config.\-h.
+
+\index{as399x\-\_\-config.\-h@{as399x\-\_\-config.\-h}!U\-A\-R\-T\-S\-U\-P\-P\-O\-R\-T@{U\-A\-R\-T\-S\-U\-P\-P\-O\-R\-T}}
+\index{U\-A\-R\-T\-S\-U\-P\-P\-O\-R\-T@{U\-A\-R\-T\-S\-U\-P\-P\-O\-R\-T}!as399x_config.h@{as399x\-\_\-config.\-h}}
+\subsubsection[{U\-A\-R\-T\-S\-U\-P\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-S\-U\-P\-P\-O\-R\-T~0}\label{as399x__config_8h_a60a810d2776a397c91769db290f921ae}
+Define this to 1 if U\-A\-R\-T should be used for communicating with host 
+
+Definition at line 65 of file as399x\-\_\-config.\-h.
+
+\index{as399x\-\_\-config.\-h@{as399x\-\_\-config.\-h}!X\-D\-A\-T\-A@{X\-D\-A\-T\-A}}
+\index{X\-D\-A\-T\-A@{X\-D\-A\-T\-A}!as399x_config.h@{as399x\-\_\-config.\-h}}
+\subsubsection[{X\-D\-A\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define X\-D\-A\-T\-A~xdata}\label{as399x__config_8h_a40236c8c1d02f94f1fb4669ca607769d}
+xdata is not available on all platforms, thus have a define for it 
+
+Definition at line 40 of file as399x\-\_\-config.\-h.
+
+
+
+\subsection{Typedef Documentation}
+\index{as399x\-\_\-config.\-h@{as399x\-\_\-config.\-h}!bool@{bool}}
+\index{bool@{bool}!as399x_config.h@{as399x\-\_\-config.\-h}}
+\subsubsection[{bool}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf umword} {\bf bool}}\label{as399x__config_8h_a1367fcbd395005ade7b649b129464275}
+type for boolean variables, should normally be natural machine size 
+
+Definition at line 115 of file as399x\-\_\-config.\-h.
+
+\index{as399x\-\_\-config.\-h@{as399x\-\_\-config.\-h}!sint@{sint}}
+\index{sint@{sint}!as399x_config.h@{as399x\-\_\-config.\-h}}
+\subsubsection[{sint}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed int {\bf sint}}\label{as399x__config_8h_ada7e83fdfe943aba4f1d5bf80cb66f40}
+type for integer types, useful as indices for arrays and loop variables 
+
+Definition at line 119 of file as399x\-\_\-config.\-h.
+
+\index{as399x\-\_\-config.\-h@{as399x\-\_\-config.\-h}!smword@{smword}}
+\index{smword@{smword}!as399x_config.h@{as399x\-\_\-config.\-h}}
+\subsubsection[{smword}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed char {\bf smword}}\label{as399x__config_8h_a90a102d7bc66a402332ca67fd215150f}
+U\-S\-E W\-I\-T\-H C\-A\-R\-E!!! signed machine word \-: 8 bit on 8bit machines, 16 bit on 16 bit machines... 
+
+Definition at line 113 of file as399x\-\_\-config.\-h.
+
+\index{as399x\-\_\-config.\-h@{as399x\-\_\-config.\-h}!u8@{u8}}
+\index{u8@{u8}!as399x_config.h@{as399x\-\_\-config.\-h}}
+\subsubsection[{u8}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf u8}}\label{as399x__config_8h_aed742c436da53c1080638ce6ef7d13de}
+Set to one if an antenna tuner is available Set to one if a power detector is available on the board and the P\-A is biased with the D\-A\-C of A\-S399x. Set to one if a switch to switch between antenna ports is available 
+
+Definition at line 104 of file as399x\-\_\-config.\-h.
+
+\index{as399x\-\_\-config.\-h@{as399x\-\_\-config.\-h}!uint@{uint}}
+\index{uint@{uint}!as399x_config.h@{as399x\-\_\-config.\-h}}
+\subsubsection[{uint}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf uint}}\label{as399x__config_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}
+type for integer types, useful as indices for arrays and loop variables 
+
+Definition at line 117 of file as399x\-\_\-config.\-h.
+
+\index{as399x\-\_\-config.\-h@{as399x\-\_\-config.\-h}!umword@{umword}}
+\index{umword@{umword}!as399x_config.h@{as399x\-\_\-config.\-h}}
+\subsubsection[{umword}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf umword}}\label{as399x__config_8h_aeb57b47748d73508eb47131fe5a022ae}
+U\-S\-E W\-I\-T\-H C\-A\-R\-E!!! unsigned machine word \-: 8 bit on 8bit machines, 16 bit on 16 bit machines... 
+
+Definition at line 111 of file as399x\-\_\-config.\-h.
+

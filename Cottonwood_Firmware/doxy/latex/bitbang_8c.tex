@@ -1,0 +1,75 @@
+\section{bitbang.\-c File Reference}
+\label{bitbang_8c}\index{bitbang.\-c@{bitbang.\-c}}
+{\ttfamily \#include \char`\"{}c8051\-F340.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}as399x\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}timer.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bitbang.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf bb\-Setup} (s16 microsec)
+\item 
+void {\bf bb\-Run} ({\bf t\-\_\-bb\-Data} $\ast$bbdata, s16 length)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Bitbang engine. \begin{DoxyAuthor}{Author}
+C. Eisendle 
+
+T. Luecker (Substitute)
+\end{DoxyAuthor}
+The bitbang module is needed to support serial protocols via bitbang technique 
+
+Definition in file {\bf bitbang.\-c}.
+
+
+
+\subsection{Function Documentation}
+\index{bitbang.\-c@{bitbang.\-c}!bb\-Run@{bb\-Run}}
+\index{bb\-Run@{bb\-Run}!bitbang.c@{bitbang.\-c}}
+\subsubsection[{bb\-Run}]{\setlength{\rightskip}{0pt plus 5cm}void bb\-Run (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bb\-Data} $\ast$}]{bbdata, }
+\item[{s16}]{length}
+\end{DoxyParamCaption}
+)}\label{bitbang_8c_ab4b378e6cae91dc1adf115f61fce6b89}
+
+
+Start the bitbang engine. 
+
+When calling this function the bitbang engine is started. In fact, timer 2 will be enabled and at each overrun the next bit is shifted out. N\-O\-T\-E\-: All other interrupts are D\-I\-S\-A\-B\-L\-E\-D during this function in order to allow exact timings.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bbdata} & \-: Array of bitbang data structs. The module can process more bitbang structures. So it's possible to setup a complete transfer without interruption. \\
+\hline
+{\em length} & \-: Length of the array \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 70 of file bitbang.\-c.
+
+\index{bitbang.\-c@{bitbang.\-c}!bb\-Setup@{bb\-Setup}}
+\index{bb\-Setup@{bb\-Setup}!bitbang.c@{bitbang.\-c}}
+\subsubsection[{bb\-Setup}]{\setlength{\rightskip}{0pt plus 5cm}void bb\-Setup (
+\begin{DoxyParamCaption}
+\item[{s16}]{microsec}
+\end{DoxyParamCaption}
+)}\label{bitbang_8c_ae777ff068d16c59f451d2279e661e9fc}
+
+
+Setup the bitbang module. 
+
+This function needs to be called prior to the use of the module. It configures the timer \#2 by setting the period time. Period time is (1/freq)/2, e.\-g. freq = 40khz --$>$ 12.\-5us
+
+
+\begin{DoxyParams}{Parameters}
+{\em microsec} & \-: The period time in microseconds \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 58 of file bitbang.\-c.
+

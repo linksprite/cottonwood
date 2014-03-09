@@ -1,0 +1,36 @@
+\section{tuner.\-c File Reference}
+\label{tuner_8c}\index{tuner.\-c@{tuner.\-c}}
+{\ttfamily \#include \char`\"{}c8051\-F340.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}as399x\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}global.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}uart.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}tuner.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}as399x\-\_\-public.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}platform.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$math.\-h$>$}\\*
+
+
+\subsection{Detailed Description}
+Implementation of tuner functionality. This file includes the whole functionality to adjust the P\-I tuner network on tuner enabled boards. The communication pins for the tuner network are defined in \doxyref{platform.\-h}{p.}{platform_8h}. The tuner network consists of 3 variable capacitors\-: Cin, Clen and Cout and looks like this\-: 
+\begin{DoxyCode}
+                       .--- L ---.
+                       |         |
+in ----.----.----- L --.--C\_len--.--.-----.-----.----- out
+       |    |                       |     |     |
+      C\_in  L                     C\_out   L     R
+       |    |                       |     |     |
+      \_\_\_  \_\_\_                     \_\_\_   \_\_\_   \_\_\_
+       -    -                       -     -     -
+       \textcolor{stringliteral}{'    '}                       \textcolor{stringliteral}{'     '}     \textcolor{stringliteral}{'}
+\end{DoxyCode}
+
+
+\begin{DoxyAuthor}{Author}
+Ulrich Herrmann 
+
+Bernhard Breinbauer 
+\end{DoxyAuthor}
+
+
+Definition in file {\bf tuner.\-c}.
+

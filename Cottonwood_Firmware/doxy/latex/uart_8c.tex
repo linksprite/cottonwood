@@ -1,0 +1,168 @@
+\section{uart.\-c File Reference}
+\label{uart_8c}\index{uart.\-c@{uart.\-c}}
+{\ttfamily \#include \char`\"{}c8051\-F340.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}as399x\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}uart.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stdarg.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}global.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}string.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf A\-L\-P\-H\-A\-\_\-\-L\-C\-\_\-\-T\-O\-\_\-\-I\-N\-T\-E\-G\-E\-R}~87
+\item 
+\#define {\bf A\-L\-P\-H\-A\-\_\-\-U\-C\-\_\-\-T\-O\-\_\-\-I\-N\-T\-E\-G\-E\-R}~55
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf uart\-Int} (void)
+\item 
+void {\bf init\-U\-A\-R\-T} (void)
+\item 
+void {\bf send\-Array\-N} (char $\ast$dat, {\bf u8} n)
+\item 
+void {\bf send\-Array} (char $\ast$dat)
+\item 
+void {\bf send\-Byte} ({\bf u8} value)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bf I\-D\-A\-T\-A} volatile {\bf u8} {\bf receive\-\_\-} = 0
+\item 
+{\bf I\-D\-A\-T\-A} volatile s8 {\bf check\-\_\-receive\-\_\-} = {\bf R\-E\-C\-E\-I\-V\-E\-\_\-\-R\-E\-S\-E\-T}
+\item 
+{\bf I\-D\-A\-T\-A} volatile s8 {\bf check\-\_\-transmitted\-\_\-} = {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-\_\-\-R\-E\-S\-E\-T}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of U\-A\-R\-T functionality. This file provides the whole functionality to send/receive data with the U\-A\-R\-T.
+
+\begin{DoxyAuthor}{Author}
+Ulrich Herrmann 
+\end{DoxyAuthor}
+
+
+Definition in file {\bf uart.\-c}.
+
+
+
+\subsection{Macro Definition Documentation}
+\index{uart.\-c@{uart.\-c}!A\-L\-P\-H\-A\-\_\-\-L\-C\-\_\-\-T\-O\-\_\-\-I\-N\-T\-E\-G\-E\-R@{A\-L\-P\-H\-A\-\_\-\-L\-C\-\_\-\-T\-O\-\_\-\-I\-N\-T\-E\-G\-E\-R}}
+\index{A\-L\-P\-H\-A\-\_\-\-L\-C\-\_\-\-T\-O\-\_\-\-I\-N\-T\-E\-G\-E\-R@{A\-L\-P\-H\-A\-\_\-\-L\-C\-\_\-\-T\-O\-\_\-\-I\-N\-T\-E\-G\-E\-R}!uart.c@{uart.\-c}}
+\subsubsection[{A\-L\-P\-H\-A\-\_\-\-L\-C\-\_\-\-T\-O\-\_\-\-I\-N\-T\-E\-G\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-L\-P\-H\-A\-\_\-\-L\-C\-\_\-\-T\-O\-\_\-\-I\-N\-T\-E\-G\-E\-R~87}\label{uart_8c_aaa0cd2727535b2a91d39b6cfa0d499e4}
+small case conversion value 
+
+Definition at line 223 of file uart.\-c.
+
+\index{uart.\-c@{uart.\-c}!A\-L\-P\-H\-A\-\_\-\-U\-C\-\_\-\-T\-O\-\_\-\-I\-N\-T\-E\-G\-E\-R@{A\-L\-P\-H\-A\-\_\-\-U\-C\-\_\-\-T\-O\-\_\-\-I\-N\-T\-E\-G\-E\-R}}
+\index{A\-L\-P\-H\-A\-\_\-\-U\-C\-\_\-\-T\-O\-\_\-\-I\-N\-T\-E\-G\-E\-R@{A\-L\-P\-H\-A\-\_\-\-U\-C\-\_\-\-T\-O\-\_\-\-I\-N\-T\-E\-G\-E\-R}!uart.c@{uart.\-c}}
+\subsubsection[{A\-L\-P\-H\-A\-\_\-\-U\-C\-\_\-\-T\-O\-\_\-\-I\-N\-T\-E\-G\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-L\-P\-H\-A\-\_\-\-U\-C\-\_\-\-T\-O\-\_\-\-I\-N\-T\-E\-G\-E\-R~55}\label{uart_8c_a70c4bfefd3251ea8ca151b6c45247ced}
+upper case conversion value 
+
+Definition at line 224 of file uart.\-c.
+
+
+
+\subsection{Function Documentation}
+\index{uart.\-c@{uart.\-c}!init\-U\-A\-R\-T@{init\-U\-A\-R\-T}}
+\index{init\-U\-A\-R\-T@{init\-U\-A\-R\-T}!uart.c@{uart.\-c}}
+\subsubsection[{init\-U\-A\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}void init\-U\-A\-R\-T (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{uart_8c_a52324117efdddb08bf0078d965a0f865}
+Initialsing the U\-A\-R\-T and all other registers to get the U\-A\-R\-T working Baudrate\-: 115200 This function does not take or return a parameter 
+
+Definition at line 83 of file uart.\-c.
+
+\index{uart.\-c@{uart.\-c}!send\-Array@{send\-Array}}
+\index{send\-Array@{send\-Array}!uart.c@{uart.\-c}}
+\subsubsection[{send\-Array}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Array (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dat}
+\end{DoxyParamCaption}
+)}\label{uart_8c_ac5b46b370968949581b2b3b294c493c6}
+Sends a s8 Array The last byte has to be 0 
+\begin{DoxyParams}{Parameters}
+{\em $\ast$dat} & Pointer to the first byte of the Array \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 147 of file uart.\-c.
+
+\index{uart.\-c@{uart.\-c}!send\-Array\-N@{send\-Array\-N}}
+\index{send\-Array\-N@{send\-Array\-N}!uart.c@{uart.\-c}}
+\subsubsection[{send\-Array\-N}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Array\-N (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dat, }
+\item[{{\bf u8}}]{n}
+\end{DoxyParamCaption}
+)}\label{uart_8c_a65bba072991caa7693e5f97b484706c8}
+Sends a s8 Array
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$dat} & Pointer to the first byte of the Array \\
+\hline
+{\em n} & the size of the array to be transmitted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 130 of file uart.\-c.
+
+\index{uart.\-c@{uart.\-c}!send\-Byte@{send\-Byte}}
+\index{send\-Byte@{send\-Byte}!uart.c@{uart.\-c}}
+\subsubsection[{send\-Byte}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Byte (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{value}
+\end{DoxyParamCaption}
+)}\label{uart_8c_a654fc483b2706d043a170727b6c796a0}
+Sends one byte 
+\begin{DoxyParams}{Parameters}
+{\em value} & value to send \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 156 of file uart.\-c.
+
+\index{uart.\-c@{uart.\-c}!uart\-Int@{uart\-Int}}
+\index{uart\-Int@{uart\-Int}!uart.c@{uart.\-c}}
+\subsubsection[{uart\-Int}]{\setlength{\rightskip}{0pt plus 5cm}void uart\-Int (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{uart_8c_a943084cad0298ddb893c26c859658aaf}
+Transmit Interrupt Function sets the transmit flag\-: check\-\_\-transmitted\-\_\- clears the transmit interrupt flag manually This function can not take or return a parameter 
+
+Definition at line 60 of file uart.\-c.
+
+
+
+\subsection{Variable Documentation}
+\index{uart.\-c@{uart.\-c}!check\-\_\-receive\-\_\-@{check\-\_\-receive\-\_\-}}
+\index{check\-\_\-receive\-\_\-@{check\-\_\-receive\-\_\-}!uart.c@{uart.\-c}}
+\subsubsection[{check\-\_\-receive\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\-D\-A\-T\-A} volatile s8 check\-\_\-receive\-\_\- = {\bf R\-E\-C\-E\-I\-V\-E\-\_\-\-R\-E\-S\-E\-T}}\label{uart_8c_a3c7058189ae15d7f8b8d73ed09180363}
+receive flag 
+
+Definition at line 41 of file uart.\-c.
+
+\index{uart.\-c@{uart.\-c}!check\-\_\-transmitted\-\_\-@{check\-\_\-transmitted\-\_\-}}
+\index{check\-\_\-transmitted\-\_\-@{check\-\_\-transmitted\-\_\-}!uart.c@{uart.\-c}}
+\subsubsection[{check\-\_\-transmitted\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\-D\-A\-T\-A} volatile s8 check\-\_\-transmitted\-\_\- = {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-\_\-\-R\-E\-S\-E\-T}}\label{uart_8c_a11b2698eee8a06f17b373678640bd795}
+transmit flag 
+
+Definition at line 44 of file uart.\-c.
+
+\index{uart.\-c@{uart.\-c}!receive\-\_\-@{receive\-\_\-}}
+\index{receive\-\_\-@{receive\-\_\-}!uart.c@{uart.\-c}}
+\subsubsection[{receive\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\-D\-A\-T\-A} volatile {\bf u8} receive\-\_\- = 0}\label{uart_8c_af54a9ad4318cd80f69c0e39667b3e070}
+received databyte 
+
+Definition at line 38 of file uart.\-c.
+

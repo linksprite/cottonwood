@@ -1,0 +1,261 @@
+\section{uart.\-h File Reference}
+\label{uart_8h}\index{uart.\-h@{uart.\-h}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf B\-A\-U\-D}~56000
+\item 
+\#define {\bf C\-L\-K\-D\-I\-V\-I\-D\-E\-R}~4
+\item 
+\#define {\bf T1\-C\-L\-K}~{\bf C\-L\-K}/{\bf C\-L\-K\-D\-I\-V\-I\-D\-E\-R}
+\item 
+\#define {\bf T1\-H}~256-\/{\bf T1\-C\-L\-K}/(2$\ast${\bf B\-A\-U\-D})
+\item 
+\#define {\bf R\-E\-C\-E\-I\-V\-E\-D}~0x00
+\item 
+\#define {\bf R\-E\-C\-E\-I\-V\-E\-\_\-\-R\-E\-S\-E\-T}~0x00
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D}~0x00
+\item 
+\#define {\bf A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-\_\-\-R\-E\-S\-E\-T}~0x01
+\item 
+\#define {\bf U\-A\-R\-T\-\_\-\-D\-A\-T\-A\-\_\-\-O\-U\-T}~S\-B\-U\-F0
+\item 
+\#define {\bf U\-A\-R\-T\-\_\-\-D\-A\-T\-A\-\_\-\-I\-N}~S\-B\-U\-F0
+\item 
+\#define {\bf C\-L\-E\-A\-R\-I\-N\-T}(x)~x=0
+\item 
+\#define {\bf W\-R\-I\-T\-E\-D\-A\-T\-A}(x)~{\bf U\-A\-R\-T\-\_\-\-D\-A\-T\-A\-\_\-\-O\-U\-T}=x
+\item 
+\#define {\bf G\-A\-T\-E1}~128
+\item 
+\#define {\bf C\-T1}~64
+\item 
+\#define {\bf T1\-M1}~32
+\item 
+\#define {\bf T1\-M0}~16
+\item 
+\#define {\bf G\-A\-T\-E0}~8
+\item 
+\#define {\bf C\-T0}~4
+\item 
+\#define {\bf T0\-M1}~2
+\item 
+\#define {\bf T0\-M0}~1
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf init\-U\-A\-R\-T} (void)
+\item 
+void {\bf send\-Array} (char $\ast$dat)
+\item 
+void {\bf send\-Byte} (unsigned char value)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file is the include file for the \doxyref{uart.\-c}{p.}{uart_8c} file. \begin{DoxyAuthor}{Author}
+Ulrich Herrmann 
+\end{DoxyAuthor}
+
+
+Definition in file {\bf uart.\-h}.
+
+
+
+\subsection{Macro Definition Documentation}
+\index{uart.\-h@{uart.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-\_\-\-R\-E\-S\-E\-T@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-\_\-\-R\-E\-S\-E\-T}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-\_\-\-R\-E\-S\-E\-T@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-\_\-\-R\-E\-S\-E\-T}!uart.h@{uart.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-\_\-\-R\-E\-S\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-\_\-\-R\-E\-S\-E\-T~0x01}\label{uart_8h_a706cb48a474c0002245374a0f9c053b7}
+Definition for transmittion not comlpete 
+
+Definition at line 67 of file uart.\-h.
+
+\index{uart.\-h@{uart.\-h}!A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D}}
+\index{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D@{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D}!uart.h@{uart.\-h}}
+\subsubsection[{A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S399\-X\-\_\-\-C\-M\-D\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-D~0x00}\label{uart_8h_a40b7ec4dc545e039c85bb0ada104baf2}
+Definition for transmittion comlpete 
+
+Definition at line 65 of file uart.\-h.
+
+\index{uart.\-h@{uart.\-h}!B\-A\-U\-D@{B\-A\-U\-D}}
+\index{B\-A\-U\-D@{B\-A\-U\-D}!uart.h@{uart.\-h}}
+\subsubsection[{B\-A\-U\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-A\-U\-D~56000}\label{uart_8h_a62634036639f88eece6fbf226b45f84b}
+Definition for the baudrate 
+
+Definition at line 50 of file uart.\-h.
+
+\index{uart.\-h@{uart.\-h}!C\-L\-E\-A\-R\-I\-N\-T@{C\-L\-E\-A\-R\-I\-N\-T}}
+\index{C\-L\-E\-A\-R\-I\-N\-T@{C\-L\-E\-A\-R\-I\-N\-T}!uart.h@{uart.\-h}}
+\subsubsection[{C\-L\-E\-A\-R\-I\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-L\-E\-A\-R\-I\-N\-T(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~x=0}\label{uart_8h_a6bb2fa48bca860a5d6920d5117533815}
+Macro clear interrupt 
+
+Definition at line 75 of file uart.\-h.
+
+\index{uart.\-h@{uart.\-h}!C\-L\-K\-D\-I\-V\-I\-D\-E\-R@{C\-L\-K\-D\-I\-V\-I\-D\-E\-R}}
+\index{C\-L\-K\-D\-I\-V\-I\-D\-E\-R@{C\-L\-K\-D\-I\-V\-I\-D\-E\-R}!uart.h@{uart.\-h}}
+\subsubsection[{C\-L\-K\-D\-I\-V\-I\-D\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-L\-K\-D\-I\-V\-I\-D\-E\-R~4}\label{uart_8h_ae562cc1468991bda11027ce4746b28a9}
+Definition for the clk divider 
+
+Definition at line 53 of file uart.\-h.
+
+\index{uart.\-h@{uart.\-h}!C\-T0@{C\-T0}}
+\index{C\-T0@{C\-T0}!uart.h@{uart.\-h}}
+\subsubsection[{C\-T0}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-T0~4}\label{uart_8h_a5424db9df7f3732c19373421f88e7670}
+T\-M\-O\-D Register -\/ Bit 2 -\/ C\-T0\-: Ninth Receive Bit 
+
+Definition at line 96 of file uart.\-h.
+
+\index{uart.\-h@{uart.\-h}!C\-T1@{C\-T1}}
+\index{C\-T1@{C\-T1}!uart.h@{uart.\-h}}
+\subsubsection[{C\-T1}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-T1~64}\label{uart_8h_a1f0ef57deaf4eaa26149fcb72d55435d}
+T\-M\-O\-D Register -\/ Bit 6 -\/ C/\-T1\-: Counter/\-Timer 1 Select 
+
+Definition at line 84 of file uart.\-h.
+
+\index{uart.\-h@{uart.\-h}!G\-A\-T\-E0@{G\-A\-T\-E0}}
+\index{G\-A\-T\-E0@{G\-A\-T\-E0}!uart.h@{uart.\-h}}
+\subsubsection[{G\-A\-T\-E0}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-A\-T\-E0~8}\label{uart_8h_a735532e820935d87be397dda6e59572e}
+T\-M\-O\-D Register -\/ Bit 3 -\/ G\-A\-T\-E0\-: Ninth Transmission Bit 
+
+Definition at line 93 of file uart.\-h.
+
+\index{uart.\-h@{uart.\-h}!G\-A\-T\-E1@{G\-A\-T\-E1}}
+\index{G\-A\-T\-E1@{G\-A\-T\-E1}!uart.h@{uart.\-h}}
+\subsubsection[{G\-A\-T\-E1}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-A\-T\-E1~128}\label{uart_8h_a625f880d1f00ba24db39d346065bd360}
+T\-M\-O\-D Register -\/ Bit 7 -\/ G\-A\-T\-E1\-: Serial Port 0 Operation Mode 
+
+Definition at line 81 of file uart.\-h.
+
+\index{uart.\-h@{uart.\-h}!R\-E\-C\-E\-I\-V\-E\-\_\-\-R\-E\-S\-E\-T@{R\-E\-C\-E\-I\-V\-E\-\_\-\-R\-E\-S\-E\-T}}
+\index{R\-E\-C\-E\-I\-V\-E\-\_\-\-R\-E\-S\-E\-T@{R\-E\-C\-E\-I\-V\-E\-\_\-\-R\-E\-S\-E\-T}!uart.h@{uart.\-h}}
+\subsubsection[{R\-E\-C\-E\-I\-V\-E\-\_\-\-R\-E\-S\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-C\-E\-I\-V\-E\-\_\-\-R\-E\-S\-E\-T~0x00}\label{uart_8h_af59acd487c8aa232272b9e3aae9a9ffe}
+Definition for a received byte 
+
+Definition at line 62 of file uart.\-h.
+
+\index{uart.\-h@{uart.\-h}!R\-E\-C\-E\-I\-V\-E\-D@{R\-E\-C\-E\-I\-V\-E\-D}}
+\index{R\-E\-C\-E\-I\-V\-E\-D@{R\-E\-C\-E\-I\-V\-E\-D}!uart.h@{uart.\-h}}
+\subsubsection[{R\-E\-C\-E\-I\-V\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-C\-E\-I\-V\-E\-D~0x00}\label{uart_8h_a90ca767ddb3c52ec640e7ed8a09dd5d8}
+Definition for a received byte 
+
+Definition at line 60 of file uart.\-h.
+
+\index{uart.\-h@{uart.\-h}!T0\-M0@{T0\-M0}}
+\index{T0\-M0@{T0\-M0}!uart.h@{uart.\-h}}
+\subsubsection[{T0\-M0}]{\setlength{\rightskip}{0pt plus 5cm}\#define T0\-M0~1}\label{uart_8h_a1fc5056e1672c0b9dbdcec93d040c7db}
+T\-M\-O\-D Register -\/ Bit 0 -\/ T0\-M0\-: Receive Interrupt Flag 
+
+Definition at line 102 of file uart.\-h.
+
+\index{uart.\-h@{uart.\-h}!T0\-M1@{T0\-M1}}
+\index{T0\-M1@{T0\-M1}!uart.h@{uart.\-h}}
+\subsubsection[{T0\-M1}]{\setlength{\rightskip}{0pt plus 5cm}\#define T0\-M1~2}\label{uart_8h_abab564a7a71aa9cd9cb34d17fe512fa1}
+T\-M\-O\-D Register -\/ Bit 1 -\/ T0\-M1\-: Transmit Interrupt Flag 
+
+Definition at line 99 of file uart.\-h.
+
+\index{uart.\-h@{uart.\-h}!T1\-C\-L\-K@{T1\-C\-L\-K}}
+\index{T1\-C\-L\-K@{T1\-C\-L\-K}!uart.h@{uart.\-h}}
+\subsubsection[{T1\-C\-L\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define T1\-C\-L\-K~{\bf C\-L\-K}/{\bf C\-L\-K\-D\-I\-V\-I\-D\-E\-R}}\label{uart_8h_a21f4dd6eb8ac9079cc22c46b1b52ca0d}
+Definition for T1 clock 
+
+Definition at line 55 of file uart.\-h.
+
+\index{uart.\-h@{uart.\-h}!T1\-H@{T1\-H}}
+\index{T1\-H@{T1\-H}!uart.h@{uart.\-h}}
+\subsubsection[{T1\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define T1\-H~256-\/{\bf T1\-C\-L\-K}/(2$\ast${\bf B\-A\-U\-D})}\label{uart_8h_ae0de4e06e642a9dfa3d6f273a5c8e23b}
+Definition for T1\-H 
+
+Definition at line 57 of file uart.\-h.
+
+\index{uart.\-h@{uart.\-h}!T1\-M0@{T1\-M0}}
+\index{T1\-M0@{T1\-M0}!uart.h@{uart.\-h}}
+\subsubsection[{T1\-M0}]{\setlength{\rightskip}{0pt plus 5cm}\#define T1\-M0~16}\label{uart_8h_afc031cb8070e57ce6ebddc8595b854fb}
+T\-M\-O\-D Register -\/ Bit 4 -\/ T1\-M0\-: Receive Enable 
+
+Definition at line 90 of file uart.\-h.
+
+\index{uart.\-h@{uart.\-h}!T1\-M1@{T1\-M1}}
+\index{T1\-M1@{T1\-M1}!uart.h@{uart.\-h}}
+\subsubsection[{T1\-M1}]{\setlength{\rightskip}{0pt plus 5cm}\#define T1\-M1~32}\label{uart_8h_ad68e57e8f3663e44d029cac1e952f64a}
+T\-M\-O\-D Register -\/ Bit 5 -\/ T1\-M1\-: Multiprocessor Communication Enable 
+
+Definition at line 87 of file uart.\-h.
+
+\index{uart.\-h@{uart.\-h}!U\-A\-R\-T\-\_\-\-D\-A\-T\-A\-\_\-\-I\-N@{U\-A\-R\-T\-\_\-\-D\-A\-T\-A\-\_\-\-I\-N}}
+\index{U\-A\-R\-T\-\_\-\-D\-A\-T\-A\-\_\-\-I\-N@{U\-A\-R\-T\-\_\-\-D\-A\-T\-A\-\_\-\-I\-N}!uart.h@{uart.\-h}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-D\-A\-T\-A\-\_\-\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-D\-A\-T\-A\-\_\-\-I\-N~S\-B\-U\-F0}\label{uart_8h_ab93018788ad1987d8def83c910d5602d}
+Definition for D\-A\-T\-A I\-N register 
+
+Definition at line 72 of file uart.\-h.
+
+\index{uart.\-h@{uart.\-h}!U\-A\-R\-T\-\_\-\-D\-A\-T\-A\-\_\-\-O\-U\-T@{U\-A\-R\-T\-\_\-\-D\-A\-T\-A\-\_\-\-O\-U\-T}}
+\index{U\-A\-R\-T\-\_\-\-D\-A\-T\-A\-\_\-\-O\-U\-T@{U\-A\-R\-T\-\_\-\-D\-A\-T\-A\-\_\-\-O\-U\-T}!uart.h@{uart.\-h}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-D\-A\-T\-A\-\_\-\-O\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-D\-A\-T\-A\-\_\-\-O\-U\-T~S\-B\-U\-F0}\label{uart_8h_aa44919fe1122e76bf80773160c5588cf}
+Definition for D\-A\-T\-A O\-U\-T register 
+
+Definition at line 70 of file uart.\-h.
+
+\index{uart.\-h@{uart.\-h}!W\-R\-I\-T\-E\-D\-A\-T\-A@{W\-R\-I\-T\-E\-D\-A\-T\-A}}
+\index{W\-R\-I\-T\-E\-D\-A\-T\-A@{W\-R\-I\-T\-E\-D\-A\-T\-A}!uart.h@{uart.\-h}}
+\subsubsection[{W\-R\-I\-T\-E\-D\-A\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\-R\-I\-T\-E\-D\-A\-T\-A(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~{\bf U\-A\-R\-T\-\_\-\-D\-A\-T\-A\-\_\-\-O\-U\-T}=x}\label{uart_8h_ab240bb685967786ff2083ba5e13860e1}
+Macro write data to buffer 
+
+Definition at line 77 of file uart.\-h.
+
+
+
+\subsection{Function Documentation}
+\index{uart.\-h@{uart.\-h}!init\-U\-A\-R\-T@{init\-U\-A\-R\-T}}
+\index{init\-U\-A\-R\-T@{init\-U\-A\-R\-T}!uart.h@{uart.\-h}}
+\subsubsection[{init\-U\-A\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}void init\-U\-A\-R\-T (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{uart_8h_a52324117efdddb08bf0078d965a0f865}
+Initialsing the U\-A\-R\-T and all other registers to get the U\-A\-R\-T working Baudrate\-: 115200 This function does not take or return a parameter 
+
+Definition at line 83 of file uart.\-c.
+
+\index{uart.\-h@{uart.\-h}!send\-Array@{send\-Array}}
+\index{send\-Array@{send\-Array}!uart.h@{uart.\-h}}
+\subsubsection[{send\-Array}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Array (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dat}
+\end{DoxyParamCaption}
+)}\label{uart_8h_ac5b46b370968949581b2b3b294c493c6}
+Sends a s8 Array The last byte has to be 0 
+\begin{DoxyParams}{Parameters}
+{\em $\ast$dat} & Pointer to the first byte of the Array \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 147 of file uart.\-c.
+
+\index{uart.\-h@{uart.\-h}!send\-Byte@{send\-Byte}}
+\index{send\-Byte@{send\-Byte}!uart.h@{uart.\-h}}
+\subsubsection[{send\-Byte}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Byte (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{value}
+\end{DoxyParamCaption}
+)}\label{uart_8h_a31d05f7d8a52136ec6d363cf3e70edfa}
+Sends one byte 
+\begin{DoxyParams}{Parameters}
+{\em value} & value to send \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 156 of file uart.\-c.
+

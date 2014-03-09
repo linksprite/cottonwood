@@ -1,0 +1,51 @@
+\section{Frequencies\-\_\- Struct Reference}
+\label{struct_frequencies__}\index{Frequencies\-\_\-@{Frequencies\-\_\-}}
+
+
+{\ttfamily \#include $<$as399x\-\_\-public.\-h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+{\bf u8} {\bf activefreq}
+\item 
+unsigned long {\bf freq} [{\bf M\-A\-X\-F\-R\-E\-Q}]
+\item 
+s8 {\bf rssi\-Threshold} [{\bf M\-A\-X\-F\-R\-E\-Q}]
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This struct stores the list of frequencies which are used for hopping. For tuning enabled boards the struct also stores the tuning settings for each frequency. 
+
+Definition at line 80 of file as399x\-\_\-public.\-h.
+
+
+
+\subsection{Field Documentation}
+\index{Frequencies\-\_\-@{Frequencies\-\_\-}!activefreq@{activefreq}}
+\index{activefreq@{activefreq}!Frequencies_@{Frequencies\-\_\-}}
+\subsubsection[{activefreq}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} Frequencies\-\_\-\-::activefreq}\label{struct_frequencies___abd6960d8e7b16bae002c632f4108572d}
+Index of the active frequency in freq. 
+
+Definition at line 83 of file as399x\-\_\-public.\-h.
+
+\index{Frequencies\-\_\-@{Frequencies\-\_\-}!freq@{freq}}
+\index{freq@{freq}!Frequencies_@{Frequencies\-\_\-}}
+\subsubsection[{freq}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long Frequencies\-\_\-\-::freq[{\bf M\-A\-X\-F\-R\-E\-Q}]}\label{struct_frequencies___a1ce7a109d5338bc3be1ba6e515cf37f9}
+List of frequencies which are used for hopping. 
+
+Definition at line 86 of file as399x\-\_\-public.\-h.
+
+\index{Frequencies\-\_\-@{Frequencies\-\_\-}!rssi\-Threshold@{rssi\-Threshold}}
+\index{rssi\-Threshold@{rssi\-Threshold}!Frequencies_@{Frequencies\-\_\-}}
+\subsubsection[{rssi\-Threshold}]{\setlength{\rightskip}{0pt plus 5cm}s8 Frequencies\-\_\-\-::rssi\-Threshold[{\bf M\-A\-X\-F\-R\-E\-Q}]}\label{struct_frequencies___a9dca84f04528438926760e300403a526}
+If rssi measurement is above this threshold the channel is regarded as used and the system will hop to the next frequency. Otherwise this frequency is used 
+
+Definition at line 89 of file as399x\-\_\-public.\-h.
+
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+{\bf as399x\-\_\-public.\-h}\end{DoxyCompactItemize}

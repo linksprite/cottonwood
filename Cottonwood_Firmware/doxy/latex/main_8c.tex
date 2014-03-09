@@ -1,0 +1,65 @@
+\section{main.\-c File Reference}
+\label{main_8c}\index{main.\-c@{main.\-c}}
+{\ttfamily \#include \char`\"{}as399x\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}platform.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}c8051\-F340.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}uart.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}as399x\-\_\-public.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}as399x.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}as399x\-\_\-com.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gen2.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}global.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}iso6b.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}tuner.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}timer.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-commands.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}F340\-\_\-\-Flash\-Primitives.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}F3xx\-\_\-\-U\-S\-B0\-\_\-\-Register.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}F3xx\-\_\-\-Blink\-\_\-\-Control.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}F3xx\-\_\-\-U\-S\-B0\-\_\-\-Interrupt\-Service\-Routine.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}F3xx\-\_\-\-U\-S\-B0\-\_\-\-Descriptor.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$math.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Tag} {\bf tags\-\_\-} [{\bf M\-A\-X\-T\-A\-G}]
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+System initialization and main loop. \begin{DoxyAuthor}{Author}
+Ulrich Herrmann 
+\end{DoxyAuthor}
+
+
+Definition in file {\bf main.\-c}.
+
+
+
+\subsection{Function Documentation}
+\index{main.\-c@{main.\-c}!main@{main}}
+\index{main@{main}!main.c@{main.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}
+main function Initializes u\-Controller (System\-\_\-\-Init()) and A\-S399x (\doxyref{as399x\-Initialize()}{p.}{as399x_8c_a3bfe6fab3c61cffe7329b050c4523fc5}). Afterwards it enters main loop in which the commands received via U\-S\-B or U\-A\-R\-T are processed. 
+
+Definition at line 199 of file main.\-c.
+
+
+
+\subsection{Variable Documentation}
+\index{main.\-c@{main.\-c}!tags\-\_\-@{tags\-\_\-}}
+\index{tags\-\_\-@{tags\-\_\-}!main.c@{main.\-c}}
+\subsubsection[{tags\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tag} tags\-\_\-[{\bf M\-A\-X\-T\-A\-G}]}\label{main_8c_a40526df6061b70feeef6f034db364b6e}
+Array of Structures which stores all necessary Information about the Tags. 
+
+Definition at line 82 of file usb\-\_\-commands.\-c.
+

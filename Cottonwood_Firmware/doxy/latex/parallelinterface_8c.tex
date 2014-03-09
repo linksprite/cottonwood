@@ -1,0 +1,234 @@
+\section{parallelinterface.\-c File Reference}
+\label{parallelinterface_8c}\index{parallelinterface.\-c@{parallelinterface.\-c}}
+{\ttfamily \#include \char`\"{}c8051\-F340.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}as399x\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}platform.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}global.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}uart.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}timer.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}as399x\-\_\-com.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf C\-L\-O\-C\-K}(x)~{\bf C\-L\-K\-P\-I\-N}=(x)
+\item 
+\#define {\bf D\-P\-O\-R\-T\-D\-I\-R\-W\-R}()~\{{\bf D\-P\-O\-R\-T\-D\-I\-R}(0x\-F\-F);\}
+\item 
+\#define {\bf D\-P\-O\-R\-T\-D\-I\-R\-R\-D}()~\{{\bf D\-P\-O\-R\-T\-D\-I\-R}(0x00); S\-E\-T\-O\-U\-T\-P\-O\-R\-T(0xff);\}
+\item 
+\#define {\bf G\-E\-T\-P\-O\-R\-T}()~{\bf D\-A\-T\-A\-I\-N\-P\-O\-R\-T}
+\item 
+\#define {\bf S\-T\-A\-R\-T\-C\-O\-N\-D\-I\-T\-I\-O\-N}()
+\item 
+\#define {\bf S\-T\-O\-P\-S\-G\-L}()
+\item 
+\#define {\bf S\-T\-O\-P\-C\-O\-N\-T}()
+\item 
+\#define {\bf S\-T\-O\-P\-D\-I\-R}()
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf init\-Interface} (void)
+\item 
+void {\bf write\-Read\-A\-S399x} (const {\bf u8} $\ast$wbuf, {\bf u8} wlen, {\bf u8} $\ast$rbuf, {\bf u8} rlen, {\bf u8} stop\-Mode, {\bf u8} do\-Start)
+\item 
+void {\bf write\-Read\-A\-S399x\-Isr} (const {\bf u8} wbuf, {\bf u8} $\ast$rbuf)
+\item 
+void {\bf set\-Port\-Direct} ()
+\item 
+void {\bf set\-Port\-Normal} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of parallel interface communication with A\-S399x. The file provides functions to initialize the u\-Controller and the board for communication via the parallel interface with A\-S399x. The function \doxyref{write\-Read\-A\-S399x()}{p.}{as399x__com_8h_a66eee56b32bf33a739f1b0c3e7a57262} provides communication functionality. The function \doxyref{write\-Read\-A\-S399x\-Isr()}{p.}{as399x__com_8h_a35abe30a55f52f77670b663d2aef3d61} does the same, but is only called from the I\-S\-R. On the Si\-Labs u\-Controller a dedicated function for the I\-S\-R improves runtime performance (no reentrant function necessary). \par
+For porting to another u\-Controller/board the functions in this file have to be adapted.
+
+\begin{DoxyAuthor}{Author}
+Ulrich Herrmann 
+
+Bernhard Breinbauer 
+\end{DoxyAuthor}
+
+
+Definition in file {\bf parallelinterface.\-c}.
+
+
+
+\subsection{Macro Definition Documentation}
+\index{parallelinterface.\-c@{parallelinterface.\-c}!C\-L\-O\-C\-K@{C\-L\-O\-C\-K}}
+\index{C\-L\-O\-C\-K@{C\-L\-O\-C\-K}!parallelinterface.c@{parallelinterface.\-c}}
+\subsubsection[{C\-L\-O\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-L\-O\-C\-K(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~{\bf C\-L\-K\-P\-I\-N}=(x)}\label{parallelinterface_8c_a249b8376719383e8b8139e135101f1c4}
+Macro for setting C\-L\-K pin 
+
+Definition at line 49 of file parallelinterface.\-c.
+
+\index{parallelinterface.\-c@{parallelinterface.\-c}!D\-P\-O\-R\-T\-D\-I\-R\-R\-D@{D\-P\-O\-R\-T\-D\-I\-R\-R\-D}}
+\index{D\-P\-O\-R\-T\-D\-I\-R\-R\-D@{D\-P\-O\-R\-T\-D\-I\-R\-R\-D}!parallelinterface.c@{parallelinterface.\-c}}
+\subsubsection[{D\-P\-O\-R\-T\-D\-I\-R\-R\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-P\-O\-R\-T\-D\-I\-R\-R\-D(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~\{{\bf D\-P\-O\-R\-T\-D\-I\-R}(0x00); S\-E\-T\-O\-U\-T\-P\-O\-R\-T(0xff);\}}\label{parallelinterface_8c_a7ef1777be40309789e715e367e1de577}
+Macro change port direction to read 
+
+Definition at line 55 of file parallelinterface.\-c.
+
+\index{parallelinterface.\-c@{parallelinterface.\-c}!D\-P\-O\-R\-T\-D\-I\-R\-W\-R@{D\-P\-O\-R\-T\-D\-I\-R\-W\-R}}
+\index{D\-P\-O\-R\-T\-D\-I\-R\-W\-R@{D\-P\-O\-R\-T\-D\-I\-R\-W\-R}!parallelinterface.c@{parallelinterface.\-c}}
+\subsubsection[{D\-P\-O\-R\-T\-D\-I\-R\-W\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-P\-O\-R\-T\-D\-I\-R\-W\-R(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~\{{\bf D\-P\-O\-R\-T\-D\-I\-R}(0x\-F\-F);\}}\label{parallelinterface_8c_af7756551f319194bd0c597b1071cb8ac}
+Macro change port direction to write 
+
+Definition at line 52 of file parallelinterface.\-c.
+
+\index{parallelinterface.\-c@{parallelinterface.\-c}!G\-E\-T\-P\-O\-R\-T@{G\-E\-T\-P\-O\-R\-T}}
+\index{G\-E\-T\-P\-O\-R\-T@{G\-E\-T\-P\-O\-R\-T}!parallelinterface.c@{parallelinterface.\-c}}
+\subsubsection[{G\-E\-T\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-E\-T\-P\-O\-R\-T(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf D\-A\-T\-A\-I\-N\-P\-O\-R\-T}}\label{parallelinterface_8c_ae59a8ae0ad9dd1abe6d5bce9f579c672}
+Macro read from data input port 
+
+Definition at line 58 of file parallelinterface.\-c.
+
+\index{parallelinterface.\-c@{parallelinterface.\-c}!S\-T\-A\-R\-T\-C\-O\-N\-D\-I\-T\-I\-O\-N@{S\-T\-A\-R\-T\-C\-O\-N\-D\-I\-T\-I\-O\-N}}
+\index{S\-T\-A\-R\-T\-C\-O\-N\-D\-I\-T\-I\-O\-N@{S\-T\-A\-R\-T\-C\-O\-N\-D\-I\-T\-I\-O\-N}!parallelinterface.c@{parallelinterface.\-c}}
+\subsubsection[{S\-T\-A\-R\-T\-C\-O\-N\-D\-I\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-A\-R\-T\-C\-O\-N\-D\-I\-T\-I\-O\-N(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{parallelinterface_8c_a28297506ea74d55d37d04f6aea258096}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\{CLOCK(LOW); SETOUTPORT(LOW); CLOCK(HIGH);\
+                                   SETOUTPORT(0x80); NOP(); NOP(); CLOCK(LOW);\}
+\end{DoxyCode}
+Macro for protocol start condition 
+
+Definition at line 61 of file parallelinterface.\-c.
+
+\index{parallelinterface.\-c@{parallelinterface.\-c}!S\-T\-O\-P\-C\-O\-N\-T@{S\-T\-O\-P\-C\-O\-N\-T}}
+\index{S\-T\-O\-P\-C\-O\-N\-T@{S\-T\-O\-P\-C\-O\-N\-T}!parallelinterface.c@{parallelinterface.\-c}}
+\subsubsection[{S\-T\-O\-P\-C\-O\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-O\-P\-C\-O\-N\-T(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{parallelinterface_8c_abdfdfa5aff3f112d5c020ba9ebe36358}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\{CLOCK(LOW); SETOUTPORT(LOW); NOP(); SETOUTPORT(0x80);\
+                                   NOP(); NOP(); SETOUTPORT(LOW);\}
+\end{DoxyCode}
+Macro for protocol continous stop condition 
+
+Definition at line 67 of file parallelinterface.\-c.
+
+\index{parallelinterface.\-c@{parallelinterface.\-c}!S\-T\-O\-P\-D\-I\-R@{S\-T\-O\-P\-D\-I\-R}}
+\index{S\-T\-O\-P\-D\-I\-R@{S\-T\-O\-P\-D\-I\-R}!parallelinterface.c@{parallelinterface.\-c}}
+\subsubsection[{S\-T\-O\-P\-D\-I\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-O\-P\-D\-I\-R(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{parallelinterface_8c_a896aa3bc9cfe4c9928d7716e8d018e51}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\{SETOUTPORT(0x80); NOP(); NOP();\
+                                   CLOCK(HIGH); NOP(); SETOUTPORT(LOW); NOP(); 
+      CLOCK(LOW);\}
+\end{DoxyCode}
+Macro for ending the Direct mode 
+
+Definition at line 70 of file parallelinterface.\-c.
+
+\index{parallelinterface.\-c@{parallelinterface.\-c}!S\-T\-O\-P\-S\-G\-L@{S\-T\-O\-P\-S\-G\-L}}
+\index{S\-T\-O\-P\-S\-G\-L@{S\-T\-O\-P\-S\-G\-L}!parallelinterface.c@{parallelinterface.\-c}}
+\subsubsection[{S\-T\-O\-P\-S\-G\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-O\-P\-S\-G\-L(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{parallelinterface_8c_ab9dcc47b3f46dca4933d233a240bfcb9}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\{SETOUTPORT(0x80); NOP();\
+                                   CLOCK(HIGH); SETOUTPORT(LOW); CLOCK(LOW);\}
+\end{DoxyCode}
+Macro for protocol simple or single stop condition 
+
+Definition at line 64 of file parallelinterface.\-c.
+
+
+
+\subsection{Function Documentation}
+\index{parallelinterface.\-c@{parallelinterface.\-c}!init\-Interface@{init\-Interface}}
+\index{init\-Interface@{init\-Interface}!parallelinterface.c@{parallelinterface.\-c}}
+\subsubsection[{init\-Interface}]{\setlength{\rightskip}{0pt plus 5cm}void init\-Interface (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{parallelinterface_8c_a6305d3b6e2bbab54bca14afc97db3c5c}
+This function initializes u\-Controller/board for comunication with the A\-S399x.
+
+This function does not take or return a parameter. 
+
+Definition at line 113 of file parallelinterface.\-c.
+
+\index{parallelinterface.\-c@{parallelinterface.\-c}!set\-Port\-Direct@{set\-Port\-Direct}}
+\index{set\-Port\-Direct@{set\-Port\-Direct}!parallelinterface.c@{parallelinterface.\-c}}
+\subsubsection[{set\-Port\-Direct}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Port\-Direct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{parallelinterface_8c_aeeadd66a92ac517951a886b62eb1fb75}
+This function sets the interface to the A\-S399\-X for accessing it via direct mode. \doxyref{I\-O3()}{p.}{platform_8h_adc9689bf9fd884c1d840a3aa947a0a39} macro needs to be used to generate T\-X signals 
+
+Definition at line 203 of file parallelinterface.\-c.
+
+\index{parallelinterface.\-c@{parallelinterface.\-c}!set\-Port\-Normal@{set\-Port\-Normal}}
+\index{set\-Port\-Normal@{set\-Port\-Normal}!parallelinterface.c@{parallelinterface.\-c}}
+\subsubsection[{set\-Port\-Normal}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Port\-Normal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{parallelinterface_8c_a48f08cfa3d7253dcd2520cad24e18e41}
+This function sets the interface to the A\-S399\-X for accessing it via normal (parallel) mode using \doxyref{write\-Read\-A\-S399x()}{p.}{as399x__com_8h_a66eee56b32bf33a739f1b0c3e7a57262} 
+
+Definition at line 210 of file parallelinterface.\-c.
+
+\index{parallelinterface.\-c@{parallelinterface.\-c}!write\-Read\-A\-S399x@{write\-Read\-A\-S399x}}
+\index{write\-Read\-A\-S399x@{write\-Read\-A\-S399x}!parallelinterface.c@{parallelinterface.\-c}}
+\subsubsection[{write\-Read\-A\-S399x}]{\setlength{\rightskip}{0pt plus 5cm}void write\-Read\-A\-S399x (
+\begin{DoxyParamCaption}
+\item[{const {\bf u8} $\ast$}]{wbuf, }
+\item[{{\bf u8}}]{wlen, }
+\item[{{\bf u8} $\ast$}]{rbuf, }
+\item[{{\bf u8}}]{rlen, }
+\item[{{\bf u8}}]{stop\-Mode, }
+\item[{{\bf u8}}]{do\-Start}
+\end{DoxyParamCaption}
+)}\label{parallelinterface_8c_a66eee56b32bf33a739f1b0c3e7a57262}
+This function talks with the A\-S399x chip. 
+
+Definition at line 129 of file parallelinterface.\-c.
+
+\index{parallelinterface.\-c@{parallelinterface.\-c}!write\-Read\-A\-S399x\-Isr@{write\-Read\-A\-S399x\-Isr}}
+\index{write\-Read\-A\-S399x\-Isr@{write\-Read\-A\-S399x\-Isr}!parallelinterface.c@{parallelinterface.\-c}}
+\subsubsection[{write\-Read\-A\-S399x\-Isr}]{\setlength{\rightskip}{0pt plus 5cm}void write\-Read\-A\-S399x\-Isr (
+\begin{DoxyParamCaption}
+\item[{const {\bf u8}}]{wbuf, }
+\item[{{\bf u8} $\ast$}]{rbuf}
+\end{DoxyParamCaption}
+)}\label{parallelinterface_8c_a35abe30a55f52f77670b663d2aef3d61}
+This function talks with the A\-S399x chip from I\-S\-R. 
+
+Definition at line 166 of file parallelinterface.\-c.
+

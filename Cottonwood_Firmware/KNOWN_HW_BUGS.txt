@@ -1,0 +1,10 @@
+- rxnoresponsewaittime is changed by hardware
+- after setting rec_on we have to wait at least 6ms before measuring RSSI level
+- gen2StoreTagId: by reading out content of PC only one byte is allowed to be read otherwise the REQ_RN command will fail.
+- TX and RX interrupt is hard to detect, SW has to detect 1->0 transition 
+- parallel mode single read from FIFO does not pop byte
+- serial mode single read from FIFO does not pop byte on AS3991
+- workaround for serial AS3991 FIFO reading must not be applied in gen2StoreTagID when reading first byte PC
+- AS399X_CMD_SOFTINIT breaks serial communication on AS992
+- AS3992 needs additional delay after enabling chip
+- AS3992 Version 5.5 has also Version number 5.1 

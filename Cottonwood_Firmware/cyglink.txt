@@ -1,0 +1,1 @@
+"C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj"  TO "C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x" RS(256) PL(68) PW(78) 

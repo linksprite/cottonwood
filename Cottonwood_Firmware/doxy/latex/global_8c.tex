@@ -1,0 +1,66 @@
+\section{global.\-c File Reference}
+\label{global_8c}\index{global.\-c@{global.\-c}}
+{\ttfamily \#include \char`\"{}c8051\-F340.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}as399x\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}global.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf bin2\-Hex} (char value, {\bf u8} $\ast$destbuf)
+\item 
+void {\bf bin2\-Chars} (int value, {\bf u8} $\ast$destbuf)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file includes some useful functions. \begin{DoxyAuthor}{Author}
+Ulrich Herrmann 
+\end{DoxyAuthor}
+
+
+Definition in file {\bf global.\-c}.
+
+
+
+\subsection{Function Documentation}
+\index{global.\-c@{global.\-c}!bin2\-Chars@{bin2\-Chars}}
+\index{bin2\-Chars@{bin2\-Chars}!global.c@{global.\-c}}
+\subsubsection[{bin2\-Chars}]{\setlength{\rightskip}{0pt plus 5cm}void bin2\-Chars (
+\begin{DoxyParamCaption}
+\item[{int}]{value, }
+\item[{{\bf u8} $\ast$}]{destbuf}
+\end{DoxyParamCaption}
+)}\label{global_8c_a04cc442263255ee8fef2f37657a74d7c}
+This function is used to convert a 8bit value to a Char string. \par
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Databyte which should be converted \\
+\hline
+{\em $\ast$destbuf} & Destination buffer. The Buffer should be at least 6 bytes long. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 75 of file global.\-c.
+
+\index{global.\-c@{global.\-c}!bin2\-Hex@{bin2\-Hex}}
+\index{bin2\-Hex@{bin2\-Hex}!global.c@{global.\-c}}
+\subsubsection[{bin2\-Hex}]{\setlength{\rightskip}{0pt plus 5cm}void bin2\-Hex (
+\begin{DoxyParamCaption}
+\item[{char}]{value, }
+\item[{{\bf u8} $\ast$}]{destbuf}
+\end{DoxyParamCaption}
+)}\label{global_8c_a485e48dfe8d151e6c9557c4a9bacbdd3}
+This function is used to convert a 8bit value to a Hexstring. \par
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Databyte which should be converted \\
+\hline
+{\em $\ast$destbuf} & Destination buffer. The Buffer should be at least 5 bytes long. The first byte is always a 0 and the second a x. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 39 of file global.\-c.
+

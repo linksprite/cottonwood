@@ -1,0 +1,3755 @@
+BL51 BANKED LINKER/LOCATER V6.22              01/02/2014  09:30:31  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as
+>> 399x.obj TO C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x RS (2
+>> 56) PL (68) PW (78)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS399X)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?SCDIV)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?CSTPTR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?IMUL)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?SIDIV)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?ULDIV)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?ULCMP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?ULSHR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?MEMSET)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?UIDIV)
+
+
+LINK MAP OF MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x
+>>  (AS399X)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0039H     UNIT         ?DT?AS399X
+            DATA    0041H     0013H     UNIT         ?DT?_AS399XSETBASEFREQUEN
+>> CY?AS399X
+            DATA    0054H     0010H     UNIT         ?DT?_AS399XGETRSSI?AS399X
+>> 
+            DATA    0064H     0009H     UNIT         ?DT?_AS399XCOMMANDCONTINU
+>> OUSADDRESS?AS399X
+            DATA    006DH     0008H     UNIT         ?DT?_AS399XINITIALIZE?AS3
+>> 99X
+            DATA    0075H     0008H     UNIT         ?DT?AS399XGETREFLECTEDPOW
+>> ERNOISELEVEL?AS399X
+            DATA    007DH     0003H     UNIT         ?DT?AS399XEXITDIRECTMODE?
+>> AS399X
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+                    0000H     0003H                  *** GAP ***
+            CODE    0003H     0003H     ABSOLUTE     
+                    0006H     07FAH                  *** GAP ***
+            CODE    0800H     0279H     UNIT         ?PR?_AS399XINITIALIZE?AS3
+>> 99X
+            CODE    0A79H     01EFH     UNIT         ?C?LIB_CODE
+            CODE    0C68H     01CCH     UNIT         ?CO?AS399X
+            CODE    0E34H     01B5H     UNIT         ?PR?_AS399XSETBASEFREQUEN
+>> CY?AS399X
+            CODE    0FE9H     0134H     UNIT         ?PR?_AS399XGETRSSI?AS399X
+>> 
+            CODE    111DH     00CEH     UNIT         ?PR?_AS399XSETSENSITIVITY
+>> ?AS399X
+            CODE    11EBH     00B5H     UNIT         ?PR?AS399XLOCKPLL?AS399X
+            CODE    12A0H     008DH     UNIT         ?PR?AS399XGETREFLECTEDPOW
+>> ER?AS399X
+            CODE    132DH     008BH     UNIT         ?PR?EXTINT?AS399X
+            CODE    13B8H     0089H     UNIT         ?PR?AS399XGETREFLECTEDPOW
+>> ERNOISELEVEL?AS399X
+            CODE    1441H     0088H     UNIT         ?PR?AS399XENTERPOWERDOWNM
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 2
+
+
+>> ODE?AS399X
+            CODE    14C9H     0077H     UNIT         ?PR?AS399XMEMORYDUMP?AS39
+>> 9X
+            CODE    1540H     0075H     UNIT         ?PR?AS399XEXITPOWERDOWNMO
+>> DE?AS399X
+            CODE    15B5H     006AH     UNIT         ?PR?AS399XENTERDIRECTMODE
+>> ?AS399X
+            CODE    161FH     0069H     UNIT         ?PR?_AS399XWRITEPREDISTOR
+>> TION?AS399X
+            CODE    1688H     0063H     UNIT         ?PR?_AS399XANTENNAPOWER?A
+>> S399X
+            CODE    16EBH     005BH     UNIT         ?PR?AS399XGETSENSITIVITY?
+>> AS399X
+            CODE    1746H     0055H     UNIT         ?PR?_AS399XWAITFORRESPONS
+>> ETIMED?AS399X
+            CODE    179BH     0052H     UNIT         ?PR?_AS399XCONTINUOUSWRIT
+>> E?AS399X
+            CODE    17EDH     0052H     UNIT         ?PR?_AS399XCOMMANDCONTINU
+>> OUSADDRESS?AS399X
+            CODE    183FH     0046H     UNIT         ?PR?_AS399XWAITFORRESPONS
+>> E?AS399X
+            CODE    1885H     003EH     UNIT         ?PR?AS399XEXITDIRECTMODE?
+>> AS399X
+            CODE    18C3H     0031H     UNIT         ?PR?_AS399XCONTINUOUSREAD
+>> ?AS399X
+            CODE    18F4H     002FH     UNIT         ?PR?_AS399XSELECTLINKFREQ
+>> UENCY?AS399X
+            CODE    1923H     002CH     UNIT         ?PR?_AS399XSINGLEWRITE?AS
+>> 399X
+            CODE    194FH     002BH     UNIT         ?PR?AS399XGETADC_MV?AS399
+>> X
+            CODE    197AH     002AH     UNIT         ?PR?AS399XGETADC?AS399X
+            CODE    19A4H     0029H     UNIT         ?PR?_AS399XSINGLEREAD?AS3
+>> 99X
+            CODE    19CDH     0023H     UNIT         ?PR?_AS399XSINGLECOMMAND?
+>> AS399X
+            CODE    19F0H     0020H     UNIT         ?PR?AS399XGETRAWRSSI?AS39
+>> 9X
+            CODE    1A10H     001FH     UNIT         ?PR?_AS399XSINGLEWRITENOS
+>> TOP?AS399X
+            CODE    1A2FH     001EH     UNIT         ?PR?AS399XEXITSTANDBYMODE
+>> ?AS399X
+            CODE    1A4DH     001AH     UNIT         ?PR?_AS399XCONTINUOUSCOMM
+>> AND?AS399X
+            CODE    1A67H     0016H     UNIT         ?PR?_AS399XWRITEDAC?AS399
+>> X
+            CODE    1A7DH     0015H     UNIT         ?PR?AS399XREADDAC?AS399X
+            CODE    1A92H     0014H     UNIT         ?PR?AS399XENTERSTANDBYMOD
+>> E?AS399X
+            CODE    1AA6H     0014H     UNIT         ?C_INITSEG
+            CODE    1ABAH     0013H     UNIT         ?PR?_AS399XSINGLEREADIRQ?
+>> AS399X
+            CODE    1ACDH     000FH     UNIT         ?PR?AS399XSAVESENSITIVITY
+>> ?AS399X
+            CODE    1ADCH     000EH     UNIT         ?PR?AS399XRESTORESENSITIV
+>> ITY?AS399X
+            CODE    1AEAH     000DH     UNIT         ?PR?AS399XRESET?AS399X
+            CODE    1AF7H     0007H     UNIT         ?PR?_AS399XFIFOREAD?AS399
+>> X
+            CODE    1AFEH     0006H     UNIT         ?PR?AS399XREADCHIPVERSION
+>> ?AS399X
+            CODE    1B04H     0005H     UNIT         ?PR?AS399XSWITCHTOIDLEMOD
+>> E?AS399X
+
+
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 3
+
+
+
+OVERLAY MAP OF MODULE:   C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as
+>> 399x (AS399X)
+
+
+SEGMENT                                            DATA_GROUP 
+  +--> CALLED SEGMENT                            START    LENGTH
+----------------------------------------------------------------
+?PR?EXTINT?AS399X                                0000H    0001H
+  +--> ?PR?_AS399XSINGLEREADIRQ?AS399X
+
+?PR?_AS399XSINGLEREADIRQ?AS399X                  0001H    0001H
+
+
+
+UNRESOLVED EXTERNAL SYMBOLS:
+   ?_CON_PRINT?BYTE
+   ?_WRITEREADAS399X?BYTE
+   SETPORTDIRECT
+   SETPORTNORMAL
+   _CON_PRINT
+   _MDELAY
+   _TIMERSTART_US
+   _UDELAY
+   _WRITEREADAS399X
+   _WRITEREADAS399XISR
+
+
+
+IGNORED SEGMENTS:
+   ?DT?_AS399XSINGLECOMMAND?AS399X
+   ?DT?_AS399XSINGLEWRITENOSTOP?AS399X
+   ?DT?_AS399XCONTINUOUSREAD?AS399X
+   ?DT?_AS399XSINGLEREAD?AS399X
+   ?DT?_AS399XWRITEPREDISTORTION?AS399X
+   ?DT?_AS399XCONTINUOUSWRITE?AS399X
+   ?DT?_AS399XSINGLEWRITE?AS399X
+   ?DT?_AS399XWAITFORRESPONSETIMED?AS399X
+   ?DT?_AS399XWAITFORRESPONSE?AS399X
+   ?DT?AS399XENTERDIRECTMODE?AS399X
+   ?DT?_AS399XSELECTLINKFREQUENCY?AS399X
+   ?DT?AS399XLOCKPLL?AS399X
+   ?DT?AS399XMEMORYDUMP?AS399X
+   ?DT?_AS399XANTENNAPOWER?AS399X
+   ?DT?AS399XGETRAWRSSI?AS399X
+   ?DT?AS399XGETSENSITIVITY?AS399X
+   ?DT?_AS399XSETSENSITIVITY?AS399X
+   ?DT?AS399XGETREFLECTEDPOWER?AS399X
+   ?DT?AS399XENTERPOWERDOWNMODE?AS399X
+   ?DT?AS399XEXITPOWERDOWNMODE?AS399X
+   _DATA_GROUP_
+
+
+
+IGNORED SYMBOLS:
+   ?_AS399XCONTINUOUSWRITE?BYTE
+
+
+
+SYMBOL TABLE OF MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as
+>> 399x (AS399X)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 4
+
+
+  -------         MODULE        AS399X
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:132DH         PUBLIC        extInt
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  C:1746H         PUBLIC        _as399xWaitForResponseTimed
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  C:194FH         PUBLIC        as399xGetADC_mV
+  D:0008H         PUBLIC        as399xFifoStatus
+  C:161FH         PUBLIC        _as399xWritePredistortion
+  D:0009H         SYMBOL        outputPowerOn
+  C:19F0H         SYMBOL        as399xGetRawRSSI
+  C:1ABAH         PUBLIC        _as399xSingleReadIrq
+  C:14C9H         PUBLIC        as399xMemoryDump
+  C:183FH         PUBLIC        _as399xWaitForResponse
+  C:0800H         PUBLIC        _as399xInitialize
+  C:1ADCH         PUBLIC        as399xRestoreSensitivity
+  B:00A0H.1       PUBLIC        P2_1
+  B:0090H.2       PUBLIC        P1_2
+  B:0090H.3       PUBLIC        P1_3
+  D:000AH         SYMBOL        as399xSavedSensRegs
+  C:19CDH         PUBLIC        _as399xSingleCommand
+  C:18F4H         PUBLIC        _as399xSelectLinkFrequency
+  C:1441H         PUBLIC        as399xEnterPowerDownMode
+  D:000CH         PUBLIC        as399xIrqStatus
+  D:000DH         SYMBOL        outputPowerCounter
+  C:18CBH         PUBLIC        _as399xContinuousRead
+  D:000FH         SYMBOL        as399xPowerDownRegs
+  C:1B04H         PUBLIC        as399xSwitchToIdleMode
+  D:0091H         PUBLIC        TMR3CN
+  C:13B8H         PUBLIC        as399xGetReflectedPowerNoiseLevel
+  C:1ACDH         PUBLIC        as399xSaveSensitivity
+  C:12A0H         PUBLIC        as399xGetReflectedPower
+  C:1A7DH         PUBLIC        as399xReadDAC
+  D:0028H         SYMBOL        outputPowerCounterStart
+  C:17A6H         PUBLIC        _as399xContinuousWrite
+  C:17EDH         PUBLIC        _as399xCommandContinuousAddress
+  C:1540H         PUBLIC        as399xExitPowerDownMode
+  D:002AH         PUBLIC        as399xResponse
+  C:16EBH         PUBLIC        as399xGetSensitivity
+  C:1A67H         PUBLIC        _as399xWriteDAC
+  B:00A8H.0       PUBLIC        EX0
+  C:1688H         PUBLIC        _as399xAntennaPower
+  C:1A10H         PUBLIC        _as399xSingleWriteNoStop
+  C:111DH         PUBLIC        _as399xSetSensitivity
+  C:1A92H         PUBLIC        as399xEnterStandbyMode
+  C:0FE9H         PUBLIC        _as399xGetRSSI
+  C:0E34H         PUBLIC        _as399xSetBaseFrequency
+  C:19A4H         PUBLIC        _as399xSingleRead
+  D:002CH         SYMBOL        evalPowerRegulation
+  C:15B5H         PUBLIC        as399xEnterDirectMode
+  C:197AH         PUBLIC        as399xGetADC
+  C:1AFEH         PUBLIC        as399xReadChipVersion
+  D:002DH         PUBLIC        as399xChipVersion
+  D:002EH         SYMBOL        as399xPowerDownRegs3
+  C:11EBH         SYMBOL        as399xLockPLL
+  C:192AH         PUBLIC        _as399xSingleWrite
+  D:003DH         PUBLIC        as399xCurrentBaseFreq
+  C:0D38H         PUBLIC        as399xPredistortionData
+  C:1A2FH         PUBLIC        as399xExitStandbyMode
+  C:1A4DH         PUBLIC        _as399xContinuousCommand
+  C:1885H         PUBLIC        as399xExitDirectMode
+  C:1AF7H         PUBLIC        _as399xFifoRead
+  C:1AEAH         PUBLIC        as399xReset
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 5
+
+
+  -------         PROC          _AS399XINITIALIZE
+  D:006DH         SYMBOL        baseFreq
+  -------         DO            
+  D:0071H         SYMBOL        myBuf
+  -------         ENDDO         
+  C:0800H         LINE#         188
+  C:0808H         LINE#         189
+  C:0808H         LINE#         193
+  C:080BH         LINE#         194
+  C:080EH         LINE#         195
+  C:0811H         LINE#         196
+  C:0814H         LINE#         197
+  C:0821H         LINE#         198
+  C:0830H         LINE#         199
+  C:083DH         LINE#         200
+  C:0850H         LINE#         204
+  C:0850H         LINE#         205
+  C:0862H         LINE#         206
+  C:0865H         LINE#         207
+  C:0865H         LINE#         208
+  C:0867H         LINE#         209
+  C:086EH         LINE#         210
+  C:0870H         LINE#         211
+  C:0877H         LINE#         212
+  C:0884H         LINE#         213
+  C:0899H         LINE#         217
+  C:0899H         LINE#         218
+  C:089FH         LINE#         219
+  C:08A2H         LINE#         220
+  C:08A2H         LINE#         222
+  C:08A7H         LINE#         223
+  C:08AEH         LINE#         224
+  C:08B5H         LINE#         225
+  C:08BAH         LINE#         226
+  C:08BFH         LINE#         227
+  C:08CDH         LINE#         228
+  C:08DBH         LINE#         229
+  C:08E9H         LINE#         230
+  C:08F7H         LINE#         231
+  C:0905H         LINE#         232
+  C:0913H         LINE#         234
+  C:091AH         LINE#         235
+  C:091FH         LINE#         236
+  C:091FH         LINE#         237
+  C:0928H         LINE#         238
+  C:092DH         LINE#         239
+  C:092DH         LINE#         241
+  C:0932H         LINE#         243
+  C:0935H         LINE#         245
+  C:093AH         LINE#         248
+  C:0951H         LINE#         249
+  C:0951H         LINE#         250
+  C:0951H         LINE#         251
+  C:0954H         LINE#         253
+  C:095AH         LINE#         254
+  C:095CH         LINE#         256
+  C:095CH         LINE#         257
+  C:095CH         LINE#         258
+  C:095FH         LINE#         260
+  C:0965H         LINE#         261
+  C:0967H         LINE#         263
+  C:0967H         LINE#         264
+  C:0967H         LINE#         265
+  C:0967H         LINE#         266
+  C:0967H         LINE#         267
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 6
+
+
+  C:096AH         LINE#         272
+  C:096CH         LINE#         274
+  C:096CH         LINE#         275
+  C:097AH         LINE#         276
+  C:097FH         LINE#         277
+  C:097FH         LINE#         282
+  C:0986H         LINE#         291
+  C:098DH         LINE#         296
+  C:0994H         LINE#         299
+  C:099DH         LINE#         300
+  C:09A4H         LINE#         301
+  C:09A7H         LINE#         302
+  C:09AEH         LINE#         309
+  C:09B5H         LINE#         330
+  C:09BEH         LINE#         331
+  C:09C5H         LINE#         332
+  C:09C8H         LINE#         333
+  C:09CFH         LINE#         341
+  C:09D6H         LINE#         345
+  C:09DFH         LINE#         351
+  C:09E2H         LINE#         355
+  C:09E5H         LINE#         363
+  C:09E8H         LINE#         365
+  C:09F6H         LINE#         370
+  C:09F9H         LINE#         373
+  C:09FCH         LINE#         376
+  C:09FFH         LINE#         377
+  C:0A0DH         LINE#         447
+  C:0A14H         LINE#         450
+  C:0A17H         LINE#         451
+  C:0A1AH         LINE#         455
+  C:0A1DH         LINE#         458
+  C:0A24H         LINE#         473
+  C:0A27H         LINE#         474
+  C:0A29H         LINE#         475
+  C:0A2BH         LINE#         476
+  C:0A38H         LINE#         483
+  C:0A3DH         LINE#         485
+  C:0A4EH         LINE#         486
+  C:0A53H         LINE#         491
+  C:0A5AH         LINE#         492
+  C:0A61H         LINE#         493
+  C:0A66H         LINE#         494
+  C:0A66H         LINE#         495
+  C:0A6BH         LINE#         496
+  C:0A6BH         LINE#         497
+  C:0A70H         LINE#         498
+  C:0A70H         LINE#         499
+  C:0A75H         LINE#         500
+  C:0A75H         LINE#         519
+  C:0A78H         LINE#         520
+  -------         ENDPROC       _AS399XINITIALIZE
+  -------         PROC          EXTINT
+  -------         DO            
+  D:0000H         SYMBOL        istat
+  D:0007H         SYMBOL        istat2
+  -------         ENDDO         
+  C:132DH         LINE#         530
+  C:134AH         LINE#         533
+  C:1351H         LINE#         534
+  C:1356H         LINE#         535
+  C:1359H         LINE#         537
+  C:1360H         LINE#         539
+  C:1367H         LINE#         540
+  C:1367H         LINE#         541
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 7
+
+
+  C:136CH         LINE#         542
+  C:136CH         LINE#         544
+  C:136FH         LINE#         546
+  C:1374H         LINE#         547
+  C:1374H         LINE#         548
+  C:137BH         LINE#         549
+  C:1384H         LINE#         550
+  C:1384H         LINE#         551
+  C:1387H         LINE#         552
+  C:1387H         LINE#         553
+  C:1390H         LINE#         554
+  C:1390H         LINE#         555
+  C:1393H         LINE#         556
+  C:1393H         LINE#         557
+  C:1393H         LINE#         559
+  C:139DH         LINE#         561
+  -------         ENDPROC       EXTINT
+  -------         PROC          AS399XREADCHIPVERSION
+  C:1AFEH         LINE#         624
+  C:1AFEH         LINE#         625
+  C:1AFEH         LINE#         626
+  C:1B03H         LINE#         627
+  -------         ENDPROC       AS399XREADCHIPVERSION
+  -------         PROC          _AS399XSINGLECOMMAND
+  D:0000H         SYMBOL        command
+  C:19CDH         LINE#         630
+  C:19CFH         LINE#         631
+  C:19CFH         LINE#         632
+  C:19D1H         LINE#         633
+  C:19EDH         LINE#         634
+  C:19EFH         LINE#         635
+  -------         ENDPROC       _AS399XSINGLECOMMAND
+  -------         PROC          _AS399XCONTINUOUSCOMMAND
+  D:0001H         SYMBOL        commands
+  D:0005H         SYMBOL        len
+  C:1A4DH         LINE#         639
+  C:1A4DH         LINE#         640
+  C:1A4DH         LINE#         641
+  C:1A4FH         LINE#         642
+  C:1A64H         LINE#         643
+  C:1A66H         LINE#         644
+  -------         ENDPROC       _AS399XCONTINUOUSCOMMAND
+  -------         PROC          _AS399XSINGLEWRITENOSTOP
+  D:0007H         SYMBOL        address
+  D:0005H         SYMBOL        value
+  -------         DO            
+  D:0000H         SYMBOL        buf
+  -------         ENDDO         
+  C:1A10H         LINE#         648
+  C:1A10H         LINE#         649
+  C:1A10H         LINE#         651
+  C:1A12H         LINE#         652
+  C:1A14H         LINE#         653
+  -------         ENDPROC       _AS399XSINGLEWRITENOSTOP
+  -------         PROC          L?0199
+  -------         ENDPROC       L?0199
+  -------         PROC          _AS399XCONTINUOUSREAD
+  D:0000H         SYMBOL        address
+  D:0005H         SYMBOL        len
+  D:0001H         SYMBOL        readbuf
+  C:18CBH         LINE#         657
+  C:18D3H         LINE#         658
+  C:18D3H         LINE#         659
+  C:18D5H         LINE#         660
+  C:18D8H         LINE#         661
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 8
+
+
+  C:18F1H         LINE#         662
+  C:18F3H         LINE#         663
+  -------         ENDPROC       _AS399XCONTINUOUSREAD
+  -------         PROC          _AS399XFIFOREAD
+  D:0005H         SYMBOL        len
+  D:0001H         SYMBOL        readbuf
+  C:1AF7H         LINE#         666
+  C:1AF9H         LINE#         667
+  C:1AF9H         LINE#         676
+  -------         ENDPROC       _AS399XFIFOREAD
+  -------         PROC          _AS399XSINGLEREAD
+  D:0000H         SYMBOL        address
+  -------         DO            
+  D:0001H         SYMBOL        readdata
+  -------         ENDDO         
+  C:19A4H         LINE#         681
+  C:19A6H         LINE#         682
+  C:19A6H         LINE#         685
+  C:19A8H         LINE#         686
+  C:19ABH         LINE#         687
+  C:19C8H         LINE#         689
+  C:19CAH         LINE#         690
+  C:19CCH         LINE#         691
+  -------         ENDPROC       _AS399XSINGLEREAD
+  -------         PROC          _AS399XSINGLEREADIRQ
+  D:0007H         SYMBOL        address
+  -------         DO            
+  D:0001H         SYMBOL        readdata
+  -------         ENDDO         
+  C:1ABAH         LINE#         694
+  C:1ABAH         LINE#         695
+  C:1ABAH         LINE#         698
+  C:1ABCH         LINE#         699
+  C:1ABFH         LINE#         700
+  C:1AC8H         LINE#         702
+  C:1ACAH         LINE#         703
+  C:1ACCH         LINE#         704
+  -------         ENDPROC       _AS399XSINGLEREADIRQ
+  -------         PROC          _AS399XWRITEPREDISTORTION
+  D:0000H         SYMBOL        buf
+  -------         DO            
+  D:0003H         SYMBOL        address
+  D:0004H         SYMBOL        version
+  -------         ENDDO         
+  C:161FH         LINE#         708
+  C:1625H         LINE#         709
+  C:1625H         LINE#         711
+  C:162AH         LINE#         712
+  C:162DH         LINE#         713
+  C:162FH         LINE#         714
+  C:164AH         LINE#         715
+  C:1664H         LINE#         716
+  C:1685H         LINE#         717
+  C:1687H         LINE#         718
+  -------         ENDPROC       _AS399XWRITEPREDISTORTION
+  C:179BH         SYMBOL        L?0196
+  C:179FH         SYMBOL        L?0197
+  C:17A1H         SYMBOL        L?0198
+  -------         PROC          L?0195
+  -------         ENDPROC       L?0195
+  C:179BH         SYMBOL        L?0196
+  C:179FH         SYMBOL        L?0197
+  C:17A1H         SYMBOL        L?0198
+  -------         PROC          _AS399XCONTINUOUSWRITE
+  D:0000H         SYMBOL        address
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 9
+
+
+  D:0001H         SYMBOL        buf
+  D:0004H         SYMBOL        len
+  C:17A6H         LINE#         720
+  C:17AEH         LINE#         721
+  C:17AEH         LINE#         722
+  C:17B1H         LINE#         723
+  C:17B3H         LINE#         724
+  C:17CEH         LINE#         725
+  C:17EAH         LINE#         726
+  C:17ECH         LINE#         727
+  -------         ENDPROC       _AS399XCONTINUOUSWRITE
+  -------         PROC          L?0200
+  -------         ENDPROC       L?0200
+  -------         PROC          _AS399XSINGLEWRITE
+  D:0007H         SYMBOL        address
+  D:0005H         SYMBOL        value
+  -------         DO            
+  D:0000H         SYMBOL        buf
+  -------         ENDDO         
+  C:192AH         LINE#         729
+  C:192AH         LINE#         730
+  C:192AH         LINE#         732
+  C:192CH         LINE#         733
+  C:192EH         LINE#         734
+  C:1930H         LINE#         735
+  C:194CH         LINE#         736
+  C:194EH         LINE#         737
+  -------         ENDPROC       _AS399XSINGLEWRITE
+  -------         PROC          _AS399XCOMMANDCONTINUOUSADDRESS
+  D:0001H         SYMBOL        command
+  D:0005H         SYMBOL        com_len
+  D:0068H         SYMBOL        address
+  D:0069H         SYMBOL        buf
+  D:006CH         SYMBOL        buf_len
+  C:17EDH         LINE#         740
+  C:17EDH         LINE#         742
+  C:17EDH         LINE#         743
+  C:17F0H         LINE#         744
+  C:17F2H         LINE#         745
+  C:1806H         LINE#         746
+  C:1820H         LINE#         747
+  C:183CH         LINE#         748
+  C:183EH         LINE#         749
+  -------         ENDPROC       _AS399XCOMMANDCONTINUOUSADDRESS
+  -------         PROC          AS399XSWITCHTOIDLEMODE
+  C:1B04H         LINE#         752
+  C:1B04H         LINE#         753
+  C:1B04H         LINE#         754
+  -------         ENDPROC       AS399XSWITCHTOIDLEMODE
+  -------         PROC          _AS399XWAITFORRESPONSETIMED
+  D:0000H         SYMBOL        waitMask
+  D:0002H         SYMBOL        counter
+  C:1746H         LINE#         757
+  C:174EH         LINE#         758
+  C:174EH         LINE#         759
+  C:1760H         LINE#         760
+  C:1760H         LINE#         761
+  C:1765H         LINE#         762
+  C:1765H         LINE#         763
+  C:176CH         LINE#         764
+  C:1774H         LINE#         765
+  C:1774H         LINE#         766
+  C:1776H         LINE#         767
+  C:177CH         LINE#         768
+  C:177CH         LINE#         769
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 10
+
+
+  C:177FH         LINE#         771
+  C:1794H         LINE#         773
+  C:179AH         LINE#         774
+  C:179AH         LINE#         776
+  -------         ENDPROC       _AS399XWAITFORRESPONSETIMED
+  -------         PROC          _AS399XWAITFORRESPONSE
+  D:0006H         SYMBOL        waitMaskOrig
+  -------         DO            
+  D:0006H         SYMBOL        counter
+  D:0000H         SYMBOL        waitMask
+  -------         ENDDO         
+  C:183FH         LINE#         778
+  C:183FH         LINE#         779
+  C:183FH         LINE#         781
+  C:1843H         LINE#         782
+  C:1846H         LINE#         783
+  C:1846H         LINE#         784
+  C:1852H         LINE#         785
+  C:1852H         LINE#         786
+  C:185DH         LINE#         787
+  C:1866H         LINE#         788
+  C:1866H         LINE#         789
+  C:1869H         LINE#         791
+  C:187EH         LINE#         794
+  C:1884H         LINE#         795
+  C:1884H         LINE#         796
+  -------         ENDPROC       _AS399XWAITFORRESPONSE
+  -------         PROC          AS399XENTERDIRECTMODE
+  -------         DO            
+  D:0000H         SYMBOL        temp
+  D:0001H         SYMBOL        buf
+  -------         ENDDO         
+  C:15B5H         LINE#         799
+  C:15B5H         LINE#         800
+  C:15B5H         LINE#         804
+  C:15BCH         LINE#         806
+  C:15C3H         LINE#         807
+  C:15CAH         LINE#         809
+  C:15D7H         LINE#         810
+  C:15DAH         LINE#         811
+  C:15E8H         LINE#         813
+  C:15EFH         LINE#         815
+  C:15F6H         LINE#         816
+  C:15FBH         LINE#         817
+  C:1600H         LINE#         818
+  C:1605H         LINE#         819
+  C:1608H         LINE#         825
+  C:160FH         LINE#         827
+  C:1613H         LINE#         828
+  C:161AH         LINE#         829
+  C:161CH         LINE#         830
+  -------         ENDPROC       AS399XENTERDIRECTMODE
+  -------         PROC          AS399XEXITDIRECTMODE
+  -------         DO            
+  D:007DH         SYMBOL        buf
+  -------         ENDDO         
+  C:1885H         LINE#         833
+  C:1885H         LINE#         834
+  C:1885H         LINE#         836
+  C:188AH         LINE#         841
+  C:188EH         LINE#         842
+  C:1891H         LINE#         843
+  C:189EH         LINE#         844
+  C:18A1H         LINE#         845
+  C:18AFH         LINE#         848
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 11
+
+
+  C:18B4H         LINE#         849
+  C:18B9H         LINE#         850
+  C:18C0H         LINE#         852
+  C:18C2H         LINE#         853
+  -------         ENDPROC       AS399XEXITDIRECTMODE
+  -------         PROC          _AS399XSELECTLINKFREQUENCY
+  D:0000H         SYMBOL        a
+  -------         DO            
+  D:0005H         SYMBOL        reg
+  -------         ENDDO         
+  C:18F4H         LINE#         856
+  C:18F6H         LINE#         857
+  C:18F6H         LINE#         861
+  C:18FAH         LINE#         862
+  C:18FAH         LINE#         863
+  C:1901H         LINE#         864
+  C:1901H         LINE#         865
+  C:1906H         LINE#         866
+  C:1906H         LINE#         867
+  C:190DH         LINE#         868
+  C:190DH         LINE#         871
+  C:1914H         LINE#         873
+  C:1917H         LINE#         874
+  C:191EH         LINE#         875
+  -------         ENDPROC       _AS399XSELECTLINKFREQUENCY
+  -------         PROC          AS399XLOCKPLL
+  -------         DO            
+  D:0000H         SYMBOL        buf
+  D:0003H         SYMBOL        var
+  D:0004H         SYMBOL        i
+  -------         DO            
+  D:0006H         SYMBOL        vco_voltage
+  -------         ENDDO         
+  -------         ENDDO         
+  C:11EBH         LINE#         878
+  C:11EBH         LINE#         879
+  C:11EBH         LINE#         884
+  C:11F2H         LINE#         885
+  C:11F2H         LINE#         887
+  C:11F7H         LINE#         888
+  C:1200H         LINE#         889
+  C:120EH         LINE#         891
+  C:1213H         LINE#         893
+  C:1213H         LINE#         894
+  C:121BH         LINE#         895
+  C:1222H         LINE#         896
+  C:1229H         LINE#         897
+  C:1239H         LINE#         899
+  C:123EH         LINE#         900
+  C:1241H         LINE#         901
+  C:1244H         LINE#         902
+  C:124BH         LINE#         903
+  C:1255H         LINE#         905
+  C:1258H         LINE#         906
+  C:125BH         LINE#         909
+  C:1268H         LINE#         910
+  C:1268H         LINE#         911
+  C:126DH         LINE#         913
+  C:126DH         LINE#         914
+  C:1275H         LINE#         915
+  C:1278H         LINE#         916
+  C:127BH         LINE#         917
+  C:127EH         LINE#         918
+  C:1281H         LINE#         919
+  C:1288H         LINE#         920
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 12
+
+
+  C:128FH         LINE#         921
+  C:129FH         LINE#         922
+  C:129FH         LINE#         923
+  C:129FH         LINE#         924
+  -------         ENDPROC       AS399XLOCKPLL
+  -------         PROC          _AS399XSETBASEFREQUENCY
+  D:0041H         SYMBOL        regs
+  D:0042H         SYMBOL        frequency
+  -------         DO            
+  D:0046H         SYMBOL        buf
+  D:0049H         SYMBOL        statusreg
+  D:004AH         SYMBOL        ref
+  D:004CH         SYMBOL        i
+  D:0006H         SYMBOL        j
+  D:004EH         SYMBOL        x
+  D:0004H         SYMBOL        reg_A
+  D:0002H         SYMBOL        reg_B
+  D:0050H         SYMBOL        divisor
+  -------         ENDDO         
+  C:0E34H         LINE#         927
+  C:0E36H         LINE#         928
+  C:0E36H         LINE#         934
+  C:0E42H         LINE#         935
+  C:0E49H         LINE#         936
+  C:0E53H         LINE#         937
+  C:0E59H         LINE#         938
+  C:0E59H         LINE#         939
+  C:0E65H         LINE#         940
+  C:0E81H         LINE#         941
+  C:0E81H         LINE#         942
+  C:0E81H         LINE#         943
+  C:0E87H         LINE#         944
+  C:0E89H         LINE#         945
+  C:0E89H         LINE#         946
+  C:0E8FH         LINE#         947
+  C:0E91H         LINE#         948
+  C:0E91H         LINE#         949
+  C:0E97H         LINE#         950
+  C:0E99H         LINE#         951
+  C:0E99H         LINE#         952
+  C:0E9FH         LINE#         953
+  C:0EA1H         LINE#         954
+  C:0EA1H         LINE#         955
+  C:0EA7H         LINE#         956
+  C:0EA9H         LINE#         957
+  C:0EA9H         LINE#         958
+  C:0EAFH         LINE#         959
+  C:0EB1H         LINE#         960
+  C:0EB1H         LINE#         961
+  C:0EB6H         LINE#         962
+  C:0EB6H         LINE#         963
+  C:0EB6H         LINE#         964
+  C:0EB6H         LINE#         965
+  C:0ED4H         LINE#         967
+  C:0EE1H         LINE#         968
+  C:0EF5H         LINE#         969
+  C:0F09H         LINE#         970
+  C:0F09H         LINE#         971
+  C:0F14H         LINE#         972
+  C:0F1CH         LINE#         973
+  C:0F1CH         LINE#         974
+  C:0F29H         LINE#         975
+  C:0F2DH         LINE#         977
+  C:0F2DH         LINE#         978
+  C:0F38H         LINE#         979
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 13
+
+
+  C:0F38H         LINE#         980
+  C:0F40H         LINE#         981
+  C:0F4CH         LINE#         982
+  C:0F4CH         LINE#         983
+  C:0F57H         LINE#         984
+  C:0F57H         LINE#         985
+  C:0F5CH         LINE#         986
+  C:0F68H         LINE#         987
+  C:0F68H         LINE#         988
+  C:0F73H         LINE#         989
+  C:0F7DH         LINE#         990
+  C:0F7DH         LINE#         991
+  C:0F89H         LINE#         992
+  C:0F8EH         LINE#         993
+  C:0F8EH         LINE#         995
+  C:0F99H         LINE#         996
+  C:0FA3H         LINE#         997
+  C:0FA9H         LINE#         998
+  C:0FA9H         LINE#         999
+  C:0FBFH         LINE#         1000
+  C:0FCFH         LINE#         1001
+  C:0FD1H         LINE#         1003
+  C:0FDFH         LINE#         1004
+  C:0FDFH         LINE#         1005
+  C:0FE2H         LINE#         1006
+  -------         ENDPROC       _AS399XSETBASEFREQUENCY
+  -------         PROC          AS399XMEMORYDUMP
+  -------         DO            
+  D:0007H         SYMBOL        error
+  D:0000H         SYMBOL        i
+  D:0001H         SYMBOL        readbuf
+  -------         ENDDO         
+  C:14C9H         LINE#         1010
+  C:14C9H         LINE#         1011
+  C:14C9H         LINE#         1015
+  C:14CCH         LINE#         1016
+  C:14CCH         LINE#         1017
+  C:14D8H         LINE#         1019
+  C:14F6H         LINE#         1020
+  C:14F6H         LINE#         1021
+  C:1503H         LINE#         1022
+  C:150FH         LINE#         1023
+  C:151BH         LINE#         1024
+  C:1524H         LINE#         1025
+  C:1526H         LINE#         1027
+  C:1526H         LINE#         1028
+  C:152BH         LINE#         1029
+  C:1536H         LINE#         1030
+  C:1536H         LINE#         1031
+  C:153FH         LINE#         1032
+  -------         ENDPROC       AS399XMEMORYDUMP
+  -------         PROC          AS399XRESET
+  C:1AEAH         LINE#         1034
+  C:1AEAH         LINE#         1035
+  C:1AEAH         LINE#         1036
+  C:1AEDH         LINE#         1037
+  C:1AF4H         LINE#         1038
+  -------         ENDPROC       AS399XRESET
+  -------         PROC          _AS399XANTENNAPOWER
+  D:0000H         SYMBOL        on
+  -------         DO            
+  D:0001H         SYMBOL        val
+  D:0002H         SYMBOL        dac
+  D:0003H         SYMBOL        count
+  -------         ENDDO         
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 14
+
+
+  C:1688H         LINE#         1042
+  C:168AH         LINE#         1043
+  C:168AH         LINE#         1044
+  C:168DH         LINE#         1047
+  C:1693H         LINE#         1049
+  C:1696H         LINE#         1051
+  C:169AH         LINE#         1052
+  C:169AH         LINE#         1053
+  C:169FH         LINE#         1079
+  C:16A2H         LINE#         1080
+  C:16A9H         LINE#         1082
+  C:16ABH         LINE#         1084
+  C:16ABH         LINE#         1085
+  C:16B0H         LINE#         1100
+  C:16B3H         LINE#         1101
+  C:16BAH         LINE#         1103
+  C:16C0H         LINE#         1104
+  C:16D6H         LINE#         1105
+  C:16D6H         LINE#         1106
+  C:16DDH         LINE#         1107
+  C:16DFH         LINE#         1114
+  C:16DFH         LINE#         1116
+  C:16E3H         LINE#         1120
+  C:16EAH         LINE#         1122
+  -------         ENDPROC       _AS399XANTENNAPOWER
+  -------         PROC          AS399XGETRAWRSSI
+  -------         DO            
+  D:0000H         SYMBOL        value
+  -------         ENDDO         
+  C:19F0H         LINE#         1124
+  C:19F0H         LINE#         1125
+  C:19F0H         LINE#         1128
+  C:19F5H         LINE#         1129
+  C:19FAH         LINE#         1131
+  C:1A01H         LINE#         1136
+  C:1A08H         LINE#         1137
+  C:1A0DH         LINE#         1138
+  C:1A0FH         LINE#         1139
+  -------         ENDPROC       AS399XGETRAWRSSI
+  -------         PROC          AS399XSAVESENSITIVITY
+  C:1ACDH         LINE#         1141
+  C:1ACDH         LINE#         1142
+  C:1ACDH         LINE#         1143
+  C:1AD4H         LINE#         1144
+  C:1ADBH         LINE#         1145
+  -------         ENDPROC       AS399XSAVESENSITIVITY
+  -------         PROC          AS399XRESTORESENSITIVITY
+  C:1ADCH         LINE#         1147
+  C:1ADCH         LINE#         1148
+  C:1ADCH         LINE#         1149
+  C:1AE3H         LINE#         1150
+  -------         ENDPROC       AS399XRESTORESENSITIVITY
+  -------         PROC          AS399XGETSENSITIVITY
+  -------         DO            
+  D:0000H         SYMBOL        sensitivity
+  D:0007H         SYMBOL        reg0a
+  D:0001H         SYMBOL        reg05
+  D:0007H         SYMBOL        gain
+  -------         ENDDO         
+  C:16EBH         LINE#         1153
+  C:16EBH         LINE#         1154
+  C:16EBH         LINE#         1155
+  C:16EEH         LINE#         1159
+  C:16F5H         LINE#         1160
+  C:16FAH         LINE#         1162
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 15
+
+
+  C:16FEH         LINE#         1163
+  C:16FEH         LINE#         1164
+  C:1704H         LINE#         1165
+  C:1708H         LINE#         1166
+  C:1708H         LINE#         1167
+  C:170AH         LINE#         1168
+  C:170AH         LINE#         1169
+  C:170CH         LINE#         1171
+  C:170CH         LINE#         1172
+  C:1712H         LINE#         1173
+  C:1716H         LINE#         1174
+  C:1716H         LINE#         1175
+  C:171CH         LINE#         1176
+  C:171CH         LINE#         1177
+  C:1720H         LINE#         1178
+  C:1720H         LINE#         1179
+  C:1726H         LINE#         1180
+  C:1726H         LINE#         1181
+  C:1726H         LINE#         1182
+  C:1731H         LINE#         1183
+  C:1736H         LINE#         1184
+  C:1736H         LINE#         1185
+  C:173CH         LINE#         1186
+  C:173EH         LINE#         1188
+  C:173EH         LINE#         1189
+  C:1743H         LINE#         1190
+  C:1743H         LINE#         1191
+  C:1745H         LINE#         1220
+  -------         ENDPROC       AS399XGETSENSITIVITY
+  -------         PROC          _AS399XSETSENSITIVITY
+  D:0000H         SYMBOL        minimumSignal
+  -------         DO            
+  D:0001H         SYMBOL        reg0a
+  D:0002H         SYMBOL        reg05
+  D:0003H         SYMBOL        gain
+  -------         ENDDO         
+  C:111DH         LINE#         1221
+  C:111FH         LINE#         1222
+  C:111FH         LINE#         1226
+  C:1126H         LINE#         1227
+  C:112DH         LINE#         1229
+  C:1130H         LINE#         1230
+  C:1135H         LINE#         1231
+  C:1135H         LINE#         1232
+  C:113BH         LINE#         1233
+  C:1142H         LINE#         1234
+  C:1142H         LINE#         1235
+  C:1148H         LINE#         1236
+  C:114BH         LINE#         1237
+  C:114BH         LINE#         1238
+  C:114DH         LINE#         1240
+  C:114DH         LINE#         1241
+  C:1153H         LINE#         1242
+  C:115AH         LINE#         1243
+  C:115AH         LINE#         1244
+  C:1160H         LINE#         1245
+  C:1163H         LINE#         1246
+  C:1163H         LINE#         1247
+  C:116CH         LINE#         1248
+  C:116CH         LINE#         1249
+  C:1172H         LINE#         1250
+  C:1175H         LINE#         1251
+  C:1175H         LINE#         1252
+  C:1175H         LINE#         1253
+  C:117EH         LINE#         1254
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 16
+
+
+  C:117EH         LINE#         1255
+  C:1181H         LINE#         1256
+  C:118BH         LINE#         1257
+  C:1193H         LINE#         1258
+  C:11A0H         LINE#         1260
+  C:11A2H         LINE#         1262
+  C:11A2H         LINE#         1263
+  C:11A5H         LINE#         1264
+  C:11BDH         LINE#         1265
+  C:11C7H         LINE#         1266
+  C:11D1H         LINE#         1267
+  C:11D1H         LINE#         1268
+  C:11DAH         LINE#         1269
+  C:11E1H         LINE#         1270
+  C:11E8H         LINE#         1271
+  C:11EAH         LINE#         1310
+  -------         ENDPROC       _AS399XSETSENSITIVITY
+  -------         PROC          _AS399XGETRSSI
+  D:0006H         SYMBOL        num_of_ms_to_scan
+  D:0056H         SYMBOL        rawIQ
+  D:0059H         SYMBOL        dBm
+  -------         DO            
+  D:005CH         SYMBOL        valstat
+  D:005DH         SYMBOL        rawVal
+  D:005EH         SYMBOL        reg0a
+  D:005FH         SYMBOL        regFilter
+  D:0060H         SYMBOL        num_of_reads
+  D:0007H         SYMBOL        reg05
+  D:0062H         SYMBOL        sum
+  C:1102H         SYMBOL        end
+  -------         DO            
+  D:0063H         SYMBOL        temp
+  -------         ENDDO         
+  -------         ENDDO         
+  C:0FE9H         LINE#         1312
+  C:0FEFH         LINE#         1313
+  C:0FEFH         LINE#         1318
+  C:0FF8H         LINE#         1325
+  C:1001H         LINE#         1326
+  C:1008H         LINE#         1327
+  C:100FH         LINE#         1328
+  C:1016H         LINE#         1330
+  C:101DH         LINE#         1334
+  C:1029H         LINE#         1336
+  C:102CH         LINE#         1337
+  C:1039H         LINE#         1338
+  C:1039H         LINE#         1340
+  C:103EH         LINE#         1341
+  C:104BH         LINE#         1342
+  C:105FH         LINE#         1343
+  C:105FH         LINE#         1344
+  C:1062H         LINE#         1345
+  C:106DH         LINE#         1346
+  C:106DH         LINE#         1347
+  C:106FH         LINE#         1349
+  C:1073H         LINE#         1350
+  C:1073H         LINE#         1351
+  C:107EH         LINE#         1352
+  C:1085H         LINE#         1353
+  C:1087H         LINE#         1354
+  C:1087H         LINE#         1357
+  C:1094H         LINE#         1358
+  C:109BH         LINE#         1359
+  C:10A0H         LINE#         1360
+  C:10A5H         LINE#         1361
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 17
+
+
+  C:10A5H         LINE#         1362
+  C:10ABH         LINE#         1363
+  C:10B2H         LINE#         1364
+  C:10B4H         LINE#         1366
+  C:10B4H         LINE#         1367
+  C:10BAH         LINE#         1368
+  C:10C5H         LINE#         1369
+  C:10D0H         LINE#         1370
+  C:10D0H         LINE#         1372
+  C:10D4H         LINE#         1373
+  C:10D4H         LINE#         1374
+  C:10E6H         LINE#         1375
+  C:10E8H         LINE#         1377
+  C:10E8H         LINE#         1378
+  C:10F7H         LINE#         1379
+  C:10F7H         LINE#         1391
+  C:1102H         LINE#         1393
+  C:1102H         LINE#         1394
+  C:1109H         LINE#         1395
+  C:1110H         LINE#         1396
+  C:111CH         LINE#         1398
+  -------         ENDPROC       _AS399XGETRSSI
+  -------         PROC          AS399XGETADC
+  -------         DO            
+  D:0007H         SYMBOL        val
+  -------         ENDDO         
+  C:197AH         LINE#         1401
+  C:197AH         LINE#         1402
+  C:197AH         LINE#         1404
+  C:197FH         LINE#         1405
+  C:1986H         LINE#         1406
+  C:198BH         LINE#         1407
+  C:19A3H         LINE#         1408
+  C:19A3H         LINE#         1409
+  -------         ENDPROC       AS399XGETADC
+  -------         PROC          _AS399XWRITEDAC
+  D:0007H         SYMBOL        natVal
+  -------         DO            
+  D:0005H         SYMBOL        dacVal
+  -------         ENDDO         
+  C:1A67H         LINE#         1414
+  C:1A67H         LINE#         1415
+  C:1A67H         LINE#         1416
+  C:1A78H         LINE#         1417
+  -------         ENDPROC       _AS399XWRITEDAC
+  -------         PROC          AS399XREADDAC
+  -------         DO            
+  D:0007H         SYMBOL        dac
+  D:0007H         SYMBOL        nat
+  -------         ENDDO         
+  C:1A7DH         LINE#         1419
+  C:1A7DH         LINE#         1420
+  C:1A7DH         LINE#         1422
+  C:1A82H         LINE#         1423
+  C:1A91H         LINE#         1424
+  C:1A91H         LINE#         1425
+  -------         ENDPROC       AS399XREADDAC
+  -------         PROC          AS399XGETADC_MV
+  -------         DO            
+  D:0007H         SYMBOL        val
+  D:0002H         SYMBOL        mV
+  -------         ENDDO         
+  C:194FH         LINE#         1427
+  C:194FH         LINE#         1428
+  C:194FH         LINE#         1431
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 18
+
+
+  C:1952H         LINE#         1433
+  C:1960H         LINE#         1434
+  C:1976H         LINE#         1437
+  C:1979H         LINE#         1438
+  -------         ENDPROC       AS399XGETADC_MV
+  -------         PROC          AS399XGETREFLECTEDPOWER
+  -------         DO            
+  D:0000H         SYMBOL        value
+  D:0007H         SYMBOL        adcVal
+  D:0002H         SYMBOL        reg
+  D:0005H         SYMBOL        reg14Temp
+  D:0006H         SYMBOL        valstat
+  -------         ENDDO         
+  C:12A0H         LINE#         1440
+  C:12A0H         LINE#         1441
+  C:12A0H         LINE#         1445
+  C:12A7H         LINE#         1446
+  C:12B4H         LINE#         1447
+  C:12B7H         LINE#         1448
+  C:12BAH         LINE#         1449
+  C:12C3H         LINE#         1452
+  C:12CDH         LINE#         1453
+  C:12D2H         LINE#         1455
+  C:12D7H         LINE#         1456
+  C:12DEH         LINE#         1460
+  C:12E5H         LINE#         1462
+  C:12E8H         LINE#         1463
+  C:12F0H         LINE#         1464
+  C:12F7H         LINE#         1468
+  C:12FEH         LINE#         1470
+  C:1301H         LINE#         1473
+  C:1308H         LINE#         1474
+  C:1315H         LINE#         1475
+  C:1318H         LINE#         1476
+  C:1321H         LINE#         1477
+  C:1328H         LINE#         1478
+  C:132CH         LINE#         1479
+  -------         ENDPROC       AS399XGETREFLECTEDPOWER
+  -------         PROC          AS399XGETREFLECTEDPOWERNOISELEVEL
+  -------         DO            
+  D:0075H         SYMBOL        value
+  D:0077H         SYMBOL        i_0
+  D:0007H         SYMBOL        q_0
+  D:0078H         SYMBOL        reg
+  D:007BH         SYMBOL        reg14Temp
+  D:007CH         SYMBOL        valstat
+  -------         ENDDO         
+  C:13B8H         LINE#         1481
+  C:13B8H         LINE#         1482
+  C:13B8H         LINE#         1486
+  C:13BFH         LINE#         1487
+  C:13CCH         LINE#         1488
+  C:13CFH         LINE#         1489
+  C:13D2H         LINE#         1490
+  C:13DBH         LINE#         1493
+  C:13E7H         LINE#         1494
+  C:13ECH         LINE#         1496
+  C:13F1H         LINE#         1497
+  C:13F8H         LINE#         1501
+  C:13FFH         LINE#         1503
+  C:1404H         LINE#         1504
+  C:140BH         LINE#         1508
+  C:1412H         LINE#         1510
+  C:1415H         LINE#         1512
+  C:141CH         LINE#         1513
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 19
+
+
+  C:1429H         LINE#         1514
+  C:142CH         LINE#         1515
+  C:1435H         LINE#         1516
+  C:143CH         LINE#         1517
+  C:1440H         LINE#         1518
+  -------         ENDPROC       AS399XGETREFLECTEDPOWERNOISELEVEL
+  -------         PROC          AS399XENTERSTANDBYMODE
+  -------         DO            
+  D:0005H         SYMBOL        val
+  -------         ENDDO         
+  C:1A92H         LINE#         1766
+  C:1A92H         LINE#         1767
+  C:1A92H         LINE#         1769
+  C:1A99H         LINE#         1771
+  C:1A9DH         LINE#         1774
+  C:1AA0H         LINE#         1776
+  C:1AA5H         LINE#         1777
+  -------         ENDPROC       AS399XENTERSTANDBYMODE
+  -------         PROC          AS399XEXITSTANDBYMODE
+  -------         DO            
+  D:0005H         SYMBOL        val
+  -------         ENDDO         
+  C:1A2FH         LINE#         1778
+  C:1A2FH         LINE#         1779
+  C:1A2FH         LINE#         1781
+  C:1A36H         LINE#         1783
+  C:1A3AH         LINE#         1786
+  C:1A3DH         LINE#         1788
+  C:1A42H         LINE#         1790
+  C:1A49H         LINE#         1792
+  C:1A4CH         LINE#         1793
+  -------         ENDPROC       AS399XEXITSTANDBYMODE
+  -------         PROC          AS399XENTERPOWERDOWNMODE
+  -------         DO            
+  D:0000H         SYMBOL        i
+  D:0001H         SYMBOL        reg3cnt
+  D:0002H         SYMBOL        count
+  -------         ENDDO         
+  C:1441H         LINE#         1796
+  C:1441H         LINE#         1797
+  C:1441H         LINE#         1799
+  C:1444H         LINE#         1805
+  C:144AH         LINE#         1809
+  C:1451H         LINE#         1810
+  C:1454H         LINE#         1811
+  C:1457H         LINE#         1812
+  C:1457H         LINE#         1813
+  C:1474H         LINE#         1816
+  C:1474H         LINE#         1817
+  C:148AH         LINE#         1818
+  C:148CH         LINE#         1820
+  C:148CH         LINE#         1821
+  C:1498H         LINE#         1822
+  C:1498H         LINE#         1823
+  C:14A1H         LINE#         1825
+  C:14A7H         LINE#         1826
+  C:14BDH         LINE#         1827
+  C:14BDH         LINE#         1828
+  C:14C4H         LINE#         1829
+  C:14C6H         LINE#         1830
+  C:14C8H         LINE#         1831
+  -------         ENDPROC       AS399XENTERPOWERDOWNMODE
+  -------         PROC          AS399XEXITPOWERDOWNMODE
+  -------         DO            
+  D:0000H         SYMBOL        i
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 20
+
+
+  D:0001H         SYMBOL        reg3cnt
+  -------         ENDDO         
+  C:1540H         LINE#         1832
+  C:1540H         LINE#         1833
+  C:1540H         LINE#         1835
+  C:1543H         LINE#         1840
+  C:1546H         LINE#         1843
+  C:1548H         LINE#         1844
+  C:154FH         LINE#         1845
+  C:1552H         LINE#         1847
+  C:1555H         LINE#         1848
+  C:1558H         LINE#         1849
+  C:1558H         LINE#         1850
+  C:1575H         LINE#         1853
+  C:1575H         LINE#         1854
+  C:158CH         LINE#         1855
+  C:158EH         LINE#         1857
+  C:158EH         LINE#         1858
+  C:159AH         LINE#         1859
+  C:159AH         LINE#         1860
+  C:15A3H         LINE#         1861
+  C:15AAH         LINE#         1862
+  C:15ADH         LINE#         1863
+  C:15B4H         LINE#         1865
+  -------         ENDPROC       AS399XEXITPOWERDOWNMODE
+  -------         ENDMOD        AS399X
+
+  -------         MODULE        ?C?SCDIV
+  C:0A79H         PUBLIC        ?C?SCDIV
+  -------         ENDMOD        ?C?SCDIV
+
+  -------         MODULE        ?C?CSTPTR
+  C:0A9BH         PUBLIC        ?C?CSTPTR
+  -------         ENDMOD        ?C?CSTPTR
+
+  -------         MODULE        ?C?IMUL
+  C:0AADH         PUBLIC        ?C?IMUL
+  -------         ENDMOD        ?C?IMUL
+
+  -------         MODULE        ?C?SIDIV
+  C:0ABFH         PUBLIC        ?C?SIDIV
+  -------         ENDMOD        ?C?SIDIV
+
+  -------         MODULE        ?C?ULDIV
+  C:0B31H         PUBLIC        ?C?ULDIV
+  -------         ENDMOD        ?C?ULDIV
+
+  -------         MODULE        ?C?ULCMP
+  C:0BC3H         PUBLIC        ?C?ULCMP
+  -------         ENDMOD        ?C?ULCMP
+
+  -------         MODULE        ?C?ULSHR
+  C:0BD4H         PUBLIC        ?C?ULSHR
+  -------         ENDMOD        ?C?ULSHR
+
+  -------         MODULE        ?C?MEMSET
+  C:0BE7H         PUBLIC        ?C?MEMSET
+  -------         ENDMOD        ?C?MEMSET
+
+  -------         MODULE        ?C?UIDIV
+  C:0C13H         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AS399XINITIALIZE?AS399X
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 21
+
+
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AS399XCONTINUOUSCOMMAND?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AS399XFIFOREAD?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AS399XCOMMANDCONTINUOUSADDRESS?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XSWITCHTOIDLEMODE?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AS399XWAITFORRESPONSETIMED?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XENTERDIRECTMODE?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XEXITDIRECTMODE?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XMEMORYDUMP?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AS399XANTENNAPOWER?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XSAVESENSITIVITY?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XRESTORESENSITIVITY?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XGETSENSITIVITY?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AS399XGETRSSI?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AS399XWRITEDAC?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XREADDAC?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XGETADC_MV?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XGETREFLECTEDPOWER?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XGETREFLECTEDPOWERNOISELEVEL?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XENTERSTANDBYMODE?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XEXITSTANDBYMODE?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?C_INITSEG
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 22
+
+
+    SPACE:   DATA    
+    SEGMENT: ?DT?AS399XLOCKPLL?AS399X
+    LENGTH:  0007H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?AS399XGETREFLECTEDPOWER?AS399X
+    LENGTH:  0007H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XWRITEPREDISTORTION?AS399X
+    LENGTH:  0005H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XCONTINUOUSWRITE?AS399X
+    LENGTH:  0005H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?AS399XMEMORYDUMP?AS399X
+    LENGTH:  0005H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XANTENNAPOWER?AS399X
+    LENGTH:  0005H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XCONTINUOUSREAD?AS399X
+    LENGTH:  0004H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XWAITFORRESPONSETIMED?AS399X
+    LENGTH:  0004H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?AS399XENTERDIRECTMODE?AS399X
+    LENGTH:  0004H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XSETSENSITIVITY?AS399X
+    LENGTH:  0004H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?AS399XENTERPOWERDOWNMODE?AS399X
+    LENGTH:  0004H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XSINGLEWRITENOSTOP?AS399X
+    LENGTH:  0002H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XSINGLEREAD?AS399X
+    LENGTH:  0002H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 23
+
+
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XSINGLEWRITE?AS399X
+    LENGTH:  0002H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XWAITFORRESPONSE?AS399X
+    LENGTH:  0002H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?AS399XGETSENSITIVITY?AS399X
+    LENGTH:  0002H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?AS399XEXITPOWERDOWNMODE?AS399X
+    LENGTH:  0002H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  0002H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XSINGLECOMMAND?AS399X
+    LENGTH:  0001H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XSELECTLINKFREQUENCY?AS399X
+    LENGTH:  0001H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?AS399XGETRAWRSSI?AS399X
+    LENGTH:  0001H
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _TIMERSTART_US
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _UDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _WRITEREADAS399XISR
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  SETPORTDIRECT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 24
+
+
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  SETPORTNORMAL
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _CON_PRINT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+
+*** ERROR L105: PUBLIC REFERS TO IGNORED SEGMENT
+    SYMBOL:  ?_AS399XCONTINUOUSWRITE?BYTE
+    SEGMENT: ?DT?_AS399XCONTINUOUSWRITE?AS399X
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 0858H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 085BH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 085EH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 0861H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 086CH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 0875H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 25
+
+
+    SYMBOL:  _CON_PRINT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 0926H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 0970H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _CON_PRINT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 0978H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _CON_PRINT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 099BH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _CON_PRINT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 09BCH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 0A58H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19D2H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19D5H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19D8H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19DCH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19DEH
+
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 26
+
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19E1H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19EBH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A50H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A53H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A56H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A5AH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A5CH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A5FH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A62H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A15H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A18H
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 27
+
+
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A1BH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A1FH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A21H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A23H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A2DH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 18D9H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 18DBH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 18DDH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 18DFH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 18E1H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 28
+
+
+    ADDRESS: 18E4H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 18EFH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19ACH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19AFH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19B2H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19B5H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19B8H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19BBH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19C6H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399XISR
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1AC6H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1630H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 29
+
+
+>> 399X)
+    ADDRESS: 1633H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1636H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 163AH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 163CH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 163EH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1648H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 164BH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 164EH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1651H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1655H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1657H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 30
+
+
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1659H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1662H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1670H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1673H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1676H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 167AH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 167CH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 167FH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1683H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17B4H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17B7H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 31
+
+
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17BAH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17BEH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17C0H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17C2H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17CCH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17CFH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17D2H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17D5H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17D9H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17DBH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17DEH
+
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 32
+
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17E8H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1931H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1934H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1937H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 193BH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 193DH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1940H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 194AH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17F3H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17F6H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17F9H
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 33
+
+
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17FDH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17FFH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1801H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1804H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1807H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 180AH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 180DH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1811H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1813H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1815H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 34
+
+
+    ADDRESS: 181EH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1821H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1824H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1827H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 182BH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 182DH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1830H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 183AH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _TIMERSTART_US
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 176AH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1787H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 178AH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 35
+
+
+>> 399X)
+    ADDRESS: 178DH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1790H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _CON_PRINT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1792H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1871H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1874H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1877H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 187AH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _CON_PRINT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 187CH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1618H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  SETPORTDIRECT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 161DH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  SETPORTNORMAL
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 188FH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _UDELAY
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 36
+
+
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1220H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _UDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1249H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1286H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 14D4H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _CON_PRINT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 14D6H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 150BH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _CON_PRINT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 150DH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1517H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _CON_PRINT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1519H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1523H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1532H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 37
+
+
+    SYMBOL:  _CON_PRINT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1534H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1AF2H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 16DBH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 16E8H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _UDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19FFH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1027H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 111AH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _UDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1984H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 12E3H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 12FCH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 13FDH
+
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 38
+
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1410H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A47H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 14C2H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 154DH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _UDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 15A8H
+
+******************************************************************************
+>> 
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 111DH BYTE (213%) 
+>> *
+******************************************************************************
+>> 
+
+Program Size: data=199.0 xdata=0 code=4876
+LINK/LOCATE RUN COMPLETE.  184 WARNING(S),  22 ERROR(S)
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AS399XINITIALIZE?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AS399XCONTINUOUSCOMMAND?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AS399XFIFOREAD?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AS399XCOMMANDCONTINUOUSADDRESS?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XSWITCHTOIDLEMODE?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AS399XWAITFORRESPONSETIMED?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XENTERDIRECTMODE?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XEXITDIRECTMODE?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 39
+
+
+    SEGMENT: ?PR?AS399XMEMORYDUMP?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AS399XANTENNAPOWER?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XSAVESENSITIVITY?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XRESTORESENSITIVITY?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XGETSENSITIVITY?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AS399XGETRSSI?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_AS399XWRITEDAC?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XREADDAC?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XGETADC_MV?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XGETREFLECTEDPOWER?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XGETREFLECTEDPOWERNOISELEVEL?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XENTERSTANDBYMODE?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AS399XEXITSTANDBYMODE?AS399X
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?C_INITSEG
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?AS399XLOCKPLL?AS399X
+    LENGTH:  0007H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?AS399XGETREFLECTEDPOWER?AS399X
+    LENGTH:  0007H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XWRITEPREDISTORTION?AS399X
+    LENGTH:  0005H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XCONTINUOUSWRITE?AS399X
+    LENGTH:  0005H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?AS399XMEMORYDUMP?AS399X
+    LENGTH:  0005H
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 40
+
+
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XANTENNAPOWER?AS399X
+    LENGTH:  0005H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XCONTINUOUSREAD?AS399X
+    LENGTH:  0004H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XWAITFORRESPONSETIMED?AS399X
+    LENGTH:  0004H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?AS399XENTERDIRECTMODE?AS399X
+    LENGTH:  0004H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XSETSENSITIVITY?AS399X
+    LENGTH:  0004H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?AS399XENTERPOWERDOWNMODE?AS399X
+    LENGTH:  0004H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XSINGLEWRITENOSTOP?AS399X
+    LENGTH:  0002H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XSINGLEREAD?AS399X
+    LENGTH:  0002H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XSINGLEWRITE?AS399X
+    LENGTH:  0002H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XWAITFORRESPONSE?AS399X
+    LENGTH:  0002H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?AS399XGETSENSITIVITY?AS399X
+    LENGTH:  0002H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?AS399XEXITPOWERDOWNMODE?AS399X
+    LENGTH:  0002H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: _DATA_GROUP_
+    LENGTH:  0002H
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 41
+
+
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XSINGLECOMMAND?AS399X
+    LENGTH:  0001H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_AS399XSELECTLINKFREQUENCY?AS399X
+    LENGTH:  0001H
+
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?AS399XGETRAWRSSI?AS399X
+    LENGTH:  0001H
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _TIMERSTART_US
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _UDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _WRITEREADAS399XISR
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  SETPORTDIRECT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  SETPORTNORMAL
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _CON_PRINT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 42
+
+
+
+*** ERROR L105: PUBLIC REFERS TO IGNORED SEGMENT
+    SYMBOL:  ?_AS399XCONTINUOUSWRITE?BYTE
+    SEGMENT: ?DT?_AS399XCONTINUOUSWRITE?AS399X
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 0858H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 085BH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 085EH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 0861H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 086CH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 0875H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _CON_PRINT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 0926H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 0970H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _CON_PRINT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 0978H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _CON_PRINT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 099BH
+
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 43
+
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _CON_PRINT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 09BCH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 0A58H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19D2H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19D5H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19D8H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19DCH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19DEH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19E1H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19EBH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A50H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A53H
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 44
+
+
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A56H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A5AH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A5CH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A5FH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A62H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A15H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A18H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A1BH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A1FH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A21H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 45
+
+
+    ADDRESS: 1A23H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A2DH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 18D9H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 18DBH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 18DDH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 18DFH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 18E1H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 18E4H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 18EFH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19ACH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19AFH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 46
+
+
+>> 399X)
+    ADDRESS: 19B2H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19B5H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19B8H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19BBH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19C6H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399XISR
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1AC6H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1630H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1633H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1636H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 163AH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 163CH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 47
+
+
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 163EH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1648H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 164BH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 164EH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1651H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1655H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1657H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1659H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1662H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1670H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1673H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 48
+
+
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1676H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 167AH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 167CH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 167FH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1683H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17B4H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17B7H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17BAH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17BEH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17C0H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17C2H
+
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 49
+
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17CCH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17CFH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17D2H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17D5H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17D9H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17DBH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17DEH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17E8H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1931H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1934H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1937H
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 50
+
+
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 193BH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 193DH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1940H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 194AH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17F3H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17F6H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17F9H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17FDH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 17FFH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1801H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 51
+
+
+    ADDRESS: 1804H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1807H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 180AH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 180DH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1811H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1813H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1815H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 181EH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1821H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1824H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1827H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 52
+
+
+>> 399X)
+    ADDRESS: 182BH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 182DH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_WRITEREADAS399X?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1830H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WRITEREADAS399X
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 183AH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _TIMERSTART_US
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 176AH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1787H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 178AH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 178DH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1790H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _CON_PRINT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1792H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1871H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 53
+
+
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1874H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1877H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 187AH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _CON_PRINT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 187CH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1618H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  SETPORTDIRECT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 161DH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  SETPORTNORMAL
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 188FH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _UDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1220H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _UDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1249H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1286H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 14D4H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 54
+
+
+    SYMBOL:  _CON_PRINT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 14D6H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 150BH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _CON_PRINT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 150DH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1517H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _CON_PRINT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1519H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1523H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?_CON_PRINT?BYTE
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1532H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _CON_PRINT
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1534H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1AF2H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 16DBH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 16E8H
+
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 55
+
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _UDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 19FFH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1027H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 111AH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _UDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1984H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 12E3H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 12FCH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 13FDH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1410H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 1A47H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 14C2H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 154DH
+BL51 BANKED LINKER/LOCATER V6.22            01/02/2014  09:30:31  PAGE 56
+
+
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _UDELAY
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (AS
+>> 399X)
+    ADDRESS: 15A8H
+
+*** FATAL ERROR L250: CODE SIZE LIMIT IN RESTRICTED VERSION EXCEEDED
+    MODULE:  C:\Users\lchu\Desktop\NFC RFID\AMS\AS399x_Firmware\as399x.obj (--
+>> ---)
+    LIMIT:   0800H BYTES

@@ -1,0 +1,664 @@
+\section{gen2.\-c File Reference}
+\label{gen2_8c}\index{gen2.\-c@{gen2.\-c}}
+{\ttfamily \#include \char`\"{}as399x\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}as399x.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}as399x\-\_\-com.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}uart.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}timer.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gen2.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}string.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf E\-P\-C\-D\-E\-B\-U\-G}~0
+\item 
+\#define {\bf E\-P\-C\-\_\-\-Q\-U\-E\-R\-Y\-R\-E\-P}~0
+\item 
+\#define {\bf E\-P\-C\-\_\-\-A\-C\-K}~1
+\item 
+\#define {\bf E\-P\-C\-\_\-\-Q\-U\-E\-R\-Y}~0x08
+\item 
+\#define {\bf E\-P\-C\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T}~0x09
+\item 
+\#define {\bf E\-P\-C\-\_\-\-S\-E\-L\-E\-C\-T}~0x0\-A
+\item 
+\#define {\bf E\-P\-C\-\_\-\-N\-A\-K}~0x\-C0
+\item 
+\#define {\bf E\-P\-C\-\_\-\-R\-E\-Q\-R\-N}~0x\-C1
+\item 
+\#define {\bf E\-P\-C\-\_\-\-R\-E\-A\-D}~0x\-C2
+\item 
+\#define {\bf E\-P\-C\-\_\-\-W\-R\-I\-T\-E}~0x\-C3
+\item 
+\#define {\bf E\-P\-C\-\_\-\-K\-I\-L\-L}~0x\-C4
+\item 
+\#define {\bf E\-P\-C\-\_\-\-L\-O\-C\-K}~0x\-C5
+\item 
+\#define {\bf E\-P\-C\-\_\-\-A\-C\-C\-E\-S\-S}~0x\-C6
+\item 
+\#define {\bf E\-P\-C\-\_\-\-B\-L\-O\-C\-K\-W\-R\-I\-T\-E}~0x\-C7
+\item 
+\#define {\bf E\-P\-C\-\_\-\-B\-L\-O\-C\-K\-E\-R\-A\-S\-E}~0x\-C8
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf u8} {\bf gen2\-Access\-Tag} ({\bf Tag} $\ast$tag, {\bf u8} $\ast$password)
+\item 
+{\bf u8} {\bf gen2\-Lock\-Tag} ({\bf Tag} $\ast$tag, {\bf u8} $\ast$mask\-\_\-action)
+\item 
+{\bf u8} {\bf gen2\-Kill\-Tag} ({\bf Tag} $\ast$tag, {\bf u8} $\ast$password, {\bf u8} rfu)
+\item 
+{\bf u8} {\bf gen2\-Write\-Word\-To\-Tag} ({\bf Tag} $\ast$tag, {\bf u8} mem\-Bank, {\bf u8} word\-Ptr, {\bf u8} $\ast$databuf)
+\item 
+{\bf u8} {\bf gen2\-N\-X\-P\-Change\-Config} ({\bf Tag} $\ast$tag, {\bf u8} $\ast$databuf)
+\item 
+{\bf u8} {\bf gen2\-Read\-From\-Tag} ({\bf Tag} $\ast$tag, {\bf u8} mem\-Bank, {\bf u8} word\-Ptr, {\bf u8} word\-Count, {\bf u8} $\ast$destbuf)
+\item 
+{\bf u8} {\bf gen2\-Generic\-Command} ({\bf Tag} $\ast$tag, struct gen2\-Generic\-Cmd\-Data $\ast$command\-Data)
+\item 
+void {\bf gen2\-Print\-Tag\-Info} ({\bf Tag} $\ast$tag, {\bf u8} epclen, {\bf u8} tag\-Nr)
+\item 
+unsigned {\bf gen2\-Search\-For\-Tags} ({\bf Tag} $\ast${\bf tags\-\_\-}, {\bf u8} maxtags, {\bf u8} $\ast${\bf mask}, {\bf u8} length, {\bf u8} q, {\bf bool}($\ast$cb\-Continue\-Scanning)(void), {\bf bool} use\-Mask\-To\-Select)
+\item 
+unsigned {\bf gen2\-Search\-For\-Tags\-Fast} ({\bf Tag} $\ast${\bf tags\-\_\-}, {\bf u8} maxtags, {\bf u8} $\ast${\bf mask}, {\bf u8} length, {\bf u8} q, {\bf bool}($\ast$cb\-Continue\-Scanning)(void), {\bf u8} start\-Cycle)
+\item 
+{\bf u8} {\bf gen2\-Set\-Protect\-Bit} ({\bf Tag} $\ast$tag)
+\item 
+{\bf u8} {\bf gen2\-Re\-Set\-Protect\-Bit} ({\bf Tag} $\ast$tag, {\bf u8} $\ast$password)
+\item 
+{\bf u8} {\bf gen2\-Change\-E\-A\-S} ({\bf Tag} $\ast$tag, {\bf u8} value)
+\item 
+{\bf u8} {\bf gen2\-Calibrate} ({\bf Tag} $\ast$tag)
+\item 
+{\bf u8} {\bf gen2\-Challenge\-Command} ({\bf u8} command\-Flags, crypto\-Suite\-Id, u16 msg\-Bit\-Length, {\bf u8} $\ast$message, {\bf u8} $\ast$output, {\bf u8} $\ast$output\-Length)
+\item 
+void {\bf gen2\-Configure} (const struct gen2\-Config $\ast$config)
+\item 
+void {\bf gen2\-Open} (const struct gen2\-Config $\ast$config)
+\item 
+void {\bf gen2\-Close} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file includes functions providing an implementation of the I\-S\-O6c aka G\-E\-N2 R\-F\-I\-D E\-P\-C protocol. Detailed documentation of the provided functionality can be found in \doxyref{gen2.\-h}{p.}{gen2_8h}.
+
+\begin{DoxyAuthor}{Author}
+Ulrich Herrmann 
+
+Bernhard Breinbauer 
+
+Wolfgang Reichart 
+\end{DoxyAuthor}
+
+
+Definition in file {\bf gen2.\-c}.
+
+
+
+\subsection{Macro Definition Documentation}
+\index{gen2.\-c@{gen2.\-c}!E\-P\-C\-\_\-\-A\-C\-C\-E\-S\-S@{E\-P\-C\-\_\-\-A\-C\-C\-E\-S\-S}}
+\index{E\-P\-C\-\_\-\-A\-C\-C\-E\-S\-S@{E\-P\-C\-\_\-\-A\-C\-C\-E\-S\-S}!gen2.c@{gen2.\-c}}
+\subsubsection[{E\-P\-C\-\_\-\-A\-C\-C\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-C\-\_\-\-A\-C\-C\-E\-S\-S~0x\-C6}\label{gen2_8c_aa5cd9035ebf5a30ad624a135c8836b3e}
+Definition for access E\-P\-C command 
+
+Definition at line 67 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!E\-P\-C\-\_\-\-A\-C\-K@{E\-P\-C\-\_\-\-A\-C\-K}}
+\index{E\-P\-C\-\_\-\-A\-C\-K@{E\-P\-C\-\_\-\-A\-C\-K}!gen2.c@{gen2.\-c}}
+\subsubsection[{E\-P\-C\-\_\-\-A\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-C\-\_\-\-A\-C\-K~1}\label{gen2_8c_a6d1adc6b61633e5c2c661eb779bb461d}
+Definition for acknowldege E\-P\-C command 
+
+Definition at line 47 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!E\-P\-C\-\_\-\-B\-L\-O\-C\-K\-E\-R\-A\-S\-E@{E\-P\-C\-\_\-\-B\-L\-O\-C\-K\-E\-R\-A\-S\-E}}
+\index{E\-P\-C\-\_\-\-B\-L\-O\-C\-K\-E\-R\-A\-S\-E@{E\-P\-C\-\_\-\-B\-L\-O\-C\-K\-E\-R\-A\-S\-E}!gen2.c@{gen2.\-c}}
+\subsubsection[{E\-P\-C\-\_\-\-B\-L\-O\-C\-K\-E\-R\-A\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-C\-\_\-\-B\-L\-O\-C\-K\-E\-R\-A\-S\-E~0x\-C8}\label{gen2_8c_ac9bf934fe990d5292fdad309e10cd12d}
+Definition for blockerase E\-P\-C command 
+
+Definition at line 71 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!E\-P\-C\-\_\-\-B\-L\-O\-C\-K\-W\-R\-I\-T\-E@{E\-P\-C\-\_\-\-B\-L\-O\-C\-K\-W\-R\-I\-T\-E}}
+\index{E\-P\-C\-\_\-\-B\-L\-O\-C\-K\-W\-R\-I\-T\-E@{E\-P\-C\-\_\-\-B\-L\-O\-C\-K\-W\-R\-I\-T\-E}!gen2.c@{gen2.\-c}}
+\subsubsection[{E\-P\-C\-\_\-\-B\-L\-O\-C\-K\-W\-R\-I\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-C\-\_\-\-B\-L\-O\-C\-K\-W\-R\-I\-T\-E~0x\-C7}\label{gen2_8c_a2619ee538af35bf04e940a22292fe085}
+Definition for blockwrite E\-P\-C command 
+
+Definition at line 69 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!E\-P\-C\-\_\-\-K\-I\-L\-L@{E\-P\-C\-\_\-\-K\-I\-L\-L}}
+\index{E\-P\-C\-\_\-\-K\-I\-L\-L@{E\-P\-C\-\_\-\-K\-I\-L\-L}!gen2.c@{gen2.\-c}}
+\subsubsection[{E\-P\-C\-\_\-\-K\-I\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-C\-\_\-\-K\-I\-L\-L~0x\-C4}\label{gen2_8c_a064e2ae9b4856bd799130bbc8cf0ce34}
+Definition for kill E\-P\-C command 
+
+Definition at line 63 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!E\-P\-C\-\_\-\-L\-O\-C\-K@{E\-P\-C\-\_\-\-L\-O\-C\-K}}
+\index{E\-P\-C\-\_\-\-L\-O\-C\-K@{E\-P\-C\-\_\-\-L\-O\-C\-K}!gen2.c@{gen2.\-c}}
+\subsubsection[{E\-P\-C\-\_\-\-L\-O\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-C\-\_\-\-L\-O\-C\-K~0x\-C5}\label{gen2_8c_a8175ef174dd2fb18ef0438d3eb97f4d7}
+Definition for lock E\-P\-C command 
+
+Definition at line 65 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!E\-P\-C\-\_\-\-N\-A\-K@{E\-P\-C\-\_\-\-N\-A\-K}}
+\index{E\-P\-C\-\_\-\-N\-A\-K@{E\-P\-C\-\_\-\-N\-A\-K}!gen2.c@{gen2.\-c}}
+\subsubsection[{E\-P\-C\-\_\-\-N\-A\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-C\-\_\-\-N\-A\-K~0x\-C0}\label{gen2_8c_ae53174d0b0a5068794a0ad9012f231cb}
+Definition for not acknowldege E\-P\-C command 
+
+Definition at line 55 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!E\-P\-C\-\_\-\-Q\-U\-E\-R\-Y@{E\-P\-C\-\_\-\-Q\-U\-E\-R\-Y}}
+\index{E\-P\-C\-\_\-\-Q\-U\-E\-R\-Y@{E\-P\-C\-\_\-\-Q\-U\-E\-R\-Y}!gen2.c@{gen2.\-c}}
+\subsubsection[{E\-P\-C\-\_\-\-Q\-U\-E\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-C\-\_\-\-Q\-U\-E\-R\-Y~0x08}\label{gen2_8c_ae3057ade33919e51f4e5868c9f069492}
+Definition for query E\-P\-C command 
+
+Definition at line 49 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!E\-P\-C\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T@{E\-P\-C\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T}}
+\index{E\-P\-C\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T@{E\-P\-C\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T}!gen2.c@{gen2.\-c}}
+\subsubsection[{E\-P\-C\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-C\-\_\-\-Q\-U\-E\-R\-Y\-A\-D\-J\-U\-S\-T~0x09}\label{gen2_8c_acb922689a9bc3cfb67861a0fc4434c45}
+Definition for query adjust E\-P\-C command 
+
+Definition at line 51 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!E\-P\-C\-\_\-\-Q\-U\-E\-R\-Y\-R\-E\-P@{E\-P\-C\-\_\-\-Q\-U\-E\-R\-Y\-R\-E\-P}}
+\index{E\-P\-C\-\_\-\-Q\-U\-E\-R\-Y\-R\-E\-P@{E\-P\-C\-\_\-\-Q\-U\-E\-R\-Y\-R\-E\-P}!gen2.c@{gen2.\-c}}
+\subsubsection[{E\-P\-C\-\_\-\-Q\-U\-E\-R\-Y\-R\-E\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-C\-\_\-\-Q\-U\-E\-R\-Y\-R\-E\-P~0}\label{gen2_8c_a4bdd409bf5c2a44c92591110ac0772cb}
+Definition for queryrep E\-P\-C command 
+
+Definition at line 45 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!E\-P\-C\-\_\-\-R\-E\-A\-D@{E\-P\-C\-\_\-\-R\-E\-A\-D}}
+\index{E\-P\-C\-\_\-\-R\-E\-A\-D@{E\-P\-C\-\_\-\-R\-E\-A\-D}!gen2.c@{gen2.\-c}}
+\subsubsection[{E\-P\-C\-\_\-\-R\-E\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-C\-\_\-\-R\-E\-A\-D~0x\-C2}\label{gen2_8c_a6206712405a50c7e4de707be325aa07a}
+Definition for read E\-P\-C command 
+
+Definition at line 59 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!E\-P\-C\-\_\-\-R\-E\-Q\-R\-N@{E\-P\-C\-\_\-\-R\-E\-Q\-R\-N}}
+\index{E\-P\-C\-\_\-\-R\-E\-Q\-R\-N@{E\-P\-C\-\_\-\-R\-E\-Q\-R\-N}!gen2.c@{gen2.\-c}}
+\subsubsection[{E\-P\-C\-\_\-\-R\-E\-Q\-R\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-C\-\_\-\-R\-E\-Q\-R\-N~0x\-C1}\label{gen2_8c_ac07fbfe8df8be1bb1a08b604ae3698a8}
+Definition for request new R\-N16 or handle 
+
+Definition at line 57 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!E\-P\-C\-\_\-\-S\-E\-L\-E\-C\-T@{E\-P\-C\-\_\-\-S\-E\-L\-E\-C\-T}}
+\index{E\-P\-C\-\_\-\-S\-E\-L\-E\-C\-T@{E\-P\-C\-\_\-\-S\-E\-L\-E\-C\-T}!gen2.c@{gen2.\-c}}
+\subsubsection[{E\-P\-C\-\_\-\-S\-E\-L\-E\-C\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-C\-\_\-\-S\-E\-L\-E\-C\-T~0x0\-A}\label{gen2_8c_a8604d3a715ca9366e82b909746b091ea}
+Definition for select E\-P\-C command 
+
+Definition at line 53 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!E\-P\-C\-\_\-\-W\-R\-I\-T\-E@{E\-P\-C\-\_\-\-W\-R\-I\-T\-E}}
+\index{E\-P\-C\-\_\-\-W\-R\-I\-T\-E@{E\-P\-C\-\_\-\-W\-R\-I\-T\-E}!gen2.c@{gen2.\-c}}
+\subsubsection[{E\-P\-C\-\_\-\-W\-R\-I\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-C\-\_\-\-W\-R\-I\-T\-E~0x\-C3}\label{gen2_8c_ad699eb0d001dde24b535493a28973b37}
+Definition for write E\-P\-C command 
+
+Definition at line 61 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!E\-P\-C\-D\-E\-B\-U\-G@{E\-P\-C\-D\-E\-B\-U\-G}}
+\index{E\-P\-C\-D\-E\-B\-U\-G@{E\-P\-C\-D\-E\-B\-U\-G}!gen2.c@{gen2.\-c}}
+\subsubsection[{E\-P\-C\-D\-E\-B\-U\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-C\-D\-E\-B\-U\-G~0}\label{gen2_8c_a26abbc825d54d3681eda53a45fe2e82a}
+Definition for debug output\-: epc.\-c 
+
+Definition at line 40 of file gen2.\-c.
+
+
+
+\subsection{Function Documentation}
+\index{gen2.\-c@{gen2.\-c}!gen2\-Access\-Tag@{gen2\-Access\-Tag}}
+\index{gen2\-Access\-Tag@{gen2\-Access\-Tag}!gen2.c@{gen2.\-c}}
+\subsubsection[{gen2\-Access\-Tag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} gen2\-Access\-Tag (
+\begin{DoxyParamCaption}
+\item[{{\bf Tag} $\ast$}]{tag, }
+\item[{{\bf u8} $\ast$}]{password}
+\end{DoxyParamCaption}
+)}\label{gen2_8c_a3adf4cc7b53a5bcec846776bd7ef7c4e}
+E\-P\-C A\-C\-C\-E\-S\-S command send to the Tag. This function is used to bring a tag with set access password from the Open state to the Secured state.
+
+\begin{DoxyAttention}{Attention}
+This command works on the one tag which is currently in the open state, i.\-e. on the last tag found by \doxyref{gen2\-Search\-For\-Tags()}{p.}{gen2_8c_acc4bef39e563061789915a8fefadb080}.
+\end{DoxyAttention}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$tag} & Pointer to the Tag structure. \\
+\hline
+{\em $\ast$password} & Pointer to first byte of the access password \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns an errorcode. 0x00 means no Error occoured. Any other value is the backscattered error code from the tag. 
+\end{DoxyReturn}
+
+
+Definition at line 307 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!gen2\-Calibrate@{gen2\-Calibrate}}
+\index{gen2\-Calibrate@{gen2\-Calibrate}!gen2.c@{gen2.\-c}}
+\subsubsection[{gen2\-Calibrate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} gen2\-Calibrate (
+\begin{DoxyParamCaption}
+\item[{{\bf Tag} $\ast$}]{tag}
+\end{DoxyParamCaption}
+)}\label{gen2_8c_a0ea6ea9eee84368ca1da42918f1fa6c4}
+This function execute sthe N\-X\-P special command Calibrate
+
+\begin{DoxyAttention}{Attention}
+This command works on the one tag which is currently in the open state, i.\-e. on the last tag found by \doxyref{gen2\-Search\-For\-Tags()}{p.}{gen2_8c_acc4bef39e563061789915a8fefadb080}.
+\end{DoxyAttention}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$tag} & Pointer to the Tag structure. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1591 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!gen2\-Challenge\-Command@{gen2\-Challenge\-Command}}
+\index{gen2\-Challenge\-Command@{gen2\-Challenge\-Command}!gen2.c@{gen2.\-c}}
+\subsubsection[{gen2\-Challenge\-Command}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} gen2\-Challenge\-Command (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{command\-Flags, }
+\item[{crypto\-Suite\-Id}]{, }
+\item[{u16}]{msg\-Bit\-Length, }
+\item[{{\bf u8} $\ast$}]{message, }
+\item[{{\bf u8} $\ast$}]{output, }
+\item[{{\bf u8} $\ast$}]{output\-Length}
+\end{DoxyParamCaption}
+)}\label{gen2_8c_a6187adc2b1b01276a94b2b1c3314cf59}
+This function sends the Challenge Command D4h to all tags in range. The challenge is used to trigger all tags within range to pre-\/calculate the the crypto-\/authentication for later request when tags are selected.
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\-Flags} & bit-\/coded command info (R\-F\-U, Buffer, Inc\-Rep\-Len, immed). \\
+\hline
+{\em crypto\-Suite\-Id} & Crypto Suite I\-D to define the used crypto algorithm. \\
+\hline
+{\em msg\-Bit\-Length} & bit length of the message (can be E\-B\-V-\/encoded for proprietary implementations). \\
+\hline
+{\em $\ast$message} & pointer to message bit stream. \\
+\hline
+{\em $\ast$output} & pointer to response buffer. \\
+\hline
+{\em $\ast$output\-Length} & pointer to variable which stores size of valid data in response buffer in bytes. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1620 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!gen2\-Change\-E\-A\-S@{gen2\-Change\-E\-A\-S}}
+\index{gen2\-Change\-E\-A\-S@{gen2\-Change\-E\-A\-S}!gen2.c@{gen2.\-c}}
+\subsubsection[{gen2\-Change\-E\-A\-S}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} gen2\-Change\-E\-A\-S (
+\begin{DoxyParamCaption}
+\item[{{\bf Tag} $\ast$}]{tag, }
+\item[{{\bf u8}}]{value}
+\end{DoxyParamCaption}
+)}\label{gen2_8c_ad2be1d431e4b15649c99d63c628f31bf}
+This function executes the N\-X\-P special command Change E\-A\-S
+
+\begin{DoxyAttention}{Attention}
+This command works on the one tag which is currently in the open state, i.\-e. on the last tag found by \doxyref{gen2\-Search\-For\-Tags()}{p.}{gen2_8c_acc4bef39e563061789915a8fefadb080}.
+\end{DoxyAttention}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$tag} & Pointer to the Tag structure. \\
+\hline
+{\em value} & to be set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1564 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!gen2\-Close@{gen2\-Close}}
+\index{gen2\-Close@{gen2\-Close}!gen2.c@{gen2.\-c}}
+\subsubsection[{gen2\-Close}]{\setlength{\rightskip}{0pt plus 5cm}void gen2\-Close (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{gen2_8c_a3ec10b438f289670b3bcd466df074740}
+
+
+Close a session. 
+
+Close the session for gen2 protocol 
+
+Definition at line 1968 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!gen2\-Configure@{gen2\-Configure}}
+\index{gen2\-Configure@{gen2\-Configure}!gen2.c@{gen2.\-c}}
+\subsubsection[{gen2\-Configure}]{\setlength{\rightskip}{0pt plus 5cm}void gen2\-Configure (
+\begin{DoxyParamCaption}
+\item[{const struct gen2\-Config $\ast$}]{config}
+\end{DoxyParamCaption}
+)}\label{gen2_8c_ac58e25f69482315c515acce7a682c1c0}
+
+
+Set the link frequency. 
+
+Set the link frequency and gen2 specific parameters. After calling this function the A\-S3991 is in normal. 
+
+Definition at line 1797 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!gen2\-Generic\-Command@{gen2\-Generic\-Command}}
+\index{gen2\-Generic\-Command@{gen2\-Generic\-Command}!gen2.c@{gen2.\-c}}
+\subsubsection[{gen2\-Generic\-Command}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} gen2\-Generic\-Command (
+\begin{DoxyParamCaption}
+\item[{{\bf Tag} $\ast$}]{tag, }
+\item[{struct gen2\-Generic\-Cmd\-Data $\ast$}]{command\-Data}
+\end{DoxyParamCaption}
+)}\label{gen2_8c_a35af734c0d114c8ef2c99a4f2ace0d85}
+G\-E\-N\-E\-R\-I\-C C\-O\-M\-M\-A\-N\-D send to the Tag.
+
+\begin{DoxyAttention}{Attention}
+This command works on the one tag which is currently in the open state, i.\-e. on the last tag found by \doxyref{gen2\-Search\-For\-Tags()}{p.}{gen2_8c_acc4bef39e563061789915a8fefadb080}.
+\end{DoxyAttention}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$tag} & Pointer to the Tag structure. \\
+\hline
+{\em $\ast$command\-Data} & structure which contains all relevant data for generic command. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns an error-\/code. 0x00 means no error occurred. 0x\-F\-F unknown error occurred. Any other value is the backscattered error code from the tag. 
+\end{DoxyReturn}
+
+
+Definition at line 669 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!gen2\-Kill\-Tag@{gen2\-Kill\-Tag}}
+\index{gen2\-Kill\-Tag@{gen2\-Kill\-Tag}!gen2.c@{gen2.\-c}}
+\subsubsection[{gen2\-Kill\-Tag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} gen2\-Kill\-Tag (
+\begin{DoxyParamCaption}
+\item[{{\bf Tag} $\ast$}]{tag, }
+\item[{{\bf u8} $\ast$}]{password, }
+\item[{{\bf u8}}]{rfu}
+\end{DoxyParamCaption}
+)}\label{gen2_8c_ac69950813dc5a76f5fbedacff2a653ec}
+E\-P\-C K\-I\-L\-L command send to the Tag. This function is used to permanently kill a tag. After that the tag will never ever respond again.
+
+\begin{DoxyAttention}{Attention}
+This command works on the one tag which is currently in the open state, i.\-e. on the last tag found by \doxyref{gen2\-Search\-For\-Tags()}{p.}{gen2_8c_acc4bef39e563061789915a8fefadb080}.
+\end{DoxyAttention}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$tag} & Pointer to the Tag structure. \\
+\hline
+{\em $\ast$password} & Pointer to first byte of the kill password \\
+\hline
+{\em rfu} & Some special configuration bits. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns an errorcode. 0x00 means no Error occoured. Any other value is the backscattered error code from the tag. 
+\end{DoxyReturn}
+
+
+Definition at line 421 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!gen2\-Lock\-Tag@{gen2\-Lock\-Tag}}
+\index{gen2\-Lock\-Tag@{gen2\-Lock\-Tag}!gen2.c@{gen2.\-c}}
+\subsubsection[{gen2\-Lock\-Tag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} gen2\-Lock\-Tag (
+\begin{DoxyParamCaption}
+\item[{{\bf Tag} $\ast$}]{tag, }
+\item[{{\bf u8} $\ast$}]{mask\-\_\-action}
+\end{DoxyParamCaption}
+)}\label{gen2_8c_a40658b9ae0315c95c670134af22d9393}
+E\-P\-C L\-O\-C\-K command send to the Tag. This function is used to lock some data region in the tag.
+
+\begin{DoxyAttention}{Attention}
+This command works on the one tag which is currently in the open state, i.\-e. on the last tag found by \doxyref{gen2\-Search\-For\-Tags()}{p.}{gen2_8c_acc4bef39e563061789915a8fefadb080}.
+\end{DoxyAttention}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$tag} & Pointer to the Tag structure. \\
+\hline
+{\em $\ast$mask\-\_\-action} & Pointer to the first byte of the mask and action array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns an errorcode. 0x00 means no Error occoured. Any other value is the backscattered error code from the tag. 
+\end{DoxyReturn}
+
+
+Definition at line 383 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!gen2\-N\-X\-P\-Change\-Config@{gen2\-N\-X\-P\-Change\-Config}}
+\index{gen2\-N\-X\-P\-Change\-Config@{gen2\-N\-X\-P\-Change\-Config}!gen2.c@{gen2.\-c}}
+\subsubsection[{gen2\-N\-X\-P\-Change\-Config}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} gen2\-N\-X\-P\-Change\-Config (
+\begin{DoxyParamCaption}
+\item[{{\bf Tag} $\ast$}]{tag, }
+\item[{{\bf u8} $\ast$}]{databuf}
+\end{DoxyParamCaption}
+)}\label{gen2_8c_afb7755e95e2f76ca5afc42a3329917b0}
+N\-X\-P Custom command Change\-Config sent to the tag. \begin{DoxyAttention}{Attention}
+Before issuing tag needs to be in secured state using non-\/zero password.
+\end{DoxyAttention}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$tag} & Pointer to the Tag structure. \\
+\hline
+{\em $\ast$databuf} & Pointer to the first byte of the config word array. The config word as in the tags reply is returned within.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns an errorcode. 0x00 means no error occoured. 0x\-F\-F unknown error occoured. Any other value is the backscattered error code from the tag. 
+\end{DoxyReturn}
+
+
+Definition at line 526 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!gen2\-Open@{gen2\-Open}}
+\index{gen2\-Open@{gen2\-Open}!gen2.c@{gen2.\-c}}
+\subsubsection[{gen2\-Open}]{\setlength{\rightskip}{0pt plus 5cm}void gen2\-Open (
+\begin{DoxyParamCaption}
+\item[{const struct gen2\-Config $\ast$}]{config}
+\end{DoxyParamCaption}
+)}\label{gen2_8c_a2d8ed4e320888084bb00bdbd8f180596}
+
+
+Open a session. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config,\-:} & configuration to use\\
+\hline
+\end{DoxyParams}
+Open a session for gen2 protocol 
+
+Definition at line 1963 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!gen2\-Print\-Tag\-Info@{gen2\-Print\-Tag\-Info}}
+\index{gen2\-Print\-Tag\-Info@{gen2\-Print\-Tag\-Info}!gen2.c@{gen2.\-c}}
+\subsubsection[{gen2\-Print\-Tag\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void gen2\-Print\-Tag\-Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Tag} $\ast$}]{tag, }
+\item[{{\bf u8}}]{epclen, }
+\item[{{\bf u8}}]{tag\-Nr}
+\end{DoxyParamCaption}
+)}\label{gen2_8c_a58b107323267558d63ec42ff9f485a21}
+Prints the tag information out (U\-A\-R\-T). 
+\begin{DoxyParams}{Parameters}
+{\em $\ast$tag} & Pointer to the Tag structure. \\
+\hline
+{\em epclen} & Length of the E\-P\-C. \\
+\hline
+{\em tag\-Nr} & Number of the tag. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 851 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!gen2\-Read\-From\-Tag@{gen2\-Read\-From\-Tag}}
+\index{gen2\-Read\-From\-Tag@{gen2\-Read\-From\-Tag}!gen2.c@{gen2.\-c}}
+\subsubsection[{gen2\-Read\-From\-Tag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} gen2\-Read\-From\-Tag (
+\begin{DoxyParamCaption}
+\item[{{\bf Tag} $\ast$}]{tag, }
+\item[{{\bf u8}}]{mem\-Bank, }
+\item[{{\bf u8}}]{word\-Ptr, }
+\item[{{\bf u8}}]{word\-Count, }
+\item[{{\bf u8} $\ast$}]{destbuf}
+\end{DoxyParamCaption}
+)}\label{gen2_8c_a9895eaaee0f285352647b0ff32c6d340}
+E\-P\-C R\-E\-A\-D command send to the Tag.
+
+\begin{DoxyAttention}{Attention}
+This command works on the one tag which is currently in the open state, i.\-e. on the last tag found by \doxyref{gen2\-Search\-For\-Tags()}{p.}{gen2_8c_acc4bef39e563061789915a8fefadb080}.
+\end{DoxyAttention}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$tag} & Pointer to the Tag structure. \\
+\hline
+{\em mem\-Bank} & Memory Bank to which the data should be written. \\
+\hline
+{\em word\-Ptr} & Word Pointer Address to which the data should be written. \\
+\hline
+{\em word\-Count} & Number of bytes to read from the tag. \\
+\hline
+{\em $\ast$destbuf} & Pointer to the first byte of the data array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns an errorcode. 0x00 means no error occoured. 0x\-F\-F unknown error occoured. Any other value is the backscattered error code from the tag. 
+\end{DoxyReturn}
+
+
+Definition at line 571 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!gen2\-Re\-Set\-Protect\-Bit@{gen2\-Re\-Set\-Protect\-Bit}}
+\index{gen2\-Re\-Set\-Protect\-Bit@{gen2\-Re\-Set\-Protect\-Bit}!gen2.c@{gen2.\-c}}
+\subsubsection[{gen2\-Re\-Set\-Protect\-Bit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} gen2\-Re\-Set\-Protect\-Bit (
+\begin{DoxyParamCaption}
+\item[{{\bf Tag} $\ast$}]{tag, }
+\item[{{\bf u8} $\ast$}]{password}
+\end{DoxyParamCaption}
+)}\label{gen2_8c_a12985678c88d48dc84b4528be4a3352f}
+This function executes the N\-X\-P special command Re\-Set protection Bit
+
+\begin{DoxyAttention}{Attention}
+This command works on the one tag which is currently in the open state, i.\-e. on the last tag found by \doxyref{gen2\-Search\-For\-Tags()}{p.}{gen2_8c_acc4bef39e563061789915a8fefadb080}.
+\end{DoxyAttention}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$tag} & Pointer to the Tag structure. \\
+\hline
+{\em $\ast$password} & pointer to the 4 byte passwords to be used \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1531 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!gen2\-Search\-For\-Tags@{gen2\-Search\-For\-Tags}}
+\index{gen2\-Search\-For\-Tags@{gen2\-Search\-For\-Tags}!gen2.c@{gen2.\-c}}
+\subsubsection[{gen2\-Search\-For\-Tags}]{\setlength{\rightskip}{0pt plus 5cm}unsigned gen2\-Search\-For\-Tags (
+\begin{DoxyParamCaption}
+\item[{{\bf Tag} $\ast$}]{tags, }
+\item[{{\bf u8}}]{maxtags, }
+\item[{{\bf u8} $\ast$}]{mask, }
+\item[{{\bf u8}}]{length, }
+\item[{{\bf u8}}]{q, }
+\item[{{\bf bool}($\ast$)(void)}]{cb\-Continue\-Scanning, }
+\item[{{\bf bool}}]{use\-Mask\-To\-Select}
+\end{DoxyParamCaption}
+)}\label{gen2_8c_acc4bef39e563061789915a8fefadb080}
+Search for tags (aka do an inventory round). Before calling any other gen2 functions this routine has to be called. It first selects using the given mask a set of tags and then does an inventory round issuing query commands. All tags are stored in then tags array for examination by the user. The last found tag will be kept in the Open/\-Secured state and can subsequently treated using the other gen2 functions. For accessing a specific tag, search\-For\-Tags should be called without a mask. Then a one of the read out epcs should be used as the mask for another inventory round thus isolating this single tag.
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$tags} & an array for the found tags to be stored to \\
+\hline
+{\em maxtags} & the size of the tags array \\
+\hline
+{\em $\ast$mask} & mask for selection of specific tags \\
+\hline
+{\em length} & of the mask \\
+\hline
+{\em q} & 2$^\wedge$q slots will be done first, additional 2 round with increased or decreased q may be performed thus keeping it in open/secured state \\
+\hline
+{\em cb\-Continue\-Scanning} & callback is called after each slot to inquire if we should \\
+\hline
+{\em use\-Mask\-To\-Select} & if set to true the mask will be used for a S\-E\-L\-E\-C\-T command. If false then all tags will be selected, operation stops at first found tag which matches the mask. continue scanning (e.\-g. for allowing a timeout) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of tags found 
+\end{DoxyReturn}
+
+
+Definition at line 1253 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!gen2\-Search\-For\-Tags\-Fast@{gen2\-Search\-For\-Tags\-Fast}}
+\index{gen2\-Search\-For\-Tags\-Fast@{gen2\-Search\-For\-Tags\-Fast}!gen2.c@{gen2.\-c}}
+\subsubsection[{gen2\-Search\-For\-Tags\-Fast}]{\setlength{\rightskip}{0pt plus 5cm}unsigned gen2\-Search\-For\-Tags\-Fast (
+\begin{DoxyParamCaption}
+\item[{{\bf Tag} $\ast$}]{tags\-\_\-, }
+\item[{{\bf u8}}]{maxtags, }
+\item[{{\bf u8} $\ast$}]{mask, }
+\item[{{\bf u8}}]{length, }
+\item[{{\bf u8}}]{q, }
+\item[{{\bf bool}($\ast$)(void)}]{cb\-Continue\-Scanning, }
+\item[{{\bf u8}}]{start\-Cycle}
+\end{DoxyParamCaption}
+)}\label{gen2_8c_a638771cacf5e3743581dec6595203e13}
+For reference see \doxyref{gen2\-Search\-For\-Tags()}{p.}{gen2_8c_acc4bef39e563061789915a8fefadb080}. The main difference is that it does not put any tags into open/secured state. Thus this function is a bit faster. 
+
+Definition at line 1409 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!gen2\-Set\-Protect\-Bit@{gen2\-Set\-Protect\-Bit}}
+\index{gen2\-Set\-Protect\-Bit@{gen2\-Set\-Protect\-Bit}!gen2.c@{gen2.\-c}}
+\subsubsection[{gen2\-Set\-Protect\-Bit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} gen2\-Set\-Protect\-Bit (
+\begin{DoxyParamCaption}
+\item[{{\bf Tag} $\ast$}]{tag}
+\end{DoxyParamCaption}
+)}\label{gen2_8c_a669536fc3360c854a5032bcf439f1a76}
+This function executes the N\-X\-P special command Set protection Bit
+
+\begin{DoxyAttention}{Attention}
+This command works on the one tag which is currently in the open state, i.\-e. on the last tag found by \doxyref{gen2\-Search\-For\-Tags()}{p.}{gen2_8c_acc4bef39e563061789915a8fefadb080}.
+\end{DoxyAttention}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$tag} & Pointer to the Tag structure. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1502 of file gen2.\-c.
+
+\index{gen2.\-c@{gen2.\-c}!gen2\-Write\-Word\-To\-Tag@{gen2\-Write\-Word\-To\-Tag}}
+\index{gen2\-Write\-Word\-To\-Tag@{gen2\-Write\-Word\-To\-Tag}!gen2.c@{gen2.\-c}}
+\subsubsection[{gen2\-Write\-Word\-To\-Tag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} gen2\-Write\-Word\-To\-Tag (
+\begin{DoxyParamCaption}
+\item[{{\bf Tag} $\ast$}]{tag, }
+\item[{{\bf u8}}]{mem\-Bank, }
+\item[{{\bf u8}}]{word\-Ptr, }
+\item[{{\bf u8} $\ast$}]{databuf}
+\end{DoxyParamCaption}
+)}\label{gen2_8c_abcd0b2ab779a3f34602494830ff8573e}
+E\-P\-C W\-R\-I\-T\-E command send to the Tag. This function writes one word (16 bit) to the tag. It first requests a new handle. The handle is then exored with the data.
+
+\begin{DoxyAttention}{Attention}
+This command works on the one tag which is currently in the open state, i.\-e. on the last tag found by \doxyref{gen2\-Search\-For\-Tags()}{p.}{gen2_8c_acc4bef39e563061789915a8fefadb080}.
+\end{DoxyAttention}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$tag} & Pointer to the Tag structure. \\
+\hline
+{\em mem\-Bank} & Memory Bank to which the data should be written. \\
+\hline
+{\em word\-Ptr} & Word Pointer Address to which the data should be written. \\
+\hline
+{\em $\ast$databuf} & Pointer to the first byte of the data array. The data buffer has to be 2 bytes long. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns an errorcode. 0x00 means no error occoured. 0x\-F\-F unknown error occoured. Any other value is the backscattered error code from the tag. 
+\end{DoxyReturn}
+
+
+Definition at line 466 of file gen2.\-c.
+

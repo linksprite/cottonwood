@@ -1,0 +1,134 @@
+\section{as399x\-\_\-com.\-h File Reference}
+\label{as399x__com_8h}\index{as399x\-\_\-com.\-h@{as399x\-\_\-com.\-h}}
+{\ttfamily \#include \char`\"{}c8051\-F340.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$intrins.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}global.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf S\-T\-O\-P\-\_\-\-N\-O\-N\-E}~0
+\item 
+\#define {\bf S\-T\-O\-P\-\_\-\-S\-G\-L}~1
+\item 
+\#define {\bf S\-T\-O\-P\-\_\-\-C\-O\-N\-T}~2
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf init\-Interface} (void)
+\item 
+void {\bf write\-Read\-A\-S399x} (const {\bf u8} $\ast$wbuf, {\bf u8} wlen, {\bf u8} $\ast$rbuf, {\bf u8} rlen, {\bf u8} stop\-Mode, {\bf u8} do\-Start)
+\item 
+void {\bf write\-Read\-A\-S399x\-Isr} (const {\bf u8} wbuf, {\bf u8} $\ast$rbuf)
+\item 
+void {\bf set\-Port\-Direct} ()
+\item 
+void {\bf set\-Port\-Normal} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file provides macros and declarations for the interface to the A\-S399x chip. The implementation of the functions is in \doxyref{parallelinterface.\-c}{p.}{parallelinterface_8c} or \doxyref{serialinterface.\-c}{p.}{serialinterface_8c} respectively. Depending on the configuration define in \doxyref{as399x\-\_\-config.\-h}{p.}{as399x__config_8h}
+
+\begin{DoxyAuthor}{Author}
+Ulrich Herrmann 
+
+Bernhard Breinbauer 
+\end{DoxyAuthor}
+
+
+Definition in file {\bf as399x\-\_\-com.\-h}.
+
+
+
+\subsection{Macro Definition Documentation}
+\index{as399x\-\_\-com.\-h@{as399x\-\_\-com.\-h}!S\-T\-O\-P\-\_\-\-C\-O\-N\-T@{S\-T\-O\-P\-\_\-\-C\-O\-N\-T}}
+\index{S\-T\-O\-P\-\_\-\-C\-O\-N\-T@{S\-T\-O\-P\-\_\-\-C\-O\-N\-T}!as399x_com.h@{as399x\-\_\-com.\-h}}
+\subsubsection[{S\-T\-O\-P\-\_\-\-C\-O\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-O\-P\-\_\-\-C\-O\-N\-T~2}\label{as399x__com_8h_a40f935d9872a31dc7badc65f3a2c8a36}
+define for stop\-Mode parameter of \doxyref{write\-Read\-A\-S399x()}{p.}{as399x__com_8h_a66eee56b32bf33a739f1b0c3e7a57262} 
+
+Definition at line 45 of file as399x\-\_\-com.\-h.
+
+\index{as399x\-\_\-com.\-h@{as399x\-\_\-com.\-h}!S\-T\-O\-P\-\_\-\-N\-O\-N\-E@{S\-T\-O\-P\-\_\-\-N\-O\-N\-E}}
+\index{S\-T\-O\-P\-\_\-\-N\-O\-N\-E@{S\-T\-O\-P\-\_\-\-N\-O\-N\-E}!as399x_com.h@{as399x\-\_\-com.\-h}}
+\subsubsection[{S\-T\-O\-P\-\_\-\-N\-O\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-O\-P\-\_\-\-N\-O\-N\-E~0}\label{as399x__com_8h_a260cfaaa2aa9dfe908380aa40caac816}
+define for stop\-Mode parameter of \doxyref{write\-Read\-A\-S399x()}{p.}{as399x__com_8h_a66eee56b32bf33a739f1b0c3e7a57262} 
+
+Definition at line 41 of file as399x\-\_\-com.\-h.
+
+\index{as399x\-\_\-com.\-h@{as399x\-\_\-com.\-h}!S\-T\-O\-P\-\_\-\-S\-G\-L@{S\-T\-O\-P\-\_\-\-S\-G\-L}}
+\index{S\-T\-O\-P\-\_\-\-S\-G\-L@{S\-T\-O\-P\-\_\-\-S\-G\-L}!as399x_com.h@{as399x\-\_\-com.\-h}}
+\subsubsection[{S\-T\-O\-P\-\_\-\-S\-G\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-O\-P\-\_\-\-S\-G\-L~1}\label{as399x__com_8h_a5ffa479d2a12ea464a4e0920d97b2bf0}
+define for stop\-Mode parameter of \doxyref{write\-Read\-A\-S399x()}{p.}{as399x__com_8h_a66eee56b32bf33a739f1b0c3e7a57262} 
+
+Definition at line 43 of file as399x\-\_\-com.\-h.
+
+
+
+\subsection{Function Documentation}
+\index{as399x\-\_\-com.\-h@{as399x\-\_\-com.\-h}!init\-Interface@{init\-Interface}}
+\index{init\-Interface@{init\-Interface}!as399x_com.h@{as399x\-\_\-com.\-h}}
+\subsubsection[{init\-Interface}]{\setlength{\rightskip}{0pt plus 5cm}void init\-Interface (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{as399x__com_8h_a6305d3b6e2bbab54bca14afc97db3c5c}
+This function initializes u\-Controller/board for comunication with the A\-S399x.
+
+This function does not take or return a parameter.
+
+This function initializes the in/out ports of the controller for communication with A\-S399x via S\-P\-I. \par
+This function has to be adapted for new boards/controllers/... 
+
+Definition at line 113 of file parallelinterface.\-c.
+
+\index{as399x\-\_\-com.\-h@{as399x\-\_\-com.\-h}!set\-Port\-Direct@{set\-Port\-Direct}}
+\index{set\-Port\-Direct@{set\-Port\-Direct}!as399x_com.h@{as399x\-\_\-com.\-h}}
+\subsubsection[{set\-Port\-Direct}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Port\-Direct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{as399x__com_8h_aeeadd66a92ac517951a886b62eb1fb75}
+This function sets the interface to the A\-S399\-X for accessing it via direct mode. \doxyref{I\-O3()}{p.}{platform_8h_adc9689bf9fd884c1d840a3aa947a0a39} macro needs to be used to generate T\-X signals 
+
+Definition at line 203 of file parallelinterface.\-c.
+
+\index{as399x\-\_\-com.\-h@{as399x\-\_\-com.\-h}!set\-Port\-Normal@{set\-Port\-Normal}}
+\index{set\-Port\-Normal@{set\-Port\-Normal}!as399x_com.h@{as399x\-\_\-com.\-h}}
+\subsubsection[{set\-Port\-Normal}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Port\-Normal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{as399x__com_8h_a48f08cfa3d7253dcd2520cad24e18e41}
+This function sets the interface to the A\-S399\-X for accessing it via normal (parallel) mode using \doxyref{write\-Read\-A\-S399x()}{p.}{as399x__com_8h_a66eee56b32bf33a739f1b0c3e7a57262} 
+
+Definition at line 210 of file parallelinterface.\-c.
+
+\index{as399x\-\_\-com.\-h@{as399x\-\_\-com.\-h}!write\-Read\-A\-S399x@{write\-Read\-A\-S399x}}
+\index{write\-Read\-A\-S399x@{write\-Read\-A\-S399x}!as399x_com.h@{as399x\-\_\-com.\-h}}
+\subsubsection[{write\-Read\-A\-S399x}]{\setlength{\rightskip}{0pt plus 5cm}void write\-Read\-A\-S399x (
+\begin{DoxyParamCaption}
+\item[{const {\bf u8} $\ast$}]{wbuf, }
+\item[{{\bf u8}}]{wlen, }
+\item[{{\bf u8} $\ast$}]{rbuf, }
+\item[{{\bf u8}}]{rlen, }
+\item[{{\bf u8}}]{stop\-Mode, }
+\item[{{\bf u8}}]{do\-Start}
+\end{DoxyParamCaption}
+)}\label{as399x__com_8h_a66eee56b32bf33a739f1b0c3e7a57262}
+This function talks with the A\-S399x chip. 
+
+Definition at line 129 of file parallelinterface.\-c.
+
+\index{as399x\-\_\-com.\-h@{as399x\-\_\-com.\-h}!write\-Read\-A\-S399x\-Isr@{write\-Read\-A\-S399x\-Isr}}
+\index{write\-Read\-A\-S399x\-Isr@{write\-Read\-A\-S399x\-Isr}!as399x_com.h@{as399x\-\_\-com.\-h}}
+\subsubsection[{write\-Read\-A\-S399x\-Isr}]{\setlength{\rightskip}{0pt plus 5cm}void write\-Read\-A\-S399x\-Isr (
+\begin{DoxyParamCaption}
+\item[{const {\bf u8}}]{wbuf, }
+\item[{{\bf u8} $\ast$}]{rbuf}
+\end{DoxyParamCaption}
+)}\label{as399x__com_8h_a35abe30a55f52f77670b663d2aef3d61}
+This function talks with the A\-S399x chip from I\-S\-R. 
+
+Definition at line 166 of file parallelinterface.\-c.
+

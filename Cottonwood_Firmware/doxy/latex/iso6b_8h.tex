@@ -1,0 +1,27 @@
+\section{iso6b.\-h File Reference}
+\label{iso6b_8h}\index{iso6b.\-h@{iso6b.\-h}}
+{\ttfamily \#include \char`\"{}as399x\-\_\-public.\-h\char`\"{}}\\*
+
+
+\subsection{Detailed Description}
+I\-S\-O6\-B protocol header file. \begin{DoxyAuthor}{Author}
+C. Eisendle 
+
+T. Luecker (Substitute)
+\end{DoxyAuthor}
+Before calling any of the functions herein the A\-S399\-X chip needs to be initialized using \doxyref{as399x\-Initialize()}{p.}{as399x_8c_a3bfe6fab3c61cffe7329b050c4523fc5}. Thereafter the function iso6b\-Open() needs to be called for opening a session.
+
+The following graph shows several states of an I\-S\-O 6\-B tag as well as their transitions based on iso6b$\ast$ commands.
+
+\begin{center}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{dot_inline_dotgraph_3}}
+\end{DoxyImageNoCaption}
+\end{center}
+
+
+It can be seen that iso6b\-Read() and iso6b\-Write() can be called without a prior inventory round. Both commands, however, do need the U\-I\-D of the tag which can only be determined by calling iso6b\-Inventory\-Round(). 
+
+Definition in file {\bf iso6b.\-h}.
+

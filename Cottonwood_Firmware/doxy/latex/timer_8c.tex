@@ -1,0 +1,108 @@
+\section{timer.\-c File Reference}
+\label{timer_8c}\index{timer.\-c@{timer.\-c}}
+{\ttfamily \#include \char`\"{}c8051\-F340.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}as399x\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}timer.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}global.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf mdelay} (u16 ms)
+\item 
+void {\bf timer\-Start\-\_\-us} (u16 us)
+\item 
+void {\bf udelay} (u16 us)
+\item 
+void {\bf timer\-Start\-Measure} ()
+\item 
+u16 {\bf timer\-Measure\-\_\-slow\-Ticks} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file includes all functionality to use some hardware timers. \begin{DoxyAuthor}{Author}
+Ulrich Herrmann 
+\end{DoxyAuthor}
+
+
+Definition in file {\bf timer.\-c}.
+
+
+
+\subsection{Function Documentation}
+\index{timer.\-c@{timer.\-c}!mdelay@{mdelay}}
+\index{mdelay@{mdelay}!timer.c@{timer.\-c}}
+\subsubsection[{mdelay}]{\setlength{\rightskip}{0pt plus 5cm}void mdelay (
+\begin{DoxyParamCaption}
+\item[{u16}]{ms}
+\end{DoxyParamCaption}
+)}\label{timer_8c_ac2e3e0e7d1926e152a2a41cf67dbb6ab}
+Delay execution for ms milliseconds.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & \-: milliseconds till return. Works only up to $\sim$4 seconds. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 44 of file timer.\-c.
+
+\index{timer.\-c@{timer.\-c}!timer\-Measure\-\_\-slow\-Ticks@{timer\-Measure\-\_\-slow\-Ticks}}
+\index{timer\-Measure\-\_\-slow\-Ticks@{timer\-Measure\-\_\-slow\-Ticks}!timer.c@{timer.\-c}}
+\subsubsection[{timer\-Measure\-\_\-slow\-Ticks}]{\setlength{\rightskip}{0pt plus 5cm}u16 timer\-Measure\-\_\-slow\-Ticks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{timer_8c_a53339b719427e3007e5ff4721c1d2c7e}
+Measure time passed since last call of \doxyref{timer\-Start\-Measure()}{p.}{timer_8c_ad64908ef7a6902ba83bbbdf9e6e75675}. Resolution is below 1 ms. Value returned is in slow ticks. Use S\-L\-O\-W\-T\-I\-C\-K\-S\-\_\-2\-\_\-\-M\-S() and M\-S\-\_\-2\-\_\-\-S\-L\-O\-W\-T\-I\-C\-K\-S() to convert. 
+
+Definition at line 93 of file timer.\-c.
+
+\index{timer.\-c@{timer.\-c}!timer\-Start\-\_\-us@{timer\-Start\-\_\-us}}
+\index{timer\-Start\-\_\-us@{timer\-Start\-\_\-us}!timer.c@{timer.\-c}}
+\subsubsection[{timer\-Start\-\_\-us}]{\setlength{\rightskip}{0pt plus 5cm}void timer\-Start\-\_\-us (
+\begin{DoxyParamCaption}
+\item[{u16}]{us}
+\end{DoxyParamCaption}
+)}\label{timer_8c_a3a9c300f1a3b05ea523593e4989bd4b8}
+Start a timer which generates an interrupt after us microseconds. Use \doxyref{T\-I\-M\-E\-R\-\_\-\-I\-S\-\_\-\-D\-O\-N\-E()}{p.}{timer_8h_afe4e488c13624b628dc31a997806c3f8} to poll expiration. No interrupt is being used, make sure no I\-S\-R clears the interrupt bit.
+
+
+\begin{DoxyParams}{Parameters}
+{\em us} & \-: microseconds until expiration. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 52 of file timer.\-c.
+
+\index{timer.\-c@{timer.\-c}!timer\-Start\-Measure@{timer\-Start\-Measure}}
+\index{timer\-Start\-Measure@{timer\-Start\-Measure}!timer.c@{timer.\-c}}
+\subsubsection[{timer\-Start\-Measure}]{\setlength{\rightskip}{0pt plus 5cm}void timer\-Start\-Measure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{timer_8c_ad64908ef7a6902ba83bbbdf9e6e75675}
+Start measurement using timer0 and P\-C\-A 
+
+Definition at line 75 of file timer.\-c.
+
+\index{timer.\-c@{timer.\-c}!udelay@{udelay}}
+\index{udelay@{udelay}!timer.c@{timer.\-c}}
+\subsubsection[{udelay}]{\setlength{\rightskip}{0pt plus 5cm}void udelay (
+\begin{DoxyParamCaption}
+\item[{u16}]{us}
+\end{DoxyParamCaption}
+)}\label{timer_8c_af511ee11bedd05bfa03ac6f24194eba7}
+Delay execution for us microseconds.
+
+
+\begin{DoxyParams}{Parameters}
+{\em us} & \-: microseconds till return. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 69 of file timer.\-c.
+

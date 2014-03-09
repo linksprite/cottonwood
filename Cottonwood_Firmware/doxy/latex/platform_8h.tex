@@ -1,0 +1,282 @@
+\section{platform.\-h File Reference}
+\label{platform_8h}\index{platform.\-h@{platform.\-h}}
+{\ttfamily \#include \char`\"{}c8051\-F340.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$intrins.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}global.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}as399x\-\_\-config.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf E\-N\-E\-X\-T\-I\-R\-Q}()~\{E\-X0 = 1;\}
+\item 
+\#define {\bf D\-I\-S\-E\-X\-T\-I\-R\-Q}()~E\-X0 = 0
+\item 
+\#define {\bf S\-E\-T\-O\-U\-T\-P\-O\-R\-T}(x)~{\bf D\-A\-T\-A\-O\-U\-T\-P\-O\-R\-T}=(x)
+\item 
+\#define {\bf D\-P\-O\-R\-T\-D\-I\-R}(x)~P1\-M\-D\-O\-U\-T=(x);
+\item 
+\#define {\bf E\-N}(x)~{\bf E\-N\-A\-B\-L\-E}=(x)
+\item 
+\#define {\bf E\-N\-\_\-\-L\-D\-O\-\_\-\-A\-S399x}(x)~;
+\item 
+\#define {\bf D\-C\-D\-C}(x)~{\bf D\-C\-D\-C\-P\-I\-N}=(x)
+\item 
+\#define {\bf E\-N\-\_\-\-P\-A}(x)~{\bf E\-N\-\_\-\-P\-A\-P\-I\-N}=(x)
+\item 
+\#define {\bf I\-O2}(x)~{\bf I\-O2\-P\-I\-N}=(x)
+\item 
+\#define {\bf I\-O3}(x)~{\bf I\-O3\-P\-I\-N}=(x)
+\item 
+\#define {\bf I\-O4}(x)~P1\-\_\-4=(x)
+\item 
+\#define {\bf I\-R\-Q\-P\-I\-N}~P0\-\_\-3
+\item 
+\#define {\bf L\-E\-D1\-P\-I\-N}~P2\-\_\-2
+\item 
+\#define {\bf E\-N\-A\-B\-L\-E}~P2\-\_\-1
+\item 
+\#define {\bf D\-C\-D\-C\-P\-I\-N}~P0\-\_\-2
+\item 
+\#define {\bf E\-N\-\_\-\-P\-A\-P\-I\-N}~P3\-\_\-0
+\item 
+\#define {\bf I\-O3\-P\-I\-N}~P1\-\_\-3
+\item 
+\#define {\bf I\-O2\-P\-I\-N}~P1\-\_\-2
+\item 
+\#define {\bf I\-O5\-P\-I\-N}~P1\-\_\-5
+\item 
+\#define {\bf I\-O6\-P\-I\-N}~P1\-\_\-6
+\item 
+\#define {\bf D\-A\-T\-A\-O\-U\-T\-P\-O\-R\-T}~P1
+\item 
+\#define {\bf D\-A\-T\-A\-I\-N\-P\-O\-R\-T}~P1
+\item 
+\#define {\bf C\-L\-K\-P\-I\-N}~P2\-\_\-0
+\item 
+\#define {\bf S\-Y\-S\-C\-L\-K\-I\-N}~P0\-\_\-7
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file provides platform (board) specific macros and declarations. \begin{DoxyAuthor}{Author}
+B. Breinbauer
+\end{DoxyAuthor}
+Contains configuration macros which are used throughout the code base, to enable/disable board specific features. 
+
+Definition in file {\bf platform.\-h}.
+
+
+
+\subsection{Macro Definition Documentation}
+\index{platform.\-h@{platform.\-h}!C\-L\-K\-P\-I\-N@{C\-L\-K\-P\-I\-N}}
+\index{C\-L\-K\-P\-I\-N@{C\-L\-K\-P\-I\-N}!platform.h@{platform.\-h}}
+\subsubsection[{C\-L\-K\-P\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-L\-K\-P\-I\-N~P2\-\_\-0}\label{platform_8h_a377f8bedbca96a219ff5a78bf54f8e1e}
+Definition for the clk pin of the for the parallel interface 
+
+Definition at line 175 of file platform.\-h.
+
+\index{platform.\-h@{platform.\-h}!D\-A\-T\-A\-I\-N\-P\-O\-R\-T@{D\-A\-T\-A\-I\-N\-P\-O\-R\-T}}
+\index{D\-A\-T\-A\-I\-N\-P\-O\-R\-T@{D\-A\-T\-A\-I\-N\-P\-O\-R\-T}!platform.h@{platform.\-h}}
+\subsubsection[{D\-A\-T\-A\-I\-N\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-A\-T\-A\-I\-N\-P\-O\-R\-T~P1}\label{platform_8h_a2c3ecf3627d7fc3f40926e983ee16b2a}
+Definition for the 8 bit (parallel) data input port 
+
+Definition at line 173 of file platform.\-h.
+
+\index{platform.\-h@{platform.\-h}!D\-A\-T\-A\-O\-U\-T\-P\-O\-R\-T@{D\-A\-T\-A\-O\-U\-T\-P\-O\-R\-T}}
+\index{D\-A\-T\-A\-O\-U\-T\-P\-O\-R\-T@{D\-A\-T\-A\-O\-U\-T\-P\-O\-R\-T}!platform.h@{platform.\-h}}
+\subsubsection[{D\-A\-T\-A\-O\-U\-T\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-A\-T\-A\-O\-U\-T\-P\-O\-R\-T~P1}\label{platform_8h_ad8c9bdaf4b39e7a77066c55b7a25a5a5}
+Definition for the 8 bit (parallel) data outport 
+
+Definition at line 171 of file platform.\-h.
+
+\index{platform.\-h@{platform.\-h}!D\-C\-D\-C@{D\-C\-D\-C}}
+\index{D\-C\-D\-C@{D\-C\-D\-C}!platform.h@{platform.\-h}}
+\subsubsection[{D\-C\-D\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-C\-D\-C(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~{\bf D\-C\-D\-C\-P\-I\-N}=(x)}\label{platform_8h_a53843008bd133c33da96bea584ff61d2}
+Macro for setting D\-C\-D\-C on/off 
+
+Definition at line 68 of file platform.\-h.
+
+\index{platform.\-h@{platform.\-h}!D\-C\-D\-C\-P\-I\-N@{D\-C\-D\-C\-P\-I\-N}}
+\index{D\-C\-D\-C\-P\-I\-N@{D\-C\-D\-C\-P\-I\-N}!platform.h@{platform.\-h}}
+\subsubsection[{D\-C\-D\-C\-P\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-C\-D\-C\-P\-I\-N~P0\-\_\-2}\label{platform_8h_ae83f57c95654d7adf6e7abdd350436d3}
+Definition for the D\-C\-D\-C enable pin 
+
+Definition at line 147 of file platform.\-h.
+
+\index{platform.\-h@{platform.\-h}!D\-I\-S\-E\-X\-T\-I\-R\-Q@{D\-I\-S\-E\-X\-T\-I\-R\-Q}}
+\index{D\-I\-S\-E\-X\-T\-I\-R\-Q@{D\-I\-S\-E\-X\-T\-I\-R\-Q}!platform.h@{platform.\-h}}
+\subsubsection[{D\-I\-S\-E\-X\-T\-I\-R\-Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-S\-E\-X\-T\-I\-R\-Q(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~E\-X0 = 0}\label{platform_8h_a2ecf545f9456911955f2b3bcc2884ff1}
+Macro for disable external I\-R\-Q 
+
+Definition at line 44 of file platform.\-h.
+
+\index{platform.\-h@{platform.\-h}!D\-P\-O\-R\-T\-D\-I\-R@{D\-P\-O\-R\-T\-D\-I\-R}}
+\index{D\-P\-O\-R\-T\-D\-I\-R@{D\-P\-O\-R\-T\-D\-I\-R}!platform.h@{platform.\-h}}
+\subsubsection[{D\-P\-O\-R\-T\-D\-I\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-P\-O\-R\-T\-D\-I\-R(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~P1\-M\-D\-O\-U\-T=(x);}\label{platform_8h_ae61be8bdbf5eb42a84a29929e2793d62}
+Macro change port direction 
+
+Definition at line 50 of file platform.\-h.
+
+\index{platform.\-h@{platform.\-h}!E\-N@{E\-N}}
+\index{E\-N@{E\-N}!platform.h@{platform.\-h}}
+\subsubsection[{E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~{\bf E\-N\-A\-B\-L\-E}=(x)}\label{platform_8h_aa28a3e21fdb1bf90626afd179b26756b}
+Macro for setting enable pin 
+
+Definition at line 57 of file platform.\-h.
+
+\index{platform.\-h@{platform.\-h}!E\-N\-\_\-\-L\-D\-O\-\_\-\-A\-S399x@{E\-N\-\_\-\-L\-D\-O\-\_\-\-A\-S399x}}
+\index{E\-N\-\_\-\-L\-D\-O\-\_\-\-A\-S399x@{E\-N\-\_\-\-L\-D\-O\-\_\-\-A\-S399x}!platform.h@{platform.\-h}}
+\subsubsection[{E\-N\-\_\-\-L\-D\-O\-\_\-\-A\-S399x}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-\_\-\-L\-D\-O\-\_\-\-A\-S399x(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~;}\label{platform_8h_a3b7b6224a9fdb6fbb664799a7e63a558}
+Macro for enabling L\-D\-O which powers A\-S399x (not available on all boards) 
+
+Definition at line 64 of file platform.\-h.
+
+\index{platform.\-h@{platform.\-h}!E\-N\-\_\-\-P\-A@{E\-N\-\_\-\-P\-A}}
+\index{E\-N\-\_\-\-P\-A@{E\-N\-\_\-\-P\-A}!platform.h@{platform.\-h}}
+\subsubsection[{E\-N\-\_\-\-P\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-\_\-\-P\-A(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~{\bf E\-N\-\_\-\-P\-A\-P\-I\-N}=(x)}\label{platform_8h_aa539ee5694a63294bddca2c47cfa0234}
+Macro for setting P\-A on/off 
+
+Definition at line 71 of file platform.\-h.
+
+\index{platform.\-h@{platform.\-h}!E\-N\-\_\-\-P\-A\-P\-I\-N@{E\-N\-\_\-\-P\-A\-P\-I\-N}}
+\index{E\-N\-\_\-\-P\-A\-P\-I\-N@{E\-N\-\_\-\-P\-A\-P\-I\-N}!platform.h@{platform.\-h}}
+\subsubsection[{E\-N\-\_\-\-P\-A\-P\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-\_\-\-P\-A\-P\-I\-N~P3\-\_\-0}\label{platform_8h_ab6942a2866ad6f01ed8c9ce1e493d27a}
+Definition for the P\-A enable Pin 
+
+Definition at line 149 of file platform.\-h.
+
+\index{platform.\-h@{platform.\-h}!E\-N\-A\-B\-L\-E@{E\-N\-A\-B\-L\-E}}
+\index{E\-N\-A\-B\-L\-E@{E\-N\-A\-B\-L\-E}!platform.h@{platform.\-h}}
+\subsubsection[{E\-N\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-A\-B\-L\-E~P2\-\_\-1}\label{platform_8h_a514ad415fb6125ba296793df7d1a468a}
+Definition for the enable pin 
+
+Definition at line 145 of file platform.\-h.
+
+\index{platform.\-h@{platform.\-h}!E\-N\-E\-X\-T\-I\-R\-Q@{E\-N\-E\-X\-T\-I\-R\-Q}}
+\index{E\-N\-E\-X\-T\-I\-R\-Q@{E\-N\-E\-X\-T\-I\-R\-Q}!platform.h@{platform.\-h}}
+\subsubsection[{E\-N\-E\-X\-T\-I\-R\-Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-E\-X\-T\-I\-R\-Q(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~\{E\-X0 = 1;\}}\label{platform_8h_a034e8f1d1358c558a547b73703363c42}
+Macro for enable external I\-R\-Q 
+
+Definition at line 41 of file platform.\-h.
+
+\index{platform.\-h@{platform.\-h}!I\-O2@{I\-O2}}
+\index{I\-O2@{I\-O2}!platform.h@{platform.\-h}}
+\subsubsection[{I\-O2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-O2(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~{\bf I\-O2\-P\-I\-N}=(x)}\label{platform_8h_a20ce1e804f77640c9fcde159e7e5fb9d}
+Macro for setting I\-O2 pin, for direct mode 
+
+Definition at line 74 of file platform.\-h.
+
+\index{platform.\-h@{platform.\-h}!I\-O2\-P\-I\-N@{I\-O2\-P\-I\-N}}
+\index{I\-O2\-P\-I\-N@{I\-O2\-P\-I\-N}!platform.h@{platform.\-h}}
+\subsubsection[{I\-O2\-P\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-O2\-P\-I\-N~P1\-\_\-2}\label{platform_8h_a0e4ec8f0c54b4c290bd14d4fbce60967}
+Definition for the Direct data mode Pin 
+
+Definition at line 153 of file platform.\-h.
+
+\index{platform.\-h@{platform.\-h}!I\-O3@{I\-O3}}
+\index{I\-O3@{I\-O3}!platform.h@{platform.\-h}}
+\subsubsection[{I\-O3}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-O3(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~{\bf I\-O3\-P\-I\-N}=(x)}\label{platform_8h_adc9689bf9fd884c1d840a3aa947a0a39}
+Macro for setting I\-O3 pin, for direct mode 
+
+Definition at line 77 of file platform.\-h.
+
+\index{platform.\-h@{platform.\-h}!I\-O3\-P\-I\-N@{I\-O3\-P\-I\-N}}
+\index{I\-O3\-P\-I\-N@{I\-O3\-P\-I\-N}!platform.h@{platform.\-h}}
+\subsubsection[{I\-O3\-P\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-O3\-P\-I\-N~P1\-\_\-3}\label{platform_8h_a589bdd59b3b6aea7eeed055b149c063c}
+Definition for the Direct data mode Pin 
+
+Definition at line 151 of file platform.\-h.
+
+\index{platform.\-h@{platform.\-h}!I\-O4@{I\-O4}}
+\index{I\-O4@{I\-O4}!platform.h@{platform.\-h}}
+\subsubsection[{I\-O4}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-O4(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~P1\-\_\-4=(x)}\label{platform_8h_a3abd90ec4a4016ea37edb6d67d6daf31}
+Macro for setting I\-O4 pin, serial enable line 
+
+Definition at line 85 of file platform.\-h.
+
+\index{platform.\-h@{platform.\-h}!I\-O5\-P\-I\-N@{I\-O5\-P\-I\-N}}
+\index{I\-O5\-P\-I\-N@{I\-O5\-P\-I\-N}!platform.h@{platform.\-h}}
+\subsubsection[{I\-O5\-P\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-O5\-P\-I\-N~P1\-\_\-5}\label{platform_8h_af2584caa41b0a6851dba98169a6edaa6}
+Definition for the Direct mode data bitclock Pin 
+
+Definition at line 155 of file platform.\-h.
+
+\index{platform.\-h@{platform.\-h}!I\-O6\-P\-I\-N@{I\-O6\-P\-I\-N}}
+\index{I\-O6\-P\-I\-N@{I\-O6\-P\-I\-N}!platform.h@{platform.\-h}}
+\subsubsection[{I\-O6\-P\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-O6\-P\-I\-N~P1\-\_\-6}\label{platform_8h_a6a776b13fcdfe2b027cd9d84f180a791}
+Definition for the Direct mode data Pin 
+
+Definition at line 160 of file platform.\-h.
+
+\index{platform.\-h@{platform.\-h}!I\-R\-Q\-P\-I\-N@{I\-R\-Q\-P\-I\-N}}
+\index{I\-R\-Q\-P\-I\-N@{I\-R\-Q\-P\-I\-N}!platform.h@{platform.\-h}}
+\subsubsection[{I\-R\-Q\-P\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-R\-Q\-P\-I\-N~P0\-\_\-3}\label{platform_8h_a02b244499426b898fdc751e44f688f19}
+Definition for the external I\-R\-Q pin 
+
+Definition at line 91 of file platform.\-h.
+
+\index{platform.\-h@{platform.\-h}!L\-E\-D1\-P\-I\-N@{L\-E\-D1\-P\-I\-N}}
+\index{L\-E\-D1\-P\-I\-N@{L\-E\-D1\-P\-I\-N}!platform.h@{platform.\-h}}
+\subsubsection[{L\-E\-D1\-P\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-E\-D1\-P\-I\-N~P2\-\_\-2}\label{platform_8h_a04d7aaffbb7b5afaf49acf8a3a39e33a}
+Definition for the L\-E\-D 1 (L\-E\-O) 
+
+Definition at line 98 of file platform.\-h.
+
+\index{platform.\-h@{platform.\-h}!S\-E\-T\-O\-U\-T\-P\-O\-R\-T@{S\-E\-T\-O\-U\-T\-P\-O\-R\-T}}
+\index{S\-E\-T\-O\-U\-T\-P\-O\-R\-T@{S\-E\-T\-O\-U\-T\-P\-O\-R\-T}!platform.h@{platform.\-h}}
+\subsubsection[{S\-E\-T\-O\-U\-T\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-E\-T\-O\-U\-T\-P\-O\-R\-T(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~{\bf D\-A\-T\-A\-O\-U\-T\-P\-O\-R\-T}=(x)}\label{platform_8h_ae6f4781761dd3b6dd1254a1c94fdcc9b}
+Macro setting data output port 
+
+Definition at line 47 of file platform.\-h.
+
+\index{platform.\-h@{platform.\-h}!S\-Y\-S\-C\-L\-K\-I\-N@{S\-Y\-S\-C\-L\-K\-I\-N}}
+\index{S\-Y\-S\-C\-L\-K\-I\-N@{S\-Y\-S\-C\-L\-K\-I\-N}!platform.h@{platform.\-h}}
+\subsubsection[{S\-Y\-S\-C\-L\-K\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-S\-C\-L\-K\-I\-N~P0\-\_\-7}\label{platform_8h_ac4612fb169d77d829f4b8ae0dc6a57c1}
+Definition for the u\-C C\-L\-K Input pin 
+
+Definition at line 177 of file platform.\-h.
+

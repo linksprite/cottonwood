@@ -1,0 +1,699 @@
+\section{as399x.\-c File Reference}
+\label{as399x_8c}\index{as399x.\-c@{as399x.\-c}}
+{\ttfamily \#include \char`\"{}c8051\-F340.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}as399x\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}platform.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}as399x.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}as399x\-\_\-public.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}global.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}as399x\-\_\-com.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}uart.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}timer.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gen2.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stdlib.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}string.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf R\-E\-A\-D}~0x40
+\item 
+\#define {\bf C\-O\-N\-T\-I\-N\-U\-O\-U\-S}~0x20
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+u16 {\bf as399x\-Initialize} (u32 base\-Freq)
+\item 
+void {\bf ext\-Int} (void)
+\item 
+{\bf u8} {\bf as399x\-Read\-Chip\-Version} (void)
+\item 
+void {\bf as399x\-Single\-Command} ({\bf u8} command)
+\item 
+void {\bf as399x\-Continuous\-Command} ({\bf u8} $\ast$commands, s8 len)
+\item 
+void {\bf as399x\-Continuous\-Read} ({\bf u8} address, s8 len, {\bf u8} $\ast$readbuf)
+\item 
+void {\bf as399x\-Fifo\-Read} (s8 len, {\bf u8} $\ast$readbuf)
+\item 
+{\bf u8} {\bf as399x\-Single\-Read} ({\bf u8} address)
+\item 
+{\bf u8} {\bf as399x\-Single\-Read\-Irq} ({\bf u8} address)
+\item 
+void {\bf as399x\-Continuous\-Write} ({\bf u8} address, {\bf u8} $\ast$buf, s8 len)
+\item 
+void {\bf as399x\-Single\-Write} ({\bf u8} address, {\bf u8} value)
+\item 
+void {\bf as399x\-Command\-Continuous\-Address} ({\bf u8} $\ast$command, {\bf u8} com\-\_\-len, {\bf u8} address, {\bf u8} $\ast$buf, {\bf u8} buf\-\_\-len)
+\item 
+void {\bf as399x\-Switch\-To\-Idle\-Mode} (void)
+\item 
+void {\bf as399x\-Wait\-For\-Response\-Timed} (u16 wait\-Mask, u16 counter)
+\item 
+void {\bf as399x\-Wait\-For\-Response} (u16 wait\-Mask\-Orig)
+\item 
+void {\bf as399x\-Enter\-Direct\-Mode} ()
+\item 
+void {\bf as399x\-Exit\-Direct\-Mode} ()
+\item 
+void {\bf as399x\-Select\-Link\-Frequency} ({\bf u8} a)
+\item 
+void {\bf as399x\-Set\-Base\-Frequency} ({\bf u8} regs, u32 frequency)
+\item 
+void {\bf as399x\-Memory\-Dump} (void)
+\item 
+void {\bf as399x\-Reset} (void)
+\item 
+void {\bf as399x\-Antenna\-Power} ({\bf u8} on)
+\item 
+void {\bf as399x\-Save\-Sensitivity} ()
+\item 
+void {\bf as399x\-Restore\-Sensitivity} ()
+\item 
+s8 {\bf as399x\-Get\-Sensitivity} ()
+\item 
+s8 {\bf as399x\-Set\-Sensitivity} (s8 minimum\-Signal)
+\item 
+void {\bf as399x\-Get\-R\-S\-S\-I} (u16 num\-\_\-of\-\_\-ms\-\_\-to\-\_\-scan, {\bf u8} $\ast$raw\-I\-Q, s8 $\ast$d\-Bm)
+\item 
+void {\bf as399x\-Write\-D\-A\-C} ({\bf u8} nat\-Val)
+\item 
+{\bf u8} {\bf as399x\-Read\-D\-A\-C} (void)
+\item 
+u16 {\bf as399x\-Get\-Reflected\-Power} (void)
+\item 
+u16 {\bf as399x\-Get\-Reflected\-Power\-Noise\-Level} (void)
+\item 
+void {\bf as399x\-Enter\-Standby\-Mode} ()\label{as399x_8c_aac42375eaacd77993195163b093aef41}
+
+\item 
+void {\bf as399x\-Exit\-Standby\-Mode} ()
+\item 
+void {\bf as399x\-Enter\-Power\-Down\-Mode} ()\label{as399x_8c_abbd6a2c62c8a946f628b2ad83d231975}
+
+\item 
+void {\bf as399x\-Exit\-Power\-Down\-Mode} ()\label{as399x_8c_a126728cbeb591b0aa075ba1317780acd}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bf u8} {\bf D\-A\-T\-A} {\bf as399x\-Irq\-Status} = 0
+\item 
+{\bf u8} {\bf D\-A\-T\-A} {\bf as399x\-Fifo\-Status} = 0
+\item 
+volatile u16 {\bf D\-A\-T\-A} {\bf as399x\-Response} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions provided by the A\-S399x series chips. \begin{DoxyAuthor}{Author}
+U. Herrmann (based on work by E.\-Grubmueller) 
+
+T. Luecker (Substitute) 
+
+B. Breinbauer
+\end{DoxyAuthor}
+Functions provided by the A\-S399x series chips. All higher level and protocol work is contained in \doxyref{gen2.\-c}{p.}{gen2_8c} and \doxyref{iso6b.\-c}{p.}{iso6b_8c} 
+
+Definition in file {\bf as399x.\-c}.
+
+
+
+\subsection{Macro Definition Documentation}
+\index{as399x.\-c@{as399x.\-c}!C\-O\-N\-T\-I\-N\-U\-O\-U\-S@{C\-O\-N\-T\-I\-N\-U\-O\-U\-S}}
+\index{C\-O\-N\-T\-I\-N\-U\-O\-U\-S@{C\-O\-N\-T\-I\-N\-U\-O\-U\-S}!as399x.c@{as399x.\-c}}
+\subsubsection[{C\-O\-N\-T\-I\-N\-U\-O\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-O\-N\-T\-I\-N\-U\-O\-U\-S~0x20}\label{as399x_8c_acf80826c205230fbc6a84ab9c46ff9af}
+Definition protocol continous bit 
+
+Definition at line 52 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!R\-E\-A\-D@{R\-E\-A\-D}}
+\index{R\-E\-A\-D@{R\-E\-A\-D}!as399x.c@{as399x.\-c}}
+\subsubsection[{R\-E\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-A\-D~0x40}\label{as399x_8c_ada74e7db007a68e763f20c17f2985356}
+Definition protocol read bit. 
+
+Definition at line 50 of file as399x.\-c.
+
+
+
+\subsection{Function Documentation}
+\index{as399x.\-c@{as399x.\-c}!as399x\-Antenna\-Power@{as399x\-Antenna\-Power}}
+\index{as399x\-Antenna\-Power@{as399x\-Antenna\-Power}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Antenna\-Power}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Antenna\-Power (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{on}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_a06bfd015bdbc7e31834542d90d15af39}
+This function turns the antenna power on or off. 
+\begin{DoxyParams}{Parameters}
+{\em on} & boolean to value to turn it on (1) or off (0). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1042 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Command\-Continuous\-Address@{as399x\-Command\-Continuous\-Address}}
+\index{as399x\-Command\-Continuous\-Address@{as399x\-Command\-Continuous\-Address}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Command\-Continuous\-Address}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Command\-Continuous\-Address (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{command, }
+\item[{{\bf u8}}]{com\-\_\-len, }
+\item[{{\bf u8}}]{address, }
+\item[{{\bf u8} $\ast$}]{buf, }
+\item[{{\bf u8}}]{buf\-\_\-len}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_ad0383b7cd9a62f20da6bdad240dd4b03}
+Sends first some commands to the A\-S3990. The number of commands is specified with the parameter com\-\_\-len. Then it sets the address where the first byte has to be written and after that every byte from the buffer is written to the A\-S3990. \par
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$command} & Pointer to the first byte of the command buffer \\
+\hline
+{\em com\-\_\-len} & Length of the command buffer. \\
+\hline
+{\em address} & addressbyte \\
+\hline
+{\em $\ast$buf} & Pointer to the first byte of the data array. \\
+\hline
+{\em buf\-\_\-len} & Length of the buffer. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 740 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Continuous\-Command@{as399x\-Continuous\-Command}}
+\index{as399x\-Continuous\-Command@{as399x\-Continuous\-Command}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Continuous\-Command}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Continuous\-Command (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{commands, }
+\item[{s8}]{len}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_af9fa5e31e45c056e01898dfcf7ecae1b}
+Sends a number of commands to the A\-S399x 
+\begin{DoxyParams}{Parameters}
+{\em commands} & commands which should be sent to A\-S399x \\
+\hline
+{\em len} & number of commands to send \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 639 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Continuous\-Read@{as399x\-Continuous\-Read}}
+\index{as399x\-Continuous\-Read@{as399x\-Continuous\-Read}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Continuous\-Read}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Continuous\-Read (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{address, }
+\item[{s8}]{len, }
+\item[{{\bf u8} $\ast$}]{readbuf}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_a6736a398e8775e09e94c3fcb2beeac22}
+Reads data from a address and some following addresses from the A\-S3990. The len parameter defines the number of address read. \par
+
+\begin{DoxyParams}{Parameters}
+{\em address} & addressbyte \\
+\hline
+{\em len} & Length of the buffer. \\
+\hline
+{\em $\ast$readbuf} & Pointer to the first byte of the array where the data has to be stored in. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 657 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Continuous\-Write@{as399x\-Continuous\-Write}}
+\index{as399x\-Continuous\-Write@{as399x\-Continuous\-Write}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Continuous\-Write}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Continuous\-Write (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{address, }
+\item[{{\bf u8} $\ast$}]{buf, }
+\item[{s8}]{len}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_a0de508f07f799ee9dc2aa1efe8553122}
+Continuous Write -\/$>$ writes several bytes to subsequent addresses of the A\-S399\-X. \par
+
+\begin{DoxyParams}{Parameters}
+{\em address} & addressbyte \\
+\hline
+{\em $\ast$buf} & Pointer to the first byte of the array. \\
+\hline
+{\em len} & Length of the buffer. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 720 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Enter\-Direct\-Mode@{as399x\-Enter\-Direct\-Mode}}
+\index{as399x\-Enter\-Direct\-Mode@{as399x\-Enter\-Direct\-Mode}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Enter\-Direct\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Enter\-Direct\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_aaa6098dbbd9b8c053ce9155e56475bf7}
+
+
+Enter the direct mode. 
+
+The direct mode is needed since the A\-S3991 doesn't support I\-S\-O18000-\/6\-B directly. Direct mode means that the M\-C\-U directly issues the commands. The A\-S3991 modulates the serial stream from the M\-C\-U and sends it out. 
+
+Definition at line 799 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Exit\-Direct\-Mode@{as399x\-Exit\-Direct\-Mode}}
+\index{as399x\-Exit\-Direct\-Mode@{as399x\-Exit\-Direct\-Mode}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Exit\-Direct\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Exit\-Direct\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_a6377e4bc9d2e2f3bde7fddebbf9ce017}
+
+
+Leave the direct mode. 
+
+After calling this function the A\-S3991 is in normal mode again. 
+
+Definition at line 833 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Exit\-Standby\-Mode@{as399x\-Exit\-Standby\-Mode}}
+\index{as399x\-Exit\-Standby\-Mode@{as399x\-Exit\-Standby\-Mode}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Exit\-Standby\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Exit\-Standby\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_ab611b632781bfee9856510dacdf8f9cf}
+
+
+Leave the standby mode. 
+
+After calling this function the A\-S3991 is in normal mode again. 
+
+Definition at line 1778 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Fifo\-Read@{as399x\-Fifo\-Read}}
+\index{as399x\-Fifo\-Read@{as399x\-Fifo\-Read}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Fifo\-Read}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Fifo\-Read (
+\begin{DoxyParamCaption}
+\item[{s8}]{len, }
+\item[{{\bf u8} $\ast$}]{readbuf}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_abb94e0a64d518dceef67d292a8fdc391}
+Reads data from the fifo and some following addresses from the A\-S3990. The len parameter defines the number of address read. Does this in a secure way so that it works also on A\-S3991 devices in serial mode 
+\begin{DoxyParams}{Parameters}
+{\em len} & Length of the buffer. \\
+\hline
+{\em $\ast$readbuf} & Pointer to the first byte of the array where the data has to be stored in. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 666 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Get\-Reflected\-Power@{as399x\-Get\-Reflected\-Power}}
+\index{as399x\-Get\-Reflected\-Power@{as399x\-Get\-Reflected\-Power}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Get\-Reflected\-Power}]{\setlength{\rightskip}{0pt plus 5cm}u16 as399x\-Get\-Reflected\-Power (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_a068783ac66684d83d08fbcbace1b4276}
+This function gets the values for the reflected power. For measuring the antenna will be switched on, a measurement performed and the antenna if necessary turned back off. The two measured 8-\/bit values are returned as one 16-\/bit value, the lower byte containing receiver-\/\-A (I) value, the higher byte containing receiver-\/\-B (Q) value. The two values are signed values and will be converted from sign magnitude representation to natural. Note\-: To get a more accurate result the I and Q values of \doxyref{as399x\-Get\-Reflected\-Power\-Noise\-Level()}{p.}{as399x_8c_af6dd4bda420c70ccbb64b355bf6bb9fb} should be subtracted from the result of \doxyref{as399x\-Get\-Reflected\-Power()}{p.}{as399x_8c_a068783ac66684d83d08fbcbace1b4276} 
+
+Definition at line 1440 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Get\-Reflected\-Power\-Noise\-Level@{as399x\-Get\-Reflected\-Power\-Noise\-Level}}
+\index{as399x\-Get\-Reflected\-Power\-Noise\-Level@{as399x\-Get\-Reflected\-Power\-Noise\-Level}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Get\-Reflected\-Power\-Noise\-Level}]{\setlength{\rightskip}{0pt plus 5cm}u16 as399x\-Get\-Reflected\-Power\-Noise\-Level (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_af6dd4bda420c70ccbb64b355bf6bb9fb}
+This function measures and returns the noise level of the reflected power measurement of the active antenna. The returned value is of type u16 and contains the 8 bit I and Q values of the reflected power. The I value is located in the lower 8 bits, the Q value in the upper 8 bits. \par
+See \doxyref{as399x\-Get\-Reflected\-Power()}{p.}{as399x_8c_a068783ac66684d83d08fbcbace1b4276} fore more info. 
+
+Definition at line 1481 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Get\-R\-S\-S\-I@{as399x\-Get\-R\-S\-S\-I}}
+\index{as399x\-Get\-R\-S\-S\-I@{as399x\-Get\-R\-S\-S\-I}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Get\-R\-S\-S\-I}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Get\-R\-S\-S\-I (
+\begin{DoxyParamCaption}
+\item[{u16}]{num\-\_\-of\-\_\-ms\-\_\-to\-\_\-scan, }
+\item[{{\bf u8} $\ast$}]{raw\-I\-Q, }
+\item[{s8 $\ast$}]{d\-Bm}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_a6ef060053cb26729e3ad88877a9157f0}
+This function gets the R\-S\-S\-I (Received\-Signal\-Strength\-Indicator) of the environment in d\-Bm. For measuring the antenna will be switched off, int the time num\-\_\-of\-\_\-ms\-\_\-to\-\_\-scan measurements performed and the antenna if necessary turned back on.
+
+The returned value is the highest R\-S\-S\-I value expressed in d\-Bm. -\/128 stands for no signal.
+
+Use this function to implement L\-B\-T (Listen Before Talk) at least for European based readers. Use like this 
+\begin{DoxyCode}
+*  as399xSetBaseFrequency( f + 100);
+*  as399xSaveSensitivity();
+*  as399xSetSensitivity(-50);
+*  as399xGetRSSI(10,&iq,&dBm)
+*  as399xRestoreSensitivity();
+*  \textcolor{keywordflow}{if} (dBm < -40) \{ 
+*     \textcolor{comment}{//use frequency f for operation}
+*  \}\textcolor{keywordflow}{else}\{
+*     \textcolor{comment}{// try to find another freqency}
+*  \}
+*  
+\end{DoxyCode}
+ 
+
+Definition at line 1312 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Get\-Sensitivity@{as399x\-Get\-Sensitivity}}
+\index{as399x\-Get\-Sensitivity@{as399x\-Get\-Sensitivity}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Get\-Sensitivity}]{\setlength{\rightskip}{0pt plus 5cm}s8 as399x\-Get\-Sensitivity (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_a80ebe27f49bceee1672a3ed0b2e5b5d5}
+This function gets the current rx sensitivity level. 
+
+Definition at line 1153 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Initialize@{as399x\-Initialize}}
+\index{as399x\-Initialize@{as399x\-Initialize}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Initialize}]{\setlength{\rightskip}{0pt plus 5cm}u16 as399x\-Initialize (
+\begin{DoxyParamCaption}
+\item[{u32}]{base\-Freq}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_a3bfe6fab3c61cffe7329b050c4523fc5}
+This function initialises the A\-S399x. This function does not take or return a parameter
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\-Freq} & the base frequency to set at initialization time, may be changed later on. If A\-S399\-X\-\_\-\-D\-O\-\_\-\-S\-E\-L\-F\-T\-E\-S\-T is set extensive selftests are performed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if everything went o.\-k. 
+
+1 if a problem with the pins connecting the A\-S399\-X was detected (only when A\-S399\-X\-\_\-\-D\-O\-\_\-\-S\-E\-L\-F\-T\-E\-S\-T==1) 
+
+2 if crystal is not stable (only when A\-S399\-X\-\_\-\-D\-O\-\_\-\-S\-E\-L\-F\-T\-E\-S\-T==1) 
+
+3 if P\-L\-L did not lock (only when A\-S399\-X\-\_\-\-D\-O\-\_\-\-S\-E\-L\-F\-T\-E\-S\-T==1) 
+
+0xd if the reflected power was too low (only when A\-S399\-X\-\_\-\-D\-O\-\_\-\-S\-E\-L\-F\-T\-E\-S\-T==1) 
+
+0xe if the reflected power was too high (only when A\-S399\-X\-\_\-\-D\-O\-\_\-\-S\-E\-L\-F\-T\-E\-S\-T==1) 
+
+0xf if the wrong chip (A\-S3990/1 vs A\-S3992) was detected. 
+\end{DoxyReturn}
+
+
+Definition at line 188 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Memory\-Dump@{as399x\-Memory\-Dump}}
+\index{as399x\-Memory\-Dump@{as399x\-Memory\-Dump}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Memory\-Dump}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Memory\-Dump (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_ad6a6740b43d27cf92c30f0f9c71a371e}
+This function dumps the A\-S399\-X registers 
+
+Definition at line 1010 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Read\-Chip\-Version@{as399x\-Read\-Chip\-Version}}
+\index{as399x\-Read\-Chip\-Version@{as399x\-Read\-Chip\-Version}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Read\-Chip\-Version}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} as399x\-Read\-Chip\-Version (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_ab8bcc8e7386bc38294b3eeb083809d67}
+This function reads the version register of the A\-S399x and returns the value. \par
+\begin{DoxyReturn}{Returns}
+Returns the value of the A\-S399x version register. 
+\end{DoxyReturn}
+
+
+Definition at line 624 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Read\-D\-A\-C@{as399x\-Read\-D\-A\-C}}
+\index{as399x\-Read\-D\-A\-C@{as399x\-Read\-D\-A\-C}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Read\-D\-A\-C}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} as399x\-Read\-D\-A\-C (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_af9e3466abca7914ac141f6205d34b631}
+Reads D\-A\-C value and returns it in natural representation. See \doxyref{as399x\-Write\-D\-A\-C()}{p.}{as399x_8c_ab4f8d2cc9b2b39192e74b0d6669e622d} for details. 
+
+Definition at line 1419 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Reset@{as399x\-Reset}}
+\index{as399x\-Reset@{as399x\-Reset}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Reset (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_ae011228afe4a87d52d005b8aa0eaaa45}
+This function reads in the current register settings (configuration only), performs a reset by driving the enable bit first low, then high and then writes back the register values. 
+
+Definition at line 1034 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Restore\-Sensitivity@{as399x\-Restore\-Sensitivity}}
+\index{as399x\-Restore\-Sensitivity@{as399x\-Restore\-Sensitivity}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Restore\-Sensitivity}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Restore\-Sensitivity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_a1c6aa0a3eef7e6d2b43bc104071b55da}
+This function restores the sensitivity previousley saved using \doxyref{as399x\-Save\-Sensitivity()}{p.}{as399x_8c_aa370b8bb8a9100c2c984f39772f2e805}. 
+
+Definition at line 1147 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Save\-Sensitivity@{as399x\-Save\-Sensitivity}}
+\index{as399x\-Save\-Sensitivity@{as399x\-Save\-Sensitivity}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Save\-Sensitivity}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Save\-Sensitivity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_aa370b8bb8a9100c2c984f39772f2e805}
+This function stores the current sensitivity registers. After that as399x\-Set\-Sensitivity can be called to change sensitivty for subsequent \doxyref{as399x\-Get\-R\-S\-S\-I()}{p.}{as399x_8c_a6ef060053cb26729e3ad88877a9157f0} calls. \doxyref{as399x\-Restore\-Sensitivity()}{p.}{as399x_8c_a1c6aa0a3eef7e6d2b43bc104071b55da} restores it again. 
+
+Definition at line 1141 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Select\-Link\-Frequency@{as399x\-Select\-Link\-Frequency}}
+\index{as399x\-Select\-Link\-Frequency@{as399x\-Select\-Link\-Frequency}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Select\-Link\-Frequency}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Select\-Link\-Frequency (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{a}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_ad128a3b59678415a598f50639f249697}
+
+
+Set the link frequency. 
+
+After calling this function the A\-S3991 is in normal mode again. 
+\begin{DoxyParams}{Parameters}
+{\em a} & 0x0\-F\-: 640k\-Hz 0x0\-C\-: 320k\-Hz 0x09\-: 256k\-Hz 0x08\-: 213.\-3k\-Hz (not available on A\-S3992) 0x06\-: 160k\-Hz 0x03\-: 80k\-Hz (not available on A\-S3992) 0x00\-: 40k\-Hz \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 856 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Set\-Base\-Frequency@{as399x\-Set\-Base\-Frequency}}
+\index{as399x\-Set\-Base\-Frequency@{as399x\-Set\-Base\-Frequency}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Set\-Base\-Frequency}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Set\-Base\-Frequency (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{regs, }
+\item[{u32}]{frequency}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_a071434f44354a6754e90b24044065074}
+This function sets the frequency in the approbiate register 
+\begin{DoxyParams}{Parameters}
+{\em regs} & Which register is being used either A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-P\-L\-L\-M\-A\-I\-N or A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-P\-L\-L\-A\-U\-X \\
+\hline
+{\em frequency} & frequency in k\-Hz \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 927 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Set\-Sensitivity@{as399x\-Set\-Sensitivity}}
+\index{as399x\-Set\-Sensitivity@{as399x\-Set\-Sensitivity}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Set\-Sensitivity}]{\setlength{\rightskip}{0pt plus 5cm}s8 as399x\-Set\-Sensitivity (
+\begin{DoxyParamCaption}
+\item[{s8}]{minimum\-Signal}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_a4551e672f1f6c15004b905998f6395ac}
+This function tries to set the sensitivity to a level to allow detection of signals using \doxyref{as399x\-Get\-R\-S\-S\-I()}{p.}{as399x_8c_a6ef060053cb26729e3ad88877a9157f0} with a level higher than minium\-Signal(d\-Bm). \begin{DoxyReturn}{Returns}
+the level offset. Sensitivity was set to minimum\-Signal -\/ (returned\-\_\-val). negative values mean the sensitivity could not be reached. 
+\end{DoxyReturn}
+
+
+Definition at line 1221 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Single\-Command@{as399x\-Single\-Command}}
+\index{as399x\-Single\-Command@{as399x\-Single\-Command}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Single\-Command}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Single\-Command (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{command}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_a929d232d3e465ec925841966be951f2b}
+Sends only one command to the A\-S399x. \par
+
+\begin{DoxyParams}{Parameters}
+{\em command} & The command which is send to the A\-S399x. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 630 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Single\-Read@{as399x\-Single\-Read}}
+\index{as399x\-Single\-Read@{as399x\-Single\-Read}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Single\-Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} as399x\-Single\-Read (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{address}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_a091ee0b3c153f82bdaccea3867168cfa}
+Single Read -\/$>$ reads one byte from one address of the A\-S3990. \par
+This function is only called from application level (not interrupt level). From interrupt level (\doxyref{ext\-Int()}{p.}{as399x_8c_ae5247c559d73460f77a87c52901ea90e}) as399x\-Single\-Read\-Irq is used. 
+\begin{DoxyParams}{Parameters}
+{\em address} & The addressbyte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The databyte read from the A\-S399x 
+\end{DoxyReturn}
+
+
+Definition at line 681 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Single\-Read\-Irq@{as399x\-Single\-Read\-Irq}}
+\index{as399x\-Single\-Read\-Irq@{as399x\-Single\-Read\-Irq}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Single\-Read\-Irq}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} as399x\-Single\-Read\-Irq (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{address}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_a8045806e4161d7d083dcbdf4d4b87174}
+This function is called only from A\-S399x I\-S\-R (ext\-Int). From application level as399x\-Single\-Read is used.\par
+The separation of application level and interrupt level removes the requirement of as399x\-Single\-Read being reentrant. This is necessary because the reentrant function definition introduces quite some runtime overhead. Especially on the interrupt level this runtime overhead is a problem because we have to meet the T2 timing constrain, defined by the Gen2 protocol when sending back A\-C\-K or Reg\-R\-N commands. 
+\begin{DoxyParams}{Parameters}
+{\em address} & address to read from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+register value read from address. 
+\end{DoxyReturn}
+
+
+Definition at line 694 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Single\-Write@{as399x\-Single\-Write}}
+\index{as399x\-Single\-Write@{as399x\-Single\-Write}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Single\-Write}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Single\-Write (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{address, }
+\item[{{\bf u8}}]{value}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_aba8ac4c5bb81836447071f99ffa486dc}
+Single Write -\/$>$ writes one byte to one address of the A\-S3990. \par
+
+\begin{DoxyParams}{Parameters}
+{\em address} & The addressbyte \\
+\hline
+{\em value} & The databyte \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 729 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Switch\-To\-Idle\-Mode@{as399x\-Switch\-To\-Idle\-Mode}}
+\index{as399x\-Switch\-To\-Idle\-Mode@{as399x\-Switch\-To\-Idle\-Mode}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Switch\-To\-Idle\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Switch\-To\-Idle\-Mode (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_a4e040ab8de948ed22fd11333e93ac793}
+This function brings the A\-S399x to Idlemode. \par
+It does not take or return a parameter. 
+
+Definition at line 752 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Wait\-For\-Response@{as399x\-Wait\-For\-Response}}
+\index{as399x\-Wait\-For\-Response@{as399x\-Wait\-For\-Response}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Wait\-For\-Response}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Wait\-For\-Response (
+\begin{DoxyParamCaption}
+\item[{u16}]{wait\-Mask}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_a043123a43dad704a086d1b5272d2a022}
+This function waits for the specified response(\-I\-R\-Q). 
+
+Definition at line 778 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Wait\-For\-Response\-Timed@{as399x\-Wait\-For\-Response\-Timed}}
+\index{as399x\-Wait\-For\-Response\-Timed@{as399x\-Wait\-For\-Response\-Timed}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Wait\-For\-Response\-Timed}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Wait\-For\-Response\-Timed (
+\begin{DoxyParamCaption}
+\item[{u16}]{wait\-Mask, }
+\item[{u16}]{ms}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_acc80940ab77e2d8a3037d8f69b8bb009}
+This function waits for the specified response(\-I\-R\-Q). 
+
+Definition at line 757 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Write\-D\-A\-C@{as399x\-Write\-D\-A\-C}}
+\index{as399x\-Write\-D\-A\-C@{as399x\-Write\-D\-A\-C}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Write\-D\-A\-C}]{\setlength{\rightskip}{0pt plus 5cm}void as399x\-Write\-D\-A\-C (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{nat\-Val}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_ab4f8d2cc9b2b39192e74b0d6669e622d}
+Sets D\-A\-C output voltage according to parameter nat\-Val. The D\-A\-C values of A\-S399x are in magnitude representation. The F\-W uses D\-A\-C values in natural representation internally, as it makes computation easier. The F\-W handles the D\-A\-C values in the code as it is a 8 bit D\-A\-C from 0\-V to 3.\-2\-V, L\-S\-B = 12.\-5m\-V. \par
+The conversion from natural to magnitude representation is handled by \doxyref{as399x\-Write\-D\-A\-C()}{p.}{as399x_8c_ab4f8d2cc9b2b39192e74b0d6669e622d} and \doxyref{as399x\-Read\-D\-A\-C()}{p.}{as399x_8c_af9e3466abca7914ac141f6205d34b631}. 
+\begin{DoxyParams}{Parameters}
+{\em nat\-Val} & Sets the D\-A\-C output voltage according to the value. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1414 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!ext\-Int@{ext\-Int}}
+\index{ext\-Int@{ext\-Int}!as399x.c@{as399x.\-c}}
+\subsubsection[{ext\-Int}]{\setlength{\rightskip}{0pt plus 5cm}void ext\-Int (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{as399x_8c_ae5247c559d73460f77a87c52901ea90e}
+External Interrupt Function The A\-S3990 uses the external interrupt to signal the u\-C that something happened. The interrupt function reads the A\-S3990 I\-R\-Q status. If the signals fifo bit is set it reads the A\-S3990 A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-F\-I\-F\-O status. The interrupt function sets the flags if an event occours. 
+
+Definition at line 530 of file as399x.\-c.
+
+
+
+\subsection{Variable Documentation}
+\index{as399x.\-c@{as399x.\-c}!as399x\-Fifo\-Status@{as399x\-Fifo\-Status}}
+\index{as399x\-Fifo\-Status@{as399x\-Fifo\-Status}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Fifo\-Status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} {\bf D\-A\-T\-A} as399x\-Fifo\-Status = 0}\label{as399x_8c_ae3691f9a46687585394a20ac22089967}
+Variable is used to store the A\-S399\-X\-\_\-\-R\-E\-G\-\_\-\-F\-I\-F\-O status read from the A\-S399x 
+
+Definition at line 75 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Irq\-Status@{as399x\-Irq\-Status}}
+\index{as399x\-Irq\-Status@{as399x\-Irq\-Status}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Irq\-Status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} {\bf D\-A\-T\-A} as399x\-Irq\-Status = 0}\label{as399x_8c_a4bfb055853ddb7cd8d7eb1f58eda54ad}
+Variable is used to store the I\-R\-Q status read from the A\-S399x 
+
+Definition at line 72 of file as399x.\-c.
+
+\index{as399x.\-c@{as399x.\-c}!as399x\-Response@{as399x\-Response}}
+\index{as399x\-Response@{as399x\-Response}!as399x.c@{as399x.\-c}}
+\subsubsection[{as399x\-Response}]{\setlength{\rightskip}{0pt plus 5cm}volatile u16 {\bf D\-A\-T\-A} as399x\-Response = 0}\label{as399x_8c_a6aaf1a00acea6d0af6a989dc1501553f}
+This variable is used as flag to signal an data reception. It is a bit mask of the R\-E\-S\-P\-\_\-\-T\-X\-I\-R\-Q, R\-E\-S\-P\-\_\-\-R\-X\-I\-R\-Q, R\-E\-S\-P\-\_\-$\ast$ values 
+
+Definition at line 80 of file as399x.\-c.
+

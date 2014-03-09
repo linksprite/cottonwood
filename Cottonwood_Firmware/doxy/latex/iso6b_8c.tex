@@ -1,0 +1,71 @@
+\section{iso6b.\-c File Reference}
+\label{iso6b_8c}\index{iso6b.\-c@{iso6b.\-c}}
+{\ttfamily \#include \char`\"{}c8051\-F340.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}as399x\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}global.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}uart.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}timer.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bitbang.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}as399x.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}iso6b.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}crc16.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf I\-S\-O6\-B\-\_\-\-D\-E\-B\-U\-G}~0
+\item 
+\#define {\bf I\-S06\-B\-\_\-\-B\-A\-C\-K\-S\-C\-A\-T\-T\-E\-R\-\_\-\-T\-I\-M\-E\-O\-U\-T}~4
+\item 
+\#define {\bf I\-S06\-B\-\_\-\-W\-R\-I\-T\-E\-\_\-\-W\-A\-I\-T}~15
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ {\bf iso6b\-Cmd} )(void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of I\-S\-O18000-\/6b protocol. \begin{DoxyAuthor}{Author}
+C. Eisendle 
+
+T. Luecker (Substitute)
+\end{DoxyAuthor}
+Implementation of I\-S\-O18000-\/6b protocol. 
+
+Definition in file {\bf iso6b.\-c}.
+
+
+
+\subsection{Macro Definition Documentation}
+\index{iso6b.\-c@{iso6b.\-c}!I\-S06\-B\-\_\-\-B\-A\-C\-K\-S\-C\-A\-T\-T\-E\-R\-\_\-\-T\-I\-M\-E\-O\-U\-T@{I\-S06\-B\-\_\-\-B\-A\-C\-K\-S\-C\-A\-T\-T\-E\-R\-\_\-\-T\-I\-M\-E\-O\-U\-T}}
+\index{I\-S06\-B\-\_\-\-B\-A\-C\-K\-S\-C\-A\-T\-T\-E\-R\-\_\-\-T\-I\-M\-E\-O\-U\-T@{I\-S06\-B\-\_\-\-B\-A\-C\-K\-S\-C\-A\-T\-T\-E\-R\-\_\-\-T\-I\-M\-E\-O\-U\-T}!iso6b.c@{iso6b.\-c}}
+\subsubsection[{I\-S06\-B\-\_\-\-B\-A\-C\-K\-S\-C\-A\-T\-T\-E\-R\-\_\-\-T\-I\-M\-E\-O\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-S06\-B\-\_\-\-B\-A\-C\-K\-S\-C\-A\-T\-T\-E\-R\-\_\-\-T\-I\-M\-E\-O\-U\-T~4}\label{iso6b_8c_a53597734860419b74ff4cc00fa3098a1}
+backscatter -\/ the time needed by the tag to answer 
+
+Definition at line 57 of file iso6b.\-c.
+
+\index{iso6b.\-c@{iso6b.\-c}!I\-S06\-B\-\_\-\-W\-R\-I\-T\-E\-\_\-\-W\-A\-I\-T@{I\-S06\-B\-\_\-\-W\-R\-I\-T\-E\-\_\-\-W\-A\-I\-T}}
+\index{I\-S06\-B\-\_\-\-W\-R\-I\-T\-E\-\_\-\-W\-A\-I\-T@{I\-S06\-B\-\_\-\-W\-R\-I\-T\-E\-\_\-\-W\-A\-I\-T}!iso6b.c@{iso6b.\-c}}
+\subsubsection[{I\-S06\-B\-\_\-\-W\-R\-I\-T\-E\-\_\-\-W\-A\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-S06\-B\-\_\-\-W\-R\-I\-T\-E\-\_\-\-W\-A\-I\-T~15}\label{iso6b_8c_a42bc65b7c3626d6391004295227f1d88}
+according to iso6b the interrogator has to wait 15ms after issueing a write 
+
+Definition at line 58 of file iso6b.\-c.
+
+\index{iso6b.\-c@{iso6b.\-c}!I\-S\-O6\-B\-\_\-\-D\-E\-B\-U\-G@{I\-S\-O6\-B\-\_\-\-D\-E\-B\-U\-G}}
+\index{I\-S\-O6\-B\-\_\-\-D\-E\-B\-U\-G@{I\-S\-O6\-B\-\_\-\-D\-E\-B\-U\-G}!iso6b.c@{iso6b.\-c}}
+\subsubsection[{I\-S\-O6\-B\-\_\-\-D\-E\-B\-U\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-S\-O6\-B\-\_\-\-D\-E\-B\-U\-G~0}\label{iso6b_8c_a66f9a31eaa29eecc2bd7cfe47b4503b2}
+enable debug information via the serial interface 
+
+Definition at line 49 of file iso6b.\-c.
+
+
+
+\subsection{Typedef Documentation}
+\index{iso6b.\-c@{iso6b.\-c}!iso6b\-Cmd@{iso6b\-Cmd}}
+\index{iso6b\-Cmd@{iso6b\-Cmd}!iso6b.c@{iso6b.\-c}}
+\subsubsection[{iso6b\-Cmd}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ iso6b\-Cmd)(void)}\label{iso6b_8c_a8d8a33233d8c4c9c7b3998aadb427360}
+function pointer indicating the function to be used in the next collision arbitration iteration 
+
+Definition at line 82 of file iso6b.\-c.
+

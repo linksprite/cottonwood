@@ -1,0 +1,16 @@
+\section{Layering}\label{index_Layering}
+This software is layered as follows\-:
+
+\begin{TabularC}{4}
+\hline
+\multicolumn{3}{|p{(\linewidth-\tabcolsep*4-\arrayrulewidth*2)*3/4}|}{\PBS\centering application code }&Upper layer in which the application run. In this example it is the \doxyref{usb\-\_\-commands.\-c}{p.}{usb__commands_8c}  \\\cline{1-4}
+\PBS\centering \doxyref{gen2}{p.}{gen2_8h} &\PBS\centering \doxyref{iso6b}{p.}{iso6b_8h} &\PBS\centering \doxyref{as399x\-\_\-public}{p.}{as399x__public_8h} &Protocol layer in which the execution is being done  \\\cline{1-4}
+\multicolumn{3}{|p{(\linewidth-\tabcolsep*4-\arrayrulewidth*2)*3/4}|}{\PBS\centering \doxyref{as399x}{p.}{as399x_8h} }&Device specific procedures of U\-H\-F Reader  \\\cline{1-4}
+\multicolumn{3}{|p{(\linewidth-\tabcolsep*4-\arrayrulewidth*2)*3/4}|}{\PBS\centering \doxyref{interface}{p.}{as399x__com_8h} }&Interface layer for the communication with the U\-H\-F Reader chip  \\\cline{1-4}
+\end{TabularC}
+
+
+The files \doxyref{gen2.\-h}{p.}{gen2_8h} and \doxyref{iso6b.\-h}{p.}{iso6b_8h} contain the interface provided to the user for the two supported protocols. They rely on the interface provide by \doxyref{as399x.\-h}{p.}{as399x_8h}. This in turn relies on the actual hardware communication interface provided by \doxyref{as399x\-\_\-com.\-h}{p.}{as399x__com_8h}.\section{Configuration}\label{index_Configuration}
+Configuration of this software is done in \doxyref{as399x\-\_\-config.\-h}{p.}{as399x__config_8h}.\section{Using}\label{index_Using}
+Before using any other functions the A\-S399\-X needs to be initialized using \doxyref{as399x\-Initialize()}{p.}{as399x_8c_a3bfe6fab3c61cffe7329b050c4523fc5}. Then functions from \doxyref{gen2.\-h}{p.}{gen2_8h} and \doxyref{iso6b.\-h}{p.}{iso6b_8h} can be called.\section{Porting}\label{index_Porting}
+The developer which needs to port this firmware to another hardware will need to change \doxyref{parallelinterface.\-c}{p.}{parallelinterface_8c} resp. \doxyref{serialinterface.\-c}{p.}{serialinterface_8c} and \doxyref{platform.\-h}{p.}{platform_8h}. Additionally he should also provide a proper interrupt service routine (currently \doxyref{ext\-Int()}{p.}{as399x_8c_ae5247c559d73460f77a87c52901ea90e} in \doxyref{as399x.\-c}{p.}{as399x_8c}). Some settings need to be changed also in \doxyref{as399x\-\_\-config.\-h}{p.}{as399x__config_8h}. 

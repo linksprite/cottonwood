@@ -1,0 +1,93 @@
+\section{bitbang.\-h File Reference}
+\label{bitbang_8h}\index{bitbang.\-h@{bitbang.\-h}}
+{\ttfamily \#include \char`\"{}global.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}platform.\-h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf t\-\_\-bb\-Data}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf B\-B\-\_\-\-P\-I\-N}~{\bf I\-O3\-P\-I\-N}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf bb\-Setup} (s16 microsec)
+\item 
+void {\bf bb\-Run} ({\bf t\-\_\-bb\-Data} $\ast$bbdata, s16 length)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Bitbang module header file. \begin{DoxyAuthor}{Author}
+C. Eisendle 
+
+T. Luecker (Substitute)
+\end{DoxyAuthor}
+The bitbang module is needed to support serial protocols via bitbang technique 
+
+Definition in file {\bf bitbang.\-h}.
+
+
+
+\subsection{Macro Definition Documentation}
+\index{bitbang.\-h@{bitbang.\-h}!B\-B\-\_\-\-P\-I\-N@{B\-B\-\_\-\-P\-I\-N}}
+\index{B\-B\-\_\-\-P\-I\-N@{B\-B\-\_\-\-P\-I\-N}!bitbang.h@{bitbang.\-h}}
+\subsubsection[{B\-B\-\_\-\-P\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-B\-\_\-\-P\-I\-N~{\bf I\-O3\-P\-I\-N}}\label{bitbang_8h_a587a7e50217ec6600e5f976abcf8906a}
+specifies the pin where the data will be shifted out 
+
+Definition at line 62 of file bitbang.\-h.
+
+
+
+\subsection{Function Documentation}
+\index{bitbang.\-h@{bitbang.\-h}!bb\-Run@{bb\-Run}}
+\index{bb\-Run@{bb\-Run}!bitbang.h@{bitbang.\-h}}
+\subsubsection[{bb\-Run}]{\setlength{\rightskip}{0pt plus 5cm}void bb\-Run (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bb\-Data} $\ast$}]{bbdata, }
+\item[{s16}]{length}
+\end{DoxyParamCaption}
+)}\label{bitbang_8h_ab4b378e6cae91dc1adf115f61fce6b89}
+
+
+Start the bitbang engine. 
+
+When calling this function the bitbang engine is started. In fact, timer 2 will be enabled and at each overrun the next bit is shifted out. N\-O\-T\-E\-: All other interrupts are D\-I\-S\-A\-B\-L\-E\-D during this function in order to allow exact timings.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bbdata} & \-: Array of bitbang data structs. The module can process more bitbang structures. So it's possible to setup a complete transfer without interruption. \\
+\hline
+{\em length} & \-: Length of the array \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 70 of file bitbang.\-c.
+
+\index{bitbang.\-h@{bitbang.\-h}!bb\-Setup@{bb\-Setup}}
+\index{bb\-Setup@{bb\-Setup}!bitbang.h@{bitbang.\-h}}
+\subsubsection[{bb\-Setup}]{\setlength{\rightskip}{0pt plus 5cm}void bb\-Setup (
+\begin{DoxyParamCaption}
+\item[{s16}]{microsec}
+\end{DoxyParamCaption}
+)}\label{bitbang_8h_ae777ff068d16c59f451d2279e661e9fc}
+
+
+Setup the bitbang module. 
+
+This function needs to be called prior to the use of the module. It configures the timer \#2 by setting the period time. Period time is (1/freq)/2, e.\-g. freq = 40khz --$>$ 12.\-5us
+
+
+\begin{DoxyParams}{Parameters}
+{\em microsec} & \-: The period time in microseconds \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 58 of file bitbang.\-c.
+

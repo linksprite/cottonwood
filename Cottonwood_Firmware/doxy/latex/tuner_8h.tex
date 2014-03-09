@@ -1,0 +1,162 @@
+\section{tuner.\-h File Reference}
+\label{tuner_8h}\index{tuner.\-h@{tuner.\-h}}
+{\ttfamily \#include \char`\"{}global.\-h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf tuner\-Params}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf T\-U\-N\-E\-R\-\_\-\-Cin}~1
+\item 
+\#define {\bf T\-U\-N\-E\-R\-\_\-\-Clen}~2
+\item 
+\#define {\bf T\-U\-N\-E\-R\-\_\-\-Cout}~3
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf tuner\-Init} (void)
+\item 
+void {\bf tuner\-Set\-Cap} ({\bf u8} component, {\bf u8} val)
+\item 
+void {\bf tuner\-One\-Hill\-Climb} (struct {\bf tuner\-Params} $\ast$p, u16 max\-Steps)
+\item 
+void {\bf tuner\-Multi\-Hill\-Climb} (struct {\bf tuner\-Params} $\ast$res)
+\item 
+void {\bf tuner\-Traversal} (struct {\bf tuner\-Params} $\ast$res)
+\item 
+void {\bf tuner\-Set\-Tuning} ({\bf u8} cin, {\bf u8} clen, {\bf u8} cout)
+\item 
+u16 {\bf tuner\-Get\-Reflected} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file provides declarations for tuner related functions. \begin{DoxyAuthor}{Author}
+Ulrich Herrmann 
+
+Bernhard Breinbauer 
+\end{DoxyAuthor}
+
+
+Definition in file {\bf tuner.\-h}.
+
+
+
+\subsection{Macro Definition Documentation}
+\index{tuner.\-h@{tuner.\-h}!T\-U\-N\-E\-R\-\_\-\-Cin@{T\-U\-N\-E\-R\-\_\-\-Cin}}
+\index{T\-U\-N\-E\-R\-\_\-\-Cin@{T\-U\-N\-E\-R\-\_\-\-Cin}!tuner.h@{tuner.\-h}}
+\subsubsection[{T\-U\-N\-E\-R\-\_\-\-Cin}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-U\-N\-E\-R\-\_\-\-Cin~1}\label{tuner_8h_a2568b99271c70a2c527818a47c7f823f}
+used in \doxyref{tuner\-Set\-Cap()}{p.}{tuner_8h_abbd4f2dcdf57dd2ba8fc073200cf34d3} to select the tuner network component. 
+
+Definition at line 36 of file tuner.\-h.
+
+\index{tuner.\-h@{tuner.\-h}!T\-U\-N\-E\-R\-\_\-\-Clen@{T\-U\-N\-E\-R\-\_\-\-Clen}}
+\index{T\-U\-N\-E\-R\-\_\-\-Clen@{T\-U\-N\-E\-R\-\_\-\-Clen}!tuner.h@{tuner.\-h}}
+\subsubsection[{T\-U\-N\-E\-R\-\_\-\-Clen}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-U\-N\-E\-R\-\_\-\-Clen~2}\label{tuner_8h_a2abd138bec3417d80739b575d90eff19}
+used in \doxyref{tuner\-Set\-Cap()}{p.}{tuner_8h_abbd4f2dcdf57dd2ba8fc073200cf34d3} to select the tuner network component. 
+
+Definition at line 38 of file tuner.\-h.
+
+\index{tuner.\-h@{tuner.\-h}!T\-U\-N\-E\-R\-\_\-\-Cout@{T\-U\-N\-E\-R\-\_\-\-Cout}}
+\index{T\-U\-N\-E\-R\-\_\-\-Cout@{T\-U\-N\-E\-R\-\_\-\-Cout}!tuner.h@{tuner.\-h}}
+\subsubsection[{T\-U\-N\-E\-R\-\_\-\-Cout}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-U\-N\-E\-R\-\_\-\-Cout~3}\label{tuner_8h_ab0094bd0761c4275f71c9958bd31368f}
+used in \doxyref{tuner\-Set\-Cap()}{p.}{tuner_8h_abbd4f2dcdf57dd2ba8fc073200cf34d3} to select the tuner network component. 
+
+Definition at line 40 of file tuner.\-h.
+
+
+
+\subsection{Function Documentation}
+\index{tuner.\-h@{tuner.\-h}!tuner\-Get\-Reflected@{tuner\-Get\-Reflected}}
+\index{tuner\-Get\-Reflected@{tuner\-Get\-Reflected}!tuner.h@{tuner.\-h}}
+\subsubsection[{tuner\-Get\-Reflected}]{\setlength{\rightskip}{0pt plus 5cm}u16 tuner\-Get\-Reflected (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{tuner_8h_a1a77d7d9a80aa54986f808758e06f4fd}
+Measures the reflected power by utilizing \doxyref{as399x\-Get\-Reflected\-Power()}{p.}{as399x_8c_a068783ac66684d83d08fbcbace1b4276} and \doxyref{as399x\-Get\-Reflected\-Power\-Noise\-Level()}{p.}{as399x_8c_af6dd4bda420c70ccbb64b355bf6bb9fb}. This function is used by the automatic tuning algorithms to find the tuner setting with the lowest reflected power. \begin{DoxyReturn}{Returns}
+Reflected power measured with the current tuner settings. 
+\end{DoxyReturn}
+\index{tuner.\-h@{tuner.\-h}!tuner\-Init@{tuner\-Init}}
+\index{tuner\-Init@{tuner\-Init}!tuner.h@{tuner.\-h}}
+\subsubsection[{tuner\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void tuner\-Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{tuner_8h_ac20492a254d42440a672d0f3402bbf54}
+Initializes the tuner caps to value 0. This function requires an already set-\/up S\-P\-I communication (see \doxyref{init\-Interface()}{p.}{as399x__com_8h_a6305d3b6e2bbab54bca14afc97db3c5c} in \doxyref{serialinterface.\-c}{p.}{serialinterface_8c}). \index{tuner.\-h@{tuner.\-h}!tuner\-Multi\-Hill\-Climb@{tuner\-Multi\-Hill\-Climb}}
+\index{tuner\-Multi\-Hill\-Climb@{tuner\-Multi\-Hill\-Climb}!tuner.h@{tuner.\-h}}
+\subsubsection[{tuner\-Multi\-Hill\-Climb}]{\setlength{\rightskip}{0pt plus 5cm}void tuner\-Multi\-Hill\-Climb (
+\begin{DoxyParamCaption}
+\item[{struct {\bf tuner\-Params} $\ast$}]{res}
+\end{DoxyParamCaption}
+)}\label{tuner_8h_a362ee9bfe4c4619f7c8818a5ffc8becc}
+Sophisticated automatic tuning function. This function tries to find an optimized tuner setting (minimal reflected power). The function splits the 3-\/dimensional tuner-\/setting-\/space (axis are Cin, Clen and Cout) into segments and searches in each segment (by using \doxyref{tuner\-One\-Hill\-Climb()}{p.}{tuner_8h_aa68ef96d81ae9dd3015e847be5c05d3c}) for its local minimum of reflected power. The tuner setting (point in tuner-\/setting-\/space) which has the lowest reflected power is returned in parameter res. This function has a much higher probability to find the tuner setting with the lowest reflected power than \doxyref{tuner\-One\-Hill\-Climb()}{p.}{tuner_8h_aa68ef96d81ae9dd3015e847be5c05d3c} but on the other hand takes much longer. 
+\begin{DoxyParams}{Parameters}
+{\em res} & Struct which contains the found tuning optimum. \\
+\hline
+\end{DoxyParams}
+\index{tuner.\-h@{tuner.\-h}!tuner\-One\-Hill\-Climb@{tuner\-One\-Hill\-Climb}}
+\index{tuner\-One\-Hill\-Climb@{tuner\-One\-Hill\-Climb}!tuner.h@{tuner.\-h}}
+\subsubsection[{tuner\-One\-Hill\-Climb}]{\setlength{\rightskip}{0pt plus 5cm}void tuner\-One\-Hill\-Climb (
+\begin{DoxyParamCaption}
+\item[{struct {\bf tuner\-Params} $\ast$}]{p, }
+\item[{u16}]{max\-Steps}
+\end{DoxyParamCaption}
+)}\label{tuner_8h_aa68ef96d81ae9dd3015e847be5c05d3c}
+Simple automatic tuning function. This function tries to find an optimized tuner setting (minimal reflected power). The function starts at the current tuner setting and modifies the tuner caps until a setting with a minimum of reflected power is found. When changing the tuner further leads to an increase of reflected power the algorithm stops. Note that, although the algorithm has been optimized to not immediately stop at local minima of reflected power, it still might not find the tuner setting with the lowest reflected power. The algorithm of \doxyref{tuner\-One\-Hill\-Climb()}{p.}{tuner_8h_aa68ef96d81ae9dd3015e847be5c05d3c} is probably producing better results, but it is slower. 
+\begin{DoxyParams}{Parameters}
+{\em p} & Struct which contains the found tuning optimum. \\
+\hline
+{\em max\-Steps} & Number of maximum steps which should be performed when searching for tuning optimum. \\
+\hline
+\end{DoxyParams}
+\index{tuner.\-h@{tuner.\-h}!tuner\-Set\-Cap@{tuner\-Set\-Cap}}
+\index{tuner\-Set\-Cap@{tuner\-Set\-Cap}!tuner.h@{tuner.\-h}}
+\subsubsection[{tuner\-Set\-Cap}]{\setlength{\rightskip}{0pt plus 5cm}void tuner\-Set\-Cap (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{component, }
+\item[{{\bf u8}}]{val}
+\end{DoxyParamCaption}
+)}\label{tuner_8h_abbd4f2dcdf57dd2ba8fc073200cf34d3}
+Sets the tuner cap associated with component to the value val. The value val is the register value of the tuner cap (not a real Farad value). The maximum value of val depends on the used component on the board. For the P\-E64904 the maximum value is 31. 
+\begin{DoxyParams}{Parameters}
+{\em component} & The tuner cap which should be changed. Allowed values are\-: \doxyref{T\-U\-N\-E\-R\-\_\-\-Cin}{p.}{tuner_8h_a2568b99271c70a2c527818a47c7f823f}, \doxyref{T\-U\-N\-E\-R\-\_\-\-Clen}{p.}{tuner_8h_a2abd138bec3417d80739b575d90eff19}, \doxyref{T\-U\-N\-E\-R\-\_\-\-Cout}{p.}{tuner_8h_ab0094bd0761c4275f71c9958bd31368f}. \\
+\hline
+{\em val} & The register value which will be written to the selected tuner cap. \\
+\hline
+\end{DoxyParams}
+\index{tuner.\-h@{tuner.\-h}!tuner\-Set\-Tuning@{tuner\-Set\-Tuning}}
+\index{tuner\-Set\-Tuning@{tuner\-Set\-Tuning}!tuner.h@{tuner.\-h}}
+\subsubsection[{tuner\-Set\-Tuning}]{\setlength{\rightskip}{0pt plus 5cm}void tuner\-Set\-Tuning (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{cin, }
+\item[{{\bf u8}}]{clen, }
+\item[{{\bf u8}}]{cout}
+\end{DoxyParamCaption}
+)}\label{tuner_8h_af86ab841063530c01fb8325b52def6e0}
+Applies the values cin, clen and cout to the tuner network. The parameter values are register values of the associated components not values in Farad. The maximum value of val depends on the used component on the board. For the P\-E64904 the maximum value is 31. 
+\begin{DoxyParams}{Parameters}
+{\em cin} & Value which is applied to cap Cin of the tuner network. \\
+\hline
+{\em clen} & Value which is applied to cap Clen of the tuner network. \\
+\hline
+{\em cout} & Value which is applied to cap Cout of the tuner network. \\
+\hline
+\end{DoxyParams}
+\index{tuner.\-h@{tuner.\-h}!tuner\-Traversal@{tuner\-Traversal}}
+\index{tuner\-Traversal@{tuner\-Traversal}!tuner.h@{tuner.\-h}}
+\subsubsection[{tuner\-Traversal}]{\setlength{\rightskip}{0pt plus 5cm}void tuner\-Traversal (
+\begin{DoxyParamCaption}
+\item[{struct {\bf tuner\-Params} $\ast$}]{res}
+\end{DoxyParamCaption}
+)}\label{tuner_8h_a5f0a7275bf7e9ac89011e7709a00d0ff}
+Exhaustive automatic tuning function. This function tries to find an optimized tuner setting (minimal reflected power). The function applies each and every possible tuner setting and returns the setting with the lowest value of reflected power in parameter res. This algorithm ensures that the optimum tuner setting is found but takes a very long time. 
+\begin{DoxyParams}{Parameters}
+{\em res} & Struct which contains the found tuning optimum. \\
+\hline
+\end{DoxyParams}
